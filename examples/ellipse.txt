@@ -1,0 +1,9 @@
+ellipse Matrix([[2*cos(t)], [sin(t)]])
+System:
+\frac{- a^{2} b^{2} \cdot \left(3 \sin^{2}{\left(t \right)} + 1\right) + a^{2} \left(x \cos{\left(t \right)} + 2 y \sin{\left(t \right)} - 2\right)^{2} + b^{2} \left(2 x \sin{\left(t \right)} - y \cos{\left(t \right)} - \frac{3 \sin{\left(2 t \right)}}{2}\right)^{2}}{a^{2} b^{2} \cdot \left(3 \sin^{2}{\left(t \right)} + 1\right)} = 0
+Derivation:
+\frac{2 \left(- 2 a^{2} \left(x \cos{\left(t \right)} + 2 y \sin{\left(t \right)} - 2\right) + b^{2} \cdot \left(2 x \cos{\left(t \right)} + 4 y \sin{\left(t \right)} + 9 \sin^{4}{\left(t \right)} + 6 \sin^{2}{\left(t \right)} - 3\right)\right) \left(2 x \sin{\left(t \right)} - y \cos{\left(t \right)} - \frac{3 \sin{\left(2 t \right)}}{2}\right)}{a^{2} b^{2} \left(3 \sin^{2}{\left(t \right)} + 1\right)^{2}} = 0
+Time:
+0.5867576599121094
+Subdeterminant:
+- \frac{4 \left(a - b\right)^{2} \left(a + b\right)^{2}}{a^{4} b^{4} \left(3 \sin^{2}{\left(t \right)} + 1\right)^{2}}

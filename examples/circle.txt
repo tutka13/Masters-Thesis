@@ -1,0 +1,9 @@
+circle Matrix([[cos(t)], [sin(t)]])
+System:
+-1 + \frac{\left(x \cos{\left(t \right)} + y \sin{\left(t \right)} - 1\right)^{2}}{b^{2}} + \frac{\left(x \sin{\left(t \right)} - y \cos{\left(t \right)}\right)^{2}}{a^{2}} = 0
+Derivation:
+\frac{2 \left(- a^{2} \left(x \cos{\left(t \right)} + y \sin{\left(t \right)} - 1\right) + b^{2} \left(x \cos{\left(t \right)} + y \sin{\left(t \right)}\right)\right) \left(x \sin{\left(t \right)} - y \cos{\left(t \right)}\right)}{a^{2} b^{2}} = 0
+Time:
+0.6981282234191895
+Subdeterminant:
+- \frac{\left(a - b\right)^{2} \left(a + b\right)^{2}}{a^{4} b^{4}}

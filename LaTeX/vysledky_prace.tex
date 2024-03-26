@@ -1,0 +1,136 @@
+\chapter{Výsledky práce}
+Upravme rovnice pre obálku sféry tak, aby zodpovedali obálke elipsoidov. Vezmime elipsoid so škálovaním v smere súradnicových osí konštantnými reálnymi číslami $a,b,c.$ Upravme škálovanie elipsoidu tak, aby $a$, škálovanie v smere osi $x$ zodpovedalo škálovaniu v dotykovom smere priestorovej krivky $m(t).$
+Teda pre elipsoid s rovnicou
+\begin{equation}
+\frac{{(x - m_1(t))^2}}{{a^2}} + \frac{{(y - m_2(t))^2}}{{b^2}} + + \frac{{(z - m_3(t))^2}}{{c^2}}= 1
+\end{equation} 
+zmeníme štandardnú bázu $\vec{e}_1, \vec{e}_2, \vec{e}_3$ na bázu Frenetovho repéra $\vec{t}, \vec{n}, \vec{b}$ v každom bode krivky $m(t).$ Naše očakávanie je, že obálku naškálovaného elipsoidu v dotykovom smere a ponechanie jeho homogenity v normálovom smere budeme môcť zostrojiť ako obálku kružníc, nanajvýš elíps. Očakávame teda, že deriváciou jednoparametrického systému elipsoidov podľa parametra $t$ bude opäť rovina. Predveďme teraz jednoduchý výpočet, ktorý podporí naše očakávanie.
+\section{Obálka elipsoidov}
+Obálku sfér vieme šikovne zapísať skalárnym súčinom, existuje však aj viac všeobecný zápis, a to maticový tvaru $Q: X^TM(t)X = 0$
+Všeobecné rovnice pre sféru v priestore sú
+$ x^2 +y^2 +z^2 -2xm_1 -2ym_2 - 2zm_3 + m_1^2 + m_2^2 + m_3^2 - r^2 =0
+,$
+potom maticový zápis
+$$
+\left(\begin{matrix} x \\ y \\ z  \\ 1
+\end{matrix} \right)^T \left(\begin{matrix} 
+1 & 0 & 0 & - m_1 \\
+0 & 1 & 0 & - m_2 \\
+0 & 0 & 1 & - m_3 \\
+- m_1 & - m_2 & - m_3 &  m_1^2 + m_2^2 + m_3^2 - r^2 \\
+\end{matrix} \right)\left(\begin{matrix} x \\ y \\ z \\ 1
+\end{matrix} \right) = 0. 
+$$
+Podobne zapíšme rovnice pre elipsoid, jediná zmena sú konštanty $a, b, c$
+$ \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} - 2 \frac{xm_1}{a^2} - 2 \frac{ym_2}{b^2} - 2 \frac{zm_3}{c^2} + \frac{m_1^2}{a^2} + \frac{m_2^2}{b^2} + \frac{m_3^2}{c^2} - 1 =0.
+,$
+$$
+\left(\begin{matrix} x \\ y \\ z  \\ 1
+\end{matrix} \right)^T \left(\begin{matrix} 
+\frac{1}{a^2} & 0 & 0 & \frac{-m_1}{a^2} \\
+0 & \frac{1}{b^2} & 0 & \frac{-m_2}{b^2} \\
+0 & 0 & \frac{1}{c^2} & \frac{-m_3}{c^2} \\
+\frac{-m_1}{a^2} & \frac{-m_2}{b^2} & \frac{-m_3}{c^2} & \frac{m_1}{a^2} + \frac{m_2}{b^2} + \frac{m_3}{c^2} - 1 \\
+\end{matrix} \right)\left(\begin{matrix} x \\ y \\ z \\ 1
+\end{matrix} \right) = 0,
+$$
+potom deriváciu elipsoidu
+$$
+-\frac{\dot{m}_1x}{a^2} + \frac{\dot{m}_2y}{b^2} + \frac{\dot{m}_3z}{c^2} + \frac{m_1\dot{m}_1}{a^2} + \frac{m_2 \dot{m}_2}{b^2} + \frac{m_3 \dot{m}_3}{c^2} = 0,
+$$
+v maticovom zápise 
+$$
+\left(\begin{matrix} x \\ y \\ z  \\ 1
+\end{matrix} \right)^T \left(\begin{matrix} 
+0 & 0 & 0 & \frac{-\dot{m}_1}{a^2} \\
+0 & 0 & 0 & \frac{-\dot{m}_2}{b^2} \\
+0 & 0 & 0 & \frac{-\dot{m}_3}{c^2} \\
+\frac{-\dot{m}_1}{a^2} & \frac{-\dot{m}_2}{b^2} & \frac{-\dot{m}_3}{c^2} & \frac{2m_1\dot{m}_1}{a^2} + \frac{2m_2 \dot{m}_2}{b^2} + \frac{2m_3 \dot{m}_3}{c^2}\\
+\end{matrix} \right)\left(\begin{matrix} x \\ y \\ z \\ 1
+\end{matrix} \right) = 0,
+$$
+je rovina kolmá na dotykový vektor $\dot{m}(t), $ ak platí, že vektory $(\dot{m}_1, \dot{m}_2, \dot{m}_3) $ a $(\frac{\dot{m}_1}{a^2}, \frac{\dot{m}_2}{b^2}, \frac{\dot{m}_3)}{c^2} $ sú lineárne závislé. Ak budeme elipsoid škálovať tak, že $a, b, c$ budú škálovacie faktory také, aby sa elipsoid naškáloval v dotykovom smere, tak kolmá rovina na dotykový vektor vytne kružnicu, pretože elipsoid je v ostatných smeroch homogénny.
+\section{Obálka elíps}
+Vyriešme toto odvodenie pre jednoduchší prípad. Nech $m(t) \colon  I \subseteq \mathbb{R} \rightarrow \mathbb{R}^2$ je aspoň dvakrát diferencovateľná parametrizácia krivky $m(t).$
+\begin{equation}
+\frac{{(x - m_1(t))^2}}{{a^2}} + \frac{{(y - m_2(t))^2}}{{b^2}} = 1
+\end{equation}
+Matica prechodu k novej báze je tvaru
+$$
+A(t) = \left(\begin{matrix} \vec{t}(t) \quad \vec{n}(t)
+\end{matrix} \right),
+$$
+čo po rozpísaní do súradníc $\vec{t}(t) = \frac{1}{ \| \dot{m}(t) \|}( \dot{m}_1(t),  \dot{m}_2(t))$ a $\vec{n}(t) = \frac{1}{ \| \dot{m}(t) \|}( -\dot{m}_2(t),  \dot{m}_1(t))$ dáva 
+$$
+A(t) = \frac{1}{ \| \dot{m}(t) \|} \left(\begin{matrix}
+   \dot{m}_1(t) & n_1(t) \\
+   \dot{m}_2(t) & n_2(t)
+\end{matrix} \right)
+$$
+K nej inverzná 
+$$
+A^{-1}(t) = A^{T}(t) = \frac{1}{ \| \dot{m}(t) \|} \left(\begin{matrix}
+  \dot{m}_1(t) & \dot{m}_2(t) \\
+    n_1(t) & n_2(t)
+\end{matrix}\right)
+$$
+Matica je ortogonálna.
+$$
+\left(\begin{matrix}
+u(t) \\
+v(t)
+\end{matrix}\right) = \frac{1}{ \| \dot{m}(t) \|}
+\left(\begin{matrix}
+  \dot{m}_1(t) & \dot{m}_2(t) \\
+    n_1(t) & n_2(t)
+\end{matrix}\right)
+\left(\begin{matrix}
+x-m_1(t) \\
+y-m_2(t) \\
+\end{matrix}\right)
+$$
+\begin{align*}
+\frac{u^2(t)}{a^2} + \frac{v^2(t)}{b^2} = 1
+\end{align*}
+sa potom transformuje na 
+\begin{align*}
+(x-m_1(t))^2(\frac{\dot{m}_1^2(t)}{a^2} + \frac{\dot{m}_2^2(t)}{b^2}) + 2(x-m_1(t))(y-m_2(t))\dot{m}_1(t)\dot{m}_2(t)(\frac{1}{a^2}-\frac{1}{b^2}) \\ 
++ (y-m_2(t))^2(\frac{\dot{m}_2^2(t)}{a^2} + \frac{\dot{m}_1^2(t)}{b^2}) - \| \dot{m}(t) \|^2 = 0,
+\end{align*}
+Po vynásobení rovnice členom $a^2b^2$ máme
+\begin{align*}
+(x-m_1(t))^2(b^2 \dot{m}_1^2(t) + a^2 \dot{m}_2^2(t)) \\
++ 2(x-m_1(t))(y-m_2(t))\dot{m}_1(t)\dot{m}_2(t)(b^2-a^2) \\
++ (y-m_2(t))^2 (b^2 \dot{m}_2^2(t) + a^2 \dot{m}_1^2(t))  \\
+- a^2 b^2\| \dot{m}(t) \|^2 = 0,
+\end{align*}
+kde konštanta $a$ zabezpečí škálovanie elipsy v dotykovom smere a konštanta $b$ určí škálovanie v normálovom smere. Výber orientácie normály nemá na výsledok žiaden vplyv. Štandardne uvažujeme $\vec{n}(t)=(-\dot{m}_2(t), \dot{m}_1(t)).$
+\begin{example}[Parabola]
+Majme parabolu s parametrizáciou $m(t)=(t, t^2).$ Transformujme elipsu v stredovom zápise so škálovaním v smere súradnicových osí
+\begin{equation}
+\frac{(x - t)^2}{{a^2}} + \frac{(y - t^2)^2}{b^2} = 1
+\end{equation}
+na elipsu so škálovaním v dotykovom a normálovom smere k parabole $m(t)$
+\begin{align*}
+(x-t)^2(\frac{1}{a^2} + \frac{4t^2}{b^2}) + 2(x-t)(y-t^2)2t(\frac{1}{a^2}-\frac{4t^2}{b^2})+(y-t^2)^2(\frac{4t^2}{a^2} + \frac{1}{b^2}) - (1+4t^2) = 0.
+\end{align*}
+Po vynásobení členom $a^2b^2$
+\begin{align*}
+(x-t)^2(b^2 + 4a^2t^2) + 2(x-t)(y-t^2)2t(b^2-4a^2t^2)+(y-t^2)^2(4b^2t^2 + a^2) - a^2b^2(1+4t^2) = 0.
+\end{align*}
+Derivujme túto elipsu 
+\begin{align*}
+-8a^{2}b^{2}t+4a^{2}t^{3}-12a^{2}t^{2}x+8a^{2}tx^{2}+4a^{2}ty-4a^{2}xy \\ +24b^{2}t^{5}-32b^{2}t^{3}y+16b^{2}t^{3}-12b^{2}t^{2}x+8b^{2} ty^{2} \\-8b^{2}ty+2b^{2}t+4b^{2}xy-2b^{2}x=0
+\end{align*}
+Vidíme, že derivácia je opäť kužeľosečka, v tomto prípade sa jej typ mení spolu s parametrami $a, b$ a $t$.
+Nech $a = 2, b = 1, $ elipsu teda škálujeme v dotykovom smere, potom v bode $t = - \frac{3}{8}$ a $t = \frac{3}{8}$ je kužeľosečka parabola, medzi týmito hodnotami hyperbola a inde elipsa. Určenie parametrov je kľúčové, všeobecne vysloviť hypotézu zatiaľ nevieme. Na výpočet obálky potom vieme s vhodným vzorkovaním vypočítať preniky dvoch kužeľosečiek pre parameter $t$ a a nájdené hodnoty interpolovať. Odhady budú lepšie ako numerické. Hádam hej. Tu by som mohla porovnať príklady, ktoré mám vypočítané numerickým spôsobom. Dopočítať to pre kvadriky ktoré mám.
+\end{example}
+
+\begin{align*}
+-\frac{(b^2-a^2)^2}{a^4 b^4 (\dot{m}_{1}^2(t) + \dot{m}_{2}^2(t) + \dot{m}_{3}^2(t))^2}\left((\dot{m}_{1}^2(t)\ddot{m}_{2}^2(t) - \ddot{m}_{1}^2(t)\dot{m}_{2}^2(t))^2 + (\dot{m}_{1}^2(t)\ddot{m}_{3}^2(t) - \ddot{m}_{1}^2(t)\dot{m}_{3}^2(t))^2 + (\dot{m}_{2}^2(t)\ddot{m}_{3}^2(t) - \ddot{m}_{2}^2(t)\dot{m}_{3}^2(t))^2 + \dot{m}_{1}\ddot{m}_{1}\dot{m}_{2}\ddot{m}_{2} + \dot{m}_{1}\ddot{m}_{1}\dot{m}_{3}\ddot{m}_{3} + \dot{m}_{2}\ddot{m}_{2}\dot{m}_{3}\ddot{m}_{3}\right)
+\end{align*}
+
+\begin{align*}
+& -\frac{(b^2-a^2)^2}{a^4 b^4 (\dot{m}_{1}^2 + \dot{m}_{2}^2 + \dot{m}_{3}^2)^2} \left((\dot{m}_{1}^2\ddot{m}_{2}^2 - \ddot{m}_{1}^2\dot{m}_{2}^2)^2 + (\dot{m}_{1}^2\ddot{m}_{3}^2 - \ddot{m}_{1}^2\dot{m}_{3}^2)^2 + (\dot{m}_{2}^2\ddot{m}_{3}^2 - \ddot{m}_{2}^2\dot{m}_{3}^2)^2 \right) \\
+& -\frac{(b^2-a^2)^2}{a^4 b^4 (\dot{m}_{1}^2 + \dot{m}_{2}^2 + \dot{m}_{3}^2)^2} \left( \dot{m}_{1}\ddot{m}_{1}\dot{m}_{2}\ddot{m}_{2} + \dot{m}_{1}\ddot{m}_{1}\dot{m}_{3}\ddot{m}_{3} + \dot{m}_{2}\ddot{m}_{2}\dot{m}_{3}\ddot{m}_{3}\right)
+\end{align*}

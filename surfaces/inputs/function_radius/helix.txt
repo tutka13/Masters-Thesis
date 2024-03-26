@@ -1,0 +1,5 @@
+curve_parametrization: cos(t), sin(t), t
+radius_function: 1+1/2*sin(t)
+step: 0.2
+t_values: -10, 10
+shift_array: -10, 11, 10

@@ -1,0 +1,7 @@
+expression: ratsimp(A1*x^2+B1*x*y+C1*y^2+D1*x+E1*y+F1)$
+substituted_expr: subst([x = m_1(t), y = m_2(t)], expression)$
+ratsimp(substituted_expr);
+
+expression: ratsimp(A1*x^2+B1*y^2+C1*z^2+D1*x*y+E1*x*z+F1*y*z+G1*x+H1*y+I1*z+J1)$
+substituted_expr: subst([x = m_1(t), y = m_2(t), z=m_3(t)], simplier)$
+ratsimp(substituted_expr);

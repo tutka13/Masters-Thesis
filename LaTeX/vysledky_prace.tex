@@ -134,3 +134,28 @@ Nech $a = 2, b = 1, $ elipsu teda škálujeme v dotykovom smere, potom v bode $t
 & -\frac{(b^2-a^2)^2}{a^4 b^4 (\dot{m}_{1}^2 + \dot{m}_{2}^2 + \dot{m}_{3}^2)^2} \left((\dot{m}_{1}^2\ddot{m}_{2}^2 - \ddot{m}_{1}^2\dot{m}_{2}^2)^2 + (\dot{m}_{1}^2\ddot{m}_{3}^2 - \ddot{m}_{1}^2\dot{m}_{3}^2)^2 + (\dot{m}_{2}^2\ddot{m}_{3}^2 - \ddot{m}_{2}^2\dot{m}_{3}^2)^2 \right) \\
 & -\frac{(b^2-a^2)^2}{a^4 b^4 (\dot{m}_{1}^2 + \dot{m}_{2}^2 + \dot{m}_{3}^2)^2} \left( \dot{m}_{1}\ddot{m}_{1}\dot{m}_{2}\ddot{m}_{2} + \dot{m}_{1}\ddot{m}_{1}\dot{m}_{3}\ddot{m}_{3} + \dot{m}_{2}\ddot{m}_{2}\dot{m}_{3}\ddot{m}_{3}\right)
 \end{align*}
+
+Pokračujme vo výpočte obálky. Majme elipsu po zmene bázy s vyjadrením
+\begin{align*}
+(x-m_1(t))^2(\frac{\dot{m}_1^2(t)}{a^2} + \frac{\dot{m}_2^2(t)}{b^2}) + 2(x-m_1(t))(y-m_2(t))\dot{m}_1(t)\dot{m}_2(t)(\frac{1}{a^2}-\frac{1}{b^2}) \\ 
++ (y-m_2(t))^2(\frac{\dot{m}_2^2(t)}{a^2} + \frac{\dot{m}_1^2(t)}{b^2}) - \| \dot{m}(t) \|^2 = 0,
+\end{align*}
+Prepíšme túto rovnicu do maticového zápisu. Máme kužeľosečku tvaru $$
+Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0.$$
+$$
+\left(\begin{matrix} x \\ y \\ z  \\ 1
+\end{matrix} \right)^T \left(\begin{matrix} 
+A & \frac{B}{2} & \frac{D}{2} \\
+\frac{B}{2} & C & \frac{E}{2} \\
+\frac{D}{2} & \frac{E}{2} & F 
+\end{matrix} \right)\left(\begin{matrix} x \\ y \\ z \\ 1
+\end{matrix} \right) = 0,
+$$, kde maticu označme $M(t).$
+
+\[
+M(t) = \begin{pmatrix} 
+\frac{\dot{m}_1^2}{a^2} + \frac{\dot{m}_2^2}{b^2} & \dot{m}_1\dot{m}_2\left(\frac{1}{a^2} - \frac{1}{b^2}\right) & - m_1\left(\frac{\dot{m}_1^2(t)}{a^2} + \frac{\dot{m}_2^2}{b^2}\right) - m_2 \dot{m}_1\dot{m}_2\left(\frac{1}{a^2} - \frac{1}{b^2}\right) \\
+\dot{m}_1\dot{m}_2\left(\frac{1}{a^2} - \frac{1}{b^2}\right) & \frac{\dot{m}_2^2}{a^2} + \frac{\dot{m}_1^2}{b^2} & - m_2\left(\frac{\dot{m}_2^2(t)}{a^2} + \frac{\dot{m}_1^2}{b^2}\right) - m_1 \dot{m}_1\dot{m}_2\left(\frac{1}{a^2} - \frac{1}{b^2}\right) \\
+- m_1\left(\frac{\dot{m}_1^2(t)}{a^2} + \frac{\dot{m}_2^2}{b^2}\right)  - m_2 \dot{m}_1\dot{m}_2\left(\frac{1}{a^2} - \frac{1}{b^2}\right) & - m_2\left(\frac{\dot{m}_2^2(t)}{a^2} + \frac{\dot{m}_1^2}{b^2}\right) - m_1 \dot{m}_1\dot{m}_2\left(\frac{1}{a^2} - \frac{1}{b^2}\right) & F 
+\end{pmatrix}
+\]

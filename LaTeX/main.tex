@@ -12,20 +12,17 @@
 \usepackage{amsmath}
 \usepackage{float}
 \usepackage{amsthm}
-\usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{xfrac}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{gensymb}
-\usepackage{enumitem}
 
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18, width=10cm}
 
 \newtheorem{definition}{Definícia}[chapter]
 \newtheorem{theorem}{Veta}[chapter]
-\newtheorem{lemma}{Lema}[chapter]
 
 \theoremstyle{definition}
 \newtheorem{corollary}{Dôsledok}[chapter]
@@ -55,6 +52,7 @@ scrscaled=1.1]{mathalpha}
 \def\mfodbor{1113 Matematika} 
 \def\program{ Počítačová grafika a geometria }
 \def\mfpracovisko{ Katedra algebry a geometrie }
+
 \begin{document}     
 \frontmatter
 
@@ -78,7 +76,7 @@ Fakulta matematiky, fyziky a informatiky
 \vfill
 
 {\sc\large 
-\noindent \mfrok \hfill
+\noindent \mfrok\\
 \mfautor
 }
 
@@ -135,7 +133,7 @@ Fakulta matematiky, fyziky a informatiky
 
 \newpage 
 \thispagestyle{empty}
-\hspace{-2cm}\includegraphics[width=1.1\textwidth]{images/zadanieJT.pdf}
+\hspace{-2cm}\includegraphics[width=1.1\textwidth]{images/zadanie.pdf}
 
 % --- Koniec zadania
 
@@ -149,7 +147,9 @@ Fakulta matematiky, fyziky a informatiky
 ~
 
 \vfill
-{\bf Poďakovanie:}
+{\bf Poďakovanie:} Tu môžete poďakovať školiteľovi, prípadne
+ďalším osobám, ktoré vám s prácou nejako pomohli, poradili,
+poskytli dáta a podobne.
 
 % --- Koniec poďakovania
 
@@ -158,8 +158,10 @@ Fakulta matematiky, fyziky a informatiky
 % -------------------
 \newpage 
 \section*{Abstrakt}
-Tutková, Jana: Obálka systému plôch. Diplomová práca, Univerzita Komenského. Fakulta matematiky, fyziky a informatiky; Katedra algebry a geometrie. Bratislava: FMFI UK, 2023.
-
+Slovenský abstrakt v rozsahu 100-500 slov, jeden odstavec. Abstrakt
+stručne sumarizuje výsledky práce. Mal by byť pochopiteľný pre bežného
+informatika. Nemal by teda využívať skratky, termíny alebo označenie
+zavedené v práci, okrem tých, ktoré sú všeobecne známe.
 
 \paragraph*{Kľúčové slová:} obálka plôch, systém kvadratických plôch
 % --- Koniec Abstrakt - Slovensky
@@ -170,11 +172,11 @@ Tutková, Jana: Obálka systému plôch. Diplomová práca, Univerzita Komenské
 % -------------------
 \newpage 
 \section*{Abstract}
-Tutková, Jana: Envelope of a system of surfaces. Master's  thesis, Comenius University. Faculty of Mathematics, Physics and Informatics; Department of algebra and geometry. Bratislava: FMFI UK, 2023.
+Abstract in the English language (translation of the abstract in the
+Slovak language).
 
 
-
-\paragraph*{Keywords:} envelope of surfaces, system of quadratic surfaces
+\paragraph*{Keywords:} envelope of surfaces, system of surfaces
 
 % --- Koniec Abstrakt - Anglicky
 
@@ -224,9 +226,7 @@ Tutková, Jana: Envelope of a system of surfaces. Master's  thesis, Comenius Uni
 
 \input kapitola.tex
 
-\input numerika.tex
-
-\input obalka_sfer.tex
+\input matematicky_model.tex
 
 \input implementacia.tex
 

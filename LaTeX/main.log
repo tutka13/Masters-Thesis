@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.25)  26 MAR 2024 21:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.25)  29 MAR 2024 14:12
 entering extended mode
 **./main.tex
 (main.tex
@@ -400,15 +400,6 @@ Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
 ) (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/latex/was\gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
 )
-(C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
-Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip57
-\enit@outerparindent=\dimen177
-\enit@toks=\toks33
-\enit@inbox=\box57
-\enit@count@id=\count292
-\enitdp@description=\count293
-)
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.rev
 ision.tex)
@@ -421,15 +412,15 @@ sty
 y
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -common.tex
-\pgfutil@everybye=\toks34
-\pgfutil@tempdima=\dimen178
-\pgfutil@tempdimb=\dimen179
+\pgfutil@everybye=\toks33
+\pgfutil@tempdima=\dimen177
+\pgfutil@tempdimb=\dimen178
 
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -common-lists.tex))
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
 -latex.def
-\pgfutil@abb=\box58
+\pgfutil@abb=\box57
 )
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
 code.tex
@@ -448,33 +439,33 @@ Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
 
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
 .code.tex
-\pgfkeys@pathtoks=\toks35
-\pgfkeys@temptoks=\toks36
+\pgfkeys@pathtoks=\toks34
+\pgfkeys@temptoks=\toks35
 
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
 filtered.code.tex
-\pgfkeys@tmptoks=\toks37
+\pgfkeys@tmptoks=\toks36
 ))
-\pgf@x=\dimen180
-\pgf@y=\dimen181
-\pgf@xa=\dimen182
-\pgf@ya=\dimen183
-\pgf@xb=\dimen184
-\pgf@yb=\dimen185
-\pgf@xc=\dimen186
-\pgf@yc=\dimen187
-\pgf@xd=\dimen188
-\pgf@yd=\dimen189
+\pgf@x=\dimen179
+\pgf@y=\dimen180
+\pgf@xa=\dimen181
+\pgf@ya=\dimen182
+\pgf@xb=\dimen183
+\pgf@yb=\dimen184
+\pgf@xc=\dimen185
+\pgf@yc=\dimen186
+\pgf@xd=\dimen187
+\pgf@yd=\dimen188
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count294
-\c@pgf@countb=\count295
-\c@pgf@countc=\count296
-\c@pgf@countd=\count297
-\t@pgf@toka=\toks38
-\t@pgf@tokb=\toks39
-\t@pgf@tokc=\toks40
-\pgf@sys@id@count=\count298
+\c@pgf@counta=\count292
+\c@pgf@countb=\count293
+\c@pgf@countc=\count294
+\c@pgf@countd=\count295
+\t@pgf@toka=\toks37
+\t@pgf@tokb=\toks38
+\t@pgf@tokc=\toks39
+\pgf@sys@id@count=\count296
 
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
 fg
@@ -493,8 +484,8 @@ File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 ssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count299
-\pgfsyssoftpath@bigbuffer@items=\count300
+\pgfsyssoftpath@smallbuffer@items=\count297
+\pgfsyssoftpath@bigbuffer@items=\count298
 )
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
 sprotocol.code.tex
@@ -529,12 +520,12 @@ code.tex
 code.tex)
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
 r.code.tex
-\pgfmath@dimen=\dimen190
-\pgfmath@count=\count301
-\pgfmath@box=\box59
-\pgfmath@toks=\toks41
-\pgfmath@stack@operand=\toks42
-\pgfmath@stack@operation=\toks43
+\pgfmath@dimen=\dimen189
+\pgfmath@count=\count299
+\pgfmath@box=\box58
+\pgfmath@toks=\toks40
+\pgfmath@stack@operand=\toks41
+\pgfmath@stack@operation=\toks42
 )
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
 ions.code.tex
@@ -556,59 +547,59 @@ ions.misc.code.tex)
 ions.integerarithmetics.code.tex)))
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
 .code.tex
-\c@pgfmathroundto@lastzeros=\count302
+\c@pgfmathroundto@lastzeros=\count300
 ))
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
 tex)
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epoints.code.tex
 File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@picminx=\dimen191
-\pgf@picmaxx=\dimen192
-\pgf@picminy=\dimen193
-\pgf@picmaxy=\dimen194
-\pgf@pathminx=\dimen195
-\pgf@pathmaxx=\dimen196
-\pgf@pathminy=\dimen197
-\pgf@pathmaxy=\dimen198
-\pgf@xx=\dimen199
-\pgf@xy=\dimen256
-\pgf@yx=\dimen257
-\pgf@yy=\dimen258
-\pgf@zx=\dimen259
-\pgf@zy=\dimen260
+\pgf@picminx=\dimen190
+\pgf@picmaxx=\dimen191
+\pgf@picminy=\dimen192
+\pgf@picmaxy=\dimen193
+\pgf@pathminx=\dimen194
+\pgf@pathmaxx=\dimen195
+\pgf@pathminy=\dimen196
+\pgf@pathmaxy=\dimen197
+\pgf@xx=\dimen198
+\pgf@xy=\dimen199
+\pgf@yx=\dimen256
+\pgf@yy=\dimen257
+\pgf@zx=\dimen258
+\pgf@zy=\dimen259
 )
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@path@lastx=\dimen261
-\pgf@path@lasty=\dimen262
+\pgf@path@lastx=\dimen260
+\pgf@path@lasty=\dimen261
 )
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 epathusage.code.tex
 File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@shorten@end@additional=\dimen263
-\pgf@shorten@start@additional=\dimen264
+\pgf@shorten@end@additional=\dimen262
+\pgf@shorten@start@additional=\dimen263
 )
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 escopes.code.tex
 File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfpic=\box60
-\pgf@hbox=\box61
-\pgf@layerbox@main=\box62
-\pgf@picture@serial@count=\count303
+\pgfpic=\box59
+\pgf@hbox=\box60
+\pgf@layerbox@main=\box61
+\pgf@picture@serial@count=\count301
 )
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 egraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgflinewidth=\dimen265
+\pgflinewidth=\dimen264
 )
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 etransformations.code.tex
 File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@pt@x=\dimen266
-\pgf@pt@y=\dimen267
-\pgf@pt@temp=\dimen268
+\pgf@pt@x=\dimen265
+\pgf@pt@y=\dimen266
+\pgf@pt@temp=\dimen267
 )
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 equick.code.tex
@@ -625,14 +616,14 @@ File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 earrows.code.tex
 File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowsep=\dimen269
+\pgfarrowsep=\dimen268
 )
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@max=\dimen270
-\pgf@sys@shading@range@num=\count304
-\pgf@shadingcount=\count305
+\pgf@max=\dimen269
+\pgf@sys@shading@range@num=\count302
+\pgf@shadingcount=\count303
 )
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eimage.code.tex
@@ -641,7 +632,7 @@ File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 eexternal.code.tex
 File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfexternal@startupbox=\box63
+\pgfexternal@startupbox=\box62
 ))
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
 elayers.code.tex
@@ -662,7 +653,7 @@ File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 shapes.code.tex
 File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfnodeparttextbox=\box64
+\pgfnodeparttextbox=\box63
 )
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 plot.code.tex
@@ -671,8 +662,8 @@ File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
 mp-version-0-65.sty
 Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@nodesepstart=\dimen271
-\pgf@nodesepend=\dimen272
+\pgf@nodesepstart=\dimen270
+\pgf@nodesepend=\dimen271
 )
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
 mp-version-1-18.sty
@@ -693,10 +684,10 @@ Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
 
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
 .tex)
-\pgffor@iter=\dimen273
-\pgffor@skip=\dimen274
-\pgffor@stack=\toks44
-\pgffor@toks=\toks45
+\pgffor@iter=\dimen272
+\pgffor@skip=\dimen273
+\pgffor@stack=\toks43
+\pgffor@toks=\toks44
 ))
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z\tikz.code.tex
@@ -705,34 +696,34 @@ Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count306
-\pgfplotmarksize=\dimen275
+\pgf@plot@mark@count=\count304
+\pgfplotmarksize=\dimen274
 )
-\tikz@lastx=\dimen276
-\tikz@lasty=\dimen277
-\tikz@lastxsaved=\dimen278
-\tikz@lastysaved=\dimen279
-\tikz@lastmovetox=\dimen280
-\tikz@lastmovetoy=\dimen281
-\tikzleveldistance=\dimen282
-\tikzsiblingdistance=\dimen283
-\tikz@figbox=\box65
-\tikz@figbox@bg=\box66
-\tikz@tempbox=\box67
-\tikz@tempbox@bg=\box68
-\tikztreelevel=\count307
-\tikznumberofchildren=\count308
-\tikznumberofcurrentchild=\count309
-\tikz@fig@count=\count310
+\tikz@lastx=\dimen275
+\tikz@lasty=\dimen276
+\tikz@lastxsaved=\dimen277
+\tikz@lastysaved=\dimen278
+\tikz@lastmovetox=\dimen279
+\tikz@lastmovetoy=\dimen280
+\tikzleveldistance=\dimen281
+\tikzsiblingdistance=\dimen282
+\tikz@figbox=\box64
+\tikz@figbox@bg=\box65
+\tikz@tempbox=\box66
+\tikz@tempbox@bg=\box67
+\tikztreelevel=\count305
+\tikznumberofchildren=\count306
+\tikznumberofcurrentchild=\count307
+\tikz@fig@count=\count308
 
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 matrix.code.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count311
-\pgfmatrixcurrentcolumn=\count312
-\pgf@matrix@numberofcolumns=\count313
+\pgfmatrixcurrentrow=\count309
+\pgfmatrixcurrentcolumn=\count310
+\pgf@matrix@numberofcolumns=\count311
 )
-\tikz@expandcount=\count314
+\tikz@expandcount=\count312
 
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarytopaths.code.tex
@@ -742,12 +733,12 @@ File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 e.tex
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore
 .code.tex
-\t@pgfplots@toka=\toks46
-\t@pgfplots@tokb=\toks47
-\t@pgfplots@tokc=\toks48
-\pgfplots@tmpa=\dimen284
-\c@pgfplots@coordindex=\count315
-\c@pgfplots@scanlineindex=\count316
+\t@pgfplots@toka=\toks45
+\t@pgfplots@tokb=\toks46
+\t@pgfplots@tokc=\toks47
+\pgfplots@tmpa=\dimen283
+\c@pgfplots@coordindex=\count313
+\c@pgfplots@scanlineindex=\count314
 
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplots
 sysgeneric.code.tex))
@@ -765,14 +756,14 @@ e\pgfplotsliststructure.code.tex)
 e\pgfplotsliststructureext.code.tex)
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
 e\pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count317
+\c@pgfplotsarray@tmp=\count315
 )
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
 e\pgfplotsmatrix.code.tex)
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgf
 plotstableshared.code.tex
-\c@pgfplotstable@counta=\count318
-\t@pgfplotstable@a=\toks49
+\c@pgfplotstable@counta=\count316
+\t@pgfplotstable@a=\toks48
 )
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
 e\pgfplotsdeque.code.tex)
@@ -784,7 +775,7 @@ sbinary.data.code.tex))
 sutil.verb.code.tex)
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibr
 arypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count319
+\c@pgfplotslibrarysurf@no=\count317
 
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibra
 rypgfplots.surfshading.pgfsys-pdftex.def)))
@@ -816,16 +807,16 @@ hs.code.tex)
 z/libraries\tikzlibrarydecorations.code.tex
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
 decorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen285
-\pgfdecoratedremainingdistance=\dimen286
-\pgfdecoratedinputsegmentcompleteddistance=\dimen287
-\pgfdecoratedinputsegmentremainingdistance=\dimen288
-\pgf@decorate@distancetomove=\dimen289
-\pgf@decorate@repeatstate=\count320
-\pgfdecorationsegmentamplitude=\dimen290
-\pgfdecorationsegmentlength=\dimen291
+\pgfdecoratedcompleteddistance=\dimen284
+\pgfdecoratedremainingdistance=\dimen285
+\pgfdecoratedinputsegmentcompleteddistance=\dimen286
+\pgfdecoratedinputsegmentremainingdistance=\dimen287
+\pgf@decorate@distancetomove=\dimen288
+\pgf@decorate@repeatstate=\count318
+\pgfdecorationsegmentamplitude=\dimen289
+\pgfdecorationsegmentlength=\dimen290
 )
-\tikz@lib@dec@box=\box69
+\tikz@lib@dec@box=\box68
 )
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibrarydecorations.pathmorphing.code.tex
@@ -837,13 +828,13 @@ z/libraries\tikzlibrarydecorations.pathreplacing.code.tex
 ions\pgflibrarydecorations.pathreplacing.code.tex))
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlib
 rarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count321
-\pgfplots@xmin@reg=\dimen292
-\pgfplots@xmax@reg=\dimen293
-\pgfplots@ymin@reg=\dimen294
-\pgfplots@ymax@reg=\dimen295
-\pgfplots@zmin@reg=\dimen296
-\pgfplots@zmax@reg=\dimen297
+\pgfplots@numplots=\count319
+\pgfplots@xmin@reg=\dimen291
+\pgfplots@xmax@reg=\dimen292
+\pgfplots@ymin@reg=\dimen293
+\pgfplots@ymax@reg=\dimen294
+\pgfplots@zmin@reg=\dimen295
+\pgfplots@zmax@reg=\dimen296
 )
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
 z/libraries\tikzlibraryplotmarks.code.tex
@@ -853,12 +844,11 @@ File: tikzlibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 aryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
-\c@definition=\count322
-\c@theorem=\count323
-\c@lemma=\count324
-\c@corollary=\count325
-\c@note=\count326
-\c@example=\count327
+\c@definition=\count320
+\c@theorem=\count321
+\c@corollary=\count322
+\c@note=\count323
+\c@example=\count324
 
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/latex/mathalpha\mathalpha.sty
 Package: mathalpha 2021/11/18 - 1.143mathalpha (License LPPL) Michael Sharpe
@@ -868,10 +858,10 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks50
-\XKV@tempa@toks=\toks51
+\XKV@toks=\toks49
+\XKV@tempa@toks=\toks50
 )
-\XKV@depth=\count328
+\XKV@depth=\count325
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 LaTeX Font Info:    Overwriting math alphabet `\mathscr' in version `bold'
@@ -879,24 +869,24 @@ LaTeX Font Info:    Overwriting math alphabet `\mathscr' in version `bold'
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -936,17 +926,17 @@ LaTeX Font Info:    ... okay on input line 58.
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count329
-\scratchdimen=\dimen298
-\scratchbox=\box70
-\nofMPsegments=\count330
-\nofMParguments=\count331
-\everyMPshowfont=\toks52
-\MPscratchCnt=\count332
-\MPscratchDim=\dimen299
-\MPnumerator=\count333
-\makeMPintoPDFobject=\count334
-\everyMPtoPDFconversion=\toks53
+\scratchcounter=\count326
+\scratchdimen=\dimen297
+\scratchbox=\box69
+\nofMPsegments=\count327
+\nofMParguments=\count328
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count329
+\MPscratchDim=\dimen298
+\MPnumerator=\count330
+\makeMPintoPDFobject=\count331
+\everyMPtoPDFconversion=\toks52
 )
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -966,7 +956,7 @@ G,.JBIG2,.JB2,.eps]
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 58.
+Package hyperref Info: Link coloring OFF on input line 56.
 
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -978,11 +968,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count335
+\c@section@level=\count332
 )
-LaTeX Info: Redefining \ref on input line 58.
-LaTeX Info: Redefining \pageref on input line 58.
-LaTeX Info: Redefining \nameref on input line 58.
+LaTeX Info: Redefining \ref on input line 56.
+LaTeX Info: Redefining \pageref on input line 56.
+LaTeX Info: Redefining \nameref on input line 56.
  (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -991,15 +981,15 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \symgns@font=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/cmr/m/n --> TS1/cmr/b/n on input line 58.
-Package gensymb Info: Math companion symbols declared on input line 58.
-LaTeX Info: Redefining \degree on input line 58.
-LaTeX Info: Redefining \celsius on input line 58.
+(Font)                  TS1/cmr/m/n --> TS1/cmr/b/n on input line 56.
+Package gensymb Info: Math companion symbols declared on input line 56.
+LaTeX Info: Redefining \degree on input line 56.
+LaTeX Info: Redefining \celsius on input line 56.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 58.
-LaTeX Info: Redefining \ohm on input line 58.
-Package gensymb Info: Using \textohm for \ohm on input line 58.
-Package gensymb Info: Using \textmu for \micro on input line 58.
+erthousand on input line 56.
+LaTeX Info: Redefining \ohm on input line 56.
+Package gensymb Info: Using \textohm for \ohm on input line 56.
+Package gensymb Info: Using \textmu for \micro on input line 56.
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
@@ -1008,30 +998,30 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 
 {C:/Users/tutko/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 110
+LaTeX Font Info:    Trying to load font information for U+msa on input line 108
 .
 
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 110
+LaTeX Font Info:    Trying to load font information for U+msb on input line 108
 .
 
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 [2]
-<images/zadanieJT.pdf, id=154, 597.50731pt x 845.04607pt>
-File: images/zadanieJT.pdf Graphic file (type pdf)
-<use images/zadanieJT.pdf>
-Package pdftex.def Info: images/zadanieJT.pdf  used on input line 138.
+<images/zadanie.pdf, id=126, 597.50731pt x 845.04607pt>
+File: images/zadanie.pdf Graphic file (type pdf)
+<use images/zadanie.pdf>
+Package pdftex.def Info: images/zadanie.pdf  used on input line 136.
 (pdftex.def)             Requested size: 485.1222pt x 686.09537pt.
 
-Overfull \hbox (4.82378pt too wide) in paragraph at lines 138--139
+Overfull \hbox (4.82378pt too wide) in paragraph at lines 136--137
 [] [] 
  []
 
-[3 <./images/zadanieJT.pdf>] [4
+[3 <./images/zadanie.pdf>] [4
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.iii}) h
 as been already used, duplicate ignored
@@ -1042,20 +1032,20 @@ l.159 \newpage
 name{page.iv}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.171 \newpage
+l.173 \newpage
                [4] [5] [6
 
-] (main.toc [7])
+] (main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [8] (main.lof)
+ [7] [8
+
+] (main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [9
-
-] [10
+ [9] [10
 
 ] (main.lot)
 \tf@lot=\write7
@@ -1070,7 +1060,7 @@ l.171 \newpage
 
 ]
 Kapitola 1.
-<images/system.pdf, id=311, 462.52798pt x 346.89601pt>
+<images/system.pdf, id=274, 462.52798pt x 346.89601pt>
 File: images/system.pdf Graphic file (type pdf)
 <use images/system.pdf>
 Package pdftex.def Info: images/system.pdf  used on input line 9.
@@ -1081,7 +1071,7 @@ Overfull \hbox (21.50911pt too wide) in paragraph at lines 9--10
  []
 
 [3 <./images/system.pdf>]
-<images/one_element_of_system.pdf, id=352, 462.52798pt x 346.89601pt>
+<images/one_element_of_system.pdf, id=315, 462.52798pt x 346.89601pt>
 File: images/one_element_of_system.pdf Graphic file (type pdf)
 <use images/one_element_of_system.pdf>
 Package pdftex.def Info: images/one_element_of_system.pdf  used on input line 3
@@ -1106,7 +1096,7 @@ ol kolmý na $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )[]$
  []
 
 [6]
-<images/concentric_circles.pdf, id=405, 462.52798pt x 346.89601pt>
+<images/concentric_circles.pdf, id=368, 462.52798pt x 346.89601pt>
 File: images/concentric_circles.pdf Graphic file (type pdf)
 <use images/concentric_circles.pdf>
 Package pdftex.def Info: images/concentric_circles.pdf  used on input line 111.
@@ -1122,7 +1112,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
 [8 <./images/concentric_circles.pdf>]
-<images/system_with_envelope_unlimited_domain.pdf, id=439, 462.52798pt x 346.89
+<images/system_with_envelope_unlimited_domain.pdf, id=402, 462.52798pt x 346.89
 601pt>
 File: images/system_with_envelope_unlimited_domain.pdf Graphic file (type pdf)
 <use images/system_with_envelope_unlimited_domain.pdf>
@@ -1134,7 +1124,7 @@ Overfull \hbox (21.50911pt too wide) in paragraph at lines 139--140
  [][] 
  []
 
-<images/system_with_correct_envelope.pdf, id=441, 462.52798pt x 346.89601pt>
+<images/system_with_correct_envelope.pdf, id=404, 462.52798pt x 346.89601pt>
 File: images/system_with_correct_envelope.pdf Graphic file (type pdf)
 <use images/system_with_correct_envelope.pdf>
 Package pdftex.def Info: images/system_with_correct_envelope.pdf  used on input
@@ -1147,7 +1137,7 @@ Overfull \hbox (21.50911pt too wide) in paragraph at lines 148--149
 
 [9 <./images/system_with_envelope_unlimited_domain.pdf> <./images/system_with_c
 orrect_envelope.pdf>]
-<images/too_complicated_equations.pdf, id=489, 462.52798pt x 346.89601pt>
+<images/too_complicated_equations.pdf, id=452, 462.52798pt x 346.89601pt>
 File: images/too_complicated_equations.pdf Graphic file (type pdf)
 <use images/too_complicated_equations.pdf>
 Package pdftex.def Info: images/too_complicated_equations.pdf  used on input li
@@ -1168,7 +1158,7 @@ r/m/n/12 + 96419840\OML/cmm/m/it/12 x[]y[] \OT1/cmr/m/n/12 +
  []
 
 [11]
-<images/resultant.pdf, id=538, 462.52798pt x 346.89601pt>
+<images/resultant.pdf, id=501, 462.52798pt x 346.89601pt>
 File: images/resultant.pdf Graphic file (type pdf)
 <use images/resultant.pdf>
 Package pdftex.def Info: images/resultant.pdf  used on input line 195.
@@ -1182,7 +1172,7 @@ Overfull \hbox (21.50911pt too wide) in paragraph at lines 195--196
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12 <./images/resultant.pdf>] [13]
-<images/lines_in_normal_form.pdf, id=580, 462.52798pt x 346.89601pt>
+<images/lines_in_normal_form.pdf, id=543, 462.52798pt x 346.89601pt>
 File: images/lines_in_normal_form.pdf Graphic file (type pdf)
 <use images/lines_in_normal_form.pdf>
 Package pdftex.def Info: images/lines_in_normal_form.pdf  used on input line 25
@@ -1198,7 +1188,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
 [15 <./images/lines_in_normal_form.pdf>]
-<images/odr.pdf, id=609, 462.52798pt x 346.89601pt>
+<images/odr.pdf, id=572, 462.52798pt x 346.89601pt>
 File: images/odr.pdf Graphic file (type pdf)
 <use images/odr.pdf>
 Package pdftex.def Info: images/odr.pdf  used on input line 283.
@@ -1209,7 +1199,7 @@ Overfull \hbox (21.50911pt too wide) in paragraph at lines 283--284
  []
 
 [16 <./images/odr.pdf>] [17]
-<images/webbbridge.jpg, id=650, 1806.75pt x 1204.5pt>
+<images/webbbridge.jpg, id=613, 1806.75pt x 1204.5pt>
 File: images/webbbridge.jpg Graphic file (type jpg)
 <use images/webbbridge.jpg>
 Package pdftex.def Info: images/webbbridge.jpg  used on input line 351.
@@ -1218,188 +1208,297 @@ Package pdftex.def Info: images/webbbridge.jpg  used on input line 351.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (numerika.tex [18] [19 <./images/webbbridge.jpg>] [20
+) (matematicky_model.tex [18] [19 <./images/webbbridge.jpg>] [20
 
 ]
 Kapitola 2.
-[21] [22]
-Overfull \hbox (15.1864pt too wide) in paragraph at lines 47--48
-\T1/cmr/m/n/12 Ak po-známe za-£ia-to£ný bod $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 
-x[]; y[]; t[]\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 , v tomto bode vieme vy-£ís-li´ g
-ra-dient $\OMS/cmsy/m/n/12 r\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12
- x[]; y[]; t[]\OT1/cmr/m/n/12 )$
+[21]
+Overfull \hbox (2.9938pt too wide) in paragraph at lines 54--56
+\T1/cmr/m/n/12 je ro-vina kolmá na do-ty-kový vek-tor $[]\OT1/cmr/m/n/12 (\OML/
+cmm/m/it/12 t\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ;$ \T1/cmr/m/n/12 ak platí, ºe v
+ek-tory $\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; []; []\OT1/cmr/m/n/12 )$ \T1/cmr
+/m/n/12 a $\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; []; []\OT1/cmr/m/n/12 )$
  []
 
-[23] [24]) (obalka_sfer.tex [25] [26
+[22]
+Overfull \hbox (103.39523pt too wide) detected at line 106
+[] [] \OMS/cmsy/m/n/12   \OT1/cmr/m/n/12 1 = 0\OML/cmm/m/it/12 :
+ []
 
-]
+[23]
+Overfull \hbox (2.94427pt too wide) in paragraph at lines 152--153
+[]\T1/cmr/m/n/12 Pozrime sa de-ri-vá-ciu jed-no-pa-ra-met-ric-kého sys-tému elí
+ps pod©a pa-ra-metra $\OML/cmm/m/it/12 t;$ \T1/cmr/m/n/12 ozna£me
+ []
+
+! Extra }, or forgotten \right.
+<template> }
+            $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
+l.165 \end{align*}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.165 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.165 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.165 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \right.
+<argument> ... \ddot {m}_1}{b^2} \right ) \right )
+                                                   \\ 
+l.165 \end{align*}
+                  
+I'm ignoring a \right that had no matching \left.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.165 \end{align*}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Extra }, or forgotten \right.
+<template> }
+            $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
+l.165 \end{align*}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.165 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.165 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.165 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \right.
+<argument> ... \ddot {m}_1}{b^2} \right ) \right )
+                                                   \\ 
+l.165 \end{align*}
+                  
+I'm ignoring a \right that had no matching \left.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.165 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.165 \end{align*}
+                  
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.165 \end{align*}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (439.75333pt too wide) detected at line 165
+[]
+ []
+
+) (implementacia.tex [24]
 Kapitola 3.
-[27] [28]
-<images/rolling_ball_blends.png, id=723, 713.66624pt x 253.94875pt>
-File: images/rolling_ball_blends.png Graphic file (type png)
-<use images/rolling_ball_blends.png>
-Package pdftex.def Info: images/rolling_ball_blends.png  used on input line 83.
-
-(pdftex.def)             Requested size: 441.01773pt x 156.93121pt.
- [29] [30 <./images/rolling_ball_blends.png>] [31] [32] [33])
-(implementacia.tex [34]
-Kapitola 4.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 8
 .
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-[35
+[25
 
-] [36]) (vysledky_prace.tex [37] [38
+] [26]) (vysledky_prace.tex [27] [28
 
 ]
-Kapitola 5.
-
-Underfull \vbox (badness 6078) has occurred while \output is active []
-
- [39]
-Overfull \hbox (1.73001pt too wide) in paragraph at lines 51--53
-\T1/cmr/m/n/12 je ro-vina kolmá na do-ty-kový vek-tor $[]\OT1/cmr/m/n/12 (\OML/
-cmm/m/it/12 t\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ;$ \T1/cmr/m/n/12 ak platí, ºe v
-ek-tory $\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; []; []\OT1/cmr/m/n/12 )$ \T1/cmr
-/m/n/12 a $\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; []; []$
- []
-
-[40]
-Overfull \hbox (6.36407pt too wide) detected at line 116
-[]
- []
-
-
-Overfull \hbox (43.03766pt too wide) detected at line 120
-[]
- []
-
-[41]
-Overfull \hbox (411.71475pt too wide) detected at line 131
-[]
- []
-
-
-Overfull \hbox (246.94513pt too wide) detected at line 161
-\OML/cmm/m/it/12 M\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) = []
- []
-
-) (zaver.tex [42]) [43
-
-] [44
+Kapitola 4.
+) [29] [30
 
 ]
 No file main.bbl.
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
+Underfull \hbox (badness 10000) in paragraph at lines 264--265
 []\T1/cmr/m/n/12 Blender do-wn-load. Do-stupné na in-ter-nete:[]$\T1/cmtt/m/n/1
 2 https : / / www . blender . org /
  []
 
 
-Underfull \hbox (badness 2781) in paragraph at lines 268--269
+Underfull \hbox (badness 2781) in paragraph at lines 266--267
 []\T1/cmr/m/n/12 Biernet A. 2016. Vi-su-ali-sie-rung und gra-fis-che An-wen-dun
 g von Ka-nalf-lä-
  []
 
 
-Underfull \hbox (badness 2644) in paragraph at lines 274--275
+Underfull \hbox (badness 2644) in paragraph at lines 272--273
 \T1/cmr/m/n/12 sin. 10.18260/1-2--6898. Do-stupné na in-ter-nete: []$\T1/cmtt/m
 /n/12 https : / / 216 . 185 . 13 . 174 /
  []
 
-[45
+[31
 
 
 ]
-Underfull \hbox (badness 1082) in paragraph at lines 282--283
+Underfull \hbox (badness 1082) in paragraph at lines 280--281
 \T1/cmr/m/n/12 107. Do-stupné na in-ter-nete: []$\T1/cmtt/m/n/12 https : / / ww
 w . researchgate . net / publication /
  []
 
-[46]
-Underfull \hbox (badness 10000) in paragraph at lines 314--315
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 []\T1/cmr/m/n/12 Visual Stu-dio Code do-wn-load. Do-stupné na in-ter-nete:[]$\T
 1/cmtt/m/n/12 https : / / code .
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 316--317
+Underfull \hbox (badness 1331) in paragraph at lines 314--315
 []\T1/cmr/m/n/12 Vráblíková J. 2022. En-ve-lo-pes of im-pli-cit sur-fa-ces. Mat
 -he-ma-ti-cal Ins-ti-tute
  []
 
 
-Underfull \hbox (badness 5022) in paragraph at lines 316--317
+Underfull \hbox (badness 5022) in paragraph at lines 314--315
 \T1/cmr/m/n/12 of Char-les Uni-ver-sity. Pra-gue. Mas-ter's the-sis. Do-stupné 
 na in-ter-nete:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
 []$\T1/cmtt/m/n/12 https : / / dodo . is . cuni . cz / bitstream / handle / 20 
 . 500 . 11956 / 171858 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--319
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
 []\T1/cmr/m/n/12 Obrázok Web-bov Most. Do-stupné na in-ter-nete: []$\T1/cmtt/m/
 n/12 http : / / www .
  []
 
-[47] (AppendixA.tex [48
+[33] (AppendixA.tex [34
 
-] [49]
+] [35]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50]
+ [36]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51])
-[52] (main.aux)
+ [37])
+[38] (main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4D4541CE47530C6EE1AB554E6D4CA6DF;5367.
+(rerunfilecheck)             Checksum: 04CA92C872EF545745DF0D59FC7C2D9E;3905.
  ) 
 Here is how much of TeX's memory you used:
- 33776 strings out of 478927
- 779572 string characters out of 2852534
- 1248589 words of memory out of 3000000
- 50823 multiletter control sequences out of 15000+600000
+ 33379 strings out of 478927
+ 772985 string characters out of 2852534
+ 1241038 words of memory out of 3000000
+ 50480 multiletter control sequences out of 15000+600000
  422711 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,18n,103p,1211b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,12n,103p,1186b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-sup
-er-t1.enc}{C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-supe
-r/cm-super-ts1.enc}<C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+er-ts1.enc}{C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-sup
+er/cm-super-t1.enc}<C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/pu
 blic/amsfonts/cm/cmex10.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/tutko/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/tutko/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/tutko/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/tutko/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users
-/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
-6.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmr8.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmsy8.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/tutko/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/tutko/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Users/tutko/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Users/t
-utko/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx2488.pfb><C:
-/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfcc1440
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/tutko/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tutko/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users
+/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C
+:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8
+.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmsy8.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/symbols/msbm10.pfb><C:/Users/tutko/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/tutko/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Users/tutko/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Users/tutko/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx2488.pfb><C:/Users/t
+utko/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfcc1440.pfb><C:
+/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfcc2074
 .pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/
-sfcc2074.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/c
-m-super/sfrm1200.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/cm-super/sfsl1200.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/font
-s/type1/public/cm-super/sfti1200.pfb><C:/Users/tutko/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (66 pages, 2226010 bytes).
+sfrm1200.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/c
+m-super/sfsl1200.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/cm-super/sfti1200.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/font
+s/type1/public/cm-super/sftt1200.pfb>
+Output written on main.pdf (52 pages, 2124522 bytes).
 PDF statistics:
- 1052 PDF objects out of 1200 (max. 8388607)
- 191 named destinations out of 1000 (max. 500000)
- 399 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 903 PDF objects out of 1000 (max. 8388607)
+ 149 named destinations out of 1000 (max. 500000)
+ 338 words of extra memory for PDF output out of 10000 (max. 10000000)
 

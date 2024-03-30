@@ -2,14 +2,14 @@
 V tejto časti opisujeme jazyk, ktorý sme vybrali a rôzne knižnice a doplnky, pomocou
 ktorých sme vyvíjali časti nášho doplnku. Takisto uvedieme dôvody výberu.
 \section{Motivácia}
-bude to špecifikácia softvérového diela?
+\section{Špecifikácia}
 \section{Blender}
 Blender je bezplatný softvér s otvoreným zdrojovým kódom, určený pre prácu s objektmi v 3D priestore. Využíva OpenGL, štandard v priemysle pre renderovanie, a je kompatibilný s operačnými systémami Windows, Linux a macOS. 
-Blender poskytuje širokú škálu nástrojov pre tvorbu 3D obsahu vrátane modelovania, animácie, simulácie fyzikálnych procesov, úpravy videa a efektových vizualizácií. S relatívne nízkymi nárokmi na pamäť a disk je vhodný aj pre menej výkonné počítače. Jeho rozhranie je optimalizované pomocou OpenGL pre konzistentný výkon na rôznych hardvérových platformách. Je ideálny pre jednotlivcov a malé štúdiá, ktoré využívajú jeho jednotnú pipeline. S podporou komunity \url{blender.org/community} a malým spustiteľným súborom je Blender flexibilným a výkonným nástrojom pre tvorbu 3D obsahu na rôzne platformy. \cite{Blender}
+Blender poskytuje širokú škálu nástrojov pre tvorbu 3D obsahu vrátane modelovania, animácie, simulácie fyzikálnych procesov, úpravy videa a efektových vizualizácií. S relatívne nízkymi nárokmi na pamäť a disk je vhodný aj pre menej výkonné počítače. Jeho rozhranie je optimalizované pomocou OpenGL pre konzistentný výkon na rôznych hardvérových platformách. Je ideálny pre jednotlivcov a malé štúdiá, ktoré využívajú jeho jednotnú pipeline. S podporou komunity \url{blender.org/community} a malým spustiteľným súborom je Blender flexibilným a výkonným nástrojom pre tvorbu 3D obsahu na rôzne platformy \cite{Blender}. 
 \section{Skriptovanie}
 Pre skúsených užívateľov Blender umožňuje rozšírenie svojej funkcionality a vytvorenie vlastných nástrojov pomocou skriptovacieho jazyka Python. Tento jazyk je integrovaný priamo do softvéru, teda nie je potreba samostatnej inštalácie Pythonu. Okrem toho Blender obsahuje špeciálnu knižnicu bpy, ktorá slúži na vykonávanie príkazov v Blenderi.
 
-Používateľ má k dispozícii niekoľko prednastavených prostredí. Na vytváranie skriptov slúži prostredie Scripting, ktoré obsahuje okná na písanie, úpravu textu a Python konzolu. Je možné pracovať aj v externom programovacom prostredí.\cite{BlenderAPI}
+Používateľ má k dispozícii niekoľko prednastavených prostredí. Na vytváranie skriptov slúži prostredie Scripting, ktoré obsahuje okná na písanie, úpravu textu a Python konzolu. Je možné pracovať aj v externom programovacom prostredí \cite{BlenderAPI}.
 \section{Python}
 Jediným jazykom, ktorý je k dispozícii na skriptovanie v Blenderi, je programovací jazyk Python. Python je interpretovaný, vysokoúrovňový a dynamický jazyk, ktorý má široké uplatnenie v rôznych odvetviach. Jeho charakteristickým rysom je používanie odsadenia, ktoré má v tomto programovacom jazyku kľúčový význam, pretože slúži ako indikátor bloku kódu. V našej aplikácii pracujeme s verziou 3.11 jazyka Python.
 \subsection{Knižnice}

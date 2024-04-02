@@ -4,7 +4,7 @@ System:
 Derivation:
 \frac{2 \cdot \left(2 a^{2} \cdot \left(2 t \left(t^{2} + 2 t \left(- t + x\right) - y\right) + \left(t - x\right) \left(4 t^{2} + 1\right)\right) \left(- t^{2} + 2 t \left(t - x\right) + y\right) + b^{2} \cdot \left(4 t \left(2 t \left(- t^{2} + y\right) - t + x\right) + \left(4 t^{2} + 1\right) \left(6 t^{2} - 2 y + 1\right)\right) \left(2 t \left(t^{2} - y\right) + t - x\right)\right)}{a^{2} b^{2} \left(4 t^{2} + 1\right)^{2}} = 0
 Time:
-1.675166130065918
+5.98702597618103
 Determinant:
 0
 Subdeterminant:

@@ -4,7 +4,7 @@ System:
 Derivation:
 \frac{2 \cdot \left(5 t - 2 x - y\right)}{a^{2}} = 0
 Time:
-0.26409053802490234
+1.0248873233795166
 Determinant:
 0
 Subdeterminant:

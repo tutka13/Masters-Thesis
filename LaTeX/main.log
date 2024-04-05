@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.25)  5 APR 2024 12:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.25)  5 APR 2024 19:47
 entering extended mode
 **./main.tex
 (main.tex
@@ -1012,7 +1012,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 108
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 [2]
-<images/zadanie.pdf, id=162, 597.50731pt x 845.04607pt>
+<images/zadanie.pdf, id=170, 597.50731pt x 845.04607pt>
 File: images/zadanie.pdf Graphic file (type pdf)
 <use images/zadanie.pdf>
 Package pdftex.def Info: images/zadanie.pdf  used on input line 136.
@@ -1061,7 +1061,7 @@ l.172 \newpage
 
 ]
 Kapitola 1.
-<images/theater.jpg, id=327, 297.7524pt x 240.9pt>
+<images/theater.jpg, id=337, 297.7524pt x 240.9pt>
 File: images/theater.jpg Graphic file (type jpg)
 <use images/theater.jpg>
 Package pdftex.def Info: images/theater.jpg  used on input line 10.
@@ -1070,7 +1070,7 @@ Package pdftex.def Info: images/theater.jpg  used on input line 10.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [3]
-<images/webbbridge.jpg, id=342, 1806.75pt x 1204.5pt>
+<images/webbbridge.jpg, id=352, 1806.75pt x 1204.5pt>
 File: images/webbbridge.jpg Graphic file (type jpg)
 <use images/webbbridge.jpg>
 Package pdftex.def Info: images/webbbridge.jpg  used on input line 30.
@@ -1079,7 +1079,7 @@ Package pdftex.def Info: images/webbbridge.jpg  used on input line 30.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/system.pdf, id=345, 462.52798pt x 346.89601pt>
+<images/system.pdf, id=355, 462.52798pt x 346.89601pt>
 File: images/system.pdf Graphic file (type pdf)
 <use images/system.pdf>
 Package pdftex.def Info: images/system.pdf  used on input line 40.
@@ -1097,7 +1097,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [5 <./images/webbbridge.jpg>]
-<images/one_element_of_system.pdf, id=362, 462.52798pt x 346.89601pt>
+<images/one_element_of_system.pdf, id=372, 462.52798pt x 346.89601pt>
 File: images/one_element_of_system.pdf Graphic file (type pdf)
 <use images/one_element_of_system.pdf>
 Package pdftex.def Info: images/one_element_of_system.pdf  used on input line 7
@@ -1121,7 +1121,7 @@ ol kolmý na $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )[]$
  []
 
 [8]
-<images/concentric_circles.pdf, id=441, 462.52798pt x 346.89601pt>
+<images/concentric_circles.pdf, id=451, 462.52798pt x 346.89601pt>
 File: images/concentric_circles.pdf Graphic file (type pdf)
 <use images/concentric_circles.pdf>
 Package pdftex.def Info: images/concentric_circles.pdf  used on input line 142.
@@ -1137,7 +1137,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
 [10 <./images/concentric_circles.pdf>]
-<images/system_with_envelope_unlimited_domain.pdf, id=475, 462.52798pt x 346.89
+<images/system_with_envelope_unlimited_domain.pdf, id=485, 462.52798pt x 346.89
 601pt>
 File: images/system_with_envelope_unlimited_domain.pdf Graphic file (type pdf)
 <use images/system_with_envelope_unlimited_domain.pdf>
@@ -1149,7 +1149,7 @@ Overfull \hbox (21.50911pt too wide) in paragraph at lines 170--171
  [][] 
  []
 
-<images/system_with_correct_envelope.pdf, id=477, 462.52798pt x 346.89601pt>
+<images/system_with_correct_envelope.pdf, id=487, 462.52798pt x 346.89601pt>
 File: images/system_with_correct_envelope.pdf Graphic file (type pdf)
 <use images/system_with_correct_envelope.pdf>
 Package pdftex.def Info: images/system_with_correct_envelope.pdf  used on input
@@ -1162,7 +1162,7 @@ Overfull \hbox (21.50911pt too wide) in paragraph at lines 179--180
 
 [11 <./images/system_with_envelope_unlimited_domain.pdf> <./images/system_with_
 correct_envelope.pdf>]
-<images/too_complicated_equations.pdf, id=526, 462.52798pt x 346.89601pt>
+<images/too_complicated_equations.pdf, id=536, 462.52798pt x 346.89601pt>
 File: images/too_complicated_equations.pdf Graphic file (type pdf)
 <use images/too_complicated_equations.pdf>
 Package pdftex.def Info: images/too_complicated_equations.pdf  used on input li
@@ -1183,7 +1183,7 @@ r/m/n/12 + 96419840\OML/cmm/m/it/12 x[]y[] \OT1/cmr/m/n/12 +
  []
 
 [13]
-<images/resultant.pdf, id=574, 462.52798pt x 346.89601pt>
+<images/resultant.pdf, id=584, 462.52798pt x 346.89601pt>
 File: images/resultant.pdf Graphic file (type pdf)
 <use images/resultant.pdf>
 Package pdftex.def Info: images/resultant.pdf  used on input line 226.
@@ -1197,7 +1197,7 @@ Overfull \hbox (21.50911pt too wide) in paragraph at lines 226--227
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14 <./images/resultant.pdf>] [15]
-<images/lines_in_normal_form.pdf, id=616, 462.52798pt x 346.89601pt>
+<images/lines_in_normal_form.pdf, id=626, 462.52798pt x 346.89601pt>
 File: images/lines_in_normal_form.pdf Graphic file (type pdf)
 <use images/lines_in_normal_form.pdf>
 Package pdftex.def Info: images/lines_in_normal_form.pdf  used on input line 28
@@ -1213,7 +1213,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16]
 [17 <./images/lines_in_normal_form.pdf>]
-<images/odr.pdf, id=646, 462.52798pt x 346.89601pt>
+<images/odr.pdf, id=656, 462.52798pt x 346.89601pt>
 File: images/odr.pdf Graphic file (type pdf)
 <use images/odr.pdf>
 Package pdftex.def Info: images/odr.pdf  used on input line 314.
@@ -1224,7 +1224,7 @@ Overfull \hbox (21.50911pt too wide) in paragraph at lines 314--315
  []
 
 [18 <./images/odr.pdf>] [19] [20] [21]
-<images/rolling_ball_blends.png, id=701, 713.66624pt x 253.94875pt>
+<images/rolling_ball_blends.png, id=711, 713.66624pt x 253.94875pt>
 File: images/rolling_ball_blends.png Graphic file (type png)
 <use images/rolling_ball_blends.png>
 Package pdftex.def Info: images/rolling_ball_blends.png  used on input line 448
@@ -1254,18 +1254,18 @@ Overfull \hbox (13.9103pt too wide) in paragraph at lines 189--190
 
 ]
 Kapitola 3.
-[29] [30] [31] [32] [33]) (vysledky_prace.tex [34]
+[29] [30] [31] [32] [33] [34] [35]) (vysledky_prace.tex [36]
 Kapitola 4.
-) (zaver.tex [35
+) (zaver.tex [37
 
-] [36
+] [38
 
-]) [37] [38
+]) [39] [40
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 263--264
-[]\T1/cmr/m/n/12 Blender do-wn-load. Do-stupné na in-ter-nete:[]$\T1/cmtt/m/n/1
-2 https : / / www . blender . org /
+[]\T1/cmr/m/n/12 Blender do-wn-load. Do-stupné na in-ter-nete: []$\T1/cmtt/m/n/
+12 https : / / www . blender . org /
  []
 
 
@@ -1275,81 +1275,141 @@ g von Ka-nalf-lä-
  []
 
 
-Underfull \hbox (badness 2644) in paragraph at lines 271--272
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
+[]\T1/cmr/m/n/12 Fake-bpy-module. Do-stupné na in-ter-nete: []$\T1/cmtt/m/n/12 
+https : / / github . com / nutti /
+ []
+
+
+Underfull \hbox (badness 2644) in paragraph at lines 273--274
 \T1/cmr/m/n/12 sin. 10.18260/1-2--6898. Do-stupné na in-ter-nete: []$\T1/cmtt/m
 /n/12 https : / / 216 . 185 . 13 . 174 /
  []
 
-[39
+[41
 
 
 ]
-Underfull \hbox (badness 1082) in paragraph at lines 281--282
+Underfull \hbox (badness 1082) in paragraph at lines 283--284
 \T1/cmr/m/n/12 107. Do-stupné na in-ter-nete: []$\T1/cmtt/m/n/12 https : / / ww
 w . researchgate . net / publication /
  []
 
-[40]
-Underfull \hbox (badness 10000) in paragraph at lines 317--318
-[]\T1/cmr/m/n/12 Visual Stu-dio Code do-wn-load. Do-stupné na in-ter-nete:[]$\T
-1/cmtt/m/n/12 https : / / code .
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
+[]\T1/cmr/m/n/12 P°íru£ka 3D tis-ka°e. Do-stupné na in-ter-nete: []$\T1/cmtt/m/
+n/12 https : / / www .
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 319--320
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
+\T1/cmtt/m/n/12 prusa3d . com / downloads / manual / prusa3d _ manual _ mk3s _ 
+cs .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
+\T1/cmtt/m/n/12 pdf ? _gl = 1*13onli8* _ ga*MTE1MzgxMDQ0NS4xNzEwMjQxMTM0* _ ga 
+_
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
+\T1/cmtt/m/n/12 3HK7B7RT5V*MTcxMjMzMDE3My43LjEuMTcxMjMzMDI1My42MC4wLjA & fbclid
+ =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
+\T1/cmtt/m/n/12 IwAR06qOhsPPUMy42HOm-[]zS6RgoDZ5cvhJmfW8ZSK7da _ qo6oD-[]iH0Il 
+_ lcH0 _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
+\T1/cmtt/m/n/12 aem _ AcV6EthMrWxjh4BNaUJb-[] _ vAreZ _ faKf34c9V0u-[]XeGLlp _ 
+5WfT6Rx8 _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
+\T1/cmtt/m/n/12 euvvEuSvLsAlZWM-[]Mb9vdp-[]0fXFGvMRz$[] \T1/cmr/m/n/12 alebo []
+$\T1/cmtt/m/n/12 https : / / help . prusa3d . com /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
+[]\T1/cmr/m/n/12 Pronterface se-tup. Do-stupné na in-ter-nete: []$\T1/cmtt/m/n/
+12 https : / / all3dp . com / 2 /
+ []
+
+
+Underfull \hbox (badness 6575) in paragraph at lines 326--327
+[]\T1/cmr/m/n/12 Visual Stu-dio Code do-wn-load. Do-stupné na in-ter-nete: []$\
+T1/cmtt/m/n/12 https : / / code .
+ []
+
+
+Underfull \hbox (badness 1331) in paragraph at lines 328--329
 []\T1/cmr/m/n/12 Vráblíková J. 2022. En-ve-lo-pes of im-pli-cit sur-fa-ces. Mat
 -he-ma-ti-cal Ins-ti-tute
  []
 
 
-Underfull \hbox (badness 5022) in paragraph at lines 319--320
+Underfull \hbox (badness 5022) in paragraph at lines 328--329
 \T1/cmr/m/n/12 of Char-les Uni-ver-sity. Pra-gue. Mas-ter's the-sis. Do-stupné 
 na in-ter-nete:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--320
+Underfull \hbox (badness 10000) in paragraph at lines 328--329
 []$\T1/cmtt/m/n/12 https : / / dodo . is . cuni . cz / bitstream / handle / 20 
 . 500 . 11956 / 171858 /
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 323--324
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
 []\T1/cmr/m/n/12 Obrázok Web-bov Most. Do-stupné na in-ter-nete: []$\T1/cmtt/m/
 n/12 http : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--328
+Underfull \hbox (badness 10000) in paragraph at lines 336--337
 []\T1/cmr/m/n/12 Obrázok Hu-dobné di-vadlo a vý-stavná sie¬. Do-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--328
+Underfull \hbox (badness 10000) in paragraph at lines 336--337
 \T1/cmr/m/n/12 stupné na in-ter-nete: []$\T1/cmtt/m/n/12 https : / / www . arch
 daily . com / 789123 /
  []
 
-[41] (AppendixA.tex [42
+[44] (AppendixA.tex [45
 
-] [43]
+]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [44]
+ [46]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45])
-(AppendixB.tex [46] [47
+ [47])
+(AppendixB.tex [48] [49
 
-]) [48] (main.aux)
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 35331B692B47D8141639C2E1175D6CF4;5452.
+]) [50] (main.aux)
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 50297DA6862D03A20DC8489273CB6E54;5678
+(rerunfilecheck)             After:  DAF21E3988D3167FA1D82C9998B9539A;5678.
  ) 
 Here is how much of TeX's memory you used:
- 33460 strings out of 478927
- 774248 string characters out of 2852534
+ 33484 strings out of 478927
+ 774545 string characters out of 2852534
  1240038 words of memory out of 3000000
- 50514 multiletter control sequences out of 15000+600000
+ 50521 multiletter control sequences out of 15000+600000
  422711 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,14n,103p,1208b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1380,9 +1440,9 @@ m-super/sfrm1200.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/cm-super/sfsl1200.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/font
 s/type1/public/cm-super/sfti1200.pfb><C:/Users/tutko/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (62 pages, 3601280 bytes).
+Output written on main.pdf (64 pages, 3624885 bytes).
 PDF statistics:
- 1044 PDF objects out of 1200 (max. 8388607)
- 188 named destinations out of 1000 (max. 500000)
- 420 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1100 PDF objects out of 1200 (max. 8388607)
+ 205 named destinations out of 1000 (max. 500000)
+ 436 words of extra memory for PDF output out of 10000 (max. 10000000)
 

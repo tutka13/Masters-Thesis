@@ -19,23 +19,29 @@
 \contentsline {subsection}{\numberline {2.3.1}Zmena bázy}{25}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Výpočet obálky elíps}{26}{subsection.2.3.2}%
 \contentsline {section}{\numberline {2.4}Obálka elipsoidov}{27}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Špecifikácia a implementácia}{29}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Softvér}{29}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Špecifikácia}{29}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Požiadavky}{29}{subsection.3.1.1}%
 \contentsline {subsubsection}{Vstup}{29}{section*.22}%
 \contentsline {subsubsection}{Výstup}{29}{section*.23}%
 \contentsline {subsubsection}{Workflow}{30}{section*.24}%
-\contentsline {subsubsection}{Funkcie}{31}{section*.25}%
-\contentsline {section}{\numberline {3.2}Blender}{31}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Skriptovanie}{31}{subsection.3.2.1}%
-\contentsline {section}{\numberline {3.3}Python}{32}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Knižnice}{32}{subsection.3.3.1}%
-\contentsline {section}{\numberline {3.4}Implementácia}{33}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Visual Studio Code}{33}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Jupyter Notebook}{33}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Inštalácia knižníc}{34}{subsection.3.4.3}%
-\contentsline {chapter}{\numberline {4}Výsledky práce}{35}{chapter.4}%
-\contentsline {chapter}{Príloha A}{43}{chapter*.28}%
-\contentsline {chapter}{Príloha B}{47}{chapter*.29}%
-\contentsline {section}{\numberline {4.1}Euklidovská teória kvadratických foriem a krivky 2. rádu}{47}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Invarianty kriviek 2. rádu}{47}{subsection.4.1.1}%
+\contentsline {subsubsection}{Funkčnosť softvéru}{31}{section*.25}%
+\contentsline {section}{\numberline {3.2}Výber softvéru a jeho inštalácia}{31}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Blender}{32}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Python}{32}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Knižnice}{32}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Inštalácia knižníc}{33}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Programovacie prostredie}{33}{subsection.3.2.5}%
+\contentsline {subsubsection}{Visual Studio Code}{33}{section*.26}%
+\contentsline {subsubsection}{Konfigurácia VS Code - Python - Blender}{34}{section*.27}%
+\contentsline {subsubsection}{Jupyter Notebook}{34}{section*.28}%
+\contentsline {section}{\numberline {3.3}Implementácia}{35}{section.3.3}%
+\contentsline {section}{\numberline {3.4}3D tlač}{35}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}PrusaSlicer}{35}{subsection.3.4.1}%
+\contentsline {subsubsection}{Parametre tlače}{35}{section*.29}%
+\contentsline {subsection}{\numberline {3.4.2}Pronterface}{36}{subsection.3.4.2}%
+\contentsline {chapter}{\numberline {4}Výsledky práce}{37}{chapter.4}%
+\contentsline {chapter}{Príloha A}{45}{chapter*.32}%
+\contentsline {chapter}{Príloha B}{49}{chapter*.33}%
+\contentsline {section}{\numberline {4.1}Euklidovská teória kvadratických foriem a krivky 2. rádu}{49}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Invarianty kriviek 2. rádu}{49}{subsection.4.1.1}%

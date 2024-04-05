@@ -1,28 +1,41 @@
 \babel@toc {slovak}{}\relax 
 \contentsline {chapter}{Úvod}{1}{chapter*.8}%
-\contentsline {chapter}{\numberline {1}Obálky v rovine}{3}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Jednoparametrický systém}{3}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Obálka jednoparametrického systému nadplôch}{5}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Výpočet obálky}{11}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Prístup algebraickej geometrie}{11}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Prístup projektívnej geometrie}{13}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Kinematický prístup}{14}{subsection.1.3.3}%
-\contentsline {subsection}{\numberline {1.3.4}Obálky a ODR}{15}{subsection.1.3.4}%
-\contentsline {subsection}{\numberline {1.3.5}Lokálne prieniky}{16}{subsection.1.3.5}%
-\contentsline {section}{\numberline {1.4}Aplikácie obálok a predošlá práca}{18}{section.1.4}%
-\contentsline {chapter}{\numberline {2}Matematický model}{21}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Obálka elipsoidov}{21}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Obálka elíps}{22}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Zmena bázy}{22}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Výpočet obálky elíps}{23}{subsection.2.2.2}%
-\contentsline {chapter}{\numberline {3}Implementácia}{25}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Motivácia}{25}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Špecifikácia}{25}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Blender}{25}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Skriptovanie}{25}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Python}{26}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Knižnice}{26}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Implementácia}{27}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Programovacie prostredie}{27}{subsection.3.5.3}%
-\contentsline {chapter}{\numberline {4}Výsledky práce}{29}{chapter.4}%
-\contentsline {chapter}{Príloha A}{35}{chapter*.20}%
+\contentsline {chapter}{\numberline {1}Prehľad problematiky}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Aplikácie obálok}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Jednoparametrický systém}{5}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Obálka jednoparametrického systému nadplôch}{7}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Výpočet obálky}{13}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Prístup algebraickej geometrie}{13}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Prístup projektívnej geometrie}{15}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Kinematický prístup}{16}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}Obálky a ODR}{17}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}Lokálne prieniky}{18}{subsection.1.4.5}%
+\contentsline {section}{\numberline {1.5}Obálka sfér}{20}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Charakteristická kružnica}{20}{section.1.6}%
+\contentsline {chapter}{\numberline {2}Matematický model}{23}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Obálka sfér}{23}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Obálka elipsoidov}{24}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Obálka elíps}{25}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Zmena bázy}{25}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Výpočet obálky elíps}{26}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Obálka elipsoidov}{27}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Špecifikácia a implementácia}{29}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Špecifikácia}{29}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Požiadavky}{29}{subsection.3.1.1}%
+\contentsline {subsubsection}{Vstup}{29}{section*.22}%
+\contentsline {subsubsection}{Výstup}{29}{section*.23}%
+\contentsline {subsubsection}{Workflow}{30}{section*.24}%
+\contentsline {subsubsection}{Funkcie}{31}{section*.25}%
+\contentsline {section}{\numberline {3.2}Blender}{31}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Skriptovanie}{31}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Python}{32}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Knižnice}{32}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}Implementácia}{33}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Visual Studio Code}{33}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Jupyter Notebook}{33}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Inštalácia knižníc}{34}{subsection.3.4.3}%
+\contentsline {chapter}{\numberline {4}Výsledky práce}{35}{chapter.4}%
+\contentsline {chapter}{Príloha A}{43}{chapter*.28}%
+\contentsline {chapter}{Príloha B}{47}{chapter*.29}%
+\contentsline {section}{\numberline {4.1}Euklidovská teória kvadratických foriem a krivky 2. rádu}{47}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Invarianty kriviek 2. rádu}{47}{subsection.4.1.1}%

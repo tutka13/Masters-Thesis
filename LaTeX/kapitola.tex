@@ -1,5 +1,36 @@
-\chapter{Obálky v rovine}
+\chapter{Prehľad problematiky}
 \label{kap:kapitola1} % id kapitoly pre pre prikaz ref
+
+\section{Aplikácie obálok}
+\subsubsection*{Architektúra}
+Projekt hudobného divadla a koncertnej sály v Tbilisi sa nachádza v Rhike Park v gruzínskom Tbilisi. Budovu tvoria dve spojené časti, pôsobiace ako obrovské kovové rúry, ktoré rámujú výhľad na rieku Kura a staré mesto. Súčasťou severnej časti budovy je sála hudobného divadla s 566 miestami na sedenie, foyer a technické priestory. Výstavná hala disponuje veľkým vstupom pre návštevníkov.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{images/theater.jpg}
+	\caption[Hudobné divadlo a výstavná sieň.]{Hudobné divadlo a výstavná sieň. \cite{MusicTheater}}
+	\label{fig:theater}
+\end{figure}
+
+Vzhľadom na výskyt obálok v aplikáciách sa obálkam venuje veľká pozornosť. Stručne spomenieme niektoré aplikácie a odkážeme na literatúru. 
+
+Výpočet obálky pohybujúcej sa plochy sa vyskytuje pri simulácii a CNC obrábaní. CNC obrábanie \textit{(Computer Numerical Control machining)}  je výrobný subtraktívny proces, pri ktorom počítač riadi stroje, napríklad vŕtačky, frézy a sústruhy tak, aby neustále odlamovali nadbytočnosti z obrobku. Tento postup sa vykonáva, kým sa nevytvorí požadovaný tvar. Rezný nástroj vytvára pri rýchlom otáčavom pohybe okolo svojej osi rotačnú plochu. Takto vytvorená plocha je časť obálky pohybujúceho sa nástroja. CNC frézovanie má široké priemyselné využitie v odvetviach ako letecký priemysel, zdravotníctvo a spotrebná elektronika. V článku \cite{Skop20} sa možno dočítať viac o výpočte obálok pri 5-osovom CNC obrábaní.  
+
+Obálky sa používajú aj na výpočet trajektórie projektilu vo vzduchu. Riešime klasický problém pohybu hmotného bodu (projektilu) vrhaného pod uhlom k horizontu. S nulovou silou odporu vzduchu je analytické riešenie dobre známe, trajektória projektilu je parabola. So zohľadnením odporu vzduchu úloha nemá presné analytické riešenie, a preto sa vo väčšine prípadov rieši numericky. Silu odporu vzduchu berieme do úvahy s konštantným členom odporu. Systém trajektórií vzniká pri vrhnutí projektilu s rovnakou počiatočnou rýchlosťou, ale s rôznymi uhlami hodu. Na určenie maximálneho rozsahu letu projektilu sa tak použije rovnica obálky \cite{Chud09}.
+
+%krivka s kontrolou chyby (Wallner)
+Medzi ďalšie aplikácie obálok patrí tollerancing – krivka s kontrolou chyby, bezkolízne plánovanie pohybu robota – uvažujeme o konvexných kompaktných krivkách reprezentujúcich pohyb robota v rovine, ktorý mení svoj lokálny tvar pomocou systému afinných transformácií. Dizajn písma – konštrukcia znakov v písmach pre typografické systémy. O ďalších aplikáciach sa čitateľ dozvie v \cite{Pott09}.
+
+Kanálové plochy \textit{(channel surfaces)}, rúrkové plochy/potrubia \textit{(pipe surfaces}), \textit{rolling ball blends} a prirodzené kanálové plochy \textit{(natural channel surfaces)} sa vyskytujú ako zmiešavacie povrchy a prechodové plochy medzi potrubiami. Kanálové plochy sú používané v počítačom podporovanom geometrickom dizajne \textit{(Computer Aided Geometric Design)}. V ďalšom texte si ukážeme ich konštrukciu ako obálku sfér.
+
+Obálky - kanálové plochy sa využívajú aj v architektúre. Ako príklad uvádzame Webbov most \textit{(Webb Bridge)}, obr. \ref{fig:webb_bridge} v Melbourne v Austrálii. Tvar mosta vzdáva hold histórii domorodého obyvateľstva a je vytvorený podľa tradičnej rybárskej pasce Koorie, ktorá sa používala na lov úhorov.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{images/webbbridge.jpg}
+	\caption[Webbov most.]{Webbov most. \cite{WebbBridge}}
+	\label{fig:webb_bridge}
+\end{figure}
 
 \section{Jednoparametrický systém}
 Ak nakreslíme kružnice so stredom na x-ovej osi s polomerom 1, ako na obrázku, pohľad nám upútajú horizontálne priamky $y = \pm 1$ idúce ponad a popod systém kružníc.
@@ -332,23 +363,89 @@ $$
 čo je z definície \ref{charakterizacia} bod obálky $\mathcal{E}.$
 \end{proof}
 
-\section{Aplikácie obálok a predošlá práca}
-Vzhľadom na výskyt obálok v aplikáciách sa obálkam venuje veľká pozornosť. Stručne spomenieme niektoré aplikácie a odkážeme na literatúru. 
+\section{Obálka sfér}
+Označme $X \in \mathbb{R}^3$ a predpokladajme, že $m(t) \colon I \subset \mathbb{R} \rightarrow \mathbb{R}^3$ je parametrizácia krivky a $r(t) \colon I \rightarrow \mathbb{R}^{+}$ je funkcia definovaná na tom istom intervale. Krivka $m$ sa nazýva kostrová krivka obálky (\textit{spine curve}) a $r$ sa nazýva funkcia polomeru (\textit{radius function}). Jednoparametrický systém sfér $\mathcal{S}$ je daný rovnicou
 
-Výpočet obálky pohybujúcej sa plochy sa vyskytuje pri simulácii a CNC obrábaní. CNC obrábanie \textit{(Computer Numerical Control machining)}  je výrobný subtraktívny proces, pri ktorom počítač riadi stroje, napríklad vŕtačky, frézy a sústruhy tak, aby neustále odlamovali nadbytočnosti z obrobku. Tento postup sa vykonáva, kým sa nevytvorí požadovaný tvar. Rezný nástroj vytvára pri rýchlom otáčavom pohybe okolo svojej osi rotačnú plochu. Takto vytvorená plocha je časť obálky pohybujúceho sa nástroja. CNC frézovanie má široké priemyselné využitie v odvetviach ako letecký priemysel, zdravotníctvo a spotrebná elektronika. V článku \cite{Skop20} sa možno dočítať viac o výpočte obálok pri 5-osovom CNC obrábaní.  
+$$
+F(X, t) = \langle X - m(t), X - m(t) \rangle - r^2(t)= 0.
+$$
 
-Obálky sa používajú aj na výpočet trajektórie projektilu vo vzduchu. Riešime klasický problém pohybu hmotného bodu (projektilu) vrhaného pod uhlom k horizontu. S nulovou silou odporu vzduchu je analytické riešenie dobre známe, trajektória projektilu je parabola. So zohľadnením odporu vzduchu úloha nemá presné analytické riešenie, a preto sa vo väčšine prípadov rieši numericky. Silu odporu vzduchu berieme do úvahy s konštantným členom odporu. Systém trajektórií vzniká pri vrhnutí projektilu s rovnakou počiatočnou rýchlosťou, ale s rôznymi uhlami hodu. Na určenie maximálneho rozsahu letu projektilu sa tak použije rovnica obálky \cite{Chud09}.
+Podľa definície \ref{charakterizacia}, obálku $\mathcal{E}$ možno nájsť ako prienik systému sfér $\mathcal{S}$ a ich derivácií $\mathcal{\dot{S}}_t$ pre všetky $t \in I$. Derivácia $\mathcal{S}$ nám dáva roviny $\mathcal{\dot{S}}$ dané rovnicou
 
-%krivka s kontrolou chyby (Wallner)
-Medzi ďalšie aplikácie obálok patrí tollerancing – krivka s kontrolou chyby, bezkolízne plánovanie pohybu robota – uvažujeme o konvexných kompaktných krivkách reprezentujúcich pohyb robota v rovine, ktorý mení svoj lokálny tvar pomocou systému afinných transformácií. Dizajn písma – konštrukcia znakov v písmach pre typografické systémy. O ďalších aplikáciach sa čitateľ dozvie v \cite{Pott09}.
+$$
+\dfrac{\partial F}{\partial t} (X, t) = \langle \dot{m}(t), X - m(t) \rangle + r(t) \dot{r}(t) = 0.
+$$
+Pre nájdenie obálky $\mathcal{E}$ budeme teda hľadať prieniky sféry $\mathcal{S}_t$ a roviny $\mathcal{\dot{S}}_t $ pre každý parameter $t \in I$.
 
-Kanálové plochy \textit{(channel surfaces)}, rúrkové plochy/potrubia \textit{(pipe surfaces}), \textit{rolling ball blends} a prirodzené kanálové plochy \textit{(natural channel surfaces)} sa vyskytujú ako zmiešavacie povrchy a prechodové plochy medzi potrubiami. Kanálové plochy sú používané v počítačom podporovanom geometrickom dizajne \textit{(Computer Aided Geometric Design)}. V ďalšom texte si ukážeme ich konštrukciu ako obálku sfér.
+\section{Charakteristická kružnica}
+\begin{definition}[Charakteristická kružnica]
+V prípade, že pre $t \in I$ je $\mathcal{S}_{t} \cap \mathcal{\dot{S}}_{t} \neq \emptyset$, sa tento prienik nazýva sa charakteristická kružnica $c_{t}$. V prípade $\mathcal{S}_{t} \cap \mathcal{\dot{S}}_{t} = \emptyset$, pre \(t\) neexistuje žiadna charakteristická kružnica.
+\end{definition}
 
-Obálky - kanálové plochy sa využívajú aj v architektúre. Ako príklad uvádzame Webbov most \textit{(Webb Bridge)}, obr. \ref{fig:webb_bridge} v Melbourne v Austrálii. Tvar mosta vzdáva hold histórii domorodého obyvateľstva a je vytvorený podľa tradičnej rybárskej pasce Koorie, ktorá sa používala na lov úhorov.
+\begin{lemma} \label{lema o zjednoteni charakteristickych kruznic}
+Zjednotenie všetkých charakteristických kružníc $c_{t}$ jednoparametrického systému sfér $\mathcal{S}_t$ je obálka $\mathcal{E}$ tohto systému, teda platí $$\mathcal{E} = \bigcup_{t \in I} c_{t}.$$
+\end{lemma}
 
-\begin{figure}[h!]
+\begin{proof}
+Nech bod $X$ patrí do zjednotenia kružníc $ \bigcup_{t \in I} c_{t}, $ potom existuje aspoň jedno $t_0 \in I, $ pre ktoré $X \in c_{t_0}.$ Keďže $c_{t_0} = \mathcal{S}_{t_0} \cap \mathcal{\dot{S}}_{t_0}, $ tak sú rovnice $\mathcal{S}_{t_0} $ a $ \mathcal{\dot{S}}_{t_0}$ splnené pre nejaké $t_0$ a $X,$ a preto patrí $X$ obálke $\mathcal{E}, $ a teda platí inklúzia $\bigcup_{t \in I} c_{t} \subseteq \mathcal{E}. $
+
+Opačne, ak $X$ patrí obálke $\mathcal{E},$ existuje podľa definície \ref{charakterizacia} $t_0 \in I $ také, že platí $F(X,t_0) = 0$ a súčasne $\dfrac{\partial F}{\partial t}(X, t_0)=0,$ to znamená, že $X$ leží v prieniku $\mathcal{S}_{t_0} \cap \mathcal{\dot{S}}_{t_0} = c_{t_0} $ a $c_{t_0} \subseteq \bigcup_{t \in I} c_t. $ Preto platí inklúzia $\mathcal{E} \subseteq \bigcup_{t \in I} c_t.$ 
+
+Týmto je rovnosť $\mathcal{E} = \bigcup_{t \in I} c_t$ dokázaná.
+\end{proof}
+
+Obálka sfér sa teda skladá zo systému kružníc. Charakteristická kružnica leží celá v rovine $\mathcal{\dot{S}}_t $, takže v tejto rovine leží aj jej stred. Dotykový vektor kostrovej krivky $m(t)$ je kolmý na rovinu $\mathcal{\dot{S}}_t$, teda stred $C_t$ charakteristickej kružnice leží na dotyčnici $T(t, s)= m(t) + s \cdot \dot{m}(t),$ $s \in \mathbb{R}$, preto stred $C_t$ nájdeme ako
+$$ \mathcal{\dot{S}}_t \cap T(t, s).$$
+Pre parameter $s$ potom platí $s = \dfrac{r(t) \dot{r}(t)}{\langle \dot{m}(t), \dot{m}(t) \rangle }, $
+po dosadení do $T(t, s)$ získavame
+\begin{equation}
+\label{eq:stred charakteristickej kruznice}
+C_t = m(t) - \frac{r(t) \dot{r}(t)}{\langle \dot{m}(t), \dot{m}(t) \rangle} \dot{m}(t).
+\end{equation}
+
+Rozoberme si nasledujúce dva prípady
+\begin{itemize}
+\item Ak je funkcia polomeru $r(t)$ konštantná, $\dot{r} \equiv 0$ a rovina $\mathcal{\dot{S}}_t$ obsahuje stred sféry $M_t$ pre všetky $t \in I$, v tomto prípade možno obálku $\mathcal{E}$ považovať za posunutie (\textit{offset}) kostrovej krivky $m$. Tieto obálky sú známe ako rúrkové plochy (\textit{pipe surfaces}). Keďže rovina $\mathcal{\dot{S}}_t$ charakteristickej kružnice $c_t$ obsahuje stred sféry $M_t$ v každom $t \in I$, charakteristická krivka je hlavnou kružnicou sféry a obálka $\mathcal{E}$ je pokrytá jednoparametrickým systémom zhodných kružníc.
+\item Ak funkcia polomeru $r(t)$ nie je konštantná, potom $\dot{r}(t) \neq 0$ a rovina $\mathcal{\dot{S}}_t$  neprechádza stredom sféry $M_t$. V tomto prípade obálka $\mathcal{E}$ patrí do triedy kanálových plôch.
+\end{itemize}
+
+Polomer $l_t$ charakteristiskej kružnice  možno vypočítať z pravouhlého trojuholníka $M_tC_tP,$ kde $P$ je ľubovoľný bod na charakteristickej kružnici $c_t$, a teda aj na sfére $\mathcal{S}_t.$
+$$ l_t = \sqrt{r^2(t) - \|M_tC_t\|^2} = r(t) \sqrt{ 1 - \frac{\dot{r}^2(t)}{\langle \dot{m}(t), \dot{m}(t) \rangle}}. $$
+V prípade, že $ \|M_tC_t\| > r(t)$, sféra $\mathcal{S}_t$ nemá s obálkou $\mathcal{E}$ reálny kontakt. 
+
+\begin{example}
+Uvažujme kostrovú krivku $m(t)$ a polomer $r(t)$
+$$ 
+m(t) = \begin{pmatrix} 0 \\ 0 \\ t \end{pmatrix} \quad \text{ a } \quad r(t) = \frac{t}{\sqrt{26}}.
+$$
+potom obálka systému je daná rovnicami
+\begin{align*}
+&\mathcal{S}_t \colon x^2 + y^2 + (z - t)^2 - \frac{t^2}{26} = 0, \\
+&\mathcal{\dot{S}}_t \colon z - \frac{25}{26}t = 0. \\
+\end{align*}
+Počítajme $ \mathcal{S}_t \cap \mathcal{\dot{S}}_t $ pre všetky $t \in \mathbb{R}.$ Z druhej rovnice dostaneme $t = \frac{26}{25}z$. Po dosadení do prvej rovnice, dostávame implicitnú rovnicu pre obálku $\mathcal{E}$
+$$
+x^2 + y^2 - \frac{1}{25}z^2 = 0,
+$$
+čo je rovnica rotačného kužeľa.
+
+Napríklad, pre $t = 1 \in I$ charakteristická krivka je prienikom dvoch plôch daných
+\begin{align*}
+&\mathcal{S}_1 \colon x^2 + y^2 + (z - 1)^2 - \frac{1}{26} = 0, \\
+&\mathcal{\dot{S}}_1 \colon z - \frac{25}{26} = 0. \\
+\end{align*}
+Z toho môžeme usúdiť, že charakteristická krivka $c_1$ je kružnica so stredom v bode $C_1 = (0, 0, \frac{25}{26})$ v rovine $z = \frac{25}{26}$ a neprechádza stredom sféry $M_1 = m(1) = (0,0,1)$, polomer $c_1$ je $l_{1} = \frac{\sqrt{25}}{26}$. Vzdialenosť bodov $ \|M_tC_t\| = \frac{1}{26}$ a $r(1)= \frac{1}{\sqrt{26}}$, takže platí, že $r(1) > \|M_tC_t\|$ a sféra $\mathcal{S}_1$ má s obálkou $\mathcal{E}$ reálny kontakt.
+\end{example}
+
+Jedným z dôležitých výsledkov je, že kanálové plochy, definované ako obálka jednoparametrického systému sfér s racionálnou funkciou polomeru $r(t)$ a stredmi v racionálnej krivke $m(t)$ možno racionálne parametrizovať \cite{Pet97}.
+
+Bohužiaľ, vo väčšine prípadov sú rovnice, ktoré charakterizujú obálky, príliš zložité a odvodiť z nich rovnicu obálky nie sme schopní.
+
+Rúrkové povrchy sa často objavujú pri výrobe potrubia. Hladké spojenie medzi dvoma nie nevyhnutne valcovými rúrami $\mathcal{P}_1$ a $\mathcal{P}_2$ sa modeluje tak, aby bol prechod hladký, bez záhybov, vodotesný alebo dokonca aj parotesný. Na to sa používa technika \textit{rolling ball blends}, využívajúca nasledujúcu myšlienku: Kým sa sféra $S$ s konštantným alebo nekonštantným polomerom $r$ kotúľa na oboch rúrach súčasne, zanecháva stopu $s_i$ na oboch rúrach. Zmiešavacia plocha je tá časť obálky $\mathcal{E}$ jednoparametrického systému sfér, ktorá leží medzi dvoma stopami $s_1$ a $s_2$. Kostrová krivka obálky $\mathcal{E}$ je priesečníkom ekvidištánt \textit{(offsetov)} plôch $\mathcal{P}_1$ a $\mathcal{P}_2$ vo vzdialenosti $r$. Každá charakteristická krivka spája dva dotykové body zmiešavacej plochy a plochami $\mathcal{P}_1$ a $\mathcal{P}_2$, ktoré sa majú zmiešavať. Viac detailov možno nájsť v \cite{Kar00} a \cite{Ode20}. Na obrázku \ref{fig:rolling_ball_blends} vľavo je znázornená metóda so sférou s konštantným polomerom $r$, vpravo s nekonštantným.
+
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{images/webbbridge.jpg}
-	\caption[Webbov most.]{Webbov most. \cite{WebbBridge}}
-	\label{fig:webb_bridge}
+	\includegraphics[width=\textwidth]{images/rolling_ball_blends.png}
+	\caption[Technika rolling ball blends.]{Technika rolling ball blend s konštatným polomerom vľavo, s nekonštantným polomerom vpravo. \cite{Rollingballblends}}
+	\label{fig:rolling_ball_blends}
 \end{figure}

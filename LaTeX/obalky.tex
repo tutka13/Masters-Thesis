@@ -1,3 +1,149 @@
+\chapter{Lokálny prienik}
+V časti \ref{lokalne prieniky pre krivky} sme odvodili vzťahy medzi lokálnym prienikom jednoparametrického systému a jeho obálkou. Pre systém kružníc však platí viac ako inklúzia jedným smerom.
+
+\begin{lemma} \label{lema o lokalnom prieniku sfer}
+Lokálny prienik $\mathcal{L}_{t}$ jednoparametrického systému sfér $\mathcal{S}$ pre $t \in I$ zodpovedá charakteristickej kružnici $c_{t}$. Platí $$
+\mathcal{L}_{t} = c_{t}.
+$$
+\end{lemma}
+
+\begin{proof}
+Ukážeme, že lokálny prienik dvoch nekonečne blízkych sfér $\mathcal{S}_{t_1}$ a $\mathcal{S}_{t_2}$ pre $\varepsilon = t_2 - t_1$ idúce k nule, bude práve charakteristická kružnica $c_{t_2}$ a to tak, že pomocou orientovanej vzdialenosti stredov sfér ukážeme, že stred charakteristickej kružnice a stred prieniku dvoch sfér sú rovnaké.
+Označme ľubovoľný bod $S \in \mathcal{S}_{t_1} \cap \mathcal{S}_{t_2}$ a $M_1 = m(t_1) $ a $M_2 = m(t_2).$ Ďalej označme $l$ vzdialenosť medzi bodmi $S$ a $C,$ kde $C$ je bod ležiaci na priamke $M_1M_2$ a zároveň stred priesečníkovej kružnice. $\vec{t} $ bude jednotkový vektor v smere $ M_2 - M_1.$
+Označme ako $d_1$ orientovanú vzdialenosť $M_1$ a $C$ a podobne $d_2$ orientovanú vzdialenosť $M_2$ a $C.$
+$$ d_1 = \langle \vec{t}, C - m(t_1) \rangle \quad \text{a} \quad d_2 = \langle m(t_2) - C,  \vec{t} \rangle, $$
+kde $d_1 + d_2 = | M_2 - M_1 |.$
+
+ Keďže $M_1CS$ a $M_2CS$ sú pravouhlé, môžeme vyjadriť dĺžku spoločnej odvesny $l.$
+$$l^2 = r^2(t_1) - d^2_1 = r^2(t_2) - d^2_2,$$
+kde $d_2 = |m(t_2) - m(t_1)| - d_1, $
+potom možno $d_1$ vyjadriť ako 
+$$d_1 = \dfrac{ | m(t_2) - m(t_1) |}{2} - \dfrac{\dfrac{r(t_2)-r(t_1)}{t_2-t_1} (r(t_2) +r(t_1))}{\dfrac{ | m(t_2)-m(t_1) |}{t_2 - t_1}}.$$
+Pre $\varepsilon = t_2 - t_1 $ idúce k nule
+$$ d_1 = - \dfrac{\dot{r}(t_1) r(t_1)}{| \dot{m}(t_1) |}.  $$
+Odkiaľ stred priesečníkovej kružnice je
+$$S = m(t) + d_t \dfrac{\dot{m}(t)}{| \dot{m}(t)|} = m(t) - \dot{m}(t)\dfrac{r(t)\dot{r}(t)}{|\dot{m}(t)|}. $$
+Tento stred $S$ zodpovedá rovnici \ref{eq:stred charakteristickej kruznice} pre stred $C_t$ charakteristickej kružnice $c_t$. Nekonečne blízke sféry sa pretínajú pre $t$ v rovine $\mathcal{\dot{S}}_{t}$, a preto je prienik daný ako 
+$$ \mathcal{L}_{t} = \mathcal{S}_{t} \cap \mathcal{\dot{S}}_{t} = c_{t}. $$
+V prípade, že lokálny prienik $\mathcal{L}_{s}$ pre nejaké $s \in I$ prázdny, neexistuje pre $s$ žiadna charakteristická kružnica a uvedená rovnosť stále platí.
+\end{proof}
+
+\begin{theorem}
+Obálka $\mathcal{E}$ jednoparametrického systému sfér $\mathcal{S}$ pozostáva z bodov prieniku infinitezimálne blízkych prvkov systému a platí $$
+\mathcal{L} = \mathcal{E}.
+$$
+\end{theorem}
+
+\begin{proof}
+Z predchádzajúcich dvoch lem, lemy \ref{lema o zjednoteni charakteristickych kruznic} a \ref{lema o lokalnom prieniku sfer} platí 
+$$ \mathcal{E} = \bigcup_{t \in I } c_t = \bigcup_{t \in I} \mathcal{L}_t = \mathcal{L}. $$
+\end{proof}
+
+\section{Lokálny samoprienik}
+Lokálny samoprienik obálky jednoparametrického systému guľových plôch je špeciálnym typom samopretínania obálky. Je definovaný nasledovne.
+\begin{definition} \label{definicia lokalny samoprienik}
+Lokálny samoprienik $\mathcal{L}_{t}$ pre $t$ je priesečníkom infinitezimálne blízkych charakteristických kružníc $c_{t}$ systému $\mathcal{S}$. Lokálny samoprienik obálky $\mathcal{E}$ je množina všetkých takých samoprienikov pre všetky parametre systému $\mathcal{S}$. Označíme ho ako $$\mathcal{L} = \bigcup_{t \in I} \mathcal{L}_t.$$
+\end{definition}
+
+Nasledujúci výrok predstavuje dôležité kritérium na identifikáciu lokálneho samoprieniku.
+\begin{lemma} \label{kriterium o lokalnom samoprieniku}
+Bod $Q \in \mathbb{R}^3$ patrí práve vtedy do lokálneho samoprieniku $\mathcal{L}_{t}$ obálky $\mathcal{E}$, ak sú splnené rovnice
+\begin{align*}
+F(Q,t) &= 0, \\
+\dfrac{\partial F}{\partial t}(Q,t) &= 0, \\
+\dfrac{\partial^2 F}{\partial t^2}(Q,t) &= 0
+\end{align*}
+pre nejaké $t \in I.$
+\end{lemma}
+
+\begin{proof}
+Ľubovoľný bod $Q \in \mathcal{L}_{t}$ patrí podľa definície k priesečníku infinitezimálne blízkych kruhov pre $t$. V bode $Q$ sa navzájom pretínajú aj roviny $\mathcal{\dot{S}}_t$, v ktorých sa tieto kružnice nachádzajú. Tieto roviny patria do systému $\mathcal{\dot{S}}$, ktorý je definovaný ako množina bodov spĺňajúcu funkciu $\dfrac{\partial F}{\partial t}(Q, t)$, a sú tiež infinitezimálne blízko, to znamená, že platí $\dfrac{\partial^2 F}{\partial t^2}(Q,t) = 0, $ teda
+\begin{equation}
+\label{eq:druha derivacia}
+\langle \ddot{m}(t), Q-m(t) \rangle - \langle \dot{m}(t), \dot{m}(t) \rangle + \dot{r}^2(t) + r(t)\ddot{r}(t) = 0. 
+\end{equation}
+Bod $Q$ leží na charakteristickej kružnici $c_{t},$ preto spĺňa rovnice $F (Q, t)$ a $\dfrac{\partial F}{\partial t}(Q, t).$
+Opačne, predpokladajme, že sú všetky rovnosti z tejto lemy splnené pre nejaké $t \in I$ a $Q \in \mathbb{R}^3, $ potom platí
+\begin{align*}
+Q &\in \lim_{\varepsilon \to 0} \left( \mathcal{S}_t \cap \mathcal{S}_{t + \varepsilon} \cap \mathcal{\dot{S}}_t \cap \mathcal{\dot{S}}_{t + \varepsilon} \right) \\
+&= \lim_{\varepsilon \to 0} \left( \underbrace{\mathcal{S}_t \cap \mathcal{\dot{S}}_t}_{c_{t}} \cap \underbrace{\mathcal{S}_{t + \varepsilon} \cap \mathcal{\dot{S}}_{t + \varepsilon}}_{c_{t + \varepsilon}} \right) 
+\\
+&= \lim_{\varepsilon \to 0} \left( {c_{t}} \cap {c_{t+ \varepsilon}} \right) \\
+&= \mathcal{L}_{t}.
+\end{align*}
+Týmto sme ukázali, že bod $Q$ patrí do samoprieniku charakteristických kružníc pre $t$ a podľa definície \ref{definicia lokalny samoprienik} patrí do lokálneho samoprieniku $\mathcal{L}_{t}$ obálky $\mathcal{E}$.
+\end{proof}
+
+Pomocou lemy \ref{kriterium o lokalnom samoprieniku} možno ľahko rozhodnúť, či bod $Q \in \mathbb{R}^3$ pre parameter $t_0 \in I$ patrí do lokálneho samoprieniku $\mathcal{L}_{t_0}.$ Ak je $t_0$ neznáme, mohli by sme určiť $t_i$ ako riešenia rovnice $\dfrac{\partial^2 F}{\partial t^2}(Q, t_i)$. Ak by pár $(Q, t_i)$ spĺňal obe ďalšie rovnice $F(Q, t_i)$ a $ \dfrac{\partial F}{\partial t}(Q, t_i)$, bod $Q$ patrí do lokálneho samoprieniku obálky $\mathcal{E}$ pre $t_i.$
+
+Často však riešime otázku, či obálka má lokálny samoprienik a ak áno, pre aké hodnoty parametrov $t \in I$. Pre túto otázku nie je použitie lemy \ref{kriterium o lokalnom samoprieniku} vhodné, preto predkladáme lepšie kritérium. Pozrieme sa na to z geometrického hľadiska. Rovnica \ref{eq:druha derivacia} definuje systém rovín $\mathcal{\ddot{S}}$. Pre každé $t \in I$ je vektor $\ddot{c}(t)$ kolmý na $\mathcal{\ddot{S}}_t.$ Prvé dve rovnice z lemy \ref{eq:druha derivacia} definujú pre pevné $q \in I$ charakteristickú kružnicu $c_q$, to znamená, že pre $q$ existuje lokálny samoprienik $\mathcal{L}_q$, ak sa $c_q$ a $\mathcal{\ddot{S}}_q$ pretínajú. 
+
+Keďže roviny $\mathcal{\dot{S}}_q $ aj $\mathcal{\ddot{S}}_q $ sú rovnobežné s vektorom $ \dot{\vec{m}}(q) \times \ddot{\vec{m}}(q) $, môžu byť obe roviny projektované do roviny obsahujúcej $ m(q) $ a kolmej na $ \vec{b}_q $ a problém priesečníka môžeme takto vyriešiť v projekcii. Pod $ \vec{b}_q $ sa rozumie binormálový vektor definovaný v bode krivky $ m(q) $. Nech $\vec{n}_q$ je zodpovedajúci normálový vektor. Označme prienik priamok $C_q + s \cdot \vec{n}_q$, $s \in \mathbb{R}$, s rovinou $\mathcal{\ddot{S}}_t$ ako $S_t = C_q + s_t \cdot \vec{n}_q$ s prislúchajúcim parametrom $s_t \in \mathbb{R}$. Bod $S_t$ lokálneho prieniku pre $q$ existuje, ak jeho vzdialenosť od stredu $C_t$ charakteristickej kružnice $c_t$ je menšia ako jej polomer $l_t.$ 
+
+\begin{align*}
+| S_t - C_t | &= | s_t \cdot \vec{n}_t | = | s_t | \leq l_t.
+\end{align*}
+
+Toto je ďalšie kritérium pre existenciu lokálneho prieniku. Na určenie parametra priesečníka $ s_t $ sa pozrieme na nasledovnú rovnicu. Do rovnice \ref{eq:druha derivacia} dosadíme vyjadrenie pre bod prieniku.
+
+\begin{align*}
+\langle \ddot{m}(t), C_t + s_t \cdot \vec{n}(t) - m(t) \rangle - \langle \dot{m}(t), \dot{m}(t) \rangle + \dot{r}^2(t) + r(t)\ddot{r}(t) = 0
+\end{align*}
+
+Odkiaľ pre parameter $ s_t $ dostávame vyjadrenie
+
+\begin{align*}
+s_t &= \dfrac{ r(t) \dot{r}(t) \langle \dot{m}(t), \ddot{m}(t) \rangle + \langle \dot{m}(t), \dot{m}(t) \rangle^2 - \left( \dot{r}^2(t) + r(t)\ddot{r}(t) \right) \langle \dot{m}(t), \dot{m}(t) \rangle}{\langle \dot{m}(t), \dot{m}(t) \rangle \langle \ddot{m}(t) , \vec{n}(t) \rangle}.
+\end{align*}
+
+Tento výraz je síce dosť zložitý, avšak umožňuje identifikovať intervaly parametra $ t $, v ktorých existuje lokálny priesečník obálky $ \mathcal{E} $ prostredníctvom nájdenia koreňov funkcie $ g(t) = | s_t | - l_t $. Samotné priesečníky pre to však nemusia byť známe.
+
+\textit{Pozorovanie:}
+Pomocou kritéria je samozrejme možné efektívne rozhodnúť o tom, či sa obalová plocha lokálne pretína v určitom parametri $t \in I$ bez toho, aby sme poznali priesečníky bodov. Tie sa potom dajú ľahko určiť pomocou
+$$
+S_{\pm} = C_{t} + s_{t} \cdot \vec{n}_{t} + b_{\pm} \cdot \vec{b}_{t},
+$$
+kde $ b_{-} \in \mathbb{R} $ a $ b_{+} \in \mathbb{R} $ a $s_t^2 + b_{\pm}^2 = l_t^2 $ z pravouhlých trojuholníkov $C_{t}S_{-}S_{t}$ a $C_{t}S_{+}S_{t}.$
+
+\subsection{Konštantný polomer}
+V prípade, že je funkcia polomeru $r(t) \equiv r $ konštantná, platí $C_t = M_t,  l_t = r$ a $\dot{r} = 0,$ preto 
+$$\dfrac{\partial^2 F}{\partial t^2} = s_t \cdot \langle \ddot{m}(t), n(t) \rangle - \langle \dot{m}(t), \dot{m}(t) \rangle = 0$$
+a kritérium pre existenciu lokálneho prieniku $\mathcal{L}_t$ sa zjednoduší na
+$$
+\lvert s_t \rvert = \frac{\langle \dot{m}(t), \dot{m}(t) \rangle}{\langle \ddot{m}(t), n(t) \rangle} \leq r.
+$$
+\begin{example}
+Pre prípad, že stredová krivka je daná normálnou parabolou, platí pre jej parametrizáciu a derivácie
+
+\[
+m(t) = \begin{pmatrix} t \\ t^2 \\ 0 \end{pmatrix}, \quad \dot{m}(t) = \begin{pmatrix} 1 \\ 2t \\ 0 \end{pmatrix} \quad \text{a} \quad \ddot{m}(t) = \begin{pmatrix} 0 \\ 2 \\ 0 \end{pmatrix}.
+\]
+Z toho ľahko získame vektory 
+$$ \dot{m}(t) \times \ddot{m}(t) =
+\begin{pmatrix} 0 \\ 0 \\ 2 \end{pmatrix} , \quad \vec{b}(t) = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} \quad  \text{a} \quad \vec{n}(t) = \dfrac{1}{\sqrt{4t^2 + 1}} \begin{pmatrix} -2t \\ 1 \\ 0 \end{pmatrix}.$$
+Ak je polomer konštantný, dostávame pre parameter samoprieseku
+$$ s_t = \dfrac{\sqrt{4t^2 + 1}^3}{2}, $$
+ktorý je rovný obrátenej hodnote krivosti krivky $m(t)$ a to
+$$ \kappa(t) = \frac{\lVert  \dot{m}(t) \times \ddot{m}(t) \rVert}{\lVert \dot{m}(t) \rVert^3} = \frac{2}{\sqrt{4t^2 + 1}^3}. $$
+Zrejme platí, že $s_t$ je vždy väčšie alebo rovné $\frac{1}{2}$. To znamená, že pre všetky polomery $r < \frac{1}{2}$ neexistuje žiadny lokálny prienik. Väčšie polomery vedú k lokálnemu pretínaniu obálky pre hodnoty parametrov $t$ v intervale $[-a, a],$ kde $a \in \mathbb{R}^+ \setminus {0}$. Napríklad pre $r = 1$ platí $a = \frac{1}{2} \sqrt{2 \sqrt{3} - 1} \approx 0.38$.
+\end{example}
+
+Vzťah medzi krivosťou a parametrom priesečníka neplatí len pre tento konkrétny príklad, ale vo všeobecnosti.
+
+\begin{lemma}
+Pre obálku $\mathcal{E}$ jednoparametrického systému sfér $\mathcal{S}$ s konštantným polomerom $r(t) \equiv r \in \mathbb{R}$ je splnená rovnosť 
+$$ s_t = \dfrac{1}{\kappa(t)} $$
+pre všetky $t \in I$, kde $\kappa$ je krivosť kostrovej krivky $m(t).$
+\end{lemma}
+
+\begin{proof}
+Označme $\alpha_t $ uhol medzi $m(t)$ a $\dot{m}(t)$ a $\beta_t $ uhol medzi $n(t)$ a $\ddot{m}(t)$. Potom platí $\alpha_t = 90 - \beta_t$ alebo $\alpha_t = 90 + \beta_t$. V oboch prípadoch je $\sin (\alpha_t) = \cos (\beta_t).$ Počítajme veľkosť parametra $s.$
+\begin{align*}
+|s_t| &= \dfrac{| \langle \dot{m}(t), \dot{m}(t) \rangle |}{ |\langle \ddot{m}(t), n(t) \rangle |} = \dfrac{| \dot{m}(t) |^2}{| \ddot{m}(t) | | n(t) | \cos \beta_t } = \dfrac{| \dot{m}(t) |^3}{| \dot{m}(t) | | \ddot{m}(t) | \sin \alpha_t } = \dfrac{| \dot{m}(t) |^3}{ | \dot{m}(t) \times \ddot{m}(t) | } \\
+&= \dfrac{1}{\kappa (t)}
+\end{align*} 
+\end{proof}
+
 \section{Obálka sfér}
 Označme $X \in \mathbb{R}^3$ a predpokladajme, že $m(t) \colon I \subset \mathbb{R} \rightarrow \mathbb{R}^3$ je parametrizácia krivky $m$ a $r(t) \colon I \rightarrow \mathbb{R}^{+}$ je funkcia definovaná na tom istom intervale. Krivka $m$ sa nazýva kostrová krivka obálky (\textit{spine curve}) a $r$ sa nazýva funkcia polomeru (\textit{radius function}). Jednoparametrický systém sfér $\mathcal{S}$ je daný rovnicou
 

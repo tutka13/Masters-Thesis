@@ -1,44 +1,122 @@
-\chapter{Implementácia}
-V tejto časti opisujeme jazyk, ktorý sme vybrali a rôzne knižnice a doplnky, pomocou
-ktorých sme vyvíjali časti nášho doplnku. Takisto uvedieme dôvody výberu.
-\section{Motivácia}
+\chapter{Špecifikácia a implementácia}
+V našej práci je cieľom implementácie matematicky odvodených konceptov vizualizácia vypočítaných plôch a následne aj ich 3D tlač. V tejto časti uvedieme dôvody výberu jazyka a knižníc, ktoré sme použili pre implementáciu. Takisto uvedieme špecifikáciu softvéru, demo a chyby, ktoré sa počas riešenia vyskytli. Potrebné skripty sa nachádzajú na webovom odkaze \url{https://github.com/tutka13/Masters-Thesis}.
 \section{Špecifikácia}
+\subsection{Požiadavky}
+Používateľ zadá parametre pre vykreslenie 3D plôch, ktoré vypočíta a vymodeluje softvér podľa procesu workflow.
+\subsubsection{Vstup}
+\textbf{Obálka sfér:}
+
+Zadať parametrizáciu priestorovej krivky $m(t)$ stredov sfér, funkciu polomeru $r(t)$, interval $I$ parametra $t$ a vzorkovanie plochy.
+
+\noindent \textbf{Obálka elipsoidov:}
+
+Zadať parametrizáciu priestorovej krivky $m(t)$ stredov elipsoidov, konštanty $a$ a $b$, interval $I$ parametra $t$ a vzorkovanie plochy.
+\subsubsection{Výstup} 
+\textbf{Obálka sfér:}
+
+Vizualizácia jednoparametrického systému sfér, charakteristických kružníc a výslednej plochy - obálky sfér.
+
+\noindent \textbf{Obálka elipsoidov:}
+
+Vizualizácia jednoparametrického systému elipsoidov, charakteristických kružníc a výslednej plochy - obálky elipsoidov.
+\subsubsection{Workflow}
+\textbf{Obálka sfér:}
+
+\begin{itemize}
+	\item vymazanie scény
+    \item čítanie parametrov z textového súboru
+    \item symbolické výpočty
+    \item vytvorenie prázdnych polí
+    \item numerické vyčíslenie symbolických výrazov
+    \item uloženie hodnôt do poľa
+    \item určenie normál charakteristických kružníc
+    \item označenie charakteristických kružníc
+    \item interpolácia medzi dvoma charakteristickými kružnicami
+    \item posun plôch v priestore
+    \item vizualizácia plôch
+    \item uloženie scény do databázy
+\end{itemize}
+
+\textbf{Obálka elipsoidov:}
+\begin{itemize}
+	\item čítanie parametrov
+    \item natočenie a posun elipsoidov
+    \item určenie parametrov škálovania
+    \item umiestnenie elipsodiu do každého bodu krivky $m(t)$
+    \item derivácia jednoparametrického systému plôch 
+    \item extrahovanie koeficientov
+    \item určenie typu plochy
+    \item nahradenie elipsoidov zodpovedajúcimi kružnicami
+    \item výpočet natočenia kružníc
+    \item vizualizácia plochy
+    \item uloženie plochy do databázy
+\end{itemize}
+\subsubsection{Funkcie} 
+Zoznam funkcií, ktoré budeme potrebovať. Sféru a elipsoid nazveme plochy.
+\begin{itemize}
+    \item čítanie parametrov z textového súboru
+    \item symbolické výpočty
+    \item derivácia
+    \item výpočet charakteristických kružníc
+    \item uloženie hodnôt do poľa
+    \item interpolácia medzi 2 charakteristickými kružnicami
+    \item posun plochy v priestore
+    \item vizualizácia plochy
+    \item uloženie plochy do databázy
+\end{itemize}
 \section{Blender}
 Blender je bezplatný softvér s otvoreným zdrojovým kódom, určený pre prácu s objektmi v 3D priestore. Využíva OpenGL, štandard v priemysle pre renderovanie, a je kompatibilný s operačnými systémami Windows, Linux a macOS. 
-Blender poskytuje širokú škálu nástrojov pre tvorbu 3D obsahu vrátane modelovania, animácie, simulácie fyzikálnych procesov, úpravy videa a efektových vizualizácií. S relatívne nízkymi nárokmi na pamäť a disk je vhodný aj pre menej výkonné počítače. Jeho rozhranie je optimalizované pomocou OpenGL pre konzistentný výkon na rôznych hardvérových platformách. Je ideálny pre jednotlivcov a malé štúdiá, ktoré využívajú jeho jednotnú pipeline. S podporou komunity \url{blender.org/community} a malým spustiteľným súborom je Blender flexibilným a výkonným nástrojom pre tvorbu 3D obsahu na rôzne platformy \cite{Blender}. 
-\section{Skriptovanie}
-Pre skúsených užívateľov Blender umožňuje rozšírenie svojej funkcionality a vytvorenie vlastných nástrojov pomocou skriptovacieho jazyka Python. Tento jazyk je integrovaný priamo do softvéru, teda nie je potreba samostatnej inštalácie Pythonu. Okrem toho Blender obsahuje špeciálnu knižnicu bpy, ktorá slúži na vykonávanie príkazov v Blenderi.
-
-Používateľ má k dispozícii niekoľko prednastavených prostredí. Na vytváranie skriptov slúži prostredie Scripting, ktoré obsahuje okná na písanie, úpravu textu a Python konzolu. Je možné pracovať aj v externom programovacom prostredí \cite{BlenderAPI}.
+Blender poskytuje širokú škálu nástrojov pre tvorbu 3D obsahu vrátane modelovania, animácie, simulácie fyzikálnych procesov, úpravy videa a efektových vizualizácií. S relatívne nízkymi nárokmi na pamäť a disk je vhodný aj pre menej výkonné počítače. Jeho rozhranie je optimalizované pomocou OpenGL pre konzistentný výkon na rôznych hardvérových platformách \cite{Blender}. Pre účely tejto práce sme využili Blender 4.0.
+\subsection{Skriptovanie}
+Blender umožňuje rozšírenie svojej funkcionality a vytvorenie vlastných nástrojov pomocou jediného skriptovacieho jazyka Python, ktorý je integrovaný priamo do softvéru, teda nie je potreba samostatnej inštalácie. Okrem toho Blender obsahuje špeciálnu knižnicu bpy, ktorá slúži na vykonávanie príkazov v Blenderi. Na vytváranie skriptov slúži prostredie Scripting, ktoré obsahuje okná na písanie, úpravu textu a Python konzolu. Je možné pracovať aj v externom programovacom prostredí \cite{BlenderAPI}.
 \section{Python}
-Jediným jazykom, ktorý je k dispozícii na skriptovanie v Blenderi, je programovací jazyk Python. Python je interpretovaný, vysokoúrovňový a dynamický jazyk, ktorý má široké uplatnenie v rôznych odvetviach. Jeho charakteristickým rysom je používanie odsadenia, ktoré má v tomto programovacom jazyku kľúčový význam, pretože slúži ako indikátor bloku kódu. V našej aplikácii pracujeme s verziou 3.11 jazyka Python.
+Python je interpretovaný, vysokoúrovňový a dynamický jazyk, ktorý má široké uplatnenie v rôznych odvetviach. Jeho charakteristickým rysom je používanie odsadenia, ktoré má v tomto programovacom jazyku kľúčový význam, pretože slúži ako indikátor bloku kódu. V našom softvéri pracujeme s verziou 3.11.5 jazyka Python.
 \subsection{Knižnice}
 Pip je systém, ktorý spravuje knižnice pre jazyk Python. Je prepojený s úložiskom
 pythonovských knižníc PyPI (Python Package Index). Pre jeho používanie nie je
-potrebná inštalácia, keďže je obsiahnutý v súboroch, ktoré používateľ získa inštalovaním
-Pythonu.
+potrebná inštalácia, keďže je obsiahnutý v súboroch, ktoré používateľ získa inštalovaním Pythonu. Na výpočet a zobrazenie plôch sme využili nasledovné knižnice
 \begin{itemize}
-\item sympy: Táto knižnica pre jazyk Python poskytuje nástroje na symbolické výpočty, algebraické manipulácie, riešenie rovníc a ďalšie matematické operácie potrebné pre pokročilé výpočty.
-\item numpy: Táto knižnica pre jazyk Python poskytuje nástroje na manipuláciu s vektormi, maticami, poliami a ďalšími objektami potrebnými pre zložitejšie výpočty.
-\item matplotlib.pyplot: Táto knižnica v jazyku Python poskytuje rozhranie na tvorbu vizualizácií a grafického zobrazenia dát. Je často využívaná na tvorbu grafov, histogramov, kontúrových máp a ďalších typov vizuálnych reprezentácií dát.
-\item math: Knižnica math v jazyku Python poskytuje základné matematické funkcie a konštanty pre numerické výpočty. Obsahuje funkcie ako $\sin, \cos, \log$ a ďalšie, ako aj konštanty ako $\pi$ a $e$.
-\item mathutils: Táto knižnica je súčasťou Blenderu a poskytuje množstvo užitočných matematických funkcií a nástrojov pre prácu s 3D objektami. Obsahuje funkcie na rotácie, transformácie, výpočet normálov a ďalšie operácie v 3D priestore.
-\item sys: Knižnica sys v jazyku Python poskytuje prístup k niektorým systémovým špecifikáciám a funkciám. Medzi jej použitia patrí prístup k argumentom príkazového riadku, manipulácia so štandardnými vstupmi a výstupmi, manipulácia s cestami k súborom a niektoré informácie o systéme ako verzia Pythonu a platforma
-\item bpy: Ide o knižnicu Blenderu, ktorá umožňuje manipuláciu s objektmi v Blenderi pomocou príkazov vytvorených vo skriptoch.
-\item time: Pomocou tejto knižnice môže používateľ získať aktuálny čas v milisekundách. 
+\item sympy: nástroje na symbolické výpočty, algebraické manipulácie, riešenie rovníc a ďalšie matematické operácie potrebné pre pokročilé výpočty,
+\item numpy: nástroje na manipuláciu s vektormi, maticami, poliami a ďalšími objektami potrebnými pre zložitejšie výpočty,
+\item matplotlib.pyplot: rozhranie na tvorbu vizualizácií a grafického zobrazenia dát, tvorbu grafov, histogramov, kontúrových máp a ďalších typov vizuálnych reprezentácií dát,
+\item math: základné matematické funkcie a konštanty pre numerické výpočty, obsahuje funkcie ako $\sin, \cos, \log$ a ďalšie, ako aj konštanty ako $\pi$ a $e$,
+\item mathutils: súčasťou Blenderu a poskytuje množstvo užitočných matematických funkcií a nástrojov pre prácu s 3D objektami, obsahuje funkcie na rotácie, transformácie, výpočet normál a ďalšie operácie v 3D priestore,
+\item sys: prístup k niektorým systémovým špecifikáciám a funkciám, medzi jej použitia patrí prístup k argumentom príkazového riadku, manipulácia so štandardnými vstupmi a výstupmi, manipulácia s cestami k súborom a niektoré informácie o systéme ako verzia Pythonu a platforma,
+\item bpy: knižnica Blenderu, ktorá umožňuje manipuláciu s objektmi v Blenderi pomocou príkazov vytvorených vo skriptoch,
+\item time: získanie času v milisekundách. 
 \end{itemize}
 
-\subsection{Implementácia}
+\section{Implementácia}
 V tejto kapitole budeme opisovať postup vývoja nášho skriptu. Takisto opíšeme jeho
 funkčnosť, používateľské rozhranie a postupy, ako inštalovať potrebný softvér a knižnice.
 Prvým krokom bol výber programovacieho prostredia. Následne sme potrebovali
 nastaviť toto prostredie tak, aby sme v ňom mohli pracovať zároveň s Blenderom a
 inštalovať všetky potrebné knižnice. Po splnení týchto krokov sme začali vyvíjať samotný skript.
-\subsection{Programovacie prostredie}
-Na programovanie v jazyku Python sme využívali programovacie prostredie VSCode vo verzii 1.77.1. Toto prostredie sme si vybrali pre jeho minimalistický dizajn, ktorý zjednodušuje používanie a robí ho intuitívnym a rýchlym. VSCode disponuje množstvom rozšírení, z ktorých pre našu prácu najdôležitejším je rozšírenie Blender Development. Toto rozšírenie slúži na ladenie skriptov, ktoré sa spúšťajú v prostredí Blenderu, a obsahuje aj predpripravené šablóny.
+\subsection{Visual Studio Code}
+Na programovanie v jazyku Python sme využívali programovacie prostredie VSCode vo verzii 1.82.2. Toto prostredie sme si vybrali pre jeho minimalistický dizajn, ktorý zjednodušuje používanie a robí ho intuitívnym a rýchlym. VSCode disponuje množstvom rozšírení, z ktorých pre našu prácu najdôležitejším je rozšírenie Blender Development. Toto rozšírenie slúži na ladenie skriptov, ktoré sa spúšťajú v prostredí Blenderu, a obsahuje aj predpripravené šablóny.
 
-Inštalácia prostredia VSCode je možná po stiahnutí inštalačného súboru z oficiálnej webovej stránky softvéru [8]. Po stiahnutí .zip súboru požadovanej verzie programu sme spustili inštalačný súbor dvojklikom.
+Inštalácia prostredia VSCode je možná po stiahnutí inštalačného súboru z oficiálnej webovej stránky softvéru. Po stiahnutí .zip súboru požadovanej verzie programu sme spustili inštalačný súbor dvojklikom.
 
 Rozšírenie Blender Development sme následne stiahli priamo v prostredí VSCode kliknutím na ikonu Extensions v ľavej lište rozhrania a vyhľadaním názvu rozšírenia.
 
 Pomocou tohto rozšírenia sme vykonávali ladenie programu pomocou klávesovej skratky Ctrl+Shift+P. Po stlačení tejto klávesovej kombinácie v prostredí VSCode sa v hornej lište zobrazilo menu, v ktorom sme vybrali možnosť Blender: Build and Start a následne Blender súbor, v ktorom sme chceli ladenie vykonať. Týmto spôsobom sa softvér spustí, a opätovným použitím klávesovej skratky Ctrl+Shift+P v programovacom prostredí a výberom možnosti Blender: Run Script sa začína proces ladenia programu.
+
+\subsection{Jupyter Notebook}
+Jupyter Notebook je výpočtový nástroj, pôvodne navrhnutý pre úlohy dátovej vedy, ktorý umožňuje interaktívnu prácu s kódom, rovnicami a vizualizáciami s podporou v 40 programovacích jazykoch. S jeho pomocou je možné vytvárať dokumenty vo formáte JSON, ktoré sú rozdelené do buniek a komunikujú s výpočtovými jadrami cez Interactive Computing Protocol. Jadrá sú zodpovedné za vykonávanie kódu a výstupy. Jupyter Notebook ponúka modulárny dizajn, ktorý umožňuje jednoduché manipulácie s jednotlivými bunkami, vrátane možnosti úpravy bunky bez ďalšieho vplyvu na zvyšnú časť kódu, spätného vrátenia sa a vymazania bunky \cite{Jupyter}.
+
+\subsection{Inštalácia knižníc}
+Pip je inštalátor balíkov pre Python. Môžete ho použiť na inštaláciu balíkov z indexu balíkov Pythonu. Python Package Index (PyPI) je úložisko softvéru pre programovací jazyk Python. Keďže sme Python stiahli z oficiálnej stránky Python \cite{PythonDownload}, pip sa inštaloval automaticky \cite{Pip}. 
+
+\noindent Overiť, či máme naištalovaný pip, možno pomocou príkazového riadku, ktorý otvoríme vyhľadaním cmd v ponuke vyhľadávania a zadaním
+\begin{verbatim}
+python -m pip --version.
+\end{verbatim}
+V našom prípade pracujeme s verziou pip 24.0. Následne je možné inštalovať všetky potrebné knižnice v príkazovom riadku zadaním
+\begin{verbatim}
+pip install sympy
+pip install numpy
+pip install matplotlib
+pip install mathutils
+pip install math
+pip install time.
+\end{verbatim}

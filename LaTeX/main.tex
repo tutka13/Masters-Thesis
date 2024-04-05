@@ -23,7 +23,7 @@
 
 \newtheorem{definition}{Definícia}[chapter]
 \newtheorem{theorem}{Veta}[chapter]
-
+\newtheorem{lemma}{Lema}
 \theoremstyle{definition}
 \newtheorem{corollary}{Dôsledok}[chapter]
 \newtheorem{note}{Poznámka}
@@ -147,9 +147,8 @@ Fakulta matematiky, fyziky a informatiky
 ~
 
 \vfill
-{\bf Poďakovanie:} Tu môžete poďakovať školiteľovi, prípadne
-ďalším osobám, ktoré vám s prácou nejako pomohli, poradili,
-poskytli dáta a podobne.
+{\bf Poďakovanie:} Na tomto mieste by som sa chcela poďakovať môjmu školiteľovi
+doc. RNDr. Pavlovi Chalmovianskému, PhD. za odborné vedenie diplomovej práce, cenné rady, pripomienky a čas strávený na konzultáciách.
 
 % --- Koniec poďakovania
 
@@ -158,10 +157,10 @@ poskytli dáta a podobne.
 % -------------------
 \newpage 
 \section*{Abstrakt}
-Slovenský abstrakt v rozsahu 100-500 slov, jeden odstavec. Abstrakt
-stručne sumarizuje výsledky práce. Mal by byť pochopiteľný pre bežného
-informatika. Nemal by teda využívať skratky, termíny alebo označenie
-zavedené v práci, okrem tých, ktoré sú všeobecne známe.
+Tutková J., Bc. Obálka systému plôch. Univerzita Komenského v Bratislava. Fakulta matematiky, fyziky a informatiky. Katedra algebry a geometrie. Bratislava, 2024.
+
+
+\noindent Táto práca sa zaoberá výpočtom obálky jednoparametrického systému elíps v $\mathbb{R}^2$ a elipsoidov v $\mathbb{R}^3$, pričom elipsy a elipsoidy sú konštantne škálované faktorom $a$ v dotykovom smere krivky $m(t)$ a faktorom $b$ v ostatných smeroch krivky. Výpočet je založený na známej teórii obálky jednoparametrického systému sfér v $\mathbb{R}^3.$ Na určenie obálky využívame symbolické a numerické výpočty v programovacom prostredí Python a vypočítané plochy vizualizujeme v 3D modelovacom softvéri Blender.
 
 \paragraph*{Kľúčové slová:} obálka plôch, systém kvadratických plôch
 % --- Koniec Abstrakt - Slovensky
@@ -170,10 +169,12 @@ zavedené v práci, okrem tých, ktoré sú všeobecne známe.
 % -------------------
 % --- Abstrakt - Anglicky 
 % -------------------
-\newpage 
-\section*{Abstract}
-Abstract in the English language (translation of the abstract in the
-Slovak language).
+\newpage
+\section*{Abstract} 
+Tutková J., Bc. Envelope of a system of surfaces. Comenius University in Bratislava. Faculty of Mathematics, Physics and Informatics. Department of Algebra and Geometry. Bratislava, 2024.
+
+
+\noindent This thesis deals with the computation of the envelope of a one-parameter system of ellipses in $\mathbb{R}^2$ and ellipsoids in $\mathbb{R}^3$, where these ellipses are scaled by a constant factor $a$ in the tangent direction of the curve $m(t)$ and by a factor $b$ in the other directions of the curve. The computation is based on known  theory of envelopes of a one-parameter system of spheres in $\mathbb{R}^3$. To determine the envelope, we use symbolic and numerical calculations in the Python programming environment and visualize the calculated surfaces in the 3D modeling software Blender.
 
 
 \paragraph*{Keywords:} envelope of surfaces, system of surfaces
@@ -248,7 +249,7 @@ Slovak language).
 \clearpage
 
 \bibliographystyle{plain}
-\bibliography{literatura} 
+%\bibliography{literatura} 
 
 %Prípadne môžete napísať literatúru priamo tu
 \begin{thebibliography}{99}
@@ -258,10 +259,6 @@ Slovak language).
 \bibitem{Blender} Blender documentation: Blender 4.0 Reference Manual. Dostupné na internete: \url{https://docs.blender.org/manual/en/latest/index.html}.
 
 \bibitem{BlenderAPI} Blender documentation: Blender 4.0 Python API Documentation. Dostupné na internete: \url{https://docs.blender.org/api/current/}.
-
-\bibitem{BlenderMesh} Blender documentation: Mesh Operator. Dostupné na internete: \url{https://docs.blender.org/api/current/bpy.ops.mesh.html}.
-
-\bibitem{BlenderContext} Blender documentation: Context Access. Dostupné na internete: \url{https://docs.blender.org/api/current/bpy.context.html}.
 
 \bibitem{BlenderDownload} Blender download. Dostupné na internete:\url{https://www.blender.org/download/}.
 
@@ -279,7 +276,11 @@ Slovak language).
 
 \bibitem{Chud09} Chudinov P. 2009. Numerical-analytical Algorithm for Constructing the Envelope of the Projectile Trajectories in Midair. Dostupné na internete: \url{https://doi.org/10.48550/arXiv.0902.0520}.
 
+\bibitem{Jupyter} Jupyter Notebook. \url{https://jupyter.org/}.
+
 \bibitem{Kar00} Karčiauskas K., Krasauskas R. 2000. Rational rolling ball blending of natural quadrics. \textit{Mathematical Modelling and Analysis,} Volume 5, Pages 97-107. Dostupné na internete: \url{https://www.researchgate.net/publication/233265253_Rational_rolling_ball_blending_of_natural_quadrics}.
+
+\bibitem{Kor} Korbaš, J. \textit{Prednášky z lineárnej algebry a geometrie}. 2013. Prvé vydanie. Univerzita Komenského v Bratislave: Vydavateľstvo UK.  ISBN 978-80-223-3408-2.
 
 \bibitem{Lee12} Lee, J. 2012. \textit{Introduction to Smooth Manifolds.} Graduate Texts in Mathematics. New York. Springer. 2. edition. Dostupné na internete: \url{https://doi.org/10.1007/978-1-4419-9982-5}.
 
@@ -297,6 +298,8 @@ On quadratic two-parameter families of spheres and their envelopes, \textit{Comp
 \bibitem{Pet98} Peternell M., Pottmann H. 1998. A Laguerre geometric approach to rational offsets, \textit{Computer Aided Geometric Design},
 Volume 15, Issue 3, Pages 223-249, ISSN 0167-8396. Dostupné na internete: \url{https://doi.org/10.1016/S0167-8396(97)00024-1}.
 
+\bibitem{Pip} Pip. \url{https://pip.pypa.io/en/stable/}.
+
 \bibitem{Pott09} Pottmann H., Peternell M. 2009. Envelopes – Computational Theory and Applications. Proceedings of Spring Conference on Computer Graphics. Dostupné na internete: \url{https://www.geometrie.tuwien.ac.at/geom/ig/peternell/env.pdf}.
 
 \bibitem{Pott98} Pottmann H., Peternell M. 1998. Applications of Laguerre geometry in CAGD. \textit{Computer Aided Geometric Design}, Volume 15, Issue 2, Pages 165-186, ISSN 0167-8396. Dostupné na internete: \url{https://doi.org/10.1016/S0167-8396(97)00023-X}.
@@ -307,7 +310,7 @@ Volume 15, Issue 3, Pages 223-249, ISSN 0167-8396. Dostupné na internete: \url{
 
 \bibitem{PythonDocumentation} Python documentation. Dostupné na internete: \url{https://docs.python.org/3/}.
 
-\bibitem{Python} Python download. Dostupné na internete: \url{https://www.python.org/downloads}.
+\bibitem{PythonDownload} Python download. Dostupné na internete: \url{https://www.python.org/downloads}.
 
 \bibitem{Skop20} Skopenkov M. et al. 2020. Characterizing envelopes of moving rotational cones and applications in CNC machining, \textit{Computer Aided Geometric Design}, Volume 83, 101944, ISSN 0167-8396. Dostupné na internete: \url{https://doi.org/10.1016/j.cagd.2020.101944}.
 
@@ -315,11 +318,15 @@ Volume 15, Issue 3, Pages 223-249, ISSN 0167-8396. Dostupné na internete: \url{
 
 \bibitem{Vra22} Vráblíková J. 2022. Envelopes of implicit surfaces. Mathematical Institute of Charles University. Prague. Master's thesis. Dostupné na internete: \url{https://dodo.is.cuni.cz/bitstream/handle/20.500.11956/171858/120411574.pdf?sequence=1&isAllowed=y}.
 
+\bibitem{Zla} Zlatoš P. \textit{Lineárna algebra a geometria: Cesta z troch rozmerov s presahmi do príbuzných odborov}. 2011. Bratislava. Marenčin PT. ISBN 978-80-8114-111-9.
+
 \bibitem{WebbBridge} Obrázok Webbov Most. Dostupné na internete: \url{http://www.yannarthusbertrand2.org/collection/australia/#mwl-3844}.
 
 \bibitem{Rollingballblends} Obrázok Rolling ball blends. Dostupné na internete:  \url{https://www2.mathematik.tu-darmstadt.de/~ehartmann/pub/parblrb_abs/parblrb_abs.html}.
 
-Všetky online zdroje boli dostupné dňa 10.05.2024.
+\bibitem{MusicTheater} Obrázok Hudobné divadlo a výstavná sieň. Dostupné na internete:  \url{https://www.archdaily.com/789123/music-theatre-and-exhibition-hall-massimiliano-and-doriana-fuksas}.
+
+Všetky online zdroje boli dostupné dňa 03.05.2024.
 
 %\bibitem{Bru92} Bruce, J., Giblin, P. (1992). Envelopes. In Curves and Singularities: A Geometrical Introduction to Singularity Theory (pp. 99-132). Cambridge: Cambridge University Press. doi:10.1017/CBO9781139172615.007
 
@@ -353,7 +360,7 @@ Všetky online zdroje boli dostupné dňa 10.05.2024.
 \input AppendixA.tex
 %
 %\addcontentsline{toc}{chapter}{Appendix B}
-%\input AppendixB.tex
+\input AppendixB.tex
 
 \end{document}
 

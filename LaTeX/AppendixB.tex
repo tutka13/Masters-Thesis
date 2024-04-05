@@ -1,0 +1,50 @@
+\chapter{Príloha B}
+\label{pri:priloha2}
+\section{Euklidovská teória kvadratických foriem a krivky 2. rádu}
+\begin{theorem}
+Ortogonálne matice typu $n \times n $ tvoria grupu, volá sa ortogonálna
+grupa a zvyčajne sa označuje $O(n)$.
+\end{theorem}
+
+\begin{theorem} 
+Matica prechodu od ortonormálnej bázy v $\mathbb{R}^n$ so štandardným skalárnym súčinom k ortonormálnej báze je ortogonálna matica. Tiež, ak od ortonormálnej bázy v $\mathbb{R}^n$ prejdeme pomocou ortogonálnej matice prechodu k novej báze,
+tak aj nová báza bude ortonormálna.
+\end{theorem}
+
+\subsection{Invarianty kriviek 2. rádu}
+\begin{definition}
+Invariantom krivky druhého rádu, vyjadrenej rovnicou
+$$
+f(x_1, x_2) = a_{11}x_1^2 + 2a_{12}x_1x_2 + a_{22}x_2^2 + 2a_1x_1 + 2a_2x_2 + a = 0
+$$
+je každý taký algebraický výraz, závisiaci od \(a_{11}, a_{12}, a_{22}, a_1, a_2, a\), ktorého hodnota sa nezmení, ak túto krivku vyjadríme v inom karteziánskom súradnicovom
+systéme, ku ktorému prejdeme pomocou otočení alebo posunutí (čím od rovnice,
+viažúcej staré premenné \(x_1, x_2\), prejdeme k rovnici, viažúcej nové premenné
+\(x'_{1}, x'_{2}\)).
+\end{definition}
+
+\begin{theorem}
+Nasledujúce číselné výrazy sú invariantmi krivky 2. rádu, vyjadrenej rovnicou
+\[ a_{11}x_1^2 + 2a_{12}x_1x_2 + a_{22}x_2^2 + 2a_1x_1 + 2a_2x_2 + a = 0. \]
+Označíme 
+\(A = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}\)
+ a vlastné hodnoty tejto matice označíme \(\lambda_1, \lambda_2\).
+\begin{align*}
+s(x_1,x_2) &= \operatorname{Tr}(A) = a_{11} + a_{22}, \\
+\delta(x_1,x_2) &= \det(A) = \det \begin{pmatrix} a_{11} & a_{12} \\ a_{12} & a_{22} \end{pmatrix} = \lambda_1 \lambda_2, \\
+\Delta(x_1,x_2) &= \det \begin{pmatrix} a_{11} & a_{12} & a_1 \\ a_{12} & a_{22} & a_2 \\ a_1 & a_2 & a \end{pmatrix}.
+\end{align*}
+\end{theorem}
+Dá sa odvodiť nasledujúca prehľadná tabuľka.
+
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Typ} & $\delta$ & \textbf{Tvar} \\
+\hline
+eliptický & $> 0$ & ak $s_1 < 0$: elipsa ak $s_1 > 0$: kružnica; ak $s_1 = 0$: bod \\
+\hline
+hyperbolický & $< 0$ & hyperbola \\
+\hline
+parabolický & $= 0$ & parabola \\
+\hline
+\end{tabular}

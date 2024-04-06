@@ -1,6 +1,18 @@
 \chapter{Príloha B}
 \label{pri:priloha2}
 \section{Euklidovská teória kvadratických foriem a krivky 2. rádu}
+Keďže kužeľosečky majú dokonalý tvar, projektanti a architekti pri riešení určitých tvarov používajú "pravé kužeľosečky" namiesto "len nejakej voľnej krivky". Čoskoro uvidíme, že to platí aj pre zovšeobecnenie kužeľov v 3-priestore, takzvané kvadriky.
+
+Body v euklidovskej rovine môžu byť dané karteziánskymi súradnicami $(x, y)$. Algebraicky povedané, kužeľosečky môžu byť dané rovnicou $Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0$.
+
+Triviálny prípad $A = B = C = 0$ treba vylúčiť, pretože potom je rovnica lineárna a opisuje priamku. Vo všeobecnom prípade rovnica opisuje klasickú kužeľovú rovnicu (elipsu, parabolu alebo hyperbolu), ktorá môže byť daná piatimi bodmi (ak $F \neq 0$, môžeme ju vydeliť $F$ a potom riešiť sústavu lineárnych rovníc s piatimi neznámymi). Krivky môžu tiež degenerovať na dvojice priamok.
+
+V algebraickom zmysle má kužeľosečka $c$ - krivka druhého stupňa - vždy dva priesečníky $S_1$ a $S_2$ s danou priamkou $s$. Oba môžu byť reálne alebo komplexne konjugované. Limitný prípad $S_1 = S_2$ nastáva vtedy, keď $s$ je dotyčnicou k $c$.
+
+Kužeľosečky sú tiež krivky druhej triedy, čo znamená, že z každého bodu v rovine kužeľosečky máme dve dotyčnice ku kužeľosečke (v algebraickom zmysle). Ak bod leží na kuželi, dotyčnice sa zhodujú. Množinu všetkých bodov, v ktorých neexistujú žiadne skutočné dotyčnice ku kužeľosečke, môžeme nazvať vnútrom kužeľosečky. Body, v ktorých sú dotyčnice komplexne konjugované a navzájom kolmé, sa nazývajú ohniská.
+
+V závislosti od počtu reálnych priesečníkov s priamkou v nekonečne rozlišujeme tri typy kužeľov: elipsy (bez reálnych priesečníkov), paraboly (priamka v nekonečne sa dotýka krivky) a hyperboly (dva reálne priesečníky).
+
 \begin{theorem}
 Ortogonálne matice typu $n \times n $ tvoria grupu, volá sa ortogonálna
 grupa a zvyčajne sa označuje $O(n)$.
@@ -26,25 +38,119 @@ viažúcej staré premenné \(x_1, x_2\), prejdeme k rovnici, viažúcej nové p
 \begin{theorem}
 Nasledujúce číselné výrazy sú invariantmi krivky 2. rádu, vyjadrenej rovnicou
 \[ a_{11}x_1^2 + 2a_{12}x_1x_2 + a_{22}x_2^2 + 2a_1x_1 + 2a_2x_2 + a = 0. \]
-Označíme 
+Označme
 \(A = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}\)
- a vlastné hodnoty tejto matice označíme \(\lambda_1, \lambda_2\).
+ a \(\lambda_1, \lambda_2\) označme vlastné hodnoty tejto matice.
 \begin{align*}
 s(x_1,x_2) &= \operatorname{Tr}(A) = a_{11} + a_{22}, \\
 \delta(x_1,x_2) &= \det(A) = \det \begin{pmatrix} a_{11} & a_{12} \\ a_{12} & a_{22} \end{pmatrix} = \lambda_1 \lambda_2, \\
 \Delta(x_1,x_2) &= \det \begin{pmatrix} a_{11} & a_{12} & a_1 \\ a_{12} & a_{22} & a_2 \\ a_1 & a_2 & a \end{pmatrix}.
 \end{align*}
 \end{theorem}
-Dá sa odvodiť nasledujúca prehľadná tabuľka.
+Z tohto možno odvodiť nasledujúcu klasifikáciu kužeľosečiek.
 
-\begin{tabular}{|c|c|c|}
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|l|}
 \hline
-\textbf{Typ} & $\delta$ & \textbf{Tvar} \\
+\textbf{Typ} & $\delta$ & $\Delta$ & \textbf{Tvar}  \\
 \hline
-eliptický & $> 0$ & ak $s_1 < 0$: elipsa ak $s_1 > 0$: kružnica; ak $s_1 = 0$: bod \\
+\multirow{3}{*}{eliptický} & \multirow{3}{*}{$> 0$} & $\neq 0$ & ak $s\Delta < 0$, tak elipsa \\
+& & $\neq 0$ & ak $s\Delta > 0$, tak  $\emptyset$ \\
+& & $= 0$ & bod \\
 \hline
-hyperbolický & $< 0$ & hyperbola \\
+\multirow{2}{*}{hyperbolický} & \multirow{2}{*}{$< 0$} & $\neq0$ & hyperbola \\
+ & & $=0$ & dve rôznobežné priamky \\
 \hline
-parabolický & $= 0$ & parabola \\
+\multirow{4}{*}{parabolický} & \multirow{4}{*}{$= 0$} & $\neq0$ & parabola \\
+& & $=0$ & dve rovnobežné priamky \\
+& & $= 0$ & priamka \\
+& & $= 0$ & $\emptyset$ \\
 \hline
 \end{tabular}
+\caption{Klasifikácia kužeľosečiek.}
+\label{tab:conic_sections}
+\end{table}
+
+\section{Plochy druhého rádu}
+V euklidovskom $3$ priestore možno body určiť pomocou troch karteziánskych $(x, y, z)$ súradníc. Potom môže byť kvadrika daná rovnicou
+\[ Ax^2 + By^2 + Cz^2 + Dxy + Exz + Fyz + Gx + Hy + Iz + J = 0. \]
+Je zrejmé, že ak prvých šesť koeficientov zanikne, uvedená rovnica je lineárna a opisuje len rovinu v priestore. Vo všeobecnom prípade rovnica opisuje klasické kvadriky (elipsoidy, paraboloidy alebo hyperboloidy). Ak $J \neq 0$, uvedenú rovnicu môžeme rozdeliť na $J$, a ak dosadíme súradnice deviatich bodov, môžeme vyriešiť sústavu lineárnych rovníc s deviatimi neznámymi. Kvadrikály však môžu degenerovať aj na kvadratické kužele, kvadratické valce a dvojice rovín.
+V algebraickom zmysle je kvadrika Q plocha druhého stupňa, ktorá má vždy dva body S1 a S2 priesečníka s danou priamkou s. Oba môžu byť reálne alebo komplexne konjugované. Limitný prípad S1 = S2 nastáva vtedy, keď s je dotyčnicou Q.
+Kvadriky sú tiež plochy druhej triedy, čo znamená, že z každého bodu v priestore máme nekonečne veľa dotykových plôch ku kvadrike, ktoré obklopujú kvadratický kužeľ v algebraickom zmysle (obrázok 1.2).
+
+V závislosti od priesečníka s rovinou v nekonečne môžeme rozlišovať
+tri typy kvadrík: elipsoidy (bez skutočného priesečníka kužeľosečky),
+paraboloidy (rovina nekonečna sa dotýka kvadriky) a hyperboloidy
+(reálny priesečník kužeľov). 
+
+Ak bod leží na kvadrike, existuje jedinečná dotyčnica roviny. Množinu všetkých bodov, v ktorých neexistujú žiadne skutočné dotyčnice ku kvadrike, možno nazvať vnútrom kvadriky. Body, v ktorých sú dotykové kužele kužeľmi otáčania, sa nazývajú ohniskové body. Tieto kužele môžu byť aj imaginárne. Súbor ohniskových bodov kvadrikály pozostáva z dvojice ohniskových kužeľov. Takéto ohniskové krivky hrajú porovnateľne dominantnú úlohu ako ohniská kužeľov a budú sa objavovať v mnohých vetách o kvadrikách.
+
+Z pohľadu matematika majú plochy stupňa dva samozrejme absolútne dokonalé tvary. Dokonca aj odchýlku permice od neho možno nazvať len aproximáciou takejto plochy. Prísne vzaté, kvadriky sú len teoretické tvary, ktoré sa v umení (obrázok 1.3), architektúre a prírode objavujú len vo viac či menej dobrých aproximáciách. Keď sa pozrieme na obrázok 1.4, Barcelonu by sme mohli nazvať "mestom kvadrík". Najmä Antoni Gaudí, najslávnejší architekt tejto oblasti, vynaložil veľké úsilie na vysvetlenie svojich stavieb. V prírode sa elipsoidy (alebo opäť ich lepšie aproximácie) zdajú byť pomerne časté, napr. keď hovoríme o tvaroch vajíčok. Zaujímavé je, že tieto tvary sú zvyčajne tvorené aspoň dvoma rôznymi elipsoidmi (obrázok 1.5), ktoré do seba pomerne dobre zapadajú. Čím podlhovastejší je tvar vajíčka, tým menšia je pravdepodobnosť, že sa vajíčko odkotúľa alebo vzdiali - namiesto toho sa bude pohybovať po kruhoch. To je dôležité pre vtáky, ktoré sa liahnu na skalách.
+
+Nasledujúce číselné výrazy sú invariantmi plochy 2. rádu, vyjadrenej rovnicou
+
+\[ a_{11}x_1^2 + 2a_{12}x_1x_2 + a_{22}x_2^2 + 2a_1x_1 + 2a_2x_2 + a = 0. \]
+Označme
+\(A = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}\)
+ a \(\lambda_1, \lambda_2\) označme vlastné hodnoty tejto matice.
+\begin{align*}
+\Delta(x, y, z) &= \det \begin{pmatrix} 
+a_{11} & a_{12} & a_{13} & a_{14} \\ 
+a_{21} & a_{22} & a_{23} & a_{24} \\
+a_{31} & a_{32} & a_{33} & a_{34} \\
+a_{41} & a_{42} & a_{43} & a_{44}
+\end{pmatrix}.
+\end{align*}
+\begin{align*}
+\delta(x, y, z) &= \det \begin{pmatrix} 
+a_{11} & a_{12} & a_{13} \\ 
+a_{21} & a_{22} & a_{23} \\ 
+a_{31} & a_{32} & a_{33} 
+\end{pmatrix},
+\end{align*}
+\begin{align*}
+T(x, y, z) &= \det \begin{pmatrix} 
+a_{11} & a_{12} \\ 
+a_{21} & a_{22} 
+\end{pmatrix} + \det \begin{pmatrix} 
+a_{22} & a_{23} \\ 
+a_{32} & a_{33} 
+\end{pmatrix} + \det \begin{pmatrix} 
+a_{33} & a_{31} \\ 
+a_{13} & a_{11} 
+\end{pmatrix}
+\end{align*}
+\begin{align*}
+s(x, y, z) &= a_{11} + a_{22} + a_{33}
+\end{align*}
+\begin{align*}
+\Delta'(x, y, z) &= \Delta_{11} + \Delta_{22} + \Delta_{33}, 
+\end{align*}
+kde $
+\Delta_{ij} = (-1)^{i+j} \det(\Delta_{ij}).
+$
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|l|}
+\hline
+\textbf{Typ} & $\delta$ & $\Delta$ & \textbf{Tvar}  \\
+\hline
+\multirow{3}{*}{eliptický} & \multirow{3}{*}{$> 0$} & $\neq 0$ & ak $s\Delta < 0$, tak elipsa \\
+& & $\neq 0$ & ak $s\Delta > 0$, tak  $\emptyset$ \\
+& & $= 0$ & bod \\
+\hline
+\multirow{2}{*}{hyperbolický} & \multirow{2}{*}{$< 0$} & $\neq0$ & hyperbola \\
+ & & $=0$ & dve rôznobežné priamky \\
+\hline
+\multirow{4}{*}{parabolický} & \multirow{4}{*}{$= 0$} & $\neq0$ & parabola \\
+& & $=0$ & dve rovnobežné priamky \\
+& & $= 0$ & priamka \\
+& & $= 0$ & $\emptyset$ \\
+\hline
+\end{tabular}
+\caption{Klasifikácia kužeľosečiek.}
+\label{tab:conic_sections}
+\end{table}
+Plochy druhého rádu možno skúmať bez redukcie všeobecnej rovnice na kanonický tvar spoločným zohľadnením tzv. základných invariantov plôch druhého rádu. Sú to výrazy vytvorené z koeficientov (*), ktorých hodnoty sa nemenia pri paralelnej translácii a rotácii súradnicového systému:
+\end{document}

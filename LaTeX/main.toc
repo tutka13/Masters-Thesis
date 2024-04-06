@@ -44,4 +44,5 @@
 \contentsline {chapter}{Príloha A}{45}{chapter*.32}%
 \contentsline {chapter}{Príloha B}{49}{chapter*.33}%
 \contentsline {section}{\numberline {4.1}Euklidovská teória kvadratických foriem a krivky 2. rádu}{49}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Invarianty kriviek 2. rádu}{49}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.1}Invarianty kriviek 2. rádu}{50}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Plochy druhého rádu}{51}{section.4.2}%

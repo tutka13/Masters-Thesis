@@ -11,9 +11,9 @@ Ak nakreslíme kružnice so stredom na x-ovej osi s polomerom 1, ako na obrázku
 	\label{fig:system}
 \end{figure}
 
-Každá z týchto priamok sa dotýka každej kružnice v jednom bode a v tomto bode majú spoločnú dotyčnicu. V nasledovnom texte túto myšlienku matematicky opíšeme, na základe nej zostrojíme tzv. obálku systému kriviek alebo plôch a porovnáme prístupy ich výpočtu. Budeme pracovať v reálnom vektorovom priestore so štandardným skalárnym súčinom, teda v euklidovskom priestore, rozmeru $n = 2, 3.$ Najprv ilustrujeme príklady obálok a ich výpočet pre $ n = 2,$ neskôr pre $n = 3.$ Po celý čas predpokladáme, že všetky zobrazenia sú dostatočne veľakrát diferencovateľné. Tučným písmom značíme vektorovú funkciu a parametre pre prehľadnosť zápisov vynechávame, ak sú z kontextu zrejmé.
+Každá z týchto priamok sa dotýka každej kružnice v jednom bode a v tomto bode majú spoločnú dotyčnicu. V nasledovnom texte túto myšlienku matematicky opíšeme, na základe nej zostrojíme tzv. obálku systému kriviek alebo plôch a porovnáme prístupy ich výpočtu. Budeme pracovať v reálnom vektorovom priestore so štandardným skalárnym súčinom, teda v euklidovskom priestore $\mathbb{E}^{n}$, rozmeru $n = 2, 3.$ Najprv ilustrujeme príklady obálok a ich výpočet pre $ n = 2,$ neskôr pre $n = 3.$ Po celý čas predpokladáme, že všetky zobrazenia sú dostatočne veľakrát diferencovateľné a pre prehľadnosť zápisov vynechávame parametre, ak sú z kontextu zrejmé.
 
-Vo všeobecnosti, začneme v $\mathbb{R}^2$ s jednoparametrickým systémom kriviek daným funkciou, v $\mathbb{R}^3$ máme jednoparametrický systém plôch.
+%Vo všeobecnosti, začneme v $\mathbb{E}^2$ s jednoparametrickým systémom kriviek daným funkciou, v $\mathbb{E}^3$ máme jednoparametrický systém plôch.
 
 \begin{definition}
 Nech $F \colon \mathbb{R}^{n} \times I \rightarrow \mathbb{R}$ je funkcia v premenných $ x_{1}, x_{2}, \ldots, x_{n} $ a v parametri $t$, kde $I \subseteq \mathbb{R}$ je interval. Definujeme jednoparametrický systém nadplôch ako systém množín 
@@ -25,7 +25,7 @@ $$
 V $n = 2$ budeme pre lepšiu prehľadnosť značiť premenné $x_{1}, x_{2}$ ako $x, y,$ pre $n = 3$ pribudne $x_{3}$ ako $z.$ Pre lepšiu prehľadnosť neskôr označíme dvojicu $(x,y)$ alebo trojicu $(x,y,z)$ ako $X$, potom
 $\mathcal{F} = \{ X \in \mathbb{R}^{n} \mid \ F(X, t) = 0, \ t \in I \}. $
 
-Pre horeuvedený prípad teda máme jednoparameterický systém kružníc so stredmi kružníc, ktoré ležia na úsečke parametrizovanej $(t,0)$ pre $t \in [-1,1]$ a konštantným polomerom pre každú kružnicu $r = 1$ daný implicitnou funkciou
+Pre horeuvedený prípad, vizualizovaný na obr. \ref{fig:system}, teda máme jednoparameterický systém kružníc so stredmi kružníc, ktoré ležia na úsečke parametrizovanej $(t,0)$ pre $t \in [-1,1]$ a konštantným polomerom pre každú kružnicu $r = 1$ daný implicitnou funkciou
 $$ \mathcal{F} = \{ (x, y) \in \mathbb{R}^{2} \mid \ F(x, y, t) = 0, \ t \in [-1,1] \}, $$
 kde
 $$ F(x, y, t) = (x - t)^2 + y^2 - 1.$$
@@ -36,19 +36,18 @@ $$ F_{-1}(x, y) = F(x, y, -1) = (x + 1)^2 + y^2 - 1. $$
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[trim={0 1.65cm 0 2cm},clip]{images/one_element_of_system.pdf}
+	\includegraphics[trim={0 1.65cm 0 2cm},clip]{images/one_element_of_the_system.pdf}
 	\caption[Zobrazenie prvkov systému.]{Modrou farbou je vyznačená kružnica systému v parametri $t=-1$.}
 	\label{fig:one_element_of_system}
 \end{figure}
 
 \section{Obálka jednoparametrického systému nadplôch}
-Najskôr definujeme obálku jednoparametrického systému kriviek v $\mathbb{R}^2$. Uvedieme charakterizáciu obálok, ktorú možno použiť na výpočet pre jednoduchšie jednoparametrické systémy. Následne túto charakterizáciu použijeme ako definíciu pre obálku jednoparametrického systému plôch v $\mathbb{R}^n$.
+Najskôr definujeme obálku jednoparametrického systému kriviek v $\mathbb{E}^2$. Uvedieme charakterizáciu obálok, ktorú možno použiť na výpočet pre jednoduchšie jednoparametrické systémy. Následne túto charakterizáciu použijeme ako definíciu pre obálku jednoparametrického systému plôch v $\mathbb{E}^n$.
 
 \begin{definition}
 Definujme gradient funkcie $F \colon \mathbb{R}^2 \times I \rightarrow \mathbb{R}$ vzhľadom na $x$ a $y$ ako
 $$\nabla F(x, y, t) = \left(\frac{\partial F}{\partial x}(x, y, t), \frac{\partial F}{\partial y}(x, y, t) \right).$$ 
 \end{definition}
-Predpokladáme, že $\nabla F(x,y,t) \neq \vec{0}. $ 
 
 \begin{definition}
 Obálkou systému kriviek $ \mathcal{F} $ je parametrizovaná krivka $\gamma(t) \colon J \subseteq I \rightarrow \mathbb{R}^{2}$ taká, že 
@@ -58,7 +57,9 @@ Obálkou systému kriviek $ \mathcal{F} $ je parametrizovaná krivka $\gamma(t) 
 \end{enumerate}
 \end{definition}
 
-Obálka $\gamma(t)$ sa dotýka každej krivky zo systému $F(x,y,t)$ v bode $(x, y)$  pre nejaké $t$ a v tomto bode má s krivkou zo systému rovnakú dotyčnicu. To znamená, že každý bod obálky ${\gamma}(t) = (\gamma_{1}(t),\gamma_{2}(t))$ spĺňa rovnicu systému $F(\gamma_{1}(t),\gamma_{2}(t),t)=0$ pre nejaké $t,$ a teda platí prvá podmienka $\gamma(t) \in \mathcal{F}_{t}$. Gradient funkcie $ \nabla F(x,y,t)$ je normálový vektor k $F(x,y,t)$ v regulárnom bode $(x,y)$ a parametri $t$. V spoločnom bode $(x,y)$ a parametri $t$ chceme rovnaký smer dotykového vektora pre $\gamma(t)$ a $F(x,y,t), $ z čoho vyplýva, že $\dot{\gamma}(t)$ a dotykový vektor k funkcii $F(x,y,t)$ sú lineárne závislé, z čoho dostávame $\dot{\gamma}(t) \perp \nabla F \left( \gamma(t), t \right), $ druhú podmienku v definícii obálky. Interval $J,$ na ktorom dostávame výslednú obálku môže byť menší ako interval $I,$ na ktorom bol definovaný systém kriviek, teda máme $J \subseteq I.$ Ak by bol gradient $\nabla F(x,y,t) $ v nejakom bode nulový, nevieme nájsť jednoznačne dotykový vektor obálky a systému. 
+Obálka $\gamma(t)$ sa dotýka každej krivky zo systému $F(x,y,t)$ v bode $(x, y)$  pre nejaké $t$ a v tomto bode má s krivkou zo systému rovnakú dotyčnicu. To znamená, že každý bod obálky ${\gamma}(t) = (\gamma_{1}(t),\gamma_{2}(t))$ spĺňa rovnicu systému $F(\gamma_{1}(t),\gamma_{2}(t),t)=0$ pre nejaké $t,$ a~teda platí prvá podmienka $\gamma(t) \in \mathcal{F}_{t}$. Gradient funkcie $ \nabla F(x,y,t)$ možno geometricky interpretovať ako normálový vektor k $F(x,y,t)$ v regulárnom bode $(x,y)$ a parametri $t$. V spoločnom bode $(x,y)$ a parametri $t$ požadujeme lineárnu závislosť dotykového vektora obálky $\gamma(t)$ a systému $F(x,y,t), $ z čoho dostávame $\dot{\gamma}(t) \perp \nabla F \left( \gamma(t), t \right), $ druhú podmienku v definícii obálky. Interval $J,$ na ktorom dostávame výslednú obálku môže byť menší ako interval $I,$ na ktorom bol definovaný systém kriviek, teda máme $J \subseteq I.$
+
+Pre všetky $(x, y, t)$ predpokladáme, že  $\nabla F(x,y,t) \neq \vec{0}. $  Ak by bol gradient $\nabla F(x,y,t) $ v nejakom bode nulový, nevieme jednoznačne nájsť dotykový vektor systému $F(x, y, t).$ 
 
 \begin{theorem}
 Regulárna krivka $\gamma(t) \colon J \subseteq I \rightarrow \mathbb{R}^{2}$ kde $t \in J  \subseteq I$ je obálkou jednoparametrického systému $\mathcal{F}$ práve vtedy, keď spĺňa:
@@ -80,25 +81,25 @@ sú ekvivalentné.
 $$ \frac{\partial F}{\partial x}(\gamma_{1}(t),\gamma_{2}(t),t) \cdot \dot{\gamma_{1}}(t)+\frac{\partial F}{\partial y}(\gamma_{1}(t),\gamma_{2}(t),t) \cdot \dot{\gamma_{2}}(t)+\frac{\partial F}{\partial t}(\gamma_{1}(t),\gamma_{2}(t),t) \cdot 1 = 0. $$
 Nakoľko požadujeme, aby gradient funkcie $\nabla F(\gamma_{1}(t),\gamma_{2}(t),t)$ bol kolmý na $\dot{\gamma}(t) \text{ tak}$
 $$ \langle \nabla F(\gamma_{1}(t),\gamma_{2}(t),t), \dot{\gamma}(t) \rangle = 0,$$
-teda platí
+a teda platí
 $$ \frac{\partial F}{\partial x}(\gamma_{1}(t),\gamma_{2}(t),t) \cdot \dot{\gamma_{1}}(t)+\frac{\partial F}{\partial y}(\gamma_{1}(t),\gamma_{2}(t),t) \cdot \dot{\gamma_{2}}(t) = 0, $$
 z čoho dostávame
 $$ \frac{\partial F}{\partial t}(\gamma_{1}(t),\gamma_{2}(t),t) = 0. $$ 
 \end{enumerate}
 \end{proof}
 
-Obálka sa počíta riešením rovníc
-\begin{align*}
-F(x, y, t) &= 0, \\
-\frac{\partial F}{\partial t}(x,y,t) &= 0. \\
-\end{align*}
+%Obálka sa počíta riešením rovníc
+%\begin{align*}
+%F(x, y, t) &= 0, \\
+%\frac{\partial F}{\partial t}(x,y,t) &= 0. \\
+%\end{align*}
 
 Často sa v literatúre môžeme stretnúť s rôznymi opismi obálky, ktoré však bez ďalších predpokladov nemusia definovať rovnakú množinu bodov. Príkladom je ďalšia charakterizácia obálky ako množiny limitných bodov prienikov kriviek systému. Vzťahy medzi jednotlivými charakterizáciami možno nájsť v \cite{Bru81}.  
 
 Dokonca, daný systém nemusí mať obálku. Príkladom sú sústredné kružnice s rastúcim polomerom.
 
 \begin{example} 
-Obálku systému sústredných kružníc pre $t \in I=[\frac{1}{10},2]$ rátame ako systém rovníc
+Obálku systému sústredných kružníc pre $t \in I=[\frac{1}{10},2]$ rátame ako riešenie systému rovníc
 \begin{align*}
 F(x, y, t) &= x^2 + y^2 - t, \\
 \frac{\partial F}{\partial t}(x,y,t) &= -1. \\
@@ -113,7 +114,7 @@ Z druhej rovnice máme $t=-1 \neq 0,$ teda systém nemá riešenie. Aj keď by s
 	\label{fig:concentric_circles}
 \end{figure}
 
-Prístup, ktorý sme využili pre jednoparametrický systém kriviek, možno zovšeobecniť pre ľubovoľný jednoparametrický systém plôch v $\mathbb{R}^n.$
+Prístup, ktorý sme využili pre jednoparametrický systém kriviek, možno zovšeobecniť pre ľubovoľný jednoparametrický systém plôch v $\mathbb{E}^n.$
 
 \begin{definition}{\textbf{\textup{(Charakterizácia.)}}}
 \label{charakterizacia}
@@ -126,7 +127,7 @@ Ak by sme chápali obálku podľa definície ako množinu bodov, problém by sme
 F(x,y,t) &= 0, \\
 \frac{\partial F}{\partial t}(x, y, t) &= 0. \\
 \end{align*}
-eliminovať $t.$ Na riešenie nelineárneho systému dvoch rovníc síce existujú pokročilé nástroje, no eliminovaním parametra $t$ strácame informáciu o tom, kde je obálka definovaná. 
+eliminovať $t.$ Na riešenie nelineárneho systému dvoch rovníc síce existujú pokročilé nástroje, no eliminovaním parametra $t$ strácame informáciu o tom, na akom intervale $I$ je obálka definovaná. 
 
 \begin{example}
 Pre náš príklad $ F(x, y, t) = (x - t)^2 + y^2 - 1 = 0 $ máme 
@@ -177,90 +178,92 @@ Na obrázku \ref{fig:too_complicated_equations} je znázornený tento systém el
 \section{Výpočet obálky}
 Vo väčšine prípadov sú rovnice charakterizujúce obálku systému plôch príliš vysokého stupňa v parametri $t$ a nedokážeme z nich ľahko odvodiť rovnicu obálky, preto pristupujeme aj k numerickým riešeniam. Spoľahlivá aproximácia obálky je jednou z aktuálnych výskumných tém. Na začiatok si však rozoberme existujúce analytické prístupy. Naledujúce prístupy sú prevzaté z \cite{Vra22}.
 \subsection{Prístup algebraickej geometrie}
-Dokonca aj v prípade jednoduchého príkladu ako \ref{example:too_complicated_equations}, obe polynomické rovnice charakterizujúce obálku sú vysokého stupňa v parametri $t$, preto je odstránenie parametera $t$ náročné bez vhodného nástroja. Štandardným aparátom na túto úlohu sú Gröbnerove bázy. Gröbnerove bázy sú kľúčovým pojmom v algebraickej geometrii a počítačovej algebre. Ide o špeciálnu množinu polynómov vo viacerých premenných, ktoré majú niekoľko dôležitých vlastností a zohrávajú kľúčovú úlohu pri riešení rôznych matematických problémoch vrátane riešenia sústav polynomických rovníc, zjednodušovania polynómov a dokazovania rôznych algebraických tvrdení. Vybudovanie tejto teórie je pomerne zdĺhavé, preto odkážeme na bohaté teoretické pozadie v \cite{Chalm}.
-Najprv vypočítame Gröbnerovu bázu Buchbergerovým algoritmom pre ideál generovaný sústavou polynomických rovníc, ktorá obsahuje všetky premenné vrátane tej, ktorú chceme eliminovať. Z Gröbnerovej bázy vyberieme polynómy, ktoré obsahujú premennú, ktorú chceme eliminovať. Tieto polynómy použijeme na vyjadrenie tejto premennej v závislosti od ostatných premenných. Po vyriešení nových rovníc získame výraz, ktorý opisuje vzťah medzi zvyšnými premennými a eliminovanou premennou. Týmto spôsobom úspešne eliminujeme premennú.
-Pokúsme sa vypočítať Gröbnerovu bázu príkladu \ref{example:too_complicated_equations} vzhľadom na lexikografické usporiadanie monómov $t > x > y $. Keďže výpočet Gröbnerovej bázy trvá pomerne dlho, neuvádzame postup a výsledok možno nájsť v prílohe \ref{pri:priloha1}.
+Dokonca aj v prípade jednoduchého príkladu \ref{example:too_complicated_equations}, obe polynomické rovnice charakterizujúce obálku sú vysokého stupňa v parametri $t$, preto je odstránenie parametera $t$ náročné bez vhodného nástroja. Štandardným aparátom na túto úlohu sú Gröbnerove bázy. Gröbnerove bázy sú kľúčovým pojmom v algebraickej geometrii a počítačovej algebre. Ide o špeciálnu množinu polynómov vo viacerých premenných, ktoré majú niekoľko dôležitých vlastností a zohrávajú kľúčovú úlohu pri riešení rôznych matematických problémoch vrátane riešenia sústav polynomických rovníc, zjednodušovania polynómov a dokazovania rôznych algebraických tvrdení. Vybudovanie tejto teórie je pomerne zdĺhavé, preto odkážeme na bohaté teoretické pozadie v \cite{Chalm}.
+%Najprv vypočítame Gröbnerovu bázu Buchbergerovým algoritmom pre ideál generovaný sústavou polynomických rovníc, ktorá obsahuje všetky premenné vrátane tej, ktorú chceme eliminovať. Z Gröbnerovej bázy vyberieme polynómy, ktoré obsahujú premennú, ktorú chceme eliminovať. Tieto polynómy použijeme na vyjadrenie tejto premennej v závislosti od ostatných premenných. Po vyriešení nových rovníc získame výraz, ktorý opisuje vzťah medzi zvyšnými premennými a eliminovanou premennou. Týmto spôsobom úspešne eliminujeme premennú.
+%Pokúsme sa vypočítať Gröbnerovu bázu príkladu \ref{example:too_complicated_equations} vzhľadom na lexikografické usporiadanie monómov $t > x > y $. 
+Keďže výpočet Gröbnerovej bázy trvá pomerne dlho, neuvádzame postup a výsledok možno nájsť v prílohe \ref{pri:priloha1}. 
 
-Gröbnerova báza vzhľadom na iné usporiadanie, napr. grevlex je zvyčajne vypočítaná oveľa rýchlejšie a jej polynómy majú krajšie koeficienty, no na druhej strane, tento prístup nie je vo všeobecnosti možné použiť na odstránenie premennej $t$ z rovníc. 
+%Gröbnerova báza vzhľadom na iné usporiadanie, napr. grevlex je zvyčajne vypočítaná oveľa rýchlejšie a jej polynómy majú krajšie koeficienty, no na druhej strane, tento prístup nie je vo všeobecnosti možné použiť na odstránenie premennej $t$ z rovníc. 
+%Spôsob, ako nájsť polynóm, ktorý leží v prvom eliminačnom ideáli, ktorý je nezávislý na Gröbnerovej bázach a monómických usporiadaniach, využíva teóriu rezultantov. 
 
-Existujú aj iné metódy na riešenie polynomických rovníc, ktoré nie sú závislé na usporiadaní monómov. 
-Spôsob, ako nájsť polynóm, ktorý leží v prvom eliminačnom ideáli, ktorý je nezávislý na Gröbnerovej bázach a monómických usporiadaniach, využíva teóriu rezultantov. Rezultant je determinant matice polynómov.
-
-Hoci výpočet determinantov veľkých matíc je výpočtovo aj časovo náročný problém, existujú metódy, ako  vypočítať determinant efektívnejšie. V príklade \ref{example:too_complicated_equations} uvedieme výsledný polynóm $Res(F^\lambda , F_t^\lambda , t)$ a ukážeme obálku nájdenú rezultantom, pozri \ref{fig:resultant}. 
+Gröbnerovu bázu je možné určiť vzhľadom na usporiadanie monómov, existujú aj iné metódy na riešenie polynomických rovníc, ktoré nie sú závislé na usporiadaní monómov. Jednou z metód je výpočet rezultantu, determinant špeciálnej matice polynómov.
+Hoci výpočet determinantov veľkých matíc je výpočtovo aj časovo náročný problém, poznáme metódy, ako vypočítať determinant efektívnejšie. V príklade \ref{example:too_complicated_equations} uvedieme výsledný polynóm $Res(F^\lambda , F_t^\lambda , t)$ a na \ref{fig:resultant} obálku nájdenú pomocou rezultantu. 
 
 $ Res(F^\lambda , F_t^\lambda , t) = 191102976x^{10} + 262144x^8y^6 - 9584640x^8y^4 + 83165184x^8y^2 - 633470976x^8 - 16384x^6y^{10} - 81920x^6y^8 - 14483456x^6y^6 - 113311744x^6y^4 + 96419840x^6y^2 + 698368000x^6 - 16384x^4y^{12} - 294912x^4y^{10} - 2998272x^4y^8 - 18284544x^4y^6 - 74956800x^4y^4 - 184320000x^4y^2 - 256000000x^4. $
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[trim={0 0.35cm 0 0.85cm},clip]{images/resultant.pdf}
 	\caption{Obálka vypočítaná rezultantom.}
 	\label{fig:resultant}
 \end{figure}
 
-Navyše táto metóda, rovnako ako metóda založená na eliminačnej teórii s použitím Gröbnerových báz, nám vypočíta správnu obálku len vtedy, ak uvažujeme parameter $t$ jednoparametrického systému z celej reálnej priamky. Ak obmedzíme oblasť parametra na interval, tak obálka zvyčajne nemôže byť daná implicitnou rovnicou, a preto je potrebné nájsť nejakú parametrizáciu obálky. 
+Navyše táto metóda, rovnako ako metóda založená na eliminačnej teórii s použitím Gröbnerových báz, nám vypočíta správnu obálku len vtedy, ak uvažujeme parameter $t$ jednoparametrického systému z celej reálnej priamky. 
 
-Pri použití rezultantov máme lepšiu kontrolu nad zložitosťou výpočtu. Pre dané dva polynómy totiž vieme, ako sa konštruuje rezultant, a tak vieme odhadnúť, s akými veľkými polynómami sa bude počas výpočtu manipulovať, avšak pri hľadaní Gröbnerovej bázy je ťažké odhadnúť, aké zložité S-polynómy sa behom algoritmu vyskytnú. Nie je zriedkavosťou, že S-polynómy sú podstatne komplikovanejšie než vstupné polynómy a výsledná Gröbnerova báza.
+%Ak obmedzíme oblasť parametra na interval, tak obálka zvyčajne nemôže byť daná implicitnou rovnicou, a preto je potrebné nájsť nejakú parametrizáciu obálky. 
+
+Pri použití rezultantov máme lepšiu kontrolu nad zložitosťou výpočtu. Pre dané dva polynómy totiž vieme, ako sa konštruuje rezultant, a tak vieme odhadnúť, s akými veľkými polynómami sa bude počas výpočtu manipulovať, avšak pri hľadaní Gröbnerovej bázy je ťažké odhadnúť, aké zložité polynómy sa behom algoritmu vyskytnú.
 
 \subsection{Prístup projektívnej geometrie}
-Body duálneho projektívneho priestoru $\mathbb{P}^3 $ možno stotožniť s nadrovinami v $\mathbb{R}^3$. Plochu v duálnom projektívnom priestore možno teda interpretovať ako množinu všetkých jej dotykových nadrovín. Pomocou duálneho prístupu sa dá dokázať, že obálky jednoparametrických systémov sú racionálne pre racionálne vstupné údaje. Potrebné teoretické pozadie možno nájsť v \cite{Pott01}, z čoho čerpajú články s mnohými výsledkami \cite{Pet08}, \cite{Pet98} a príklady pre výpočet obálky možno nájsť v \cite{Vra22}.
+Body duálneho projektívneho priestoru $\mathbb{P}^3 $ možno stotožniť s nadrovinami v $\mathbb{R}^3$. Plochu v duálnom projektívnom priestore možno teda interpretovať ako množinu všetkých jej dotykových nadrovín. Pomocou duálneho prístupu sa dá dokázať, že obálky jednoparametrických systémov sú pre racionálne vstupné údaje racionálne. Potrebné vybudovanie teórie možno nájsť v \cite{Pott01}, z čoho čerpajú články s mnohými výsledkami \cite{Pet08}, \cite{Pet98} a príklady pre výpočet obálky možno nájsť v \cite{Vra22}.
 \begin{example}
 Uvažujme dva systémy kružníc $\mathcal{F}$ s konštantným polomerom $\frac{1}{2}$ a $\mathcal{G}$ s funkciou polomeru $\frac{t}{2}$, ktorých stredy ležia na rovinnej krivke $m(t) = (t^3, t^2)$, kde $t \in \mathbb{R}.$
 So systémom
 $$ \mathcal{F} = \{ X \in \mathbb{R}^2 \mid (x - t^3)^2 + (y - t^2)^2 - \frac{1}{4} = 0, t \in \mathbb{R} \}.$$
-korešponduje v cyklografickom modeli krivka $m_1 = (t^3, t^2, \frac{1}{2})\subset \mathbb{R}^3$.
+korešponduje krivka $m_1 = (t^3, t^2, \frac{1}{2})\subset \mathbb{R}^3$.
 Pre
 $$ \mathcal{G} = \{ X \in \mathbb{R}^2 \mid (x - t^3)^2 + (y - t^2)^2 - \frac{t^2}{4} = 0, t \in \mathbb{R} \}$$
-máme v cyklografickom modeli krivku $m_2(t) = (t^3, t^2, \frac{t}{2}).$
-Kružnice korešpondujúce s $t < 0$ sú negatívne orientované a orientácia sa mení pre kružnice korešpondujúce s $t > 0$. Pre $t = 0$ je prvok $\mathcal{F}_0 \in \mathcal{F}$ bod $ (0, 0) \in m(t), $ čo je kružnica s nulovým polomerom a bez určenej orientácie.
+máme krivku $m_2(t) = (t^3, t^2, \frac{t}{2}).$
+Kružnice zodpovedajúce $t < 0$ sú negatívne orientované, pre $t > 0$ pozitívne orientované, pre $t = 0$ je prvok $\mathcal{F}_0 \in \mathcal{F}$ bod $ (0, 0) \in m(t), $ čo je kružnica s nulovým polomerom a bez určenej orientácie.
 Krivka $m(t)$ je ortogonálna projekcia oboch kriviek $m_1$ a $m_2$ a často sa nazýva stredná os \textit{(medial axis)} jednoparametrického systému.
-Pozrite si obrázok pre krivky $m_1, m_2 \subset \mathbb{R}^3$, jednoparametrické systémy $\mathcal{F}$ a $\mathcal{G}$ rovinných kružníc a ich stredné osy.
 \end{example}
 
 Rovnakým spôsobom môžeme definovať jednoparametrický systém sfér v $\mathbb{R}^3$ ako obraz kriviek v $\mathbb{R}^4$.
-Jedným z dôležitých výsledkov je, že pomocou cyklografického zobrazenia racionálnej krivky možno rozhodnúť o reálnosti obálky a to tak, že cyklografický obraz $m(t) \subset \mathbb{R}^{n+1}$ má reálnu obálku práve vtedy, keď pre všetky $t \in I $ platí 
+Jedným z dôležitých výsledkov je, že pomocou tohto prístupu možno rozhodnúť o reálnosti obálky a to tak, že systém korešpondujúci s krivkou $m(t) \subset \mathbb{R}^{n+1}$ má reálnu obálku práve vtedy, keď pre všetky $t \in I $ platí 
 $$\langle \dot{m}(t), \dot{m}(t) \rangle \geq 0$$ 
 a rovnosť platí len pre izolované hodnoty $t$, kde za skalárny súčin vezmeme pseudo-skalárny súčin vyjadrený ako $\langle \dot{m}(t), \dot{m}(t) \rangle = m_1^2(t) + m_2^2(t) + \ldots + m_n^2(t) - m_{n+1}^2(t).$
 
 Pre príklad tak 4 máme
-$$\langle \dot{m}(t), \dot{m}(t) \rangle = 9t^4 - 4t^2 = t^2(9t^2 - 4)\geq 0, \text{ pre } t \in I = \mathbb{R} \setminus \{ [-\frac{2}{3}, 0) \cup( 0, \frac{2}{3}] \}, $$
-preto na tomto intervale existuje reálna obálka.
+\begin{align*}
+&\langle \dot{m}_1(t), \dot{m}_1(t) \rangle = 9t^4 + 4t^2 \geq 0, \text{ pre } t \in \mathbb{R}, \\
+&\langle \dot{m}_2(t), \dot{m}_2(t) \rangle = 9t^4 + 4t^2 - \frac{1}{4} \geq 0, \text{ pre } t \in \mathbb{R} \setminus \{ (-0.236, 0) \cup( 0, 0.236) \},
+\end{align*}
+preto na týchto intervaloch existuje reálna obálka systémov $\mathcal{F}$ a $\mathcal{G}$.
 
 \subsection{Kinematický prístup}
 Ďalším zo spôsobov, ako chápať jednoparametrické systémy plôch v $\mathbb{R}^n$ je pozerať sa na ne ako na množinu všetkých transformácií daného povrchu $\mathcal{P}$. Povrch $\mathcal{P}$ sa transformuje na ostatné prvky systému prostredníctvom prvkov vhodnej grupy transformácií. Táto množina transformácii má okrem štruktúry grupy aj štruktúru hladkej variety \textit{(smooth manifold)}. Tieto grupy nazývame Lieove grupy.
 
 \begin{example}
-Ilustrujme tento postup na jednoduchom rovinnom príklade. Transformujme zobrazením $g_t$ priamku $l$, kde pre každé $t \in \mathbb{R}$, zodpovedá $g_t$ rotácii.
+Ilustrujme tento postup na jednoduchom rovinnom príklade. Zobrazením $g_t$, kde pre každé $t \in \mathbb{R}$, zodpovedá $g_t$ rotácii, transformujme priamku $l$  parametrizovanú
 \begin{align*}
 l \colon x(u) &= 1 \\
-y(u) &= u \\
+y(u) &= u. 
 \end{align*}
-Vo všeobecnosti
-\[
-g_t \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix}
+Vo všeobecnosti 
+$$
+g_t = \begin{pmatrix}
 \cos t & -\sin t  \\
 \sin t & \cos t  \\
-\end{pmatrix}
-\begin{pmatrix} x \\ y \end{pmatrix}.
-\]
-Grupa všetkých rotácií je $SO(n)$ a nazýva sa špeciálna ortogonálna grupa. Pre $t = 0$, dostávame priamku $l$. Pre iné $t$, napríklad $t = \frac{\pi}{2}$, dostávame priamku 
+\end{pmatrix}.
+$$
+Zobrazením $g_0(l)$, dostávame opäť priamku $l$. Pre iné $t$, napríklad $t = \frac{\pi}{2}$, dostávame priamku 
 \begin{align*}
 g_t(l) \colon x(u) &= -u \\
-y(u) &= 1. \\
+y(u) &= 1.
 \end{align*}
-Na obrázku \ref{fig:lines_in_normal_form} je znázornená priamka $l$ modrou farbou, transformovaná priamka $g_t(l)$ červenou farbou.
+Na obrázku \ref{fig:lines_in_normal_form} je znázornená priamka $l$ modrou farbou a transformovaná priamka $g_{\pi/2}(l)$ červenou farbou. 
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[trim={0 0.35cm 0 0.85cm},clip]{images/lines_in_normal_form.pdf}
 	\caption{Systém priamok v normálovom tvare.}
 	\label{fig:lines_in_normal_form}
 \end{figure}
-
 \end{example}
 
-Transformácie $g_{t}$ z príkladu sú prvkami Lieovej grupy $SO(n)$. Ďalšie známe príklady maticových Lieovych grúp sú ortogonálna grupa $O(n)$, unitárna $U(n)$ a špeciálna unitárna grupa $SU(n).$ 
-Pre nájdenie podrobnejších informácií, sa môže čitateľ obrátiť na ľubovoľnú úvodnú učebnicu o Lieovych grupách a Lieovych algebrách, ako je napríklad \cite{Lee12}.
-Použili sme štruktúru Lieovej grupy, aby sme opísali, ako sa grupa transformuje daný povrch. Ďalej, využijúc štruktúru hladkej variety môžeme opísať jednoparametrický systém plôch výlučne pomocou terminológie Lieových grúp. Táto teória sa aplikuje na nájdenie parametrizácie obálok kvadratických plôch. Viac o tomto prístupe možno nájsť v \cite{Vra22}. 
+Transformácie $g_{t}$ z príkladu sú prvkami špeciálna ortogonálnej grupy $SO(n)$. Táto grupa je Lieova grupa. Ďalšie známe príklady maticových Lieovych grúp sú ortogonálna grupa $O(n)$, unitárna $U(n)$ a špeciálna unitárna grupa $SU(n).$ 
+Viac podrobných informácií o Lieovych grupách a Lieovych algebrách možno nájsť v \cite{Lee12}.
+Použili sme štruktúru Lieovej grupy, aby sme opísali, ako sa grupa transformuje daný povrch. Ďalej, využijúc štruktúru hladkej variety môžeme opísať jednoparametrický systém plôch výlučne pomocou terminológie Lieových grúp. Táto teória sa aplikuje na nájdenie parametrizácie obálok kvadratických plôch v \cite{Vra22}. 
 
 \subsection{Obálky a ODR}
 Obálky súvisia aj so štúdiom obyčajných diferenciálnych rovníc, a najmä ich singulárnych riešení. Predpokladajme, že jednoparametrický systém kriviek $\mathcal{F}$ je riešením nejakej diferenciálnej rovnice prvého rádu. Potom môže existovať aj ďalšia krivka spĺňajúca túto diferenciálnu rovnicu, ktorá je dotyčnicou k $\mathcal{F}$ v každom bode. Táto krivka je obálka. V literatúre sa nazýva aj singulárne riešenie diferenciálnej rovnice.
@@ -274,11 +277,11 @@ Riešenie môžeme reprezentovať ako jednoparametrický systém kriviek $\mathc
 $$F(x,y,t) = t^2 - 2tx + y. $$
 Derivovaním podľa parametra $t$ dostávame
 $$\dfrac{\partial F}{\partial t} (x,y,t) = 2t - 2x, $$
-z čoho máme $t=x$ a dosadením do funkcie máme $F=-x^2+y,$ teda obálka je $y=x^2.$
+z čoho máme $t=x$ a dosadením do funkcie $F$ máme $F=-x^2+y,$ teda obálka je $y=x^2.$
 
 Obálka tohto jednoparametrického systému priamok, ktorou je parabola $y = x^2$, rieši taktiež diferenciálnu rovnicu. Viac o tomto prístupe možno nájsť v \cite{Gro97}.
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[trim={0 0.35cm 0 0.85cm},clip]{images/odr.pdf}
 	\caption{Regulárne riešenia a obálka.}
@@ -339,7 +342,7 @@ $$
 F(X, t) = \langle X - m(t), X - m(t) \rangle - r^2(t)= 0.
 $$
 
-Podľa definície \ref{charakterizacia}, obálku $\mathcal{E}$ možno nájsť ako prienik systému sfér $\mathcal{S}$ a ich derivácií $\mathcal{\dot{S}}_t$ pre všetky $t \in I$. Derivácia $\mathcal{S}$ nám dáva roviny $\mathcal{\dot{S}}$ dané rovnicou
+Podľa definície \ref{charakterizacia}, obálku $\mathcal{E}$ možno nájsť ako prienik systému sfér $\mathcal{S}$ a ich derivácií $\mathcal{\dot{S}}$ pre všetky $t \in I$. Derivácia $\mathcal{S}$ nám dáva jednoparametrický systém rovín $\mathcal{\dot{S}}$ daný rovnicou
 
 $$
 \dfrac{\partial F}{\partial t} (X, t) = \langle \dot{m}(t), X - m(t) \rangle + r(t) \dot{r}(t) = 0.
@@ -389,10 +392,10 @@ m(t) = \begin{pmatrix} 0 \\ 0 \\ t \end{pmatrix} \quad \text{ a } \quad r(t) = \
 $$
 potom obálka systému je daná rovnicami
 \begin{align*}
-&\mathcal{S}_t \colon x^2 + y^2 + (z - t)^2 - \frac{t^2}{26} = 0, \\
-&\mathcal{\dot{S}}_t \colon z - \frac{25}{26}t = 0. \\
+&\mathcal{S} \colon x^2 + y^2 + (z - t)^2 - \frac{t^2}{26} = 0, \\
+&\mathcal{\dot{S}} \colon z - \frac{25}{26}t = 0. \\
 \end{align*}
-Počítajme $ \mathcal{S}_t \cap \mathcal{\dot{S}}_t $ pre všetky $t \in \mathbb{R}.$ Z druhej rovnice dostaneme $t = \frac{26}{25}z$. Po dosadení do prvej rovnice, dostávame implicitnú rovnicu pre obálku $\mathcal{E}$
+Počítajme $ \mathcal{S} \cap \mathcal{\dot{S}} $ pre všetky $t \in \mathbb{R}.$ Z druhej rovnice dostaneme $t = \frac{26}{25}z$. Po dosadení do prvej rovnice, dostávame implicitnú rovnicu pre obálku $\mathcal{E}$
 $$
 x^2 + y^2 - \frac{1}{25}z^2 = 0,
 $$

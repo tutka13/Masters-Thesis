@@ -1,5 +1,24 @@
 \chapter*{Úvod} % chapter* je necislovana kapitola
 \addcontentsline{toc}{chapter}{Úvod} % rucne pridanie do obsahu
 \markboth{Úvod}{Úvod} % vyriesenie hlaviciek
+Obálky plôch majú široké využitie vo viacerých odvetviach. Výpočet obálky pohybujúcej sa plochy sa vyskytuje pri simulácii a CNC obrábaní. CNC obrábanie \textit{(Computer Numerical Control machining)} je výrobný subtraktívny proces, pri ktorom počítač riadi stroje, napríklad vŕtačky, frézy a sústruhy tak, aby neustále odlamovali nadbytočnosti z obrobku. Tento postup sa vykonáva, kým sa nevytvorí požadovaný tvar. Rezný nástroj vytvára pri rýchlom otáčavom pohybe okolo svojej osi rotačnú plochu. Takto vytvorená plocha je časť obálky pohybujúceho sa nástroja \cite{Skop20}. Obálky sa používajú aj na výpočet trajektórie projektilu vo vzduchu. Riešime problém pohybu projektilu vrhaného pod uhlom k horizontu. S nulovou silou odporu vzduchu je analytické riešenie dobre známe, trajektória projektilu je parabola. So zohľadnením odporu vzduchu úloha nemá presné analytické riešenie, a preto sa vo väčšine prípadov rieši numericky. Systém trajektórií vzniká pri vrhnutí projektilu s rovnakou počiatočnou rýchlosťou, ale pod rôznymi uhlami hodu. Na určenie maximálneho rozsahu letu projektilu sa tak použije rovnica obálky \cite{Chud09}. Medzi ďalšie aplikácie obálok patrí tollerancing – krivka s kontrolou chyby, bezkolízne plánovanie pohybu robota, ktorý mení svoj lokálny tvar pomocou systému afinných transformácií, dizajn písma a konštrukcia znakov v písmach pre typografické systémy \cite{Pott09}. Kanálové plochy \textit{(channel surfaces)}, rúrkové plochy/potrubia \textit{(pipe surfaces}), \textit{rolling ball blends}, plochy používané v počítačom podporovanom geometrickom dizajne, \textit{(Computer Aided Geometric Design)} sa vyskytujú ako zmiešavacie povrchy a prechodové plochy medzi potrubiami. Kanálové plochy sa využívajú aj v architektúre. Ako príklad uvádzame Webbov most \textit{(Webb Bridge)}, obr. \ref{fig:webb_bridge} v Melbourne v Austrálii. Tvar mosta vzdáva hold histórii domorodého obyvateľstva a je vytvorený podľa tradičnej rybárskej pasce Koorie, ktorá sa používala na lov úhorov.
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{images/webbbridge.jpg}
+	\caption[Webbov most.]{Webbov most. \cite{WebbBridge}}
+	\label{fig:webb_bridge}
+\end{figure}
 
+Ďalším architektonickým projektom je hudobné divadlo a koncertná sála v gruzínskom Tbilisi. Budovu tvoria dve spojené časti, pôsobiace ako obrovské kovové rúry, ktoré rámujú výhľad na rieku a staré mesto.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{images/theater.jpg}
+	\caption[Hudobné divadlo a výstavná sieň.]{Hudobné divadlo a výstavná sieň. \cite{MusicTheater}}
+	\label{fig:theater}
+\end{figure}
+
+Obálka jednoparametrického systému sfér funguje tak, že začíname s krivkou a funkciou polomeru a zistíme, že derivácia tohto systému je vždy rovina a tá vytne v každom parametri kružnicu, takže obálku môžeme zostrojiť iba použitím týchto kružníc. Existuje zovšeobecnenie na plochy druhého rádu. Prvým zovšeobecnením, ktoré sa núka, je vziať obálku elipsoidov. Základnou výskumnou otázkou našej práce je: Aká bude obálka elipsoidov, ak ich budeme škálovať v dotykovom smere krivky a v zvyšných dvoch smeroch bude elipsoid homogénny?
+
+Práca je rozdelená do štyroch kapitol. V prvej kapitole spomíname prístupu výpočtu obálky v rovine a uvádzame teoretické pozadie obálky sfér potrebné na zostrojenie obálky elipsoidov. V druhej kapitole sa nachádzajú odvodené rovnice pre obálku elíps a elipsoidov a ich interpretácia. Tretia kapitola pozostáva zo špecifikácie algoritmov, vymenovania a zdôvodnenia použitého softvéru, postupu implementácie algoritmov a informácii o 3D tlači. Vo štvrtej kapitole vyhodnocujeme uvedené postupy a na záver uvádzame pár vizualizácií a časových meraní.

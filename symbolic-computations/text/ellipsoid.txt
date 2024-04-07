@@ -98,3 +98,30 @@ detM1_33: A1*B1 - D1^2/4 + B1*C1 - F1^2/4 + C1*A1 - E1^2/4$
 simplified_detM1_33: ratsimp(detM1_33);
 tex(simplified_detM1_33)
 
+delta: matrix(
+ [A1, D1/2, E1/2], 
+ [D1/2, B1, F1/2], 
+ [E1/2, F1/2, C1]
+)$
+
+det_delta: ratsimp(determinant(delta));
+
+delta_11: ratsimp(determinant(matrix(
+ [B1, F1/2, H1/2], 
+ [F1/2, C1, I1/2],
+ [H1/2, I1/2, J1]
+)))$
+
+delta_22: ratsimp(determinant(matrix(
+ [A1, E1/2, G1/2], 
+ [E1/2, C1, I1/2],
+ [G1/2, I1/2, J1]
+)))$
+
+delta_33: ratsimp(determinant(matrix(
+ [A1, D1/2, G1/2], 
+ [D1/2, B1, H1/2], 
+ [G1/2, H1/2, J1]
+)))$
+
+delta_dashed: ratsimp(delta_11 + delta_22 + delta_33);

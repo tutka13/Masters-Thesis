@@ -1,37 +1,6 @@
 \chapter{Prehľad problematiky}
 \label{kap:kapitola1} % id kapitoly pre pre prikaz ref
 
-\section{Aplikácie obálok}
-\subsubsection*{Architektúra}
-Projekt hudobného divadla a koncertnej sály v Tbilisi sa nachádza v Rhike Park v gruzínskom Tbilisi. Budovu tvoria dve spojené časti, pôsobiace ako obrovské kovové rúry, ktoré rámujú výhľad na rieku Kura a staré mesto. Súčasťou severnej časti budovy je sála hudobného divadla s 566 miestami na sedenie, foyer a technické priestory. Výstavná hala disponuje veľkým vstupom pre návštevníkov.
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=\textwidth]{images/theater.jpg}
-	\caption[Hudobné divadlo a výstavná sieň.]{Hudobné divadlo a výstavná sieň. \cite{MusicTheater}}
-	\label{fig:theater}
-\end{figure}
-
-Vzhľadom na výskyt obálok v aplikáciách sa obálkam venuje veľká pozornosť. Stručne spomenieme niektoré aplikácie a odkážeme na literatúru. 
-
-Výpočet obálky pohybujúcej sa plochy sa vyskytuje pri simulácii a CNC obrábaní. CNC obrábanie \textit{(Computer Numerical Control machining)}  je výrobný subtraktívny proces, pri ktorom počítač riadi stroje, napríklad vŕtačky, frézy a sústruhy tak, aby neustále odlamovali nadbytočnosti z obrobku. Tento postup sa vykonáva, kým sa nevytvorí požadovaný tvar. Rezný nástroj vytvára pri rýchlom otáčavom pohybe okolo svojej osi rotačnú plochu. Takto vytvorená plocha je časť obálky pohybujúceho sa nástroja. CNC frézovanie má široké priemyselné využitie v odvetviach ako letecký priemysel, zdravotníctvo a spotrebná elektronika. V článku \cite{Skop20} sa možno dočítať viac o výpočte obálok pri 5-osovom CNC obrábaní.  
-
-Obálky sa používajú aj na výpočet trajektórie projektilu vo vzduchu. Riešime klasický problém pohybu hmotného bodu (projektilu) vrhaného pod uhlom k horizontu. S nulovou silou odporu vzduchu je analytické riešenie dobre známe, trajektória projektilu je parabola. So zohľadnením odporu vzduchu úloha nemá presné analytické riešenie, a preto sa vo väčšine prípadov rieši numericky. Silu odporu vzduchu berieme do úvahy s konštantným členom odporu. Systém trajektórií vzniká pri vrhnutí projektilu s rovnakou počiatočnou rýchlosťou, ale s rôznymi uhlami hodu. Na určenie maximálneho rozsahu letu projektilu sa tak použije rovnica obálky \cite{Chud09}.
-
-%krivka s kontrolou chyby (Wallner)
-Medzi ďalšie aplikácie obálok patrí tollerancing – krivka s kontrolou chyby, bezkolízne plánovanie pohybu robota – uvažujeme o konvexných kompaktných krivkách reprezentujúcich pohyb robota v rovine, ktorý mení svoj lokálny tvar pomocou systému afinných transformácií. Dizajn písma – konštrukcia znakov v písmach pre typografické systémy. O ďalších aplikáciach sa čitateľ dozvie v \cite{Pott09}.
-
-Kanálové plochy \textit{(channel surfaces)}, rúrkové plochy/potrubia \textit{(pipe surfaces}), \textit{rolling ball blends} a prirodzené kanálové plochy \textit{(natural channel surfaces)} sa vyskytujú ako zmiešavacie povrchy a prechodové plochy medzi potrubiami. Kanálové plochy sú používané v počítačom podporovanom geometrickom dizajne \textit{(Computer Aided Geometric Design)}. V ďalšom texte si ukážeme ich konštrukciu ako obálku sfér.
-
-Obálky - kanálové plochy sa využívajú aj v architektúre. Ako príklad uvádzame Webbov most \textit{(Webb Bridge)}, obr. \ref{fig:webb_bridge} v Melbourne v Austrálii. Tvar mosta vzdáva hold histórii domorodého obyvateľstva a je vytvorený podľa tradičnej rybárskej pasce Koorie, ktorá sa používala na lov úhorov.
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=\textwidth]{images/webbbridge.jpg}
-	\caption[Webbov most.]{Webbov most. \cite{WebbBridge}}
-	\label{fig:webb_bridge}
-\end{figure}
-
 \section{Jednoparametrický systém}
 Ak nakreslíme kružnice so stredom na x-ovej osi s polomerom 1, ako na obrázku, pohľad nám upútajú horizontálne priamky $y = \pm 1$ idúce ponad a popod systém kružníc.
 

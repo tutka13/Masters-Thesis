@@ -18,28 +18,27 @@
 \contentsline {section}{\numberline {2.3}Obálka elíps}{22}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Zmena bázy}{22}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Výpočet obálky elíps}{23}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}Obálka sfér}{24}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Obálka elipsoidov}{25}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Softvér}{27}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Špecifikácia}{27}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Požiadavky}{27}{subsection.3.1.1}%
-\contentsline {subsubsection}{Vstup}{27}{section*.24}%
-\contentsline {subsubsection}{Výstup}{27}{section*.25}%
-\contentsline {subsubsection}{Workflow}{28}{section*.26}%
-\contentsline {subsubsection}{Funkčnosť softvéru}{29}{section*.27}%
-\contentsline {section}{\numberline {3.2}Výber softvéru a jeho inštalácia}{29}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Blender}{30}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Python}{30}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Knižnice}{31}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Inštalácia knižníc}{31}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Programovacie prostredie}{32}{subsection.3.2.5}%
-\contentsline {subsubsection}{Visual Studio Code}{32}{section*.29}%
-\contentsline {subsubsection}{Konfigurácia VS Code - Python - Blender}{32}{section*.31}%
-\contentsline {subsubsection}{Jupyter Notebook}{33}{section*.32}%
-\contentsline {section}{\numberline {3.3}Implementácia}{33}{section.3.3}%
-\contentsline {section}{\numberline {3.4}3D tlač}{34}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}PrusaSlicer}{34}{subsection.3.4.1}%
-\contentsline {subsubsection}{Parametre tlače}{35}{section*.35}%
-\contentsline {subsection}{\numberline {3.4.2}Pronterface}{36}{subsection.3.4.2}%
-\contentsline {chapter}{\numberline {4}Výsledky práce}{37}{chapter.4}%
-\contentsline {chapter}{Príloha A}{45}{chapter*.39}%
+\contentsline {section}{\numberline {2.4}Obálka elipsoidov}{25}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Softvér}{29}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Špecifikácia}{29}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Požiadavky}{29}{subsection.3.1.1}%
+\contentsline {subsubsection}{Vstup}{29}{section*.24}%
+\contentsline {subsubsection}{Výstup}{29}{section*.25}%
+\contentsline {subsubsection}{Workflow}{30}{section*.26}%
+\contentsline {subsubsection}{Funkčnosť softvéru}{31}{section*.27}%
+\contentsline {section}{\numberline {3.2}Výber softvéru a jeho inštalácia}{31}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Blender}{32}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Python}{32}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Knižnice}{33}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Inštalácia knižníc}{33}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Programovacie prostredie}{34}{subsection.3.2.5}%
+\contentsline {subsubsection}{Visual Studio Code}{34}{section*.29}%
+\contentsline {subsubsection}{Konfigurácia VS Code - Python - Blender}{34}{section*.31}%
+\contentsline {subsubsection}{Jupyter Notebook}{35}{section*.32}%
+\contentsline {section}{\numberline {3.3}Implementácia}{35}{section.3.3}%
+\contentsline {section}{\numberline {3.4}3D tlač}{36}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}PrusaSlicer}{36}{subsection.3.4.1}%
+\contentsline {subsubsection}{Parametre tlače}{37}{section*.35}%
+\contentsline {subsection}{\numberline {3.4.2}Pronterface}{38}{subsection.3.4.2}%
+\contentsline {chapter}{\numberline {4}Výsledky práce}{39}{chapter.4}%
+\contentsline {chapter}{Príloha A}{47}{chapter*.39}%

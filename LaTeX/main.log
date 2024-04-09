@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.25)  8 APR 2024 00:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.25)  9 APR 2024 00:09
 entering extended mode
 **./main.tex
 (main.tex
@@ -1332,18 +1332,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 149--150
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [21] [22] [23]
-Overfull \hbox (1146.57591pt too wide) detected at line 324
+Overfull \hbox (1148.9759pt too wide) detected at line 337
 []
  []
 
 [24] [25]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 4
-06.
+20.
 
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-Overfull \hbox (34.79408pt too wide) in paragraph at lines 406--407
+Overfull \hbox (34.79408pt too wide) in paragraph at lines 420--421
 \T1/cmr/m/n/12 tári []$\T1/cmtt/m/n/12 https : / / github . com / tutka13 / Mas
 ters-[]Thesis / tree / main / symbolic-[]computations$[]\T1/cmr/m/n/12 . 
  []
@@ -1351,26 +1351,29 @@ ters-[]Thesis / tree / main / symbolic-[]computations$[]\T1/cmr/m/n/12 .
 <images/maxima.png, id=777, 1444.64719pt x 767.86874pt>
 File: images/maxima.png Graphic file (type png)
 <use images/maxima.png>
-Package pdftex.def Info: images/maxima.png  used on input line 410.
+Package pdftex.def Info: images/maxima.png  used on input line 424.
 (pdftex.def)             Requested size: 441.01773pt x 234.40466pt.
-) (implementacia.tex [26 <./images/maxima.png>]
-Kapitola 3.
-[27
 
-] [28] [29]
-<images/blender.png, id=809, 1443.89438pt x 768.62157pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (implementacia.tex [26] [27 <./images/maxima.png>] [28
+
+]
+Kapitola 3.
+[29] [30] [31]
+<images/blender.png, id=817, 1443.89438pt x 768.62157pt>
 File: images/blender.png Graphic file (type png)
 <use images/blender.png>
 Package pdftex.def Info: images/blender.png  used on input line 74.
 (pdftex.def)             Requested size: 441.01773pt x 234.76349pt.
- [30 <./images/blender.png>] [31]
-<images/vscode.png, id=826, 1442.38875pt x 769.37437pt>
+ [32 <./images/blender.png>] [33]
+<images/vscode.png, id=834, 1442.38875pt x 769.37437pt>
 File: images/vscode.png Graphic file (type png)
 <use images/vscode.png>
 Package pdftex.def Info: images/vscode.png  used on input line 114.
 (pdftex.def)             Requested size: 441.01773pt x 235.23996pt.
- [32 <./images/vscode.png>]
-<images/jupyter.png, id=838, 1442.38875pt x 764.8575pt>
+ [34 <./images/vscode.png>]
+<images/jupyter.png, id=846, 1442.38875pt x 764.8575pt>
 File: images/jupyter.png Graphic file (type png)
 <use images/jupyter.png>
 Package pdftex.def Info: images/jupyter.png  used on input line 133.
@@ -1379,26 +1382,26 @@ Package pdftex.def Info: images/jupyter.png  used on input line 133.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[33] [34 <./images/jupyter.png>]
-<images/prusaslicer.png, id=858, 1440.88312pt x 765.6103pt>
+[35] [36 <./images/jupyter.png>]
+<images/prusaslicer.png, id=867, 1440.88312pt x 765.6103pt>
 File: images/prusaslicer.png Graphic file (type png)
 <use images/prusaslicer.png>
 Package pdftex.def Info: images/prusaslicer.png  used on input line 159.
 (pdftex.def)             Requested size: 441.01773pt x 234.3344pt.
- [35 <./images/prusaslicer.png>]
-<images/pronterface.png, id=871, 1444.64719pt x 765.6103pt>
+ [37 <./images/prusaslicer.png>]
+<images/pronterface.png, id=879, 1444.64719pt x 765.6103pt>
 File: images/pronterface.png Graphic file (type png)
 <use images/pronterface.png>
 Package pdftex.def Info: images/pronterface.png  used on input line 182.
 (pdftex.def)             Requested size: 441.01773pt x 233.71524pt.
 )
-(vysledky_prace.tex [36 <./images/pronterface.png>]
+(vysledky_prace.tex [38 <./images/pronterface.png>]
 Kapitola 4.
-) (zaver.tex [37
+) (zaver.tex [39
 
-] [38
+] [40
 
-]) [39] [40
+]) [41] [42
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 266--267
@@ -1424,7 +1427,7 @@ Underfull \hbox (badness 2644) in paragraph at lines 278--279
 /n/12 https : / / 216 . 185 . 13 . 174 /
  []
 
-[41
+[43
 
 
 ]
@@ -1439,7 +1442,7 @@ Underfull \hbox (badness 1082) in paragraph at lines 290--291
 w . researchgate . net / publication /
  []
 
-[42]
+[44]
 Underfull \hbox (badness 10000) in paragraph at lines 328--329
 []\T1/cmr/m/n/12 Pronterface se-tup. Do-stupné na in-ter-nete: []$\T1/cmtt/m/n/
 12 https : / / all3dp . com / 2 /
@@ -1469,7 +1472,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 338--339
 . 500 . 11956 / 171858 /
  []
 
-[43]
+[45]
 Underfull \hbox (badness 10000) in paragraph at lines 342--343
 []\T1/cmr/m/n/12 Obrázok Web-bov Most. Do-stupné na in-ter-nete: []$\T1/cmtt/m/
 n/12 http : / / www .
@@ -1486,51 +1489,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 346--347
 daily . com / 789123 /
  []
 
-[44] (AppendixA.tex [45
+[46] (AppendixA.tex [47
 
-] [46]) [47] (main.aux)
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 773DE530D13EF1308C37E504DF9083E6;5303.
+] [48]) [49] (main.aux)
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 773DE530D13EF1308C37E504DF9083E6;5303
+(rerunfilecheck)             After:  919D741C709500A3A806A1189739FCB2;5184.
  ) 
 Here is how much of TeX's memory you used:
- 34462 strings out of 478927
- 792226 string characters out of 2852534
- 1243036 words of memory out of 3000000
+ 34464 strings out of 478927
+ 792240 string characters out of 2852534
+ 1241036 words of memory out of 3000000
  51458 multiletter control sequences out of 15000+600000
  423480 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,14n,103p,1213b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-sup
-er-t1.enc}{C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-supe
-r/cm-super-ts1.enc}<C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmex10.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/tutko/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/tutko/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/tutko/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tutko/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users
-/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C
-:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8
-.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmsy8.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/symbols/msbm10.pfb><C:/Users/tutko/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/tutko/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Users/tutko/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Users/tutko/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx2488.pfb><C:/Users/t
-utko/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfcc1440.pfb><C:
-/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfcc2074
-.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/
-sfrm0800.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/c
-m-super/sfrm1095.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/cm-super/sfrm1200.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/font
-s/type1/public/cm-super/sfsl1200.pfb><C:/Users/tutko/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/cm-super/sfti1200.pfb><C:/Users/tutko/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (61 pages, 5716151 bytes).
+pdfTeX warning (dest): name{section.2.5} has been referenced but does not exi
+st, replaced by a fixed one
+
+{C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super
+-t1.enc}{C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/
+cm-super-ts1.enc}<C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/tutko/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/tutko/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tutko/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/t
+utko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/
+Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.p
+fb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmsy8.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/symbols/msbm10.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/tutko/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Users/tutko/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Users/tutko/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx2488.pfb><C:/Users/tut
+ko/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfcc1440.pfb><C:/U
+sers/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfcc2074.p
+fb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sf
+rm0800.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-
+super/sfrm1095.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/cm-super/sfrm1200.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/cm-super/sfsl1200.pfb><C:/Users/tutko/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/cm-super/sfti1200.pfb><C:/Users/tutko/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on main.pdf (63 pages, 5718124 bytes).
 PDF statistics:
- 1129 PDF objects out of 1200 (max. 8388607)
- 214 named destinations out of 1000 (max. 500000)
+ 1137 PDF objects out of 1200 (max. 8388607)
+ 216 named destinations out of 1000 (max. 500000)
  450 words of extra memory for PDF output out of 10000 (max. 10000000)
 

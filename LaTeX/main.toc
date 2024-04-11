@@ -2,45 +2,46 @@
 \contentsline {chapter}{Úvod}{1}{chapter*.8}%
 \contentsline {chapter}{\numberline {1}Prehľad problematiky}{3}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Jednoparametrický systém}{3}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Obálka jednoparametrického systému nadplôch}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.2}Obálka jednoparametrického systému nadplôch}{5}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Výpočet obálky}{9}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Prístup algebraickej geometrie}{9}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.1}Prístup algebraickej geometrie}{10}{subsection.1.3.1}%
 \contentsline {subsection}{\numberline {1.3.2}Prístup projektívnej geometrie}{11}{subsection.1.3.2}%
 \contentsline {subsection}{\numberline {1.3.3}Kinematický prístup}{12}{subsection.1.3.3}%
 \contentsline {subsection}{\numberline {1.3.4}Obálky a ODR}{13}{subsection.1.3.4}%
 \contentsline {subsection}{\numberline {1.3.5}Lokálne prieniky}{14}{subsection.1.3.5}%
 \contentsline {section}{\numberline {1.4}Obálka sfér}{16}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Charakteristická kružnica}{16}{section.1.5}%
-\contentsline {chapter}{\numberline {2}Matematický model}{19}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Krivky a plochy druhého stupňa}{19}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Invarianty kriviek druhého stupňa}{20}{subsection.2.1.1}%
-\contentsline {section}{\numberline {2.2}Plochy druhého stupňa}{20}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Invarianty plôch druhého stupňa}{21}{subsection.2.2.1}%
-\contentsline {section}{\numberline {2.3}Obálka elíps}{21}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Zmena bázy}{22}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Výpočet obálky elíps}{23}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}Obálka elipsoidov}{26}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Softvér}{29}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Špecifikácia}{29}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Požiadavky}{29}{subsection.3.1.1}%
-\contentsline {subsubsection}{Vstup}{29}{section*.24}%
-\contentsline {subsubsection}{Výstup}{29}{section*.25}%
-\contentsline {subsubsection}{Workflow}{30}{section*.26}%
-\contentsline {subsubsection}{Funkčnosť softvéru}{30}{section*.27}%
-\contentsline {section}{\numberline {3.2}Výber softvéru a jeho inštalácia}{30}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Blender}{31}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Python}{31}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Knižnice}{32}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Inštalácia knižníc}{32}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Programovacie prostredie}{33}{subsection.3.2.5}%
-\contentsline {subsubsection}{Visual Studio Code}{33}{section*.29}%
-\contentsline {subsubsection}{Konfigurácia VS Code - Python - Blender}{34}{section*.31}%
-\contentsline {subsubsection}{Jupyter Notebook}{34}{section*.32}%
-\contentsline {section}{\numberline {3.3}Implementácia}{35}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Realizácia procesu worklow}{35}{subsection.3.3.1}%
-\contentsline {section}{\numberline {3.4}3D tlač}{36}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}PrusaSlicer}{36}{subsection.3.4.1}%
-\contentsline {subsubsection}{Parametre tlače}{37}{section*.35}%
-\contentsline {subsection}{\numberline {3.4.2}Pronterface}{37}{subsection.3.4.2}%
-\contentsline {chapter}{\numberline {4}Výsledky práce}{41}{chapter.4}%
-\contentsline {chapter}{Príloha A}{49}{chapter*.40}%
+\contentsline {section}{\numberline {1.5}Charakteristická kružnica}{17}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Matematický model}{21}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Krivky druhého stupňa}{21}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Invarianty kriviek druhého stupňa}{22}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Plochy druhého stupňa}{22}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Invarianty plôch druhého stupňa}{23}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}Obálka elíps}{23}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Zmena bázy elíps}{24}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Výpočet obálky elíps}{25}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Obálka elipsoidov}{27}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Zmena bázy elipsodiov}{27}{subsection.2.4.1}%
+\contentsline {chapter}{\numberline {3}Softvér}{31}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Špecifikácia}{31}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Požiadavky}{31}{subsection.3.1.1}%
+\contentsline {subsubsection}{Vstup}{31}{section*.25}%
+\contentsline {subsubsection}{Výstup}{31}{section*.26}%
+\contentsline {subsubsection}{Workflow}{32}{section*.27}%
+\contentsline {subsubsection}{Funkčnosť softvéru}{32}{section*.28}%
+\contentsline {section}{\numberline {3.2}Výber softvéru a jeho inštalácia}{32}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Blender}{33}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Python}{33}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Knižnice}{34}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Inštalácia knižníc}{34}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Programovacie prostredie}{35}{subsection.3.2.5}%
+\contentsline {subsubsection}{Visual Studio Code}{35}{section*.30}%
+\contentsline {subsubsection}{Konfigurácia VS Code - Python - Blender}{36}{section*.32}%
+\contentsline {subsubsection}{Jupyter Notebook}{36}{section*.33}%
+\contentsline {section}{\numberline {3.3}Implementácia}{37}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Realizácia procesu worklow}{37}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}3D tlač}{38}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}PrusaSlicer}{38}{subsection.3.4.1}%
+\contentsline {subsubsection}{Parametre tlače}{39}{section*.36}%
+\contentsline {subsection}{\numberline {3.4.2}Pronterface}{39}{subsection.3.4.2}%
+\contentsline {chapter}{\numberline {4}Výsledky práce}{43}{chapter.4}%
+\contentsline {chapter}{Príloha A}{51}{chapter*.41}%

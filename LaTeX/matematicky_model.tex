@@ -1,6 +1,6 @@
 \chapter{Matematický model}
 \label{kap:matematicky_model}
-\section{Krivky a plochy druhého stupňa}
+\section{Krivky druhého stupňa}
 Nasledujúca teória a klasifikácia nadplôch druhého rádu je prevzatá zo \cite{Ivan}, \cite{Kor13}, \cite{Gla16}, \cite{Ode20}, \cite{Zla11}.
 Krivka druhého stupňa $q$ je v karteziánskych súradniciach $(x, y) \in \mathbb{E}^2$ daná rovnicou 
 $$ f(x, y) = Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0.$$
@@ -16,9 +16,9 @@ V závislosti od počtu reálnych priesečníkov s priamkou $s$ v nekonečne roz
 \end{enumerate}
 
 \begin{definition}
-Matica $A \in \mathbb{R}^{n \times n}$ sa nazýva ortogonálna, ak platí $A^T \cdot A = I_n$, alebo, čo je to isté, $A^{-1} = A^T$. 
+Matica $A \in \mathbb{R}^{n \times n}$ sa nazýva ortogonálna, ak platí $A^T A = I_n$, alebo, čo je to isté, $A^{-1} = A^T$. 
 \end{definition}
-Prvá podmienka hovorí, že stĺpce matice $A$ tvoria ortonormálnu bázu euklidovského priestoru $\mathbb{R}^n$ so štandardným skalárnym súčinom. Potom tiež platí $A \cdot A^T = I_n$, teda takisto riadky matice $A$ tvoria ortonormálnu bázu v $\mathbb{R}^n$. 
+Prvá podmienka hovorí, že stĺpce matice $A$ tvoria ortonormálnu bázu euklidovského priestoru $\mathbb{R}^n$ so štandardným skalárnym súčinom. Potom tiež platí $A A^T = I_n$, teda takisto riadky matice $A$ tvoria ortonormálnu bázu v $\mathbb{R}^n$. 
 
 \begin{theorem} 
 Matica prechodu od ortonormálnej bázy v $\mathbb{R}^n$ so štandardným skalárnym súčinom k ortonormálnej báze je ortogonálna matica. Tiež, ak od ortonormálnej bázy v $\mathbb{R}^n$ prejdeme pomocou ortogonálnej matice prechodu k novej báze,
@@ -27,7 +27,7 @@ tak aj nová báza bude ortonormálna.
 
 \subsection{Invarianty kriviek druhého stupňa}
 \begin{definition}
-Invariantom krivky druhého stupňa, vyjadrenej rovnicou
+Invariantom krivky druhého stupňa $q$, vyjadrenej rovnicou
 $$
 f(x, y) = a_{11}x^2 + 2a_{12}xy + a_{22}y^2 + 2a_{13}x + 2a_{23}y + a_{33} = 0
 $$
@@ -104,8 +104,8 @@ V závislosti od počtu reálnych priesečníkov s rovinou $s$ v nekonečne rozl
 \item parabolický typ: kvadriky sa dotýka rovina v nekonečne.
 \end{enumerate}
 \subsection{Invarianty plôch druhého stupňa}
-Nasledujúce číselné výrazy sú invariantmi plochy druhého rádu, vyjadrenej rovnicou 
-\[ q(x, y, z) = a_{11}x^2 + a_{22}y^2 + a_{33}z^2 + 2a_{12}xy + 2a_{13}xz + 2a_{23}yz + 2a_{14}x + 2a_{24}y + 2a_{23}z + a_{44} = 0. \]
+Nasledujúce číselné výrazy sú invariantmi plochy druhého rádu $Q$, vyjadrenej rovnicou 
+\[ f(x, y, z) = a_{11}x^2 + a_{22}y^2 + a_{33}z^2 + 2a_{12}xy + 2a_{13}xz + 2a_{23}yz + 2a_{14}x + 2a_{24}y + 2a_{23}z + a_{44} = 0. \]
 \begin{align*}
 \Delta(x, y, z) &= \det \begin{pmatrix} 
 a_{11} & a_{12} & a_{13} & a_{14} \\ 
@@ -139,7 +139,7 @@ kde $
 
 Z tohto možno odvodiť nasledujúce dve tabuľky.
 
-\begin{table}[h]
+\begin{table}[h!]
 \centering
 \begin{tabular}{|c|c|c|p{2.2cm}|p{2.15cm}|p{2cm}|}
 \hline
@@ -175,7 +175,7 @@ parabolický & $=0$ & & hyperbolický paraboloid & eliptický paraboloid & valco
 %\label{tab:classification_of_quadrics}
 %\end{table}
 
-\begin{table}[h]
+\begin{table}[h!]
 \centering
 \begin{tabular}{|l|l|l|l|}
 \hline
@@ -197,19 +197,19 @@ hyperbolický & $< 0$ & hyperbolický valec & dve rôznobežné roviny \\
 
 \section{Obálka elíps}
 Pre vyriešenie úlohy obálky elipsoidov sme sa najprv zaoberali obálkou elíps.
-\subsection{Zmena bázy}
-Nech $m(t) \colon  I \subseteq \mathbb{R} \rightarrow \mathbb{R}^2$ je aspoň dvakrát diferencovateľná krivka, napíšme rovnicu jednoparametrického systému elíps $Q$ so stredom na krivke $m(t)$, hlavnou polosou $a$ v smere vektora $\dot{m}(t)$ a vedľajšou polosou $b$ v smere normálového vektora $n(t)$ ku krivke $m(t)$. Vydelením normou vektorov $\dot{m}(t)$ a $n(t)$ dostávame novú ortonormálnu bázu tvorenú stĺpcovými vektormi matice $P(t),$ kde
+\subsection{Zmena bázy elíps}
+Nech $m(t) \colon  I \subseteq \mathbb{R} \rightarrow \mathbb{R}^2$ je aspoň dvakrát diferencovateľná krivka, napíšme rovnicu jednoparametrického systému elíps $Q$ so stredom na krivke $m(t)$, hlavnou polosou $a$ v smere vektora $\dot{m}(t)$ a vedľajšou polosou $b$ v smere normálového vektora $n(t)$ ku krivke $m(t)$. Uvažujme $\vec{n}=(-\dot{m}_2, \dot{m}_1). $ Vydelením normou vektorov $\dot{m}(t)$ a $n(t)$ dostávame novú ortonormálnu bázu tvorenú stĺpcovými vektormi matice $P(t),$ kde
 $$
 P(t) = \frac{1}{ \| \dot{m}(t) \|} \left(\begin{matrix}
-   \dot{m}_1(t) & n_1(t) \\
-   \dot{m}_2(t) & n_2(t)
+   \dot{m}_1(t) & -\dot{m}_2(t) \\
+   \dot{m}_2(t) & \dot{m}_1(t)
 \end{matrix} \right).
 $$
 Keďže sme prešli od štandardnej bázy k ortonormálnej báze, matica $P(t)$ je ortogonálna, a teda
 $$
 P^{-1} = P^{T} = \frac{1}{ \| \dot{m}(t) \|} \left(\begin{matrix}
   \dot{m}_1(t) & \dot{m}_2(t) \\
-    n_1(t) & n_2(t)
+  -\dot{m}_2(t) & \dot{m}_1(t)
 \end{matrix}\right).
 $$
 V súradniciach $(u(t), v(t))$ má systém $Q$ rovnicu v kanonickom tvare 
@@ -224,49 +224,10 @@ v(t)
 \end{matrix}\right) = \frac{1}{ \| \dot{m}(t) \|}
 \left(\begin{matrix}
   \dot{m}_1(t) & \dot{m}_2(t) \\
-    n_1(t) & n_2(t)
+   -\dot{m}_2(t) & \dot{m}_1(t)
 \end{matrix}\right)
 \left(\begin{matrix} \left(\begin{matrix} x \\ y \end{matrix}\right) - \left(\begin{matrix} m_1(t) \\ m_2(t) \end{matrix}\right) \end{matrix}\right).
 $$
-%\begin{equation*}
-%\frac{{(x - m_1(t))^2}}{a_0^2} + \frac{{(y - m_2(t))^2}}{b_0^2} = 1
-%\end{equation*}
-%Matica prechodu k novej báze je tvaru
-%$$
-%A(t) = \left(\begin{matrix} \vec{t}(t) \quad \vec{n}(t)
-%\end{matrix} \right),
-%$$
-%čo po rozpísaní do súradníc $\vec{t}(t) = \frac{1}{ \| \dot{m}(t) \|}( \dot{m}_1(t),  \dot{m}_2(t))$ a $\vec{n}(t) = \frac{1}{ \| \dot{m}(t) \|}( -\dot{m}_2(t),  \dot{m}_1(t))$ dáva 
-%$$
-%A(t) = \frac{1}{ \| \dot{m}(t) \|} \left(\begin{matrix}
-%   \dot{m}_1(t) & n_1(t) \\
-%   \dot{m}_2(t) & n_2(t)
-%\end{matrix} \right).
-%$$
-%Keďže sme maticu $A(t)$ zostrojili tak, aby bola ortogonálna, ľahko dostávame aj vyjadrenie inverznej matice
-%$$
-%A^{-1}(t) = A^{T}(t) = \frac{1}{ \| \dot{m}(t) \|} \left(\begin{matrix}
-%  \dot{m}_1(t) & \dot{m}_2(t) \\
-%    n_1(t) & n_2(t)
-%\end{matrix}\right).
-%$$
-%Vyjadrime elipsu $Q$ v novej báze $ u, v$ nasledovnou transformáciou
-%
-%kde 
-%$$
-%\left(\begin{matrix}
-%u(t) \\
-%v(t)
-%\end{matrix}\right) = \frac{1}{ \| \dot{m}(t) \|}
-%\left(\begin{matrix}
-%  \dot{m}_1(t) & \dot{m}_2(t) \\
-%    n_1(t) & n_2(t)
-%\end{matrix}\right)
-%\left(\begin{matrix}
-%x-m_1(t) \\
-%y-m_2(t) \\
-%\end{matrix}\right).
-%$$
 Systém elíps $Q$ sa potom transformuje na tvar
 \begin{align} 
 \label{eq:elipsa_v_novej_baze}
@@ -278,7 +239,6 @@ po miernej úprave tak dostávame výraz
 &\frac{1}{a^2b^2\|\dot{m}\|^2} \left( (x - m_1)^2 \left( b^2 \dot{m}_1^2 + a^2 \dot{m}_2^2 \right) + (y - m_2)^2 \left( a^2 \dot{m}_1^2 + b^2 \dot{m}_2^2 \right) \right) \\
 + &\frac{1}{a^2b^2\|\dot{m}\|^2} \left( 2(b^2 - a^2)(x - m_1)(y - m_2)\dot{m}_1\dot{m}_2 \right) - 1 = 0.
 \end{align*}
-Uvažovali sme $\vec{n}=(-\dot{m}_2, \dot{m}_1), $ no výber orientácie normály nemá na výsledok žiaden vplyv.
 
 \begin{example}[Parabola]
 Majme parabolu s parametrizáciou $m(t)=(t, t^2), $ kde $\dot{m}(t)=(1, 2t).$ Transformujme jednoparametrický systém elíps $Q$.
@@ -293,44 +253,33 @@ Prepíšme rovnicu \ref{eq:elipsa_v_novej_baze} do maticového zápisu. Máme sy
 A(t)x^2 + B(t)xy + C(t)y^2 + D(t)x + E(t)y + F(t) = 0,$$
 ktorý má v maticovom tvare vyjadrenie $$
 X^TM(t)X = 0,
-$$ kde $X=(x, y, 1) \in \mathbb{R}^3$ a $M(t)$ je symetrická matica rozmerov $3 \times 3$ s prvkami $A(t). \dots, F(t) $.
-$$
-\left(\begin{matrix} x \\ y \\ 1 
-\end{matrix} \right)^T \left(\begin{matrix} 
-A & \frac{B}{2} & \frac{D}{2} \\
-\frac{B}{2} & C & \frac{E}{2} \\
-\frac{D}{2} & \frac{E}{2} & F 
-\end{matrix} \right)\left(\begin{matrix} x \\ y \\ 1 
-\end{matrix} \right) = 0, 
-$$
-kde prvky matice majú nasledovný tvar
+$$ kde $X=(x, y, 1)^T \in \mathbb{R}^3$ a $M(t) \in  \mathbb{R}^{3 \times 3}$ je symetrická matica s prvkami $A(t), \dots, F(t) $, kde prvky matice majú nasledovný tvar
 \begin{align*}
 A &= \frac{b^2 \dot{m}_1^2 + a^2 \dot{m}_2^2}{a^2b^2 \| \dot{m} \|^2} \\
 B &= \frac{2(b^2-a^2)\dot{m}_1 \dot{m}_2}{a^2b^2 \| \dot{m} \|^2} \\
 C &= \frac{a^2 \dot{m}_1^2 + b^2 \dot{m}_2^2}{a^2b^2\| \dot{m} \|^2} \\
 D &= \frac{- 2m_1 \left( b^2 \dot{m}_1^2 + a^2 \dot{m}_2^2 \right) - 2 \left(b^2 - a^2 \right) m_2 \dot{m}_1 \dot{m}_2 }{a^2b^2\| \dot{m} \|^2} \\
 E &= \frac{- 2m_2 \left( a^2 \dot{m}_1^2 + b^2 \dot{m}_2^2 \right) - 2 \left(b^2 - a^2 \right) m_1 \dot{m}_1 \dot{m}_2 }{a^2b^2\| \dot{m} \|^2} \\
-F &= \frac{\dot{m}_1^2 (b^2 m_1^2 + a^2 m_2^2 - a^2b^2) + 2 (b^2 - a^2) m_1 m_2 \dot{m}_1 \dot{m}_2 + \dot{m}_2^2 (a^2 m_1^2 + b^2 m_2^2 - a^2b^2) }{a^2b^2\| \dot{m}  \|^2}  -  1  \\
+F &= \frac{\dot{m}_1^2 (b^2 m_1^2 + a^2 m_2^2 - a^2b^2) + 2 (b^2 - a^2) m_1 m_2 \dot{m}_1 \dot{m}_2 + \dot{m}_2^2 (a^2 m_1^2 + b^2 m_2^2 - a^2b^2) }{a^2b^2\| \dot{m}  \|^2}  -  1.  \\
 \end{align*}
-Pozrime sa deriváciu jednoparametrického systému elíps $Q$ podľa parametra $t.$ Definujme
-$$ 
-\dot{Q}(x,y,t) := \frac{\partial Q (x,y,t)}{\partial t},
-$$
-a teda $X^T \dot{M}(t)X := \frac{\partial X^TM(t)X}{\partial t}.
-$
-Máme teda jednoparametrický systém kužeľosečiek $\dot{Q}$ tvaru 
-$$
-\dot{A}(t)x^2 + \dot{B}(t)xy + \dot{C}(t)y^2 + \dot{D}(t)x + \dot{E}(t)y + \dot{F}(t) = 0$$
-kde $\dot{A}(t), \dots, \dot{F}(t)$ sú prvky $3x3$ symetrickej matice $\dot{M}(t).$
+Teda jednoparametrický systém elíps $Q$ možno vyjadriť 
 $$
 \left(\begin{matrix} x \\ y \\ 1 
 \end{matrix} \right)^T \left(\begin{matrix} 
-\dot{A} & \frac{\dot{B}}{2} & \frac{\dot{D}}{2} \\
-\frac{\dot{B}}{2} & \dot{C} & \frac{\dot{E}}{2} \\
-\frac{\dot{D}}{2} & \frac{\dot{E}}{2} & F 
+A & \dfrac{B}{2} & \dfrac{D}{2} \\
+\dfrac{B}{2} & C & \dfrac{E}{2} \\
+\dfrac{D}{2} & \dfrac{E}{2} & F 
 \end{matrix} \right)\left(\begin{matrix} x \\ y \\ 1 
 \end{matrix} \right) = 0.
 $$
+Pozrime sa deriváciu jednoparametrického systému elíps $Q$ podľa parametra $t.$ Definujme
+$$ 
+\dot{Q}(x,y,t) := \frac{\partial Q (x,y,t)}{\partial t} \text{ a } \dot{M} :=\frac{\partial M(t)}{\partial t}.
+$$
+Deriváciou dostávame jednoparametrický systém kužeľosečiek $\dot{Q}$ tvaru 
+$$
+\dot{A}(t)x^2 + \dot{B}(t)xy + \dot{C}(t)y^2 + \dot{D}(t)x + \dot{E}(t)y + \dot{F}(t) = 0$$
+kde $\dot{A}(t), \dots, \dot{F}(t)$ sú prvky symetrickej matice $\dot{M}(t) \in \mathbb{R}^{3 \times 3}$ nasledovného tvaru
 \begin{align*}
 \dot{A} &= \frac{2 ( b^2 - a^{2}) ( \ddot{m}_{1} \dot{m}_{2} - \dot{m}_{1} \ddot{m}_{2}) \dot{m}_{1} \dot{m}_{2}}{a^{2} b^{2} \|\dot{m} \|^4} \\
 \dfrac{\dot{B}}{2} &= \frac{(a^{2} - b^{2}) (2 (\dot{m}_{1} \ddot{m}_{1} + \dot{m}_{2} \ddot{m}_{2}) \dot{m}_{1} \dot{m}_{2} - (\dot{m}_{1} \ddot{m}_{2} + \ddot{m}_{1} \dot{m}_{2}) \|\dot{m} \|^2)}{a^{2} b^{2} \|\dot{m} \|^4} \\
@@ -344,9 +293,18 @@ $$
 \dot{F} &= \frac{-2(\dot{m}_{1} \ddot{m}_{1} + \dot{m}_{2} \ddot{m}_{2}) (- a^{2} b^{2} \|\dot{m} \|^2 + a^{2} (m_{1}\dot{m}_{2} - m_{2}\dot{m}_{1})^2 + b^{2} (m_{1} \dot{m}_{1} + m_{2} \dot{m}_{2})^{2})}{a^{2} b^{2} \|\dot{m} \|^4} \\
 &+ \frac{ \|\dot{m} \|^2 (- a^{2} b^{2} (\dot{m}_{1} \ddot{m}_{1} + \dot{m}_{2} \ddot{m}_{2}) + a^{2} (m_{1}^{2} \dot{m}_{2} \ddot{m}_{2} - m_{1} m_{2} \dot{m}_{1} \ddot{m}_{2} - m_{1} m_{2} \ddot{m}_{1} \dot{m}_{2} + m_{2}^{2} \dot{m}_{1} \ddot{m}_{1})}{a^{2} b^{2} \|\dot{m} \|^4} \\
 &+ \frac{ \|\dot{m} \|^2 b^{2} (m_{1}^{2} \dot{m}_{1} \ddot{m}_{1} + m_{1} m_{2} \dot{m}_{1} \ddot{m}_{2} + m_{1} m_{2} \ddot{m}_{1} \dot{m}_{2} + m_{1}\dot{m}_{1}^{3})}{a^{2} b^{2} \|\dot{m} \|^4} \\
-&+ \frac {\|\dot{m} \|^2 b^{2} (m_{1} \dot{m}_{1} \dot{m}_{2}^{2} + m_{2}^{2} \dot{m}_{2} \ddot{m}_{2} + m_{2} \dot{m}_{1}^{2} \dot{m}_{2} + m_{2} \dot{m}_{2}^{3})}{a^{2} b^{2} \|\dot{m} \|^4}
+&+ \frac {\|\dot{m} \|^2 b^{2} (m_{1} \dot{m}_{1} \dot{m}_{2}^{2} + m_{2}^{2} \dot{m}_{2} \ddot{m}_{2} + m_{2} \dot{m}_{1}^{2} \dot{m}_{2} + m_{2} \dot{m}_{2}^{3})}{a^{2} b^{2} \|\dot{m} \|^4}.
 \end{align*}
-
+Prvky sú do matice usporiadané takto
+$$
+\left(\begin{matrix} x \\ y \\ 1 
+\end{matrix} \right)^T \left(\begin{matrix} 
+\dot{A} & \dfrac{\dot{B}}{2} & \dfrac{\dot{D}}{2} \\
+\dfrac{\dot{B}}{2} & \dot{C} & \dfrac{\dot{E}}{2} \\
+\dfrac{\dot{D}}{2} & \dfrac{\dot{E}}{2} & F 
+\end{matrix} \right)\left(\begin{matrix} x \\ y \\ 1 
+\end{matrix} \right) = 0.
+$$
 Určme typ kužeľosečiek, ktoré vznikli deriváciou jednoparametrického systému.
 Označme determinant matice $\Delta(t) := \det \dot{M}(t) $ a subdeterminant matice, ktorá vznikne odstránením tretieho stĺpca a riadku $\delta(t) := \det \dot{M}_{33}(t)$ 
 $$\Delta(t) = 0 $$ 
@@ -363,80 +321,68 @@ $$
 \end{example}
 
 \section{Obálka elipsoidov}
-Pre jednoparametrické systémy plôch druhého rádu existuje maticový zápis tvaru 
+\subsection{Zmena bázy elipsodiov}
+Pre jednoparametrický systém plôch druhého rádu existuje maticový zápis tvaru 
 $$
 S: X^TM(t)X = 0,
 $$
-kde $ X = (x, y, z)^T \in \mathbb{R}^3 $ a $M(t) $ je symetrická matica rozmeru $4x4, $ ktorej koeficienty sú závislé od $t \in I$.
-Rovnicu jednoparametrického systému sfér $S$
-$$ x^2 +y^2 +z^2 -2xm_1 -2ym_2 - 2zm_3 + m_1^2 + m_2^2 + m_3^2 - r^2 =0
-,$$
-tak vieme zapísať ako
+kde $ X = (x, y, z, 1)^T \in \mathbb{R}^4$ a $M(t) \in \mathbb{R}^{4 \times 4} $ je symetrická matica, ktorej koeficienty $A(t), \dots, J(t)$ sú závislé od $t \in I$. Matica $M(t)$ je tvaru
 $$
-\left(\begin{matrix} x \\ y \\ z  \\ 1
-\end{matrix} \right)^T \left(\begin{matrix} 
-1 & 0 & 0 & - m_1 \\
-0 & 1 & 0 & - m_2 \\
-0 & 0 & 1 & - m_3 \\
-- m_1 & - m_2 & - m_3 &  m_1^2 + m_2^2 + m_3^2 - r^2 \\
-\end{matrix} \right)\left(\begin{matrix} x \\ y \\ z \\ 1
-\end{matrix} \right) = 0. 
+\left(\begin{matrix} 
+A & \dfrac{B}{2} & \dfrac{D}{2} \\
+\dfrac{B}{2} & C & \dfrac{E}{2} \\
+\dfrac{D}{2} & \dfrac{E}{2} & F 
+\end{matrix} \right)
 $$
-Deriváciu jednoparametrického systému sfér $\dot{S}$
+Upravme rovnice pre obálku sféry tak, aby zodpovedali obálke elipsoidov. Vezmime sféru, zmeňme súradnicový systém so štandardnou bázou  $\vec{e}_1, \vec{e}_2, \vec{e}_3$ na lokálny súradnicový system krivky s bázou Frenetovho repéra $\vec{t}, \vec{n}, \vec{b}$ v každom bode krivky $m(t).$ Tak budeme môcť upraviť sféru na elipsoid tak, aby $a$ zodpovedalo škálovaniu v dotykovom smere priestorovej krivky $m(t)$ a $b$ zodpovedalo škálovaniu v normálovom a binormálovom smere. Frenetov repér je ortonormálna báza, ktorú tvoria stĺpcové vektory matice $P(t),$ kde
 $$
--2x\dot{m}_1 -2y\dot{m}_2 - 2z\dot{m}_3 + 2m_1\dot{m_1} + 2m_2\dot{m_2} + 2m_3\dot{m_3} - 2r\dot{r} = 0
+P(t) = \left( \begin{matrix} \vec{t} & \vec{n} & \vec{b} \end{matrix} \right),
 $$
-možno tiež zapísať v tvare  $X^T\dot{M}(t)X = 0,$
-kde $\dot{M}(t)= \dfrac{\partial M(t)}{\partial t}.$
+kde
+\begin{align*}
+\vec{t} &= \dfrac{\dot{m}}{\| \dot{m} \|}, \\
+\vec{n} &= \dfrac{\ddot{m} - \langle \ddot{m}, \vec{t} \rangle \vec{t}}{\| \ddot{m} - \langle \ddot{m}, \vec{t} \rangle \vec{t}\| }, \\
+\vec{b} &= \dfrac{\dddot{m} - \langle \dddot{m}, \vec{t} \rangle \vec{t} - \langle \dddot{m}, \vec{n} \rangle \vec{n}}{\| \dddot{m} - \langle \dddot{m}, \vec{t} \rangle \vec{t} - \langle \dddot{m}, \vec{n} \rangle \vec{n} \| }.
+\end{align*}
+Matica $P(t)$ je ortogonálna, preto $P^{-1} = P^T.$
+Keďže vyjadrenia nových vektorov sú pri prepise do súraníc alebo aj vyčíslení pre konkrétne prípady príliš dlhé, uvažujme inú ortonormálnu bázu, ktorá by zachovala požadované vlastnosti škálovania. Uvažujme
+\begin{align*}
+\vec{t} &= \dfrac{(\dot{m}_1, \dot{m}_2, \dot{m}_3)}{\sqrt{\dot{m}_1^2 + \dot{m}_2^2 + \dot{m}_3^2}}, \\
+\vec{n} &= \dfrac{(0, -\dot{m}_3, \dot{m}_2)}{\sqrt{\dot{m}_2^2 + \dot{m}_3^2}}, \\
+\vec{b} &= \dfrac{(\dot{m}_2^2 + \dot{m}_3^2, -\dot{m}_1 \dot{m}_2, -\dot{m}_1 \dot{m}_2)}{\sqrt{\dot{m}_1^2 + \dot{m}_3^2}\sqrt{\dot{m}_1^2 + \dot{m}_2^2 + \dot{m}_3^2}}.
+\end{align*}
+Potom matica prechodu $P^{-1}$ má tvar
 $$
-\left(\begin{matrix} x \\ y \\ z  \\ 1
-\end{matrix} \right)^T \left(\begin{matrix} 
-0 & 0 & 0 & - \dot{m}_1 \\
-0 & 0 & 0 & - \dot{m}_2 \\
-0 & 0 & 0 & - \dot{m}_3 \\
-- \dot{m}_1 & - \dot{m}_2 & - \dot{m}_3 &  2m_1\dot{m_1} + 2m_2\dot{m_2} + 2m_3\dot{m_3} - 2r\dot{r} \\
-\end{matrix} \right)\left(\begin{matrix} x \\ y \\ z \\ 1
-\end{matrix} \right) = 0,
+P^{-1} = \left( \begin{matrix} \dfrac{\dot{m}_1}{\|\dot{m}\|} & \dfrac{\dot{m}_2}{\|\dot{m}\|} & \dfrac{\dot{m}_3}{\|\dot{m}\|} \\
+0 & \dfrac{-\dot{m}_3}{\sqrt{\dot{m}_2^2 + \dot{m}_3^2}} & \dfrac{\dot{m}_2}{\sqrt{\dot{m}_2^2 + \dot{m}_3^2}} \\
+\dfrac{\dot{m}_2^2 + \dot{m}_3^2}{\|\dot{m}\| \sqrt{\dot{m}_2^2 + \dot{m}_3^2}} & \dfrac{-\dot{m}_1 \dot{m}_2 }{\|\dot{m}\| \sqrt{\dot{m}_2^2 + \dot{m}_3^2}} &  \dfrac{-\dot{m}_1 \dot{m}_2}{ \|\dot{m}\| \sqrt{\dot{m}_2^2 + \dot{m}_3^2}} 
+\end{matrix} \right).
 $$
-Matica $\dot{M}(t)$ reprezentuje v každom $t \in I $ rovinu, ktorej normálový vektor $\vec{N} $ je $(-2\dot{m}_1, -2\dot{m}_2, -2\dot{m}_3).$ Vektor $\vec{N}$ je lineárne závislý s dotykovým vektorom $\dot{m}$ ku krivke $m.$
-
-
-Rovnako zapíšme rovnicu jednoparametrického systému elipsoidov $Q$
-$$ \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} - 2 \frac{xm_1}{a^2} - 2 \frac{ym_2}{b^2} - 2 \frac{zm_3}{c^2} + \frac{m_1^2}{a^2} + \frac{m_2^2}{b^2} + \frac{m_3^2}{c^2} - 1 = 0,$$
+V súradniciach $(u(t),v(t),w(t))$ má jednoparametrický systém elipsoidov $Q$ rovnicu
+\begin{align*}
+\dfrac{u^2(t)}{a^2} + \dfrac{v^2(t)}{b^2} + \dfrac{w^2(t)}{b^2} = 1,
+\end{align*}
+kde vzťah medzi súradnicami $(u(t),v(t),w(t))$ a $(x,y,z)$ je daný
 $$
-\left(\begin{matrix} x \\ y \\ z  \\ 1
-\end{matrix} \right)^T \left(\begin{matrix} 
-\frac{1}{a^2} & 0 & 0 & \frac{-m_1}{a^2} \\
-0 & \frac{1}{b^2} & 0 & \frac{-m_2}{b^2} \\
-0 & 0 & \frac{1}{c^2} & \frac{-m_3}{c^2} \\
-\frac{-m_1}{a^2} & \frac{-m_2}{b^2} & \frac{-m_3}{c^2} & \frac{m_1}{a^2} + \frac{m_2}{b^2} + \frac{m_3}{c^2} - 1 \\
-\end{matrix} \right)\left(\begin{matrix} x \\ y \\ z \\ 1
-\end{matrix} \right) = 0,
+\left(\begin{matrix}
+u \\
+v \\
+w
+\end{matrix}\right) = \frac{1}{ \| \dot{m}\| \sqrt{\dot{m}_2^2 + \dot{m}_3^2}}
+\left( \begin{matrix} 
+\dot{m}_1 \sqrt{\dot{m}_2^2 + \dot{m}_3^2} & \dot{m}_2 \sqrt{\dot{m}_2^2 + \dot{m}_3^2} & \dot{m}_3 \sqrt{\dot{m}_2^2 + \dot{m}_3^2} \\
+0 & -\dot{m}_3 \| \dot{m}\| & \dot{m}_2 \| \dot{m}\| \\
+\dot{m}_2^2 + \dot{m}_3^2 & -\dot{m}_1 \dot{m}_2 & -\dot{m}_1 \dot{m}_2 
+\end{matrix} \right)
+\left(\begin{matrix} x - m_1 \\ y - m_2 \\ z - m_3 \end{matrix}\right),
 $$
-potom derivácia jednoparametrického systému elipsoidov, ktorú označíme $\dot{Q} = \dfrac{\partial Q(t)}{\partial t}$
-$$
--\frac{\dot{m}_1x}{a^2} + \frac{\dot{m}_2y}{b^2} + \frac{\dot{m}_3z}{c^2} + \frac{m_1\dot{m}_1}{a^2} + \frac{m_2 \dot{m}_2}{b^2} + \frac{m_3 \dot{m}_3}{c^2} = 0,
-$$
-má v maticovom zápise tvar
-$$
-\left(\begin{matrix} x \\ y \\ z  \\ 1
-\end{matrix} \right)^T \left(\begin{matrix} 
-0 & 0 & 0 & \frac{-\dot{m}_1}{a^2} \\
-0 & 0 & 0 & \frac{-\dot{m}_2}{b^2} \\
-0 & 0 & 0 & \frac{-\dot{m}_3}{c^2} \\
-\frac{-\dot{m}_1}{a^2} & \frac{-\dot{m}_2}{b^2} & \frac{-\dot{m}_3}{c^2} & \frac{2m_1\dot{m}_1}{a^2} + \frac{2m_2 \dot{m}_2}{b^2} + \frac{2m_3 \dot{m}_3}{c^2}\\
-\end{matrix} \right)\left(\begin{matrix} x \\ y \\ z \\ 1
-\end{matrix} \right) = 0.
-$$
-$ \dot{Q}$ je rovina kolmá na dotykový vektor $\dot{m}(t), $ práve vtedy keď vektory $(\dot{m}_1, \dot{m}_2, \dot{m}_3) $ a $(\frac{\dot{m}_1}{a^2}, \frac{\dot{m}_2}{b^2}, \frac{\dot{m}_3}{c^2}) $ sú lineárne závislé. Ak budeme elipsoid škálovať tak, že $a, b, c$ budú škálovacie faktory také, aby sa elipsoid naškáloval v dotykovom smere, tak kolmá rovina na dotykový vektor vytne kružnicu, pretože elipsoid je v ostatných smeroch homogénny. Vyriešme toto odvodenie pre jednoduchší prípad, a to prípad elíps.
-
-Upravme rovnice pre obálku sféry tak, aby zodpovedali obálke elipsoidov. Vezmime elipsoid so škálovaním v smere súradnicových osí konštantnými reálnymi číslami $a,b,c.$ Upravme škálovanie elipsoidu tak, aby $a$, škálovanie v smere osi $x$ zodpovedalo škálovaniu v dotykovom smere priestorovej krivky $m(t).$
-Teda pre elipsoid s rovnicou
-\begin{equation*}
-\frac{{(x - m_1(t))^2}}{{a^2}} + \frac{{(y - m_2(t))^2}}{{b^2}} + \frac{{(z - m_3(t))^2}}{{c^2}}= 1
-\end{equation*} 
-zmeníme štandardnú bázu $\vec{e}_1, \vec{e}_2, \vec{e}_3$ na bázu Frenetovho repéra $\vec{t}, \vec{n}, \vec{b}$ v každom bode krivky $m(t).$ Naše očakávanie je, že obálku  elipsoidu škálovaného v dotykovom smere budeme môcť zostrojiť znova ako obálku kružníc, a teda, deriváciou jednoparametrického systému elipsoidov je podľa parametra $t$ bude opäť rovina. V ďalších výpočtoch budeme parameter $t$ pre väčšiu prehľadnosť zápisov vynechávať.
-
+Pre jednoparametrický systém elipsoidov $Q$ tak dostávame vyjadrenie
+\begin{align*}
+&\frac{- a^{2} b^{2} (\dot{m}_{2}^{2} + \dot{m}_{3}^{2}) \| \dot{m} \|^2 + a^{2} ((y - m_{2}) \dot{m}_{3} - (z - m_{3}) \dot{m}_{2})^{2} \| \dot{m} \|^2}{a^{2} b^{2} (\dot{m}_{2}^{2} + \dot{m}_{3}^{2}) \| \dot{m} \|^2} \\
++ &\frac{a^{2} (- (x - m_{1}) (\dot{m}_{2}^{2} + \dot{m}_{3}^{2}) + (y - m_{2}) \dot{m}_{1} \dot{m}_{2} + (z - m_{3}) \dot{m}_{1} \dot{m}_{3})^{2}}{a^{2} b^{2} (\dot{m}_{2}^{2} + \dot{m}_{3}^{2}) \| \dot{m} \|^2} \\
++ &\frac{b^{2} \| \dot{m} \|^2  ((x - m_{1}) \dot{m}_{1} + (y - m_{2}) \dot{m}_{2} + (z - m_{3}) \dot{m}_{3})^{2}}{a^{2} b^{2} (\dot{m}_{2}^{2} + \dot{m}_{3}^{2}) \| \dot{m} \|^2} = 0.
+\end{align*}
+Pozrime sa na deriváciu $\dot{Q}$ systému elipsoidov.
 Na všetky výpočty v tejto kapitole bol použitý voľne dostupný softvér počítačovej algebry Maxima s grafickým užívateľským rozhraním wmMaxima. Celý balík a dokumentácia sú dostupné na \cite{MaximaDoc}, \cite{MaximaDownload}. Rovnice z Maximy boli prevedené do \LaTeX u pomocou Python skriptu \verb|conversion-to-latex.ipynb|, ktorý sa nachádza v GitHub repozitári \url{https://github.com/tutka13/Masters-Thesis/tree/main/symbolic-computations}.
 
 \begin{figure}[h]

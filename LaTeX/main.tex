@@ -23,13 +23,14 @@
 
 \usepackage{multirow}
 \usepackage{adjustbox}
+\newcommand{\altref}[2]{\hyperref[#1]{#2}}
 
 \newtheorem{definition}{Definícia}[chapter]
 \newtheorem{theorem}{Veta}[chapter]
-\newtheorem{lemma}{Lema}
+\newtheorem{lemma}{Lema}[chapter]
 \theoremstyle{definition}
 \newtheorem{corollary}{Dôsledok}[chapter]
-\newtheorem{note}{Poznámka}
+\newtheorem{note}{Poznámka}[chapter]
 \newtheorem{example}{Príklad}
 
 %euler, pxtx, cm
@@ -163,7 +164,7 @@ doc. RNDr. Pavlovi Chalmovianskému, PhD. za odborné vedenie diplomovej práce,
 Tutková J., Bc. Obálka systému plôch. Diplomová práca. Univerzita Komenského. Fakulta matematiky, fyziky a informatiky. Katedra algebry a geometrie. Bratislava, 2024.
 \vspace{\baselineskip}
 
-\noindent Táto práca sa zaoberá výpočtom obálky jednoparametrického systému elíps v $\mathbb{R}^2$ a elipsoidov v $\mathbb{R}^3$, pričom elipsy a elipsoidy sú konštantne škálované faktorom $a$ v dotykovom smere krivky $m(t)$ a faktorom $b$ v ostatných smeroch krivky. Výpočet je založený na známej teórii obálky jednoparametrického systému sfér v $\mathbb{R}^3.$ Na určenie obálky využívame symbolické a numerické výpočty v programovacom prostredí Python a vypočítané plochy vizualizujeme v 3D modelovacom softvéri Blender. Niektoré z plôch sme vytlačili v 3D tlačiarni.
+\noindent Táto práca sa zaoberá výpočtom obálky jednoparametrického systému elíps v $\mathbb{R}^2$ a elipsoidov v $\mathbb{R}^3$, pričom elipsy a elipsoidy sú konštantne škálované faktorom $a$ v dotykovom smere krivky $m(t)$ a faktorom $b$ v ostatných smeroch krivky. Výpočet je založený na známej teórii obálky jednoparametrického systému sfér v $\mathbb{R}^3.$ Na určenie obálky využívame symbolické a numerické výpočty v programovacom jazyku Python a vypočítané plochy vizualizujeme v 3D modelovacom softvéri Blender. Niektoré z plôch sme vytlačili v 3D tlačiarni.
 
 \paragraph*{Kľúčové slová:} obálka plôch, systém kvadratických plôch
 % --- Koniec Abstrakt - Slovensky
@@ -177,7 +178,7 @@ Tutková J., Bc. Obálka systému plôch. Diplomová práca. Univerzita Komensk�
 Tutková J., Bc. Envelope of a system of surfaces. Master's thesis. Comenius University. Faculty of Mathematics, Physics and Informatics. Department of Algebra and Geometry. Bratislava, 2024.
 \vspace{\baselineskip}
 
-\noindent This thesis deals with the computation of the envelope of a one-parameter system of ellipses in $\mathbb{R}^2$ and ellipsoids in $\mathbb{R}^3$, where these ellipses are scaled by a constant factor $a$ in the tangent direction of the curve $m(t)$ and by a factor $b$ in the other directions of the curve. The computation is based on known  theory of envelopes of a one-parameter system of spheres in $\mathbb{R}^3$. To determine the envelope, we use symbolic and numerical calculations in the Python programming environment and visualize the calculated surfaces in the 3D modeling software Blender. We printed some of the surfaces in a 3D printer.
+\noindent This thesis deals with the computation of the envelope of a one-parameter system of ellipses in $\mathbb{R}^2$ and ellipsoids in $\mathbb{R}^3$, where these ellipses are scaled by a constant factor $a$ in the tangent direction of the curve $m(t)$ and by a factor $b$ in the other directions of the curve. The computation is based on known  theory of envelopes of a one-parameter system of spheres in $\mathbb{R}^3$. To determine the envelope, we use symbolic and numerical calculations in the Python programming language and visualize the calculated surfaces in the 3D modeling software Blender. We printed some of the surfaces in a 3D printer.
 
 
 \paragraph*{Keywords:} envelope of surfaces, system of surfaces
@@ -270,6 +271,8 @@ Tutková J., Bc. Envelope of a system of surfaces. Master's thesis. Comenius Uni
 \bibitem{Bru92} Bruce, J., Giblin, P. 1992. Envelopes. \textit{In Curves and Singularities: A Geometrical Introduction to Singularity Theory} (pp. 99-132). Cambridge: Cambridge University Press. Dostupné na internete: \url{doi:10.1017/CBO9781139172615.007}.
 
 \bibitem{Bru81} Bruce J. W., Giblin P. J. 1981. What Is an Envelope? \textit{The Mathematical Gazette}, 65(433), 186-192. Dostupné na internete: \url{http://www.jstor.org/stable/3617131}.
+
+\bibitem{Ciz2017} Čižmár J. 2017. \textit{Dejiny matematiky.} Bratislava. Perfekt. ISBN 978-80-8046-829-3.
 
 \bibitem{doCarmo17} do Carmo M. P. 2017. \textit{Differential Geometry of Curves and Surfaces}, New York. Dover Publications Inc., Mineola. ISBN 978-0-486-80699-0.
 

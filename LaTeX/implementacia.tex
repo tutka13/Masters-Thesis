@@ -1,5 +1,6 @@
 \chapter{Softvér}
-V našej práci je cieľom implementácie matematicky odvodených konceptov vizualizácia vypočítaných plôch a následne aj ich 3D tlač. V tejto kapitole v prvej časti uvedieme stručnú špecifikáciu softvéru, v druhej časti zdôvodnime výber programovacieho jazyka a knižníc, opíšeme proces ich inštalácie, zdôvodnime použité programovacie prostredie a uvedieme jeho konfiguráciu pre naše použitie. V tretej časti uvedieme vývoj skriptov, demo a chyby, ktoré sa počas riešenia vyskytli a na záver, vo štvrtej časti, krátko opíšeme proces 3D tlače plôch. Všetky vytvorené skripty, vymodelované plochy, súbory pripravené na 3D tlač a ďalšie súbory sa nachádzajú na GitHube v repozitári \url{https://github.com/tutka13/Masters-Thesis}.
+V našej práci je cieľom implementácie matematicky odvodených konceptov vizualizácia vypočítaných plôch a následne aj ich 3D tlač. V tejto kapitole v prvej časti uvedieme stručnú špecifikáciu softvéru, v druhej časti zdôvodnime výber programovacieho jazyka a knižníc, opíšeme proces ich inštalácie, zdôvodnime použité programovacie prostredie a uvedieme jeho konfiguráciu pre naše použitie. V tretej časti uvedieme vývoj skriptov a na záver, vo štvrtej časti, krátko opíšeme proces 3D tlače plôch. Všetky vytvorené skripty, vymodelované plochy, súbory pripravené na 3D tlač a ďalšie súbory sa nachádzajú na GitHube v repozitári \url{https://github.com/tutka13/Masters-Thesis}.
+%demo a chyby, ktoré sa počas riešenia vyskytli 
 \section{Špecifikácia}
 Hlavným cieľom je vytvorenie 3D plochy - obálky sfér a elipsoidov, kde používateľ zadá vstupné parametre. Softvér vypočíta a vymodeluje plochu podľa procesu workflow.
 \subsection{Vstup}
@@ -97,8 +98,8 @@ Na výpočet a zobrazenie plôch v Blendri sme využili nasledovné knižnice
 Pip je inštalátor balíkov pre Python, ktorý spravuje knižnice pre jazyk Python. Používa sa na inštaláciu z Python Package Index. PyPI je knižníc pre programovací jazyk Python. Keďže sme Python stiahli z oficiálnej stránky Python \cite{PythonDownload}, pip sa inštaloval automaticky \cite{Pip}. Overiť, či máme naištalovaný pip, možno pomocou príkazového riadku, ktorý otvoríme vyhľadaním cmd v ponuke vyhľadávania a zadaním
 \verb|python -m pip --version.|
 V našom prípade pracujeme s verziou pip 24.0. Následne je možné inštalovať všetky potrebné knižnice v príkazovom riadku zadaním
+%pip install bpy,
 \begin{verbatim}
-pip install bpy,
 pip install math,
 pip install mathutils,
 pip install matplotlib,
@@ -146,10 +147,10 @@ Najprv sme začali vyvíjať skript pre obálku sfér, kde bolo hlavnou myšlien
 Vymodelovanie obálky sme realizovali, tak že charakteristické kružnice sme postupne v for cykle pridávali do ich vypočítaných stredov s normálou $(0,0,1).$ Následne sme kružnice v priestore otočili podľa dotykového vektora krivky $m(t)$ pomocou \verb|circle_object.rotation_mode = 'AXIS_ANGLE'.| Vymodelované kružnice sme označili, vytvorili z nich jeden objekt pomocou \verb|bpy.ops.object.join()| a pospájali ich v \verb|Edit Mode| funkciou \verb|bpy.ops.mesh.bridge_edge_loops().| Zobrazenie jednoparametrického systému sfér sme vykonali v ďalšom for cykle vykreslením sfér na s im zodpovedajúcimi parametrami a vizualizáciu charakterisktických kružníc sme vykonali v tom istom cykle, opäť s prislúchajúcimi parametrami a výpočtom rotácie s posunom v priestore. Tieto kružnice sme už však nespájali. Týmto spôsobom sme v scéne vytvorili tri plochy, ktoré sme mohli porovnať. Na záver sme scénu uložili do vhodného priečinku menšej databázy a vyčíslili sme čas behu skriptu. Skript \verb|envelope_of_spheres.py| má $127$ riadkov a všetky výpočty vrátane rotácie kružníc sú realizované pomocou vlastných funkcií uložených v skripte \verb|functions.py|, ktorý má $108$ riadkov.
 
 \noindent \textbf{Obálka elipsoidov:}
-V skripte \verb|envelope_of_ellipsoids.py| je jedinou zmenou oproti obálke sfér pridanie faktorov škálovania $a$ a $b$, ktoré možno meniť v skripte, teda nenačítavajú sa priamo z textového súboru. Výpočty prebiehajú rovnako pomocou \verb|functions.py|, pridáme vykreslenie jednoparametrického systému elipsoidov jedným for cyklom, kde najprv pridáme elipsoid na správnu pozíciu so škálovaním v smere súradnicových osí s hodnotami $(b, b, a)$ a potom tento elipsoid správne natočíme podľa dotykového vektora krivky $m(t).$ 
+V skripte \verb|envelope_of_ellipsoids.py| je jedinou zmenou oproti obálke sfér pridanie faktorov škálovania $a$ a $b$, ktoré možno meniť v skripte, teda nenačítavajú sa priamo z textového súboru. Výpočty prebiehajú rovnako pomocou \verb|functions.py|, pridáme vykreslenie jednoparametrického systému elipsoidov jedným for cyklom, kde najprv pridáme elipsoid na správnu pozíciu so škálovaním v smere súradnicových osí s hodnotami $(b, b, a)$ a potom tento elipsoid správne natočíme podľa dotykového vektora krivky $m(t).$  TO DO budú tam ďalšie plochy
 
 \noindent \textbf{Porovnanie plôch:}
-V skripte \verb|comparison_of_surfaces.py| sa nachádzajú štyri vymodelované plochy pre danú krivku $m(t),$ jednoparametrický systém sfér, jeho obálka, jednoparametrický systém elipsoidov a jeho obálka.
+V skripte \verb|comparison_of_surfaces.py| sa nachádzajú štyri vymodelované plochy pre danú krivku $m(t),$ jednoparametrický systém sfér, jeho obálka, jednoparametrický systém elipsoidov a jeho obálka. TO DO príklady a obálka elipsoidov
 
 \section{3D tlač}
 Tlačiareň, v ktorej sme plochy tlačili je typu Original Prusa i3 MK3S+. Všetky jej parametre a taktiež manuál k tlači sa nachádza na \cite{PrusaManual}. Na vytlačenie modelov plôch bolo potrebné exportovať plochy v Blendri do vhodného formátu. Pre tlač bolo potrebné inštalovať softvér PrusaSlicer, ktorý možno stiahnuť z \cite{PrusaSlicer}.
@@ -188,7 +189,7 @@ Kvôli nefunkčnosti tlače z SD karty, sme pre 3D tlač používali počítač 
 \subsection{Pronterface}
 Pronterface je jednoduché grafické používateľské rozhranie, ktoré používateľom ponúka možnosť monitorovať a ovládať tlačiareň z počítača pripojeného cez USB. Pomocou neho možno priamo pohybovať krokovými motormi, ovládať teplotu lôžka a trysky, posielať príkazy G-kódu priamo cez terminál alebo konzolové okno a mnoho ďalšieho. Pronterface je súčasťou balíka jednoduchých nástrojov Printrun na správu a ovládanie 3D tlačiarní aj CNC strojov. Napriek svojmu základne vyzerajúcemu dizajnu a zastaranej grafike zostáva užitočným nástrojom, ktorý si udržiava silnú pozíciu v komunite 3D tlačiarov \cite{Prontersetup}. 
 
-Stiahli sme jeho poslednú veziu 2.0.1 na webovej lokalite \cite{Pronterface}. Pomocou Správcu zariadení systému Windows sme skontrolovali, ktorý port COM bol priradený našej 3D tlačiarni, bol to COM3. Po pripojení k tlačiarni sme zvolili tlačidlo Connect. Potom sme načítali model tlačidlom Load file a vybrali súbor vo formáte \verb|.gcode|. V aplikácii sme skontrolovali nastavenú teplotu trysiek a podložky, aby zodpovedala zvolenému materiálu podľa našich pokynov. Po načítaní modelu sa v pravom stĺpci zobrazil pesimisticky odhad času tlače.
+Stiahli sme jeho poslednú veziu 2.0.1 na webovej lokalite \cite{Pronterface}. Pomocou Správcu zariadení systému Windows sme skontrolovali, ktorý port COM bol priradený našej 3D tlačiarni, bol to COM3. Po pripojení k tlačiarni sme zvolili tlačidlo Connect. Potom sme načítali model tlačidlom \verb|Load file| a vybrali súbor vo formáte \verb|.gcode|. V aplikácii sme skontrolovali nastavenú teplotu trysiek a podložky, aby zodpovedala zvolenému materiálu podľa našich pokynov. Po načítaní modelu sa v pravom stĺpci zobrazil pesimisticky odhad času tlače.
 
 \begin{figure}[h]
 	\centering

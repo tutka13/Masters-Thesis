@@ -1,6 +1,6 @@
 \chapter{Prehľad problematiky}
 \label{kap:kapitola1}
-Prehľad definícií sme čerpali z \cite{Bru92}, \cite{Bru81}, \cite{doCarmo17} a \cite{Ode20}.
+Prehľad definíciía a viet uvedených v tejto kapitole sme čerpali najmä z \cite{Bru92}, \cite{Bru81}, \cite{doCarmo17}, \cite{Ode20} a \cite{Vra22}.
 
 \section{Jednoparametrický systém}
 Ak nakreslíme kružnice so stredom na x-ovej osi s polomerom 1, ako na obr. \ref{fig:system}, pohľad nám upútajú úsečky $y = \pm 1$ pre $ x \in [-2,2]$ idúce ponad a popod systém kružníc.
@@ -112,7 +112,7 @@ Z druhej rovnice máme $t=-1 \neq 0,$ teda systém nemá riešenie. Aj keď by s
 \begin{figure}[h]
 	\centering
 	\includegraphics[trim={0 0.35cm 0 0.85cm},clip, width=0.9\textwidth]{images/concentric_circles.pdf}
-	\caption[Sústredné kružnice.]{Sústredné kružnice na intervale $[\frac{1}{100},2]$ a krokom $\Delta t = 0,1$.}
+	\caption[Sústredné kružnice.]{Sústredné kružnice na intervale $[\frac{1}{100},2]$ a krokom $\Delta t = 0,1$. V parametri $t = \frac{1}{100} $ je farba kružnice ružová, v $ t = 2 $ čierna.}
 	\label{fig:concentric_circles}
 \end{figure}
 
@@ -140,7 +140,7 @@ Ak $t = x, $ tak $y^2 = 1.$ Teda obálka je podľa tejto charakterizácie $ y = 
 \begin{figure}[h]
 	\centering
 	\includegraphics[trim={0.5cm 2.8cm 0.5cm 3.3cm},clip]{images/system_with_envelope_unlimited_domain.pdf}
-	\caption[Obálka systému podľa charakterizácie.]{Obálka systému podľa charakterizácie \ref{charakterizacia}.}
+	\caption[Obálka systému podľa charakterizácie.]{Modrou farbou je znázornená obálka systému podľa charakterizácie \ref{charakterizacia}.}
 	\label{fig:system_with_envelope_unlimited_domain}
 \end{figure}
 
@@ -149,11 +149,11 @@ V skutočnosti sú obálkou úsečky $y=\pm 1$ definované na intervale $[-2,2]$
 \begin{figure}[h]
 	\centering
 	\includegraphics[trim={0.5cm 2.8cm 0.5cm 3.3cm},clip]{images/system_with_correct_envelope.pdf}
-	\caption[Obálka systému podľa definície.]{Obálka systému podľa definície \ref{definicia}.}
+	\caption[Obálka systému podľa definície.]{Modrou farbou je znázornená obálka systému podľa definície \ref{definicia}.}
 	\label{fig:system_with_correct_envelope}
 \end{figure}
 
-Ďalšou otázkou, ktorá prirodzene vzniká je, či patria aj časti kriviek jednoparametrického systému v koncových bodoch intervalu do obálky. Podľa defínicie a charakterzácie nie. Ak by sme predsa len koncové časti pridali, mohli by sme systém v prípadoch kružníc, elíps, sfér a elipsoidov ohraničiť akousi kontúrou systému. Na obr. \ref{fig:nanuk} sa nachádza vizualizácia systému s jeho kontúrou vytvorenou z obálky systému a polkružnicami v parametroch $t=-2$ a $t=2.$
+Ďalšou otázkou, ktorá prirodzene vzniká je, či patria aj časti kriviek jednoparametrického systému v koncových bodoch intervalu do obálky. Podľa defínicie \ref{definicia} a charakterizácie \ref{charakterizacia} nie. Ak by sme predsa len koncové časti pridali, mohli by sme systém v prípadoch ako kružnice, elpsy, sféry a elipsoidy ohraničiť akousi kontúrou systému. Na obr. \ref{fig:nanuk} sa nachádza vizualizácia systému s jeho kontúrou vytvorenou z obálky systému a polkružnicami v parametroch $t=-2$ a $t=2.$ Táto kontúra pripomína tvar nanukovej paličky.
 
 \begin{figure}[H]
 	\centering
@@ -185,23 +185,22 @@ Na obrázku \ref{fig:too_complicated_equations} je znázornený tento systém el
 \end{figure}
 
 \section{Výpočet obálky}
-Vo väčšine prípadov sú rovnice charakterizujúce obálku systému plôch príliš vysokého stupňa v parametri $t$ a nedokážeme z nich ľahko odvodiť rovnicu obálky, preto pristupujeme aj k numerickým riešeniam. Spoľahlivá aproximácia obálky je jednou z aktuálnych výskumných tém. Na začiatok si však rozoberme existujúce analytické prístupy. Naledujúce prístupy sú prevzaté z \cite{Vra22}.
+Vo väčšine prípadov sú rovnice charakterizujúce obálku systému plôch príliš vysokého stupňa v parametri $t$ a nedokážeme z nich ľahko odvodiť rovnicu obálky, preto pristupujeme aj k numerickým riešeniam. Spoľahlivá aproximácia obálky je jednou z aktuálnych výskumných tém. Na začiatok si však rozoberme existujúce analytické prístupy.
 \subsection{Prístup algebraickej geometrie}
-Dokonca aj v prípade jednoduchého príkladu \ref{example:too_complicated_equations}, obe polynomické rovnice charakterizujúce obálku sú vysokého stupňa v parametri $t$, preto je odstránenie parametera $t$ náročné bez vhodného nástroja. Štandardným aparátom na túto úlohu sú Gröbnerove bázy. Gröbnerove bázy sú kľúčovým pojmom v algebraickej geometrii a počítačovej algebre. Ide o špeciálnu množinu polynómov vo viacerých premenných, ktoré majú niekoľko dôležitých vlastností a zohrávajú kľúčovú úlohu pri riešení rôznych matematických problémoch vrátane riešenia sústav polynomických rovníc, zjednodušovania polynómov a dokazovania rôznych algebraických tvrdení. Vybudovanie tejto teórie je pomerne zdĺhavé, preto odkážeme na bohaté teoretické pozadie v \cite{Chalm}.
+Dokonca aj v prípade jednoduchého príkladu \ref{example:too_complicated_equations}, obe polynomické rovnice charakterizujúce obálku sú vysokého stupňa v parametri $t$, preto je odstránenie parametera $t$ náročné bez vhodného nástroja. Štandardným aparátom na túto úlohu sú Gröbnerove bázy. Ide o špeciálnu množinu polynómov vo viacerých premenných, ktoré majú niekoľko dôležitých vlastností a zohrávajú kľúčovú úlohu pri riešení sústav polynomických rovníc, zjednodušovania polynómov a dokazovania rôznych algebraických tvrdení. Vybudovanie tejto teórie je pomerne zdĺhavé, preto odkazujeme na teoretické pozadie v \cite{Chalm}.
 %Najprv vypočítame Gröbnerovu bázu Buchbergerovým algoritmom pre ideál generovaný sústavou polynomických rovníc, ktorá obsahuje všetky premenné vrátane tej, ktorú chceme eliminovať. Z Gröbnerovej bázy vyberieme polynómy, ktoré obsahujú premennú, ktorú chceme eliminovať. Tieto polynómy použijeme na vyjadrenie tejto premennej v závislosti od ostatných premenných. Po vyriešení nových rovníc získame výraz, ktorý opisuje vzťah medzi zvyšnými premennými a eliminovanou premennou. Týmto spôsobom úspešne eliminujeme premennú.
 %Pokúsme sa vypočítať Gröbnerovu bázu príkladu \ref{example:too_complicated_equations} vzhľadom na lexikografické usporiadanie monómov $t > x > y $. 
-Keďže výpočet Gröbnerovej bázy trvá pomerne dlho, neuvádzame postup a výsledok možno nájsť v  \altref{kap:priloha1}{Prílohe A}. 
+Keďže výpočet Gröbnerovej bázy aj pre príklad \ref{example:too_complicated_equations} trvá pomerne dlho, neuvádzame postup a výsledok možno nájsť v  \altref{kap:priloha1}{Prílohe A}. 
 
 %Gröbnerova báza vzhľadom na iné usporiadanie, napr. grevlex je zvyčajne vypočítaná oveľa rýchlejšie a jej polynómy majú krajšie koeficienty, no na druhej strane, tento prístup nie je vo všeobecnosti možné použiť na odstránenie premennej $t$ z rovníc. 
 %Spôsob, ako nájsť polynóm, ktorý leží v prvom eliminačnom ideáli, ktorý je nezávislý na Gröbnerovej bázach a monómických usporiadaniach, využíva teóriu rezultantov. 
 
-Gröbnerovu bázu je možné určiť vzhľadom na usporiadanie monómov, existujú aj iné metódy na riešenie polynomických rovníc, ktoré nie sú závislé na usporiadaní monómov. Jednou z metód je výpočet rezultantu, determinant špeciálnej matice polynómov.
-Hoci výpočet determinantov veľkých matíc je výpočtovo aj časovo náročný problém, poznáme metódy, ako vypočítať determinant efektívnejšie. 
-Navyše táto metóda, rovnako ako metóda založená na eliminačnej teórii s použitím Gröbnerových báz, nám vypočíta správnu obálku len vtedy, ak uvažujeme parameter $t$ jednoparametrického systému z celej reálnej priamky. 
+Gröbnerovu bázu je možné určiť vzhľadom na usporiadanie monómov, existujú aj iné metódy na riešenie polynomických rovníc, ktoré nie sú závislé na usporiadaní monómov. Jednou z metód je výpočet rezultantu, determinantu špeciálnej matice polynómov.
+Hoci výpočet determinantov veľkých matíc je výpočtovo aj časovo náročný problém, poznáme metódy, ako vypočítať determinant efektívnejšie. Navyše táto metóda, rovnako ako metóda založená na eliminačnej teórii s použitím Gröbnerových báz, nám vypočíta správnu obálku len vtedy, ak uvažujeme parameter $t$ jednoparametrického systému z celej reálnej priamky. 
 
 %Ak obmedzíme oblasť parametra na interval, tak obálka zvyčajne nemôže byť daná implicitnou rovnicou, a preto je potrebné nájsť nejakú parametrizáciu obálky. 
 
-Pri použití rezultantov máme lepšiu kontrolu nad zložitosťou výpočtu. Pre dané dva polynómy totiž vieme, ako sa konštruuje rezultant, a tak vieme odhadnúť, s akými veľkými polynómami sa bude počas výpočtu manipulovať, avšak pri hľadaní Gröbnerovej bázy je ťažké odhadnúť, aké zložité polynómy sa behom algoritmu vyskytnú.
+%Pri použití rezultantov máme lepšiu kontrolu nad zložitosťou výpočtu. Pre dané dva polynómy totiž vieme, ako sa konštruuje rezultant, a tak vieme odhadnúť, s akými veľkými polynómami sa bude počas výpočtu manipulovať, avšak pri hľadaní Gröbnerovej bázy je ťažké odhadnúť, aké zložité polynómy sa behom algoritmu vyskytnú.
 
 V príklade \ref{example:too_complicated_equations} uvedieme výsledný polynóm $Res(F^\lambda , F_t^\lambda , t)$ a na obr. \ref{fig:resultant} obálku nájdenú pomocou rezultantu. 
 
@@ -239,7 +238,7 @@ a rovnosť platí len pre izolované hodnoty $t$, kde za skalárny súčin vezme
 Pre príklad tak 4 máme
 \begin{align*}
 &\langle \dot{m}_1(t), \dot{m}_1(t) \rangle = 9t^4 + 4t^2 \geq 0, \text{ pre } t \in \mathbb{R}, \\
-&\langle \dot{m}_2(t), \dot{m}_2(t) \rangle = 9t^4 + 4t^2 - \frac{1}{4} \geq 0, \text{ pre } t \in \mathbb{R} \setminus \{ (-0.236, 0) \cup( 0, 0.236) \},
+&\langle \dot{m}_2(t), \dot{m}_2(t) \rangle = 9t^4 + 4t^2 - \frac{1}{4} \geq 0, \text{ pre } t \in \mathbb{R} \setminus \{ (\frac{-1}{3 \sqrt{2}}, \frac{1}{3 \sqrt{2}}) \},
 \end{align*}
 preto na týchto intervaloch existuje reálna obálka systémov $\mathcal{F}$ a $\mathcal{G}$.
 
@@ -264,8 +263,6 @@ Zobrazením $g_{0}(l)$, dostávame opäť priamku $l$. Pre iné $t$, napríklad 
 g_{\frac{\pi}{2}}(l) \colon x(u) &= -u \\
 y(u) &= 1.
 \end{align*}
-Na obrázku \ref{fig:lines_in_normal_form} je znázornená priamka $l$ modrou farbou a transformovaná priamka $g_{\frac{\pi}{2}}(l)$ červenou farbou. 
-
 \begin{figure}[h]
 	\centering
 	\includegraphics{images/lines_in_normal_form.eps}
@@ -423,9 +420,9 @@ Z toho môžeme usúdiť, že charakteristická krivka $c_1$ je kružnica so str
 
 Jedným z dôležitých výsledkov je, že kanálové plochy, definované ako obálka jednoparametrického systému sfér s racionálnou funkciou polomeru $r(t)$ a stredmi v racionálnej krivke $m(t)$ možno racionálne parametrizovať \cite{Pet97}.
 
-Bohužiaľ, vo väčšine prípadov sú rovnice, ktoré charakterizujú obálky, príliš zložité a odvodiť z nich rovnicu obálky nie sme schopní.
+%Bohužiaľ, vo väčšine prípadov sú rovnice, ktoré charakterizujú obálky, príliš zložité a odvodiť z nich rovnicu obálky nie sme schopní.
 
-Rúrkové povrchy sa často objavujú pri výrobe potrubia. Hladké spojenie medzi dvoma nie nevyhnutne valcovými rúrami $\mathcal{P}_1$ a $\mathcal{P}_2$ sa modeluje tak, aby bol prechod hladký, bez záhybov, vodotesný alebo dokonca aj parotesný. Na to sa používa technika \textit{rolling ball blends}, využívajúca nasledujúcu myšlienku: Kým sa sféra $S$ s konštantným alebo nekonštantným polomerom $r$ kotúľa na oboch rúrach súčasne, zanecháva stopu $s_i$ na oboch rúrach. Zmiešavacia plocha je tá časť obálky $\mathcal{E}$ jednoparametrického systému sfér, ktorá leží medzi dvoma stopami $s_1$ a $s_2$. Kostrová krivka obálky $\mathcal{E}$ je priesečníkom ekvidištánt \textit{(offsetov)} plôch $\mathcal{P}_1$ a $\mathcal{P}_2$ vo vzdialenosti $r$. Každá charakteristická krivka spája dva dotykové body zmiešavacej plochy a plochami $\mathcal{P}_1$ a $\mathcal{P}_2$, ktoré sa majú zmiešavať. Viac detailov možno nájsť v \cite{Kar00} a \cite{Ode20}. Na obrázku \ref{fig:rolling_ball_blends} vľavo je znázornená metóda so sférou s konštantným polomerom $r$, vpravo s nekonštantným.
+Jednou z aplikácii kanálových a rúrkové plôch je výroba potrubia. Hladké spojenie medzi dvoma nie nevyhnutne valcovými rúrami $\mathcal{P}_1$ a $\mathcal{P}_2$ sa modeluje tak, aby bol prechod hladký, bez záhybov, vodotesný alebo dokonca aj parotesný. Na to sa používa technika \textit{rolling ball blends}, využívajúca nasledujúcu myšlienku: Kým sa sféra $S$ s konštantným alebo nekonštantným polomerom $r$ kotúľa na oboch rúrach súčasne, zanecháva stopu $s_i$ na oboch rúrach. Zmiešavacia plocha je tá časť obálky $\mathcal{E}$ jednoparametrického systému sfér, ktorá leží medzi dvoma stopami $s_1$ a $s_2$. Kostrová krivka obálky $\mathcal{E}$ je priesečníkom ekvidištánt \textit{(offsetov)} plôch $\mathcal{P}_1$ a $\mathcal{P}_2$ vo vzdialenosti $r$. Každá charakteristická krivka spája dva dotykové body zmiešavacej plochy a plochami $\mathcal{P}_1$ a $\mathcal{P}_2$, ktoré sa majú zmiešavať. Viac detailov možno nájsť v \cite{Kar00} a \cite{Ode20}. Na obrázku \ref{fig:rolling_ball_blends} vľavo je znázornená metóda so sférou s konštantným polomerom $r$, vpravo s nekonštantným.
 
 \begin{figure}[h]
 	\centering

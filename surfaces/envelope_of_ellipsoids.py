@@ -1,10 +1,13 @@
 import bpy
 import sympy as sp
 import time
+import math as m
 import sys
-sys.path.append("C:\Program Files\Blender Foundation\Blender 4.0\4.0\scripts\modules\functions.py")
-import functions as f
+sys.path.append('C:/Program Files/Blender Foundation/Blender 4.0/4.0/scripts/modules')
+import envelopes as en
 from mathutils import Vector
+import importlib
+importlib.reload(en)
 
 start_time = time.time()
 
@@ -16,42 +19,49 @@ bpy.ops.object.delete(use_global=False, confirm=False)
 t = sp.symbols('t')
 
 # Factors of scaling
-a = 1.5
+a = 2
 b = 1
 
 # Read parameters from a text file
-text_file = 'cornetto_constant_radius'
+text_file = 'helix_multiplied_by_t_constant_radius'
 with open('C:/Users/tutko/Desktop/Masters-Thesis/surfaces/inputs/constant_radius/' + text_file + '.txt', 'r') as file:
     lines = file.readlines()
 
 # Call the functions
-curve_parametrization_str, radius_function_str = f.parse_parameters(lines)
-curve_parametrization_exp, radius_function = f.convert_to_expressions(curve_parametrization_str, radius_function_str)
-curve_parametrization = f.calculate_curve_parametrization(curve_parametrization_exp)
-derivative_curve_parametrization = f.calculate_derivative_curve(curve_parametrization)
-norm_derivative_curve_parametrization = f.calculate_norm_derivative_curve(derivative_curve_parametrization)
-derivative_radius_function = f.calculate_derivative_radius(radius_function)
-center_characteristic_curve = f.calculate_center_characteristic_curve(curve_parametrization, 
+curve_parametrization_str, radius_function_str = en.parse_parameters(lines)
+curve_parametrization_exp, radius_function = en.convert_to_expressions(curve_parametrization_str, radius_function_str)
+curve_parametrization = en.calculate_curve_parametrization(curve_parametrization_exp)
+derivative_curve_parametrization = en.calculate_derivative_curve(curve_parametrization)
+norm_derivative_curve_parametrization = en.calculate_norm_derivative_curve(derivative_curve_parametrization)
+derivative_radius_function = en.calculate_derivative_radius(radius_function)
+center_characteristic_curve = en.calculate_center_characteristic_curve(curve_parametrization, 
 radius_function, derivative_radius_function, derivative_curve_parametrization, norm_derivative_curve_parametrization)
-radius_characteristic_curve = f.calculate_radius_characteristic_curve(radius_function, 
+radius_characteristic_curve = en.calculate_radius_characteristic_curve(radius_function, 
 derivative_radius_function, norm_derivative_curve_parametrization)
-rho = f.rho(curve_parametrization, derivative_curve_parametrization, norm_derivative_curve_parametrization, a, b)
+rho = en.rho(curve_parametrization, derivative_curve_parametrization, norm_derivative_curve_parametrization, a, b)
+normal_vector_of_plane = en.normal_vector_of_plane(derivative_curve_parametrization)
+curvature = en.curvature(curve_parametrization, derivative_curve_parametrization)
+ratio = en.ratio(a, b)
 
 # Number of ellipsoids to create with step and shift array
-step = f.step(lines)
+step = en.step(lines)
 # Set the range of t values for the curve
-t_values = f.t_values(lines, step)
-number_of_ellipsoids = f.number_of_spheres(t_values)
-shift_array = f.shift_array(lines)
+t_values = en.t_values(lines, step)
+number_of_ellipsoids = en.number_of_spheres(t_values)
+shift_array = en.shift_array(lines)
 
 # Compute the point, derivative at each point on the curve
 points = []
 derivatives = []
 radii = []
 # Compute the center and radius of characteristic circle
-center_char = []
-radii_char = []
-rho = []
+center_char_circles = []
+radii_char_circles = []
+
+rhos = []
+normal_vectors_of_plane = []
+
+curvatures = []
 
 # Parameter preparation
 for t_value in t_values:
@@ -70,40 +80,54 @@ for t_value in t_values:
 
     radius_characteristic_at_point = radius_characteristic_curve.subs(t, t_value)
     #print("Radius of Characteristic Curve:", radius_characteristic_at_point)
+    
+    rho_at_point = rho.subs(t, t_value)    
+    normal_vector_of_plane_at_point = normal_vector_of_plane.subs(t, t_value)
 
-    rho_at_point = rho.subs(t, t_value)
-
+    curvature_at_point = curvature.subs(t, t_value)
     # Append to the lists
     points.append(curve_point)
     derivatives.append(derivative_curve_at_point)
     radii.append(radius_at_point)
 
-    center_char.append(center_characteristic_at_point)
-    radii_char.append(radius_characteristic_at_point)
+    center_char_circles.append(center_characteristic_at_point)
+    radii_char_circles.append(radius_characteristic_at_point)
 
-    rho.append(rho_at_point)
+    rhos.append(rho_at_point)
+    print(rho_at_point)
 
-#Computation of rotation characteristic curves
-#Define the original normal vector (assuming z-axis)
-for i in range(number_of_ellipsoids): 
-    # Ellipsoids with relevant scaling factors
-    bpy.ops.mesh.primitive_uv_sphere_add(scale=(b, b, a), location=center_char[i])
-    ellipsoid = bpy.context.object
-    direction_a = Vector((derivatives[i][0], derivatives[i][1], derivatives[i][2]))
-    ellipsoid.rotation_euler = direction_a.to_track_quat('Z', 'Y').to_euler()
+    curvatures.append(curvature_at_point)
+    normal_vectors_of_plane.append(normal_vector_of_plane_at_point)
 
+#Define the original normal vector (assuming z-axis) 
+original_normal = Vector((0, 0, 1)) 
+    
+for i in range(number_of_ellipsoids):         
+    bpy.ops.mesh.primitive_circle_add(location=center_char_circles[i])
+    circle = bpy.context.object
+    circle.name = "Circle"
+    rotated_normal_vector = Vector(derivatives[i])
+    # Calculate rotation
+    rotation_angle, rotation_axis = en.find_rotation(original_normal, rotated_normal_vector)
 
-for i in range(number_of_ellipsoids): 
-    if (rho[i] <= b):
-        bpy.ops.mesh.primitive_circle_add(location=center_char[i]+rho[i])
-    #ellipsoid = bpy.context.object
-    #direction_a = Vector((derivatives[i][0], derivatives[i][1], derivatives[i][2]))
-    #ellipsoid.rotation_euler = direction_a.to_track_quat('Z', 'Y').to_euler()
-      
+    # Apply the rotation
+    circle.rotation_mode = 'AXIS_ANGLE'
+    circle.rotation_axis_angle[0] = rotation_angle
+    circle.rotation_axis_angle[1:] = rotation_axis        
+
+for i in range(number_of_ellipsoids):
+    #if (abs(rhos[i]) < abs(b)):
+    if (ratio < curvatures[i]):
+        bpy.ops.mesh.primitive_uv_sphere_add(scale=(b, b, a), location=center_char_circles[i])
+        ellipsoid = bpy.context.object
+        ellipsoid.name = "Ellipsoid"
+        direction = Vector(derivatives[i])
+        ellipsoid.rotation_euler = direction.to_track_quat('Z', 'Y').to_euler()
+               
 #Update the scene
 bpy.context.view_layer.update()
 # Save the Blender file
-#bpy.ops.wm.save_as_mainfile(filepath='C:/Users/tutko/Desktop/Masters-Thesis/surfaces/outputs_ellipsoids/' + text_file + '.blend') 
+bpy.ops.wm.save_as_mainfile(filepath='C:/Users/tutko/Desktop/Masters-Thesis/surfaces/outputs_envelope_of_ellipsoids/ellipsoids_and_circles/' + text_file + '.blend') 
 
 #Time computation
 end_time = time.time()

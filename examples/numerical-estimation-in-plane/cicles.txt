@@ -1,8 +1,0 @@
-family_of_curves = (x - t)**2 + y**2 - 1
-x_start = -1
-y_start = 1
-t_min = -1
-t_max = 1
-h = 0.05
-eps = 0.0001
-orientation = '-'

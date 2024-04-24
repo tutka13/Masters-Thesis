@@ -1,0 +1,88 @@
+ellipse: (1/(diff(m_1(t), t)^2 + diff(m_2(t), t)^2))*(((x - m_1(t))^2 * ((diff(m_1(t), t))^2/a^2 + (diff(m_2(t), t))^2/b^2))
++ (2 * (x - m_1(t)) * (y - m_2(t)) * diff(m_1(t), t) * diff(m_2(t), t) * (1/a^2 - 1/b^2))
++ ((y - m_2(t))^2 * ((diff(m_2(t), t))^2/a^2 + (diff(m_1(t), t))^2/b^2))) - 1$
+
+expr: expand(ellipse)$
+A: ratsimp(coeff(expr, x, 2));
+C: ratsimp(coeff(expr, y, 2));
+
+x_0: coeff(expr, y, 0)$
+y_0: coeff(expr, x, 0)$
+x_1: coeff(expr, x, 1)$
+
+B: ratsimp(coeff(x_1, y, 1));
+D: ratsimp(coeff(x_0, x, 1));
+E: ratsimp(coeff(y_0, y, 1));
+F: ratsimp(coeff(x_0, x, 0));
+
+/*M: matrix(
+ [A,B/2,D/2], 
+ [B/2,C,E/2], 
+ [D/2,E/2,F]
+)$
+
+detM: determinant(M)$
+expanded_detM: expand(detM)$
+simplified_detM: ratsimp(expanded_detM);
+/*tex(simplified_detM)*/
+
+detM_33: A*C - B^2/4$
+expanded_detM_33: expand(detM_33)$
+simplified_detM_33: ratsimp(expanded_detM_33);
+/*tex(simplified_eq_detM_33)*/*/
+
+A1: ratsimp(diff(A,t,1)); 
+B1: ratsimp(diff(B,t,1));
+C1: ratsimp(diff(C,t,1));
+D1: ratsimp(diff(D,t,1));
+E1: ratsimp(diff(E,t,1));
+F1: ratsimp(diff(F,t,1));
+
+M_dot: matrix(
+ [A1,B1/2,D1/2], 
+ [B1/2,C1,E1/2], 
+ [D1/2,E1/2,F1]
+)$
+
+detM_dot: determinant(M_dot)$
+expanded_detM_dot: expand(detM_dot)$
+simplified_detM_dot: ratsimp(expanded_detM_dot);
+/*tex(simplified_eq_detM_dot)*/
+
+detM_dot_33: A1*C1 - B1^2/4$
+expanded_detM_dot_33: expand(detM_dot_33)$
+simplified_detM_dot_33: ratsimp(expanded_detM_dot_33);
+/*tex(simplified_eq_detM_dot_33);*/
+
+/*l: ratsimp(A1/(diff(m_1(t), t)*diff(m_2(t), t)));
+ratsimp(B1/l);
+ratsimp(C1/l);
+ratsimp(D1/l);
+ratsimp(E1/l);
+f: ratsimp(F1/l);
+alfa: ratsimp(f/(-m_1*diff(m_1(t), t)-m_2*diff(m_2(t), t)));*/
+
+alfa: ratsimp(A1/diff(m_1(t), t));
+beta: ratsimp(C1/diff(m_2(t), t));
+c: m_1(t)*diff(m_1(t), t)+m_2(t)*diff(m_2(t), t);
+gama: ratsimp(-F1/c);
+
+d: ratsimp(diff(m_1(t), t)*gama-c*alfa);
+e: ratsimp(diff(m_2(t), t)*gama-c*beta);
+
+gamma_d: ratsimp((D1 + c*alfa)/diff(m_1(t),t));
+gamma_e: ratsimp((E1 + c*beta)/diff(m_2(t),t));
+
+T: ratsimp(expand(A1*F1-D1^2/4+C1*F1-E1^2/4));
+
+T1: ratsimp(determinant(matrix(
+ [A1,D1/2], 
+ [D1/2,F1]
+)));
+
+T2: ratsimp(determinant(matrix(
+ [C1,E1/2], 
+ [E1/2,F1]
+)));
+
+T0: ratsimp(T1+T2);

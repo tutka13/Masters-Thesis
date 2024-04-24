@@ -35,6 +35,7 @@ center_characteristic_curve = f.calculate_center_characteristic_curve(curve_para
 radius_function, derivative_radius_function, derivative_curve_parametrization, norm_derivative_curve_parametrization)
 radius_characteristic_curve = f.calculate_radius_characteristic_curve(radius_function, 
 derivative_radius_function, norm_derivative_curve_parametrization)
+rho = f.rho(curve_parametrization, derivative_curve_parametrization, norm_derivative_curve_parametrization, a, b)
 
 # Number of ellipsoids to create with step and shift array
 step = f.step(lines)
@@ -50,6 +51,7 @@ radii = []
 # Compute the center and radius of characteristic circle
 center_char = []
 radii_char = []
+rho = []
 
 # Parameter preparation
 for t_value in t_values:
@@ -69,6 +71,8 @@ for t_value in t_values:
     radius_characteristic_at_point = radius_characteristic_curve.subs(t, t_value)
     #print("Radius of Characteristic Curve:", radius_characteristic_at_point)
 
+    rho_at_point = rho.subs(t, t_value)
+
     # Append to the lists
     points.append(curve_point)
     derivatives.append(derivative_curve_at_point)
@@ -76,6 +80,8 @@ for t_value in t_values:
 
     center_char.append(center_characteristic_at_point)
     radii_char.append(radius_characteristic_at_point)
+
+    rho.append(rho_at_point)
 
 #Computation of rotation characteristic curves
 #Define the original normal vector (assuming z-axis)
@@ -85,6 +91,14 @@ for i in range(number_of_ellipsoids):
     ellipsoid = bpy.context.object
     direction_a = Vector((derivatives[i][0], derivatives[i][1], derivatives[i][2]))
     ellipsoid.rotation_euler = direction_a.to_track_quat('Z', 'Y').to_euler()
+
+
+for i in range(number_of_ellipsoids): 
+    if (rho[i] <= b):
+        bpy.ops.mesh.primitive_circle_add(location=center_char[i]+rho[i])
+    #ellipsoid = bpy.context.object
+    #direction_a = Vector((derivatives[i][0], derivatives[i][1], derivatives[i][2]))
+    #ellipsoid.rotation_euler = direction_a.to_track_quat('Z', 'Y').to_euler()
       
 #Update the scene
 bpy.context.view_layer.update()

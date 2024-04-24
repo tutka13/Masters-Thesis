@@ -42,7 +42,12 @@ a_{11} & a_{12} & a_{13} \\
 a_{12} & a_{22} & a_{23} \\
 a_{13} & a_{23} & a_{33} \end{pmatrix}, \
 \delta = \det \begin{pmatrix} a_{11} & a_{12} \\ a_{12} & a_{22} \end{pmatrix}, \
-s = a_{11} + a_{22}.
+s = a_{11} + a_{22}, \\
+T &= \det \begin{pmatrix} 
+a_{22} & a_{23} \\
+a_{32} & a_{33}  \end{pmatrix} + \det \begin{pmatrix} 
+a_{11} & a_{13} \\ 
+a_{31} & a_{33} \end{pmatrix}.
 \end{align*}
 \end{theorem}
 Z tohto možno odvodiť nasledujúcu klasifikáciu kužeľosečiek.
@@ -81,9 +86,9 @@ Z tohto možno odvodiť nasledujúcu klasifikáciu kužeľosečiek.
 \hline
 hyperbolický & $< 0$ & hyperbola & dve rôznobežné priamky \\
 \hline
-\multirow{3}{*}{parabolický} & \multirow{3}{*}{$= 0$} & dve rovnobežné priamky & \multirow{3}{*}{parabola} \\
-& & priamka & \\
-& & $\emptyset$ & \\
+\multirow{3}{*}{parabolický} & \multirow{3}{*}{$= 0$} & \multirow{3}{*}{parabola} & ak $T < 0$, tak dve rovnobežné priamky \\
+& & & ak $T = 0$, tak priamka \\
+& & & ak $T > 0$, tak $\emptyset$ \\
 \hline
 \end{tabular}
 \caption{Klasifikácia kužeľosečiek.}
@@ -290,52 +295,99 @@ F &= \frac{\dot{m}_1^2 (b^2 m_1^2 + a^2 m_2^2 - a^2b^2) + 2 (b^2 - a^2) m_1 m_2 
 Derivujme funkcie $A(t), \dots, F(t).$ 
 \begin{flalign*}
 &\dot{A} = \frac{2 ( b^2 - a^{2}) ( \ddot{m}_{1} \dot{m}_{2} - \dot{m}_{1} \ddot{m}_{2}) \dot{m}_{1} \dot{m}_{2}}{a^{2} b^{2} \|\dot{m} \|^4} & \\
-&\dfrac{\dot{B}}{2} = \frac{(a^{2} - b^{2}) (2 (\dot{m}_{1} \ddot{m}_{1} + \dot{m}_{2} \ddot{m}_{2}) \dot{m}_{1} \dot{m}_{2} - (\dot{m}_{1} \ddot{m}_{2} + \ddot{m}_{1} \dot{m}_{2}) \|\dot{m} \|^2)}{a^{2} b^{2} \|\dot{m} \|^4} & \\
+&\dfrac{\dot{B}}{2} = \frac{(b^{2} - a^{2}) (\dot{m}_1^3  \ddot{m}_2 - \dot{m}_1^2 \dot{m}_2 \ddot{m}_1 - \dot{m}_1 \dot{m}_2^2 \ddot{m}_2 + \ddot{m}_1 \dot{m}_2^3)}{a^{2} b^{2} \|\dot{m} \|^4} & \\
 &\dot{C} = \frac{2 (b^2 - a^{2}) ( \dot{m}_{1} \ddot{m}_{2} - \ddot{m}_{1} \dot{m}_{2}) \dot{m}_{1} \dot{m}_{2}}{a^{2} b^{2} \|\dot{m} \|^4} & \\
 \end{flalign*}
 
 \begin{flalign*}
-& \dfrac{\dot{D}}{2} = \frac{2(\dot{m}_{1} \ddot{m}_{1} + \dot{m}_{2} \ddot{m}_{2}) (a^{2} (m_{1} \dot{m}_{2} - m_{2} \dot{m}_{1}) \dot{m}_{2} + b^{2} (m_{1} \dot{m}_{1} + m_{2} \dot{m}_{2}) \dot{m}_{1})}{a^{2} b^{2} \|\dot{m} \|^4} & \\
-&- \frac{\|\dot{m} \|^2 (a^{2}(m_{1} \dot{m}_{2} - m_{2} \dot{m}_{1}) \ddot{m}_{2} + a^2 (m_{1} \ddot{m}_{2} - m_{2} \ddot{m}_{1}) \dot{m}_{2})}{a^{2} b^{2} \|\dot{m} \|^4} & \\
-&- \frac{\|\dot{m} \|^2 ( b^{2}(m_{1} \dot{m}_{1} + m_{2} \dot{m}_{2}) \ddot{m}_{1} + b^2 (m_{1} \ddot{m}_{1} + m_{2} \ddot{m}_{2} + \|\dot{m} \|^2) \dot{m}_{1})}{a^{2} b^{2} \|\dot{m} \|^4} & \\
-& \dfrac{\dot{E}}{2} = \frac{- 2 (\dot{m}_{1} \ddot{m}_{1} + \dot{m}_{2} \ddot{m}_{2}) (a^{2} (m_{1} \dot{m}_{2} - m_{2} \dot{m}_{1}) \dot{m}_{1} - b^{2} (m_{1} \dot{m}_{1} + m_{2} \dot{m}_{2}) \dot{m}_{2})}{a^{2} b^{2} \|\dot{m} \|^4} & \\
-&+ \frac{\|\dot{m} \|^2 (a^{2} (m_{1} \dot{m}_{2} - m_{2} \dot{m}_{1}) \ddot{m}_{1} + a^{2} (m_{1} \ddot{m}_{2} - m_{2} \ddot{m}_{1}) \dot{m}_{1})}{a^{2} b^{2} \|\dot{m} \|^4} & \\
-&- \frac{\|\dot{m} \|^2 (b^{2} (m_{1} \dot{m}_{1} + m_{2} \dot{m}_{2}) \ddot{m}_{2} + b^{2} (m_{1} \ddot{m}_{1} + m_{2} \ddot{m}_{2} + \|\dot{m} \|^2) \dot{m}_{2})}{a^{2} b^{2} \|\dot{m} \|^4} & \\
-& \dot{F} = \frac{-2(\dot{m}_{1} \ddot{m}_{1} + \dot{m}_{2} \ddot{m}_{2}) (- a^{2} b^{2} \|\dot{m} \|^2 + a^{2} (m_{1}\dot{m}_{2} - m_{2}\dot{m}_{1})^2 + b^{2} (m_{1} \dot{m}_{1} + m_{2} \dot{m}_{2})^{2})}{a^{2} b^{2} \|\dot{m} \|^4} & \\
-&+ \frac{ \|\dot{m} \|^2 (- a^{2} b^{2} (\dot{m}_{1} \ddot{m}_{1} + \dot{m}_{2} \ddot{m}_{2}) + a^{2} (m_{1}^{2} \dot{m}_{2} \ddot{m}_{2} - m_{1} m_{2} \dot{m}_{1} \ddot{m}_{2} - m_{1} m_{2} \ddot{m}_{1} \dot{m}_{2} + m_{2}^{2} \dot{m}_{1} \ddot{m}_{1})}{a^{2} b^{2} \|\dot{m} \|^4} & \\
-&+ \frac{ \|\dot{m} \|^2 b^{2} (m_{1}^{2} \dot{m}_{1} \ddot{m}_{1} + m_{1} m_{2} \dot{m}_{1} \ddot{m}_{2} + m_{1} m_{2} \ddot{m}_{1} \dot{m}_{2} + m_{1}\dot{m}_{1}^{3})}{a^{2} b^{2} \|\dot{m} \|^4} & \\
-&+ \frac {\|\dot{m} \|^2 b^{2} (m_{1} \dot{m}_{1} \dot{m}_{2}^{2} + m_{2}^{2} \dot{m}_{2} \ddot{m}_{2} + m_{2} \dot{m}_{1}^{2} \dot{m}_{2} + m_{2} \dot{m}_{2}^{3})}{a^{2} b^{2} \|\dot{m} \|^4}.
+& \dfrac{\dot{D}}{2} = \frac{(b^{2} - a^{2}) ( 2m_1 \dot{m}_1 \dot{m}_2 ( \dot{m}_1 \ddot{m}_2 - \dot{m}_2 \ddot{m}_1)  + m_2 (- \dot{m}_1^{3} \ddot{m}_2 + \dot{m}_1^{2} \dot{m}_2 \ddot{m}_1 + \dot{m}_1 \dot{m}_2^{2} \ddot{m}_2 - \dot{m}_2^{3} \ddot{m}_1) )}{a^2 b^2 \|\dot{m} \|^4} & \\
+& - \frac{b^{2} (\dot{m}_1 \dot{m}_2^{4} + 2\dot{m}_1^{3}  \dot{m}_2^{2} + \dot{m}_1^{5})}{a^2 b^2 \|\dot{m} \|^4} & \\
+& \dfrac{\dot{E}}{2} = \frac{(b^{2} - a^{2}) ( m_1 (- \dot{m}_1^{3} \ddot{m}_2 + \dot{m}_1^{2} \dot{m}_2 \ddot{m}_1 + \dot{m}_1 \dot{m}_2^{2} \ddot{m}_2 - \dot{m}_2^{3} \ddot{m}_1)  + 2m_2 \dot{m}_1 \dot{m}_2 (\dot{m}_2 \ddot{m}_1 - \dot{m}_1 \ddot{m}_2 ))}{a^2 b^2 \|\dot{m} \|^4} & \\
+& - \frac{b^{2} (\dot{m}_1^{4} \dot{m}_2 + 2 \dot{m}_1^{2}  \dot{m}_2^{3} + \dot{m}_2^{5})}{a^2 b^2 \|\dot{m} \|^4} & \\
+& \dot{F} = \frac{2(b^{2} - a^{2}) ((m_1^2 - m_2^2) \dot{m}_1 \dot{m}_2 (\dot{m}_1 \ddot{m}_2 - \dot{m}_2 \ddot{m}_1)} {a^2 b^2 \|\dot{m} \|^4} & \\
+& + \frac{2(b^{2} - a^{2}) m_1 m_2 (\dot{m}_1^{3} \ddot{m}_2 - \dot{m}_1^{2} \dot{m}_2 \ddot{m}_1 - \dot{m}_1 \dot{m}_2^{2} \ddot{m}_2 + \dot{m}_2^{3} \ddot{m}_1))} {a^2 b^2 \|\dot{m} \|^4} & \\
+& + \frac{ 2b^{2} ( m_1 (\dot{m}_1 \dot{m}_2^{4} + 2 \dot{m}_1^{3}  \dot{m}_2^{2} + \dot{m}_1^{5}) +  m_2 (\dot{m}_1^{4} \dot{m}_2 + 2\dot{m}_1^{2}  \dot{m}_2^{3} + \dot{m}_2^{5}))}{a^2 b^2 \|\dot{m} \|^4} & \\
 \end{flalign*}
-
 
 Určme typ kužeľosečiek jednoparametrického systému $\dot{Q}$ podľa jeho invariantov.
 Invarianty
 \begin{flalign*}
-&\Delta(t) = 0 & \\
-&\delta(t) = \dot{A} \dot{C} - \frac{\dot{B}^2}{4} =  -\frac{(b^2 - a^2)^2}{a^4b^4} \frac{ (\dot{m_1}\ddot{m_2} - \ddot{m_1}\dot{m_2})^2 + \dot{m_1}\dot{m_2}\ddot{m_1}\ddot{m_2}}{\|m\|^4} < 0
+&\Delta(t) = 0, & \\
+&\delta(t) = \dot{A} \dot{C} - \frac{\dot{B}^2}{4} =  -\frac{(b^2 - a^2)^2}{a^4b^4} \frac{ (\dot{m_1}\ddot{m_2} - \ddot{m_1}\dot{m_2})^2}{\|\dot{m}\|^4} < 0,
+&T(t) = 0
 \end{flalign*}
-pre všetky $t,$ teda kužeľosečky v systéme $\dot{Q}$ podľa klasifikácie \ref{tab:conic_sections} degenerujú na dve rôznobežné priamky. 
-
-%Ukázali sme, že jednoparametrický systém $\dot{Q}$ sú pre každý parameter dve rôznobežné priamky.
-
-TO DO prienik $Q$ a $\dot{Q}$ a interpretácia výsledkov
-\begin{example}[Parabola]
-Majme parabolu s parametrizáciou $m(t)=(t, t^2), $ kde $\dot{m}(t)=(1, 2t).$ Transformujme jednoparametrický systém elíps $Q$.
+pre všetky $t,$ teda kužeľosečky v systéme $\dot{Q}$ podľa klasifikácie \ref{tab:conic_sections} degenerujú na dve rôznobežné priamky $p(t)$ a $q(t)$.
+Vyjadrenie jednoparametrického systému $\dot{Q}$ vieme upraviť do tvaru $$
+p(t)q(t) = 0, \text{ kde}
+$$
 \begin{align*}
-Q: \quad &\frac{1}{a^{2} b^{2}\left(4 t^{2} + 1\right)} \left( (x-t)^2 (b^2 + a^{2} 4t^2) + (y-t^2)^2 (a^2 + b^2 4t^2) \right)\\
-+ &\frac{1}{a^{2} b^{2}\left(4 t^{2} + 1\right)} \left( 4t(b^2 - a^2)(x-t)(y-t^2)2t \right) - 1 = 0.
+p(t) &\colon \dot{m}_1 x + \dot{m}_2 y - (m_1 \dot{m}_1 + m_2 \dot{m}_2) = 0, \\
+q(t) &\colon  \alpha(t) x + \beta(t) y +  \gamma(t) = 0.
 \end{align*}
-TO DO dokončiť príklad
+kde 
+\begin{align*}
+\alpha (t) &= \dot{m}_2(\dot{m}_2 \ddot{m}_1 - \dot{m}_1 \ddot{m}_2) , \\
+\beta (t) &= \dot{m}_1 (\dot{m}_1 \ddot{m}_2 - \dot{m}_2 \ddot{m}_1) , \\
+\gamma (t) &= -\alpha m_1 - \beta m_2 - \frac{b^2 \| \dot{m} \|^4 }{b^2 - a^2}.
+\end{align*}
+%\colon \mathbb{R} \rightarrow \mathbb{R}$
+Definujme funkciu $\rho(t)$, ktorá reprezentuje vzdialenosť priamky $q(t)$ od bodu na krivke $m(t),$ v ktorom je umiestnená elipsa
+$$
+\rho (t) = \| m(t), q(t) \|= \bigg|  \frac{\alpha m_1 + \beta m_2 + \gamma}{\sqrt{\alpha^2 + \beta^2}} \bigg|.
+$$
+Ak je $\rho(t) > b,$ rovina $q(t)$ nemá s elipsou žiaden prienik. Všimnime si, že podmienku $\rho(t) > b,$ možno upraviť do jednoduchšieho tvaru
+$$
+\bigg|  \frac{b}{a^2 - b^2} \bigg| > \frac{\sqrt{\alpha^2 + \beta^2}}{\| \dot{m} \|^4}.
+$$
+Po chvíľke úprav zistíme, že člen $\frac{\sqrt{\alpha^2 + \beta^2}}{\| \dot{m}^4 \|} $ reprezentuje krivosť krivky $\kappa(t).$
+Teda obálka jednoparametrického systému elíps $Q$ sa pre parametre $t,$ pre ktoré platí 
+$$
+\bigg|  \frac{b}{a^2 - b^2} \bigg| > \kappa(t).
+$$
+zhoduje s obálkou kružníc.
+
+\begin{example}[Parabola]
+Majme parabolu s parametrizáciou $m(t)=(t, t^2).$ Vypočítajme derivácie krivky 
+\begin{align*}
+\dot{m}(t)&=(1, 2t) \\
+\| \dot{m} \|^2 &= 1+4t^2 \\
+\ddot{m}(t)&=(0, 2) \\
+\end{align*}
+Jednoparametrický systém elíps
+\begin{flalign*}
+& Q \colon \quad \frac{1}{a^{2} b^{2}\left(4 t^{2} + 1\right)} \left( (x-t)^2 (b^2 + a^{2} 4t^2) + (y-t^2)^2 (a^2 + b^2 4t^2) \right) & \\
+& + \frac{1}{a^{2} b^{2}\left(4 t^{2} + 1\right)} \left( 4t(b^2 - a^2)(x-t)(y-t^2)2t \right) - 1 = 0.
+\end{flalign*}
+Koeficienty jeho derivácie
+\begin{flalign*}
+& \dot{A}  = \frac{8 t \left(a^{2} - b^{2}\right)}{a^{2} b^{2} \left(16 t^{4} + 8 t^{2} + 1\right)} & \\
+& \frac{\dot{B}}{2} = \frac{2 (4 t^{2} - 1) (a^{2} - b^{2})}{a^{2} b^{2} \left(16 t^{4} + 8 t^{2} + 1\right)} \\
+& \dot{C} = \frac{-8 t \left(a^{2} - b^{2}\right)}{a^{2} b^{2} \left(16 t^{4} + 8 t^{2} + 1\right)} & \\
+& \frac{\dot{D}}{2} = \frac{ \left(- 8 a^{2} t^{4} - 6 a^{2} t^{2} - 8 b^{2} t^{4} - 2 b^{2} t^{2} - b^{2}\right)}{a^{2} b^{2} \left(16 t^{4} + 8 t^{2} + 1\right)} & \\
+& \frac{\dot{E}}{2} = \frac{2 t \left(a^{2} - 16 b^{2} t^{4} - 8 b^{2} t^{2} - 2 b^{2}\right)}{a^{2} b^{2} \left(16 t^{4} + 8 t^{2} + 1\right)} & \\
+& \dot{F} = \frac{2 t \left(4 a^{2} t^{4} + 2 a^{2} t^{2} + 32 b^{2} t^{6} + 28 b^{2} t^{4} + 8 b^{2} t^{2} + b^{2}\right)}{a^{2} b^{2} \left(16 t^{4} + 8 t^{2} + 1\right)}.
+\end{flalign*}
+Determinant 
+$$
+\Delta(t) = 0. 
+$$
+Subdeterminant
+$$\delta(t) = \frac{-4 (a^2 - b^2)^2}{a^{4} b^{4} \left(16 t^{4} + 8 t^{2} + 1\right)} < 0.$$
+Jednoparametrický systém $\dot{Q}$ po zjednodušení
+\begin{flalign*}
+& \dot{Q} \colon 8t(a^{2} - b^{2}) x^2 + 4(4 t^{2} - 1)(a^{2} - b^{2})xy - 8t(a^{2} - b^{2}) y^2 & \\
+& (- 16 a^{2} t^{4} - 12 a^{2} t^{2} - 16 b^{2} t^{4} - 4 b^{2} t^{2} - 2 b^{2})x + 4 t(a^{2} - 16 b^{2} t^{4} - 8 b^{2} t^{2} - 2 b^{2})y & \\
+& + 2t(4 a^{2} t^{4} + 2 a^{2} t^{2} + 32 b^{2} t^{6} + 28 b^{2} t^{4} + 8 b^{2} t^{2} + b^{2}) = 0. 
+\end{flalign*}
+Rozklad na priamky $p(t)$ a $q(t)$
+\begin{align*}
+p(t)& \colon x+2ty - \left(t + 2t^{3}\right)=0, \\
+q(t)& \colon 2tx-y +\left(-t^{2}-\frac{b^{2}\left(1+4t^{2}\right)^{2}}{2\left(a^{2}-b^{2}\right)}\right)=0.
+\end{align*}
 \end{example}
 
-%\begin{example}[Parabola]
-%$$
-%\frac{2 \cdot \left(2 a^{2} \cdot \left(2 t \left(t^{2} + 2 t \left(- t + x\right) - y\right) + \left(t - x\right) \left(4 t^{2} + 1\right)\right) \left(- t^{2} + 2 t \left(t - x\right) + y\right) + b^{2} \cdot \left(4 t \left(2 t \left(- t^{2} + y\right) - t + x\right) + \left(4 t^{2} + 1\right) \left(6 t^{2} - 2 y + 1\right)\right) \left(2 t \left(t^{2} - y\right) + t - x\right)\right)}{a^{2} b^{2} \left(4 t^{2} + 1\right)^{2}} = 0
-%$$
-%\end{example}
-
 \section{Obálka elipsoidov}
-Pododobne ako pre elipsy odvodíme formu zápisov s dorbnými úpravami pre elipsoidy. Pre tento prípad parameter $t$ pre lepšiu prehľadnosť vynechávame.
+Pododobne ako pre elipsy odvodíme formu zápisov s dorbnými úpravami pre elipsoidy. V tomto prípade parameter $t$ pre lepšiu prehľadnosť vynechávame.
 Nech $M(t) \colon I \subset \mathbb{R} \rightarrow \mathbb{R}^{4 \times 4}$ je jednoparametrický systém (nie nutne regulárnych) symetrických $4 \times 4$ matíc. Nech $ X = (x, y, z, 1)^T$ sú homogénne súradnice v $\mathbb{P}^3(\mathbb{R})$, potom
 \begin{equation*}
 Q(t) \colon X^T M(t) X = 0
@@ -480,18 +532,64 @@ Invarianty
 \begin{align*}
 \Delta (t) &= 0, \\
 \delta (t)&=0, \\
-T(t) & =  \dot{A} \dot{B} - \frac{\dot{D}^2}{4} + 
-\dot{B} \dot{C} - \frac{\dot{F}^2}{4} + 
-\dot{A} \dot{C} - \frac{\dot{E}^2}{4} < 0 \\
+T(t) & = - \frac{(b^2 - a^2)^2}{a^4b^4} \frac{ (\dot{m_1}\ddot{m_2} - \ddot{m_1}\dot{m_2})^2 + (\dot{m_2}\ddot{m_3} - \ddot{m_2}\dot{m_3})^2 + (\dot{m_3}\ddot{m_1} - \ddot{m_3}\dot{m_1})^2}{\|\dot{m}\|^4} < 0, \\
 S(t) & < 0,
 \end{align*}
+
+% \dot{A} \dot{B} - \frac{\dot{D}^2}{4} + \dot{B} \dot{C} - \frac{\dot{F}^2}{4} + \dot{A} \dot{C} - \frac{\dot{E}^2}{4}
 pre všetky $t \in I,$
 teda podľa klasifikácie plôch druhého stupňa \ref{tab:classification_of_quadrics} a \ref{tab:degenerate_quadrics} sú kvadriky v systéme $\dot{Q}$ dve rôznobežné roviny.
 
-TO DO prienik $Q$ a $\dot{Q}$ a interpretácia výsledkov
+$\dot{Q}$ vieme napísať v súčinovom tvare dvoch rovín $ \eta (t) \xi (t) = 0,$
+kde 
+\begin{align*}
+\eta(t) & \colon \dot{m}_1 x + \dot{m}_2 y + \dot{m}_3 z - (m_1 \dot{m}_1 + m_2 \dot{m}_2 + m_3 \dot{m}_3) = 0, \\
+\xi(t) & \colon  \alpha (t) x + \beta (t) y + \gamma (t) z + \delta (t) = 0, 
+\end{align*}
+kde 
+\begin{align*}
+\alpha (t) &= \ddot{m}_1 (\dot{m}_2^2 + \dot{m}_3^2) - \dot{m}_1(\dot{m}_2 \ddot{m}_2 + \dot{m}_3 \ddot{m}_3) , \\
+\beta (t) &= \ddot{m}_2 (\dot{m}_1^2 + \dot{m}_3^2) - \dot{m}_2(\dot{m}_1 \ddot{m}_1 + \dot{m}_3 \ddot{m}_3), \\
+\gamma (t) &= \ddot{m}_3 (\dot{m}_1^2 + \dot{m}_2^2) - \dot{m}_3(\dot{m}_1 \ddot{m}_1 + \dot{m}_2 \ddot{m}_2), \\
+\delta (t) &= - \alpha (t) m_1 - \beta (t) m_2 - \gamma (t) m_3 - \frac{b^2 \| \dot{m} \|^4 }{b^2 - a^2}.
+\end{align*}
+%\colon \mathbb{R} \rightarrow \mathbb{R}$
+Definujme funkciu $\rho(t)$, ktorá reprezentuje vzdialenosť roviny $\xi(t)$ od bodu na krivke $m(t),$ v ktorom je umiestnený elipsoid
+
+$$
+\rho (t) = \| m(t), \xi(t) \|= \bigg|  \frac{\alpha m_1 + \beta m_2 + \gamma m_3 + \delta}{\sqrt{\alpha^2 + \beta^2 + \gamma^2}} \bigg|.
+$$
+
+Ak $\rho(t) > b,$ tak jednoparametrický systém $Q$ nemá prienik s rovinou $\xi(t) $ a za body obálky vieme v parametri $t$ považovať prienik $Q(t)$ a $\eta(t)$, čo je charakteristická kružnica s rovnakými parametrami ako v obálke sfér. Ak $\rho(t) < b,$ tak prienikom $Q(t)$ a $\xi(t)$ je elipsa a prienikom $Q(t)$ a $\eta(t)$ je charakteristická kružnica. Keďže rovina $\eta(t)$ prechádza krivkou $m(t)$ a jej normálový vektor je $\dot{m}(t),$ prienik $Q(t)$ a $\dot{Q}(t)$ je vždy reálny.
+
+Všimnime si, že podmienku
+$$
+\rho (t) > b 
+$$
+možno vyjadriť
+$$
+\bigg| \frac{b^2}{a^2 - b^2} \bigg| > \frac{\sqrt{\alpha^2 + \beta^2 + \gamma^2}}{\| \dot{m} \|^4} = \kappa (t),
+$$
+kde výraz $ \sqrt{\alpha^2 + \beta^2 + \gamma^2} $ predstavuje veľkosť normálového vektora roviny $\xi(t)$ a $\kappa(t)$ je krivosť krivky $m(t).$
+
+\subsubsection*{Parametre elipsy}
+Elipsa leží v rovine $\xi(t) $ so stredom v bode $S = m(t) + \rho(t)(\alpha(t), \beta(t), \gamma(t))$,  preto veľkostí jej polosí $c(t)$ a $d(t)$ možno určiť nasledujúcim výpočtom.
+Z pohľadu v smere vektora $\dot{m}(t)$ vidíme kružnicu, kde veľkosť vedľajšej poloosi $d(t)$ sa určí z pravouhlého trojuholníka $MBS$ a to
+$d(t) = \sqrt{b^2 - \rho(t)^2}$
+a veľkosť hlavnej poloosi $c(t)$ určíme jednoduchou geometrickou úvahou. Umiestnime stred elipsy $m(t)$ do počiatku súradnicovej sústavy. Elipsa má rovnicu 
+$$
+\frac{x^2}{c(t)^2} - \frac{y^2}{d(t)^2} = 1,
+$$
+bod $S$ má súradnice $(0, -\rho)$ a bod na elipse $P$ má súradnice $(p_x, -\rho)$. Nás zaujíma veľkosť hodnoty $p_x$, ktorú určíme z vyjadrenia elipsy.
+$$
+p_x = \pm \frac{a}{b} \sqrt{b^2 - \rho^2},
+$$
+hľadaná vzdialenosť $c(t) = \frac{a}{b} \sqrt{b^2 - \rho^2}.$
+
+Majme fixnú krivku $m(t),$ ako určiť, pre aké parametre $a$ a $b$ možno plochu zostrojiť v každom $t$ iba z kružníc? Jediné miesto kde sa objavujú parametre škálovania $a$ a $b$, je funkcia $\delta (t).$
 
 \section{Softvér Maxima}
-Na všetky výpočty v tejto kapitole bol použitý voľne dostupný softvér počítačovej algebry Maxima s grafickým užívateľským rozhraním wmMaxima. Celý balík a dokumentácia sú dostupné na \cite{MaximaDoc}, \cite{MaximaDownload}. Rovnice z Maximy boli prevedené do \LaTeX u pomocou Python skriptu \verb|conversion-to-latex.ipynb|, ktorý sa nachádza v GitHub repozitári \url{https://github.com/tutka13/Masters-Thesis/tree/main/symbolic-computations}.
+Na všetky výpočty v tejto kapitole bol použitý voľne dostupný softvér počítačovej algebry Maxima s grafickým užívateľským rozhraním wmMaxima. Celý balík a dokumentácia sú dostupné na \cite{MaximaDoc}, \cite{MaximaDownload}.
 
 \begin{figure}[h]
 	\centering

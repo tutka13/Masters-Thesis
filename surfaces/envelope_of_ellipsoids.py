@@ -23,7 +23,7 @@ a = 2
 b = 1
 
 # Read parameters from a text file
-text_file = 'helix_multiplied_by_t_constant_radius'
+text_file = 'astroid'
 with open('C:/Users/tutko/Desktop/Masters-Thesis/surfaces/inputs/constant_radius/' + text_file + '.txt', 'r') as file:
     lines = file.readlines()
 
@@ -40,8 +40,10 @@ radius_characteristic_curve = en.calculate_radius_characteristic_curve(radius_fu
 derivative_radius_function, norm_derivative_curve_parametrization)
 rho = en.rho(curve_parametrization, derivative_curve_parametrization, norm_derivative_curve_parametrization, a, b)
 normal_vector_of_plane = en.normal_vector_of_plane(derivative_curve_parametrization)
-curvature = en.curvature(curve_parametrization, derivative_curve_parametrization)
+curvature = en.curvature(derivative_curve_parametrization)
 ratio = en.ratio(a, b)
+kappa = en.function_kappa(derivative_curve_parametrization, norm_derivative_curve_parametrization)
+print(f'ratio: {ratio}')
 
 # Number of ellipsoids to create with step and shift array
 step = en.step(lines)
@@ -62,6 +64,7 @@ rhos = []
 normal_vectors_of_plane = []
 
 curvatures = []
+kappas = []
 
 # Parameter preparation
 for t_value in t_values:
@@ -85,6 +88,7 @@ for t_value in t_values:
     normal_vector_of_plane_at_point = normal_vector_of_plane.subs(t, t_value)
 
     curvature_at_point = curvature.subs(t, t_value)
+    kappa_at_point = kappa.subs(t, t_value)
     # Append to the lists
     points.append(curve_point)
     derivatives.append(derivative_curve_at_point)
@@ -94,29 +98,38 @@ for t_value in t_values:
     radii_char_circles.append(radius_characteristic_at_point)
 
     rhos.append(rho_at_point)
-    print(rho_at_point)
+    print(f'rho: {rho_at_point}')
 
     curvatures.append(curvature_at_point)
+    print(f'curvature: {curvature_at_point}')
+    
+    kappas.append(kappa_at_point)
+    print(f'kappa: {kappa_at_point}')
+
     normal_vectors_of_plane.append(normal_vector_of_plane_at_point)
 
 #Define the original normal vector (assuming z-axis) 
 original_normal = Vector((0, 0, 1)) 
     
-for i in range(number_of_ellipsoids):         
-    bpy.ops.mesh.primitive_circle_add(location=center_char_circles[i])
-    circle = bpy.context.object
-    circle.name = "Circle"
-    rotated_normal_vector = Vector(derivatives[i])
-    # Calculate rotation
-    rotation_angle, rotation_axis = en.find_rotation(original_normal, rotated_normal_vector)
+for i in range(number_of_ellipsoids): 
+    #if (rhos[i] >= b):
+    #if (ratio >= kappas[i]):    
+    if (ratio >= curvatures[i]):  
+        bpy.ops.mesh.primitive_circle_add(location=center_char_circles[i])
+        circle = bpy.context.object
+        circle.name = "Circle"
+        rotated_normal_vector = Vector(derivatives[i])
+        # Calculate rotation
+        rotation_angle, rotation_axis = en.find_rotation(original_normal, rotated_normal_vector)
 
-    # Apply the rotation
-    circle.rotation_mode = 'AXIS_ANGLE'
-    circle.rotation_axis_angle[0] = rotation_angle
-    circle.rotation_axis_angle[1:] = rotation_axis        
+        # Apply the rotation
+        circle.rotation_mode = 'AXIS_ANGLE'
+        circle.rotation_axis_angle[0] = rotation_angle
+        circle.rotation_axis_angle[1:] = rotation_axis        
 
 for i in range(number_of_ellipsoids):
-    #if (abs(rhos[i]) < abs(b)):
+    #if (rhos[i] < b):
+    #if (ratio < kappas[i]):
     if (ratio < curvatures[i]):
         bpy.ops.mesh.primitive_uv_sphere_add(scale=(b, b, a), location=center_char_circles[i])
         ellipsoid = bpy.context.object

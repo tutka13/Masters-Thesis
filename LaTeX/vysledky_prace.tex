@@ -1,6 +1,15 @@
 \chapter{Výsledky práce}
-Hlavným cieľom práce bolo vypočítať obálku plôch druhého radu, kde sme za plochu druhého rádu považovali elipsoid naškálovaný v dotykovom smere krivky konštantou $a$.
-Stručne predstavte účel svojho výskumu a pripomeňte čitateľom hlavné ciele. Zdôraznite význam vašich zistení v kontexte širšej oblasti výskumu.Prezentujte svoje matematické výpočty a diskutujte o výsledkoch. Popíšte implementáciu výpočtov v programe Blender Python a prediskutujte získané výsledky.
+Hlavným cieľom práce bolo vypočítať obálku plôch druhého radu, kde sme za plochu druhého rádu považovali elipsoid naškálovaný v dotykovom smere krivky konštantou $a$. Obálku jednoparametrického systému elipsoidov sme počítali rovnakým prístupom ako obálku sfér, a to tak, že sme v každom parameteri $t$ systému zistili prienik systému s jeho deriváciou. Systém ležal na krivke $m(t).$
+Zistili sme, že v každom parametri $t$ je prienikom systémov kružnica a v tých parametroch $t,$ pre ktoré platí
+$$
+\frac{b}{a^2-b^2} > \kappa(t),
+$$  
+kde $\kappa(t)$ je krivosť krivky $m(t)$ je prienikom systémov aj elipsa.
+Tento výpočet sme implementovali v programe Blender pomocu Blender Python API a tak sme zostrojili menšiu databázu jednoparametrických systémov sfér, jednoparametrických systémov elipsoidov a ich obálok. V tejto časti uvedieme pár vizualizácií, kde uvedieme parametre plôch.
+
+Pri konštrukcií plôch z elipsoidov sme vyriešili o rozmer menší prípad a to obálku elíps v rovine. Pre tie sme výsledky vizualizovali v programe Desmos, kde sme zadávali matematické výrazy vypočítané v Pythone. 
+
+Popíšte implementáciu výpočtov v programe Blender Python a prediskutujte získané výsledky.
 Prezentujte povrchy vytvorené v programe Blender a prediskutujte ich význam pre ciele vášho výskumu.
 Prezentujte všetky 2D grafy alebo vizualizácie, ktoré dopĺňajú vaše výsledky.
 Analyzujte dôsledky vašich výsledkov vo vzťahu k vašim výskumným otázkam.

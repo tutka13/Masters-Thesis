@@ -45,7 +45,7 @@
 \contentsline {subsubsection}{Parametre tlače}{43}{section*.34}%
 \contentsline {subsection}{\numberline {3.4.2}Pronterface}{44}{subsection.3.4.2}%
 \contentsline {chapter}{\numberline {4}Výsledky práce}{47}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Príklady kriviek}{47}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Príklady plôch}{47}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Budúca práca}{47}{section.4.3}%
+\contentsline {section}{\numberline {4.1}Príklady kriviek}{48}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Príklady plôch}{48}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Budúca práca}{48}{section.4.3}%
 \contentsline {chapter}{Príloha A}{55}{chapter*.39}%

@@ -3,30 +3,36 @@
 Prehľad definíciía a viet uvedených v tejto kapitole sme čerpali najmä z \cite{Bru92}, \cite{Bru81}, \cite{doCarmo17}, \cite{Ode20} a \cite{Vra22}.
 
 \section{Jednoparametrický systém}
-Ak nakreslíme kružnice so stredom na x-ovej osi s polomerom 1, ako na obr. \ref{fig:system}, pohľad nám upútajú úsečky $y = \pm 1$ pre $ x \in [-2,2]$ idúce ponad a popod systém kružníc.
+Ak nakreslíme kružnice so stredom na x-ovej osi s polomerom 1, ako na obr. \ref{fig:new_system}, pohľad nám upútajú úsečky $y = \pm 1$ pre $ x \in [-2,2]$ idúce ponad a popod systém kružníc.
+
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[trim={0.5cm 2.8cm 0.5cm 3.3cm},clip]{images/system.pdf}
+%	\caption[Jednoparametrický systém kružníc.]{Jednoparametrický systém kružníc.}
+%	\label{fig:system}
+%\end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[trim={0.5cm 2.8cm 0.5cm 3.3cm},clip]{images/system.pdf}
-	\caption[Systém kružníc.]{Systém kružníc.}
-	\label{fig:system}
+	\includegraphics[trim={0.5cm 2.5cm 0.5cm 3cm},clip]{images/new_envelope.pdf}
+	\caption[Zobrazenie prvkov systému.]{Systém je zobrazený na intervale $[-2,2]$ s krokom  $\Delta t = 0.1$. Ružovou farbou je vyznačená kružnica systému v parametri $t=-2$, čiernou farbou v parametri $t = 2$, v hodnotách parametrov medzi nimi je farba kružnice lineárne interpolovaná. }
+	\label{fig:new_system}
 \end{figure}
 
-Každá z týchto úsečiek sa dotýka každej kružnice v jednom bode a v tomto bode majú spoločnú dotyčnicu. V nasledovnom texte túto myšlienku matematicky opíšeme, na základe nej zostrojíme tzv. obálku systému kriviek alebo plôch a porovnáme prístupy ich výpočtu. Budeme pracovať v reálnom vektorovom priestore so štandardným skalárnym súčinom, teda v euklidovskom priestore $\mathbb{E}^{n}$, rozmeru $n = 2, 3.$ Najprv ilustrujeme príklady obálok a ich výpočet pre $ n = 2,$ neskôr pre $n = 3.$ Po celý čas predpokladáme, že všetky zobrazenia sú dostatočne veľakrát diferencovateľné a pre prehľadnosť zápisov vynechávame parametre, ak sú z kontextu zrejmé.
+Každá z týchto úsečiek sa dotýka každej kružnice zo systému $F(x,y,t)$ v jednom bode a v tomto bode majú spoločnú dotyčnicu. V nasledovnom texte túto myšlienku matematicky opíšeme, na základe nej zostrojíme tzv. obálku systému kriviek alebo plôch a porovnáme prístupy ich výpočtu. Budeme pracovať v reálnom vektorovom priestore so štandardným skalárnym súčinom, teda v euklidovskom priestore $\mathbb{E}^{n}$, rozmeru $n = 2, 3.$ Najprv ilustrujeme príklady obálok a ich výpočet pre $ n = 2,$ neskôr pre $n = 3.$ Po celý čas predpokladáme, že všetky zobrazenia sú dostatočne veľakrát diferencovateľné a pre prehľadnosť zápisov vynechávame parametre, ak sú z kontextu zrejmé.
 
 %Vo všeobecnosti, začneme v $\mathbb{E}^2$ s jednoparametrickým systémom kriviek daným funkciou, v $\mathbb{E}^3$ máme jednoparametrický systém plôch.
 
 \begin{definition}
-Nech $F \colon \mathbb{R}^{n} \times I \rightarrow \mathbb{R}$ je funkcia v premenných $ x_{1}, x_{2}, \ldots, x_{n} $ a v parametri $t$, kde $I \subseteq \mathbb{R}$ je interval. Definujeme jednoparametrický systém nadplôch ako systém množín 
+Nech $F \colon \mathbb{R}^{n} \times I \rightarrow \mathbb{R}$ je funkcia v $ X = ( x_{1}, x_{2}, \ldots, x_{n}) $ a v parametri $t$, kde $I \subseteq \mathbb{R}$ je interval. Definujeme jednoparametrický systém nadplôch ako systém množín 
 $$
-\mathcal{F} = \{ (x_{1}, x_{2}, \ldots, x_{n}) \in \mathbb{R}^{n} \mid  \ F(x_{1}, x_{2}, \ldots, x_{n}, t) = 0, \ t \in I \}.
+\mathcal{F} = \{ X \in \mathbb{R}^{n} \mid  \ F(X, t) = 0, \ t \in I \}.
 $$
 \end{definition}
 
-V $n = 2$ budeme pre lepšiu prehľadnosť značiť premenné $x_{1}, x_{2}$ ako $x, y,$ pre $n = 3$ pribudne $x_{3}$ ako $z.$ Pre lepšiu prehľadnosť neskôr označíme dvojicu $(x,y)$ alebo trojicu $(x,y,z)$ ako $X$, potom
-$\mathcal{F} = \{ X \in \mathbb{R}^{n} \mid \ F(X, t) = 0, \ t \in I \}. $
+Pre $n = 2$ budeme značiť premenné $x_{1}, x_{2}$ ako $x, y,$ pre $n = 3$ pribudne $x_{3}$ ako $z.$ 
 
-Pre horeuvedený prípad, vizualizovaný na obr. \ref{fig:system}, teda máme jednoparameterický systém kružníc so stredmi kružníc, ktoré ležia na úsečke parametrizovanej $(t,0)$ pre $t \in [-2,2]$ a konštantným polomerom pre každú kružnicu $r = 1$ daný implicitnou funkciou
+Pre horeuvedený prípad, vizualizovaný na obr. \ref{fig:new_system}, teda máme jednoparameterický systém kružníc so stredmi kružníc, ktoré ležia na úsečke parametrizovanej $(t,0)$ pre $t \in [-2,2]$ a konštantným polomerom pre každú kružnicu $r = 1$ daný implicitnou funkciou
 $$ \mathcal{F} = \{ (x, y) \in \mathbb{R}^{2} \mid \ F(x, y, t) = 0, \ t \in [-1,1] \}, $$
 kde
 $$ F(x, y, t) = (x - t)^2 + y^2 - 1.$$
@@ -34,13 +40,6 @@ $$ F(x, y, t) = (x - t)^2 + y^2 - 1.$$
 Systém budeme ilustrovať zobrazením niektorých prvkov systému pre diskrétne hodnoty parametra $t$. Pre $t = -2$ je zodpovedajúci prvok systému $\mathcal{F}_{-2} \in \mathcal{F}$  kružnica s implicitnou rovnicou
 $$ F_{-2}(x, y) = F(x, y, -2) = (x + 2)^2 + y^2 - 1. $$
 Často budeme pre pevný parameter $t_0$ označovať prislúchajúcu rovnicu $F_{t_0}(X)$ a množinu bodov, ktoré rovnicu spĺňajú označíme $\mathcal{F}_{t_0}.$
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[trim={0.5cm 2.5cm 0.5cm 3cm},clip]{images/elements.pdf}
-	\caption[Zobrazenie prvkov systému.]{Systém je zobrazený na intervale $[-2,2]$ s krokom  $\Delta t = 0,1$. Ružovou farbou je vyznačená kružnica systému v parametri $t=-2$, čiernou farbou v parametri $t = 2$, v hodnotách parametrov medzi nimi je farba kružnice lineárne interpolovaná. }
-	\label{fig:one_element_of_system}
-\end{figure}
 
 \section{Obálka jednoparametrického systému nadplôch}
 Najskôr definujeme obálku jednoparametrického systému kriviek v $\mathbb{E}^2$. Uvedieme charakterizáciu obálok, ktorú možno použiť na výpočet pre jednoduchšie jednoparametrické systémy. Následne túto charakterizáciu použijeme ako definíciu pre obálku jednoparametrického systému plôch v $\mathbb{E}^n$.
@@ -137,25 +136,25 @@ $$\frac{\partial F}{\partial t}(x, y, t) = 2(t-x) = 0. $$
 Ak $t = x, $ tak $y^2 = 1.$ Teda obálka je podľa tejto charakterizácie $ y = \pm 1, $ ako sme očakávali.
 \end{example}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[trim={0.5cm 2.8cm 0.5cm 3.3cm},clip]{images/system_with_envelope_unlimited_domain.pdf}
-	\caption[Obálka systému podľa charakterizácie.]{Modrou farbou je znázornená obálka systému podľa charakterizácie \ref{charakterizacia}.}
-	\label{fig:system_with_envelope_unlimited_domain}
-\end{figure}
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[trim={0.5cm 2.8cm 0.5cm 3.3cm},clip]{images/system_with_envelope_unlimited_domain.pdf}
+%	\caption[Obálka systému podľa charakterizácie.]{Modrou farbou je znázornená obálka systému podľa charakterizácie \ref{charakterizacia}.}
+%	\label{fig:system_with_envelope_unlimited_domain}
+%\end{figure}
 
 V skutočnosti sú obálkou úsečky $y=\pm 1$ definované na intervale $[-2,2]$. Tento problém možno ošetriť tak, že budeme uvažovať systémy kriviek, ktoré sú v parametri $t$ definované na celej reálnej priamke $\mathbb{R}$. 
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[trim={0.5cm 2.8cm 0.5cm 3.3cm},clip]{images/system_with_correct_envelope.pdf}
-	\caption[Obálka systému podľa definície.]{Modrou farbou je znázornená obálka systému podľa definície \ref{definicia}.}
-	\label{fig:system_with_correct_envelope}
-\end{figure}
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[trim={0.5cm 2.8cm 0.5cm 3.3cm},clip]{images/system_with_correct_envelope.pdf}
+%	\caption[Obálka systému podľa definície.]{Modrou farbou je znázornená obálka systému podľa definície \ref{definicia}.}
+%	\label{fig:system_with_correct_envelope}
+%\end{figure}
 
 Ďalšou otázkou, ktorá prirodzene vzniká je, či patria aj časti kriviek jednoparametrického systému v koncových bodoch intervalu do obálky. Podľa defínicie \ref{definicia} a charakterizácie \ref{charakterizacia} nie. Ak by sme predsa len koncové časti pridali, mohli by sme systém v prípadoch ako kružnice, elpsy, sféry a elipsoidy ohraničiť akousi kontúrou systému. Na obr. \ref{fig:nanuk} sa nachádza vizualizácia systému s jeho kontúrou vytvorenou z obálky systému a polkružnicami v parametroch $t=-2$ a $t=2.$ Táto kontúra pripomína tvar nanukovej paličky.
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[trim={0.5cm 2.8cm 0.5cm 3.3cm},clip]{images/nanuk.pdf}
 	\caption{Kontúra systému.}
@@ -177,12 +176,12 @@ F_t^\lambda &= 24t^5-20yt^4+4y^2t^3+28t^3-24yt^2+4y^2t+4t-4y. \\
 Na obrázku \ref{fig:too_complicated_equations} je znázornený tento systém elíps pre $t \in [-2,2]$ s krokom $\Delta t=0.1$. Obálku nájdeme ako riešenie rovníc $F^\lambda \cap F_t^\lambda. $ Rovnice sú však príliš vysokého stupňa v parametri $t$, preto nevieme implicitnú rovnicu obálky bez vhodného nástroja vyjadriť. V ďalšej časti rozoberieme známe prístupy výpočtu.
 \end{example}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[trim={0 0.35cm 0 0.85cm},clip, width=\textwidth]{images/too_complicated_equations.pdf}
-	\caption[Systém elíps.]{Systém elíps, pre $t=-2$ ružová elipsa, pre $t=2$ čierna elipsa.}
-	\label{fig:too_complicated_equations}
-\end{figure}
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[trim={0 0.35cm 0 0.85cm},clip, width=\textwidth]{images/too_complicated_equations.pdf}
+%	\caption[Systém elíps.]{Systém elíps, pre $t=-2$ ružová elipsa, pre $t=2$ čierna elipsa.}
+%	\label{fig:too_complicated_equations}
+%\end{figure}
 
 \section{Výpočet obálky}
 Vo väčšine prípadov sú rovnice charakterizujúce obálku systému plôch príliš vysokého stupňa v parametri $t$ a nedokážeme z nich ľahko odvodiť rovnicu obálky, preto pristupujeme aj k numerickým riešeniam. Spoľahlivá aproximácia obálky je jednou z aktuálnych výskumných tém. Na začiatok si však rozoberme existujúce analytické prístupy.
@@ -211,10 +210,9 @@ $ Res(F^\lambda , F_t^\lambda , t) = 191102976x^{10} + 262144x^8y^6 - 9584640x^8
 \begin{figure}[h]
 	\centering
 	\includegraphics{images/resultant.eps}
-	\caption[Obálka nájdená rezultantom.]{Modrou farbou je znázornená obálka vypočítaná rezultantom.}
-	\label{fig:resultant}
+	\caption[Obálka nájdená rezultantom.]{Systém elíps, v $t=-2$ je elipsa vykreslená ružovou farbou, pre $t=2$ čiernou. Modrou farbou je znázornená obálka vypočítaná rezultantom.}
+	\label{fig:too_complicated_equations}
 \end{figure}
-
 
 \subsection{Prístup projektívnej geometrie}
 Body duálneho projektívneho priestoru $\mathbb{P}^3 $ možno stotožniť s nadrovinami v $\mathbb{R}^3$. Plochu v duálnom projektívnom priestore možno teda interpretovať ako množinu všetkých jej dotykových nadrovín. Pomocou duálneho prístupu sa dá dokázať, že obálky jednoparametrických systémov sú pre racionálne vstupné údaje racionálne. Potrebné vybudovanie teórie možno nájsť v \cite{Pott01}, z čoho čerpajú články s mnohými výsledkami \cite{Pet08}, \cite{Pet98} a príklady pre výpočet obálky možno nájsť v \cite{Vra22}.

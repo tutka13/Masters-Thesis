@@ -41,7 +41,7 @@ Nasledujúce číselné výrazy sú invariantmi krivky druhého stupňa, vyjadre
 a_{11} & a_{12} & a_{13} \\ 
 a_{12} & a_{22} & a_{23} \\
 a_{13} & a_{23} & a_{33} \end{pmatrix}, \
-\delta = \det \begin{pmatrix} a_{11} & a_{12} \\ a_{12} & a_{22} \end{pmatrix}, \
+\Delta_{33} = \det \begin{pmatrix} a_{11} & a_{12} \\ a_{12} & a_{22} \end{pmatrix}, \
 s = a_{11} + a_{22}, \\
 T &= \det \begin{pmatrix} 
 a_{22} & a_{23} \\
@@ -79,7 +79,7 @@ Z tohto možno odvodiť nasledujúcu klasifikáciu kužeľosečiek.
 \centering
 \begin{tabular}{|l|l|l|l|}
 \hline
-\textbf{Typ} & $\delta$ & $\Delta \neq  0$ & $\Delta = 0 $ \\
+\textbf{Typ} & $\Delta_{33}$ & $\Delta \neq  0$ & $\Delta = 0 $ \\
 \hline
 \multirow{2}{*}{eliptický} & \multirow{2}{*}{$> 0$} & ak $s\Delta < 0$, tak elipsa & \multirow{2}{*}{bod} \\
 & & ak $s\Delta > 0$, tak $\emptyset$ & \\
@@ -100,7 +100,7 @@ Plocha druhého stupňa $P$ je v karteziánskych súradniciach $(x, y, z) \in \m
 \[ f(x, y, z) = Ax^2 + By^2 + Cz^2 + Dxy + Exz + Fyz + Gx + Hy + Iz + J = 0. \]
 Je zrejmé, že ak je prvých šesť koeficientov nulových, uvedená rovnica je lineárna a opisuje rovinu v priestore. Vo všeobecnosti rovnica opisuje kvadriku, ktorá je daná deviatimi bodmi. Ak $J \neq 0$, môžeme ju vydeliť $J$ a potom vyriešiť sústavu lineárnych rovníc s deviatimi neznámymi. Okrem klasických prípadov, ako elipsoidy, paraboloidy a hyperboloidy, môžu kvadriky degenerovať aj na kvadratické kužele, kvadratické valce a dvojice rovín.
 
-V algebraickom zmysle je kvadrika $P$ plocha druhého stupňa, ktorá má vždy dva priesečníky $S-1$ a $S_2$ s danou priamkou $s$. Oba môžu byť reálne alebo komplexne združené. Limitný prípad $S_1 = S_2$ nastáva vtedy, keď $s$ je dotyčnicou $P$.
+V algebraickom zmysle je kvadrika $P$ plocha druhého stupňa, ktorá má vždy dva priesečníky $S_1$ a $S_2$ s danou priamkou $s$. Oba môžu byť reálne alebo komplexne združené. Limitný prípad $S_1 = S_2$ nastáva vtedy, keď $s$ je dotyčnicou $P$.
 
 V závislosti od počtu reálnych priesečníkov s rovinou $s$ v nekonečne rozlišujeme tri typy kvadrík:
 \begin{enumerate}
@@ -118,7 +118,7 @@ a_{21} & a_{22} & a_{23} & a_{24} \\
 a_{31} & a_{32} & a_{33} & a_{34} \\
 a_{41} & a_{42} & a_{43} & a_{44}
 \end{pmatrix}, \
-\delta = \det \begin{pmatrix} 
+\Delta_{44} = \det \begin{pmatrix} 
 a_{11} & a_{12} & a_{13} \\ 
 a_{21} & a_{22} & a_{23} \\ 
 a_{31} & a_{32} & a_{33} 
@@ -147,7 +147,7 @@ Z tohto možno odvodiť nasledujúce dve tabuľky.
 \centering
 \begin{tabular}{|c|c|c|p{2.2cm}|p{2.15cm}|p{2cm}|}
 \hline
-Typ & $\delta$ & $s\delta$ a $T$ & $\Delta > 0$ & $\Delta < 0$ & $\Delta = 0$ \\
+Typ & $\Delta_{44}$ & $s\Delta_{44}$ a $T$ & $\Delta > 0$ & $\Delta < 0$ & $\Delta = 0$ \\
 \hline
 eliptický & $\neq 0$ & $s\delta>0$ a $T>0$ & $\emptyset$ & elipsoid & $\emptyset$ \\
 \hline
@@ -204,7 +204,7 @@ hyperbolický & $< 0$ & hyperbolický valec & dve rôznobežné roviny \\
 \section{Obálka elíps}
 Pre vyriešenie úlohy zostrojenia obálky elipsoidov sme sa najprv zaoberali obálkou elíps.
 
-Nech $M(t) \colon I \subset \mathbb{R} \rightarrow \mathbb{R}^{3 \times 3}$ je jednoparametrický systém (nie nutne regulárnych) symetrických $3 \times 3$ matíc. Nech $ X = (x, y, 1)^T$ sú homogénne súradnice v $\mathbb{P}^2(\mathbb{R})$, potom
+Nech $M(t) \colon I \subset \mathbb{R} \rightarrow \mathbb{R}^{3 \times 3}$ je jednoparametrický systém (nie nutne regulárnych) symetrických $3 \times 3$ matíc. Nech $ X = (x, y, 1)^T$ sú homogénne súradnice v $\mathbb{A}^2(\mathbb{R})$, potom
 \begin{equation*}
 Q(t) \colon X^T M(t) X = 0 
 \end{equation*}
@@ -240,14 +240,13 @@ a subdeterminant matice, ktorá vznikne odstránením tretieho riadku a tretieho
 $$\delta(t) \vcentcolon = \det \dot{M}_{33}(t).$$ 
 
 \subsection{Zmena bázy elíps}
-Nech $m(t) \colon  I \subseteq \mathbb{R} \rightarrow \mathbb{R}^2$ je aspoň dvakrát diferencovateľná krivka, napíšme rovnicu jednoparametrického systému elíps $Q$ so stredom na krivke $m(t)$, hlavnou polosou $a$ v smere vektora $\dot{m}(t)$ a vedľajšou polosou $b$ v smere normálového vektora $\vec{n}$ ku krivke $m(t)$. Uvažujme $\vec{n}=(-\dot{m}_2, \dot{m}_1). $ Vydelením normou vektorov $\dot{m}(t)$ a $\vec{n}$ dostávame novú ortonormálnu bázu tvorenú stĺpcovými vektormi matice $P(t),$ kde
-$$
-P(t) = \frac{1}{ \| \dot{m}(t) \|} \left(\begin{matrix}
-   \dot{m}_1(t) & -\dot{m}_2(t) \\
-   \dot{m}_2(t) & \dot{m}_1(t)
-\end{matrix} \right).
-$$
-Keďže sme prešli od štandardnej bázy k ortonormálnej báze, matica $P(t)$ je ortogonálna, a teda
+Nech $m(t) \colon  I \subseteq \mathbb{R} \rightarrow \mathbb{R}^2$ je aspoň dvakrát diferencovateľná krivka, napíšme rovnicu jednoparametrického systému elíps $Q$ so stredom na krivke $m(t)$, hlavnou polosou $a$ v smere vektora $\dot{m}(t)$ a vedľajšou polosou $b$ v smere normálového vektora $\vec{n}$ ku krivke $m(t)$. Uvažujme $\vec{n}=(-\dot{m}_2, \dot{m}_1). $ Vydelením normou vektorov $\dot{m}(t)$ a $\vec{n}$ dostávame novú ortonormálnu bázu tvorenú stĺpcovými vektormi matice $P(t).$ Keďže sme prešli od štandardnej bázy k ortonormálnej báze, matica $P(t)$ je ortogonálna, a teda
+%$$
+%P(t) = \frac{1}{ \| \dot{m}(t) \|} \left(\begin{matrix}
+%   \dot{m}_1(t) & -\dot{m}_2(t) \\
+%   \dot{m}_2(t) & \dot{m}_1(t)
+%\end{matrix} \right).
+%$$
 $$
 P^{-1} = P^{T} = \frac{1}{ \| \dot{m}(t) \|} \left(\begin{matrix}
   \dot{m}_1(t) & \dot{m}_2(t) \\
@@ -268,19 +267,20 @@ v(t)
   \dot{m}_1(t) & \dot{m}_2(t) \\
    -\dot{m}_2(t) & \dot{m}_1(t)
 \end{matrix}\right)
-\left(\begin{matrix} \left(\begin{matrix} x \\ y \end{matrix}\right) - \left(\begin{matrix} m_1(t) \\ m_2(t) \end{matrix}\right) \end{matrix}\right).
+\left(\begin{matrix} x - m_1 \\ y - m_2 \end{matrix}\right).
 $$
+%\left(\begin{matrix} \left(\begin{matrix} x \\ y \end{matrix}\right) - \left(\begin{matrix} m_1(t) \\ m_2(t) \end{matrix}\right) \end{matrix}\right).
 Systém elíps $Q$ sa potom transformuje na tvar
 \begin{align} 
 \label{eq:elipsa_v_novej_baze}
 &\frac{1}{\|{\dot{m}}\|^2} \left( (x - m_1)^2 \left( \frac{{\dot{m}_1}^2}{a^2} + \frac{{\dot{m}_2}^2}{b^2} \right) + (y - m_2)^2 \left( \frac{{\dot{m}_2}^2}{a^2} + \frac{{\dot{m}_1}^2}{b^2} \right) \right) \notag \\
-+ &\frac{1}{\|{\dot{m}}\|^2} \left( 2\left( \frac{1}{a^2} - \frac{1}{b^2} \right)(x - m_1)(y - m_2)\dot{m}_1\dot{m}_2 \right) - 1 = 0,
++ &\frac{1}{\|{\dot{m}}\|^2} \left( 2\left( \frac{1}{a^2} - \frac{1}{b^2} \right)(x - m_1)(y - m_2)\dot{m}_1\dot{m}_2 \right) - 1 = 0.
 \end{align}
-po miernej úprave tak dostávame výraz
-\begin{align*} 
-&\frac{1}{a^2b^2\|\dot{m}\|^2} \left( (x - m_1)^2 \left( b^2 \dot{m}_1^2 + a^2 \dot{m}_2^2 \right) + (y - m_2)^2 \left( a^2 \dot{m}_1^2 + b^2 \dot{m}_2^2 \right) \right) \\
-+ &\frac{1}{a^2b^2\|\dot{m}\|^2} \left( 2(b^2 - a^2)(x - m_1)(y - m_2)\dot{m}_1\dot{m}_2 \right) - 1 = 0.
-\end{align*}
+%po miernej úprave tak dostávame výraz
+%\begin{align*} 
+%&\frac{1}{a^2b^2\|\dot{m}\|^2} \left( (x - m_1)^2 \left( b^2 \dot{m}_1^2 + a^2 \dot{m}_2^2 \right) + (y - m_2)^2 \left( a^2 \dot{m}_1^2 + b^2 \dot{m}_2^2 \right) \right) \\
+%+ &\frac{1}{a^2b^2\|\dot{m}\|^2} \left( 2(b^2 - a^2)(x - m_1)(y - m_2)\dot{m}_1\dot{m}_2 \right) - 1 = 0.
+%\end{align*}
 
 \subsection{Výpočet obálky elíps}
 Prepíšme jednoparametrický systém elíps $Q$ v novej báze, teda rovnicu \ref{eq:elipsa_v_novej_baze}, do maticového zápisu.
@@ -292,28 +292,28 @@ D &= \frac{- 2m_1 \left( b^2 \dot{m}_1^2 + a^2 \dot{m}_2^2 \right) - 2 \left(b^2
 E &= \frac{- 2m_2 \left( a^2 \dot{m}_1^2 + b^2 \dot{m}_2^2 \right) - 2 \left(b^2 - a^2 \right) m_1 \dot{m}_1 \dot{m}_2 }{a^2b^2\| \dot{m} \|^2} \\
 F &= \frac{\dot{m}_1^2 (b^2 m_1^2 + a^2 m_2^2 - a^2b^2) + 2 (b^2 - a^2) m_1 m_2 \dot{m}_1 \dot{m}_2 + \dot{m}_2^2 (a^2 m_1^2 + b^2 m_2^2 - a^2b^2) }{a^2b^2\| \dot{m}  \|^2}  -  1.  \\
 \end{align*}
-Derivujme funkcie $A(t), \dots, F(t).$ 
-\begin{flalign*}
-&\dot{A} = \frac{2 ( b^2 - a^{2}) ( \ddot{m}_{1} \dot{m}_{2} - \dot{m}_{1} \ddot{m}_{2}) \dot{m}_{1} \dot{m}_{2}}{a^{2} b^{2} \|\dot{m} \|^4} & \\
-&\dfrac{\dot{B}}{2} = \frac{(b^{2} - a^{2}) (\dot{m}_1^3  \ddot{m}_2 - \dot{m}_1^2 \dot{m}_2 \ddot{m}_1 - \dot{m}_1 \dot{m}_2^2 \ddot{m}_2 + \ddot{m}_1 \dot{m}_2^3)}{a^{2} b^{2} \|\dot{m} \|^4} & \\
-&\dot{C} = \frac{2 (b^2 - a^{2}) ( \dot{m}_{1} \ddot{m}_{2} - \ddot{m}_{1} \dot{m}_{2}) \dot{m}_{1} \dot{m}_{2}}{a^{2} b^{2} \|\dot{m} \|^4} & \\
-\end{flalign*}
 
-\begin{flalign*}
-& \dfrac{\dot{D}}{2} = \frac{(b^{2} - a^{2}) ( 2m_1 \dot{m}_1 \dot{m}_2 ( \dot{m}_1 \ddot{m}_2 - \dot{m}_2 \ddot{m}_1)  + m_2 (- \dot{m}_1^{3} \ddot{m}_2 + \dot{m}_1^{2} \dot{m}_2 \ddot{m}_1 + \dot{m}_1 \dot{m}_2^{2} \ddot{m}_2 - \dot{m}_2^{3} \ddot{m}_1) )}{a^2 b^2 \|\dot{m} \|^4} & \\
-& - \frac{b^{2} (\dot{m}_1 \dot{m}_2^{4} + 2\dot{m}_1^{3}  \dot{m}_2^{2} + \dot{m}_1^{5})}{a^2 b^2 \|\dot{m} \|^4} & \\
-& \dfrac{\dot{E}}{2} = \frac{(b^{2} - a^{2}) ( m_1 (- \dot{m}_1^{3} \ddot{m}_2 + \dot{m}_1^{2} \dot{m}_2 \ddot{m}_1 + \dot{m}_1 \dot{m}_2^{2} \ddot{m}_2 - \dot{m}_2^{3} \ddot{m}_1)  + 2m_2 \dot{m}_1 \dot{m}_2 (\dot{m}_2 \ddot{m}_1 - \dot{m}_1 \ddot{m}_2 ))}{a^2 b^2 \|\dot{m} \|^4} & \\
-& - \frac{b^{2} (\dot{m}_1^{4} \dot{m}_2 + 2 \dot{m}_1^{2}  \dot{m}_2^{3} + \dot{m}_2^{5})}{a^2 b^2 \|\dot{m} \|^4} & \\
-& \dot{F} = \frac{2(b^{2} - a^{2}) ((m_1^2 - m_2^2) \dot{m}_1 \dot{m}_2 (\dot{m}_1 \ddot{m}_2 - \dot{m}_2 \ddot{m}_1)} {a^2 b^2 \|\dot{m} \|^4} & \\
-& + \frac{2(b^{2} - a^{2}) m_1 m_2 (\dot{m}_1^{3} \ddot{m}_2 - \dot{m}_1^{2} \dot{m}_2 \ddot{m}_1 - \dot{m}_1 \dot{m}_2^{2} \ddot{m}_2 + \dot{m}_2^{3} \ddot{m}_1))} {a^2 b^2 \|\dot{m} \|^4} & \\
-& + \frac{ 2b^{2} ( m_1 (\dot{m}_1 \dot{m}_2^{4} + 2 \dot{m}_1^{3}  \dot{m}_2^{2} + \dot{m}_1^{5}) +  m_2 (\dot{m}_1^{4} \dot{m}_2 + 2\dot{m}_1^{2}  \dot{m}_2^{3} + \dot{m}_2^{5}))}{a^2 b^2 \|\dot{m} \|^4} & \\
-\end{flalign*}
-
-Určme typ kužeľosečiek jednoparametrického systému $\dot{Q}$ podľa jeho invariantov.
+%\begin{flalign*}
+%&\dot{A} = \frac{2 ( b^2 - a^{2}) ( \ddot{m}_{1} \dot{m}_{2} - \dot{m}_{1} \ddot{m}_{2}) \dot{m}_{1} \dot{m}_{2}}{a^{2} b^{2} \|\dot{m} \|^4} & \\
+%&\dfrac{\dot{B}}{2} = \frac{(b^{2} - a^{2}) (\dot{m}_1^3  \ddot{m}_2 - \dot{m}_1^2 \dot{m}_2 \ddot{m}_1 - \dot{m}_1 \dot{m}_2^2 \ddot{m}_2 + \ddot{m}_1 \dot{m}_2^3)}{a^{2} b^{2} \|\dot{m} \|^4} & \\
+%&\dot{C} = \frac{2 (b^2 - a^{2}) ( \dot{m}_{1} \ddot{m}_{2} - \ddot{m}_{1} \dot{m}_{2}) \dot{m}_{1} \dot{m}_{2}}{a^{2} b^{2} \|\dot{m} \|^4} & \\
+%\end{flalign*}
+%
+%\begin{flalign*}
+%& \dfrac{\dot{D}}{2} = \frac{(b^{2} - a^{2}) ( 2m_1 \dot{m}_1 \dot{m}_2 ( \dot{m}_1 \ddot{m}_2 - \dot{m}_2 \ddot{m}_1)  + m_2 (- \dot{m}_1^{3} \ddot{m}_2 + \dot{m}_1^{2} \dot{m}_2 \ddot{m}_1 + \dot{m}_1 \dot{m}_2^{2} \ddot{m}_2 - \dot{m}_2^{3} \ddot{m}_1) )}{a^2 b^2 \|\dot{m} \|^4} & \\
+%& - \frac{b^{2} (\dot{m}_1 \dot{m}_2^{4} + 2\dot{m}_1^{3}  \dot{m}_2^{2} + \dot{m}_1^{5})}{a^2 b^2 \|\dot{m} \|^4} & \\
+%& \dfrac{\dot{E}}{2} = \frac{(b^{2} - a^{2}) ( m_1 (- \dot{m}_1^{3} \ddot{m}_2 + \dot{m}_1^{2} \dot{m}_2 \ddot{m}_1 + \dot{m}_1 \dot{m}_2^{2} \ddot{m}_2 - \dot{m}_2^{3} \ddot{m}_1)  + 2m_2 \dot{m}_1 \dot{m}_2 (\dot{m}_2 \ddot{m}_1 - \dot{m}_1 \ddot{m}_2 ))}{a^2 b^2 \|\dot{m} \|^4} & \\
+%& - \frac{b^{2} (\dot{m}_1^{4} \dot{m}_2 + 2 \dot{m}_1^{2}  \dot{m}_2^{3} + \dot{m}_2^{5})}{a^2 b^2 \|\dot{m} \|^4} & \\
+%& \dot{F} = \frac{2(b^{2} - a^{2}) ((m_1^2 - m_2^2) \dot{m}_1 \dot{m}_2 (\dot{m}_1 \ddot{m}_2 - \dot{m}_2 \ddot{m}_1)} {a^2 b^2 \|\dot{m} \|^4} & \\
+%& + \frac{2(b^{2} - a^{2}) m_1 m_2 (\dot{m}_1^{3} \ddot{m}_2 - \dot{m}_1^{2} \dot{m}_2 \ddot{m}_1 - \dot{m}_1 \dot{m}_2^{2} \ddot{m}_2 + \dot{m}_2^{3} \ddot{m}_1))} {a^2 b^2 \|\dot{m} \|^4} & \\
+%& + \frac{ 2b^{2} ( m_1 (\dot{m}_1 \dot{m}_2^{4} + 2 \dot{m}_1^{3}  \dot{m}_2^{2} + \dot{m}_1^{5}) +  m_2 (\dot{m}_1^{4} \dot{m}_2 + 2\dot{m}_1^{2}  \dot{m}_2^{3} + \dot{m}_2^{5}))}{a^2 b^2 \|\dot{m} \|^4} & \\
+%\end{flalign*}
+%\dot{A} \dot{C} - \frac{\dot{B}^2}{4} = 
+Určme typ kužeľosečiek jednoparametrického systému $\dot{Q}$ podľa jeho invariantov, kde prvky matíc sú derivácie funkcií $A(t), \dots, F(t).$ 
 Invarianty
 \begin{flalign*}
 &\Delta(t) = 0, & \\
-&\delta(t) = \dot{A} \dot{C} - \frac{\dot{B}^2}{4} =  -\frac{(b^2 - a^2)^2}{a^4b^4} \frac{ (\dot{m_1}\ddot{m_2} - \ddot{m_1}\dot{m_2})^2}{\|\dot{m}\|^4} < 0, & \\
+&\Delta_{33}(t) =  -\frac{(b^2 - a^2)^2}{a^4b^4} \frac{ (\dot{m_1}\ddot{m_2} - \ddot{m_1}\dot{m_2})^2}{\|\dot{m}\|^4} < 0, & \\
 &T(t) = 0
 \end{flalign*}
 pre všetky $t,$ teda kužeľosečky v systéme $\dot{Q}$ podľa klasifikácie \ref{tab:conic_sections} degenerujú na dve rôznobežné priamky $p(t)$ a $q(t)$.
@@ -335,60 +335,36 @@ Definujme funkciu $\rho(t)$, ktorá reprezentuje vzdialenosť priamky $q(t)$ od 
 $$
 \rho (t) = \| m(t), q(t) \|= \bigg|  \frac{\alpha m_1 + \beta m_2 + \gamma}{\sqrt{\alpha^2 + \beta^2}} \bigg|.
 $$
-Ak je $\rho(t) > b,$ rovina $q(t)$ nemá s elipsou žiaden prienik. Všimnime si, že podmienku $\rho(t) > b,$ možno upraviť do jednoduchšieho tvaru
+Ak je $\rho(t) > b,$ priamka $q(t)$ nemá s elipsou žiaden prienik. Všimnime si, že podmienku $\rho(t) > b,$ možno upraviť do tvaru
 $$
 \bigg|  \frac{b}{a^2 - b^2} \bigg| > \frac{\sqrt{\alpha^2 + \beta^2}}{\| \dot{m} \|^4}.
 $$
-Po chvíľke úprav zistíme, že člen $\frac{\sqrt{\alpha^2 + \beta^2}}{\| \dot{m}^4 \|} $ reprezentuje krivosť krivky $\kappa(t).$
-Teda obálka jednoparametrického systému elíps $Q$ sa pre parametre $t,$ pre ktoré platí 
+Označme $\lambda = \big| \frac{b}{a^2 - b^2} \big|.$ Po chvíľke úprav zistíme, že člen $\frac{\sqrt{\alpha^2 + \beta^2}}{\| \dot{m} \|^4} $ reprezentuje krivosť krivky $\kappa(t).$
+Teda do obálky jednoparametrického systému elíps $Q$ pre parametre $t,$ pre ktoré platí 
 $$
-\bigg|  \frac{b}{a^2 - b^2} \bigg| > \kappa(t).
+\lambda > \kappa(t).
 $$
-zhoduje s obálkou kružníc.
+prispievajú dva prieniky, ktoré možno parametrizovať
+$$P_{1,2}= m(t)\pm b \vec{n}(t).$$
+Pre parametre, v ktorých
+$$
+\lambda < \kappa(t).
+$$
+pribudnú ďalšie dva prieniky
+$$
+P_{3,4} = m(t) + \rho(t) \vec{n}(t) \pm l(t) \vec{t},$$
+kde $l(t)=\frac{a}{b} \sqrt{b^2 - \rho^2(t)}.$
 
-\begin{example}[Parabola]
-Majme parabolu s parametrizáciou $m(t)=(t, t^2).$ Vypočítajme derivácie krivky 
-\begin{align*}
-\dot{m}(t)&=(1, 2t) \\
-\| \dot{m} \|^2 &= 1+4t^2 \\
-\ddot{m}(t)&=(0, 2) \\
-\end{align*}
-Jednoparametrický systém elíps
-\begin{flalign*}
-& Q \colon \quad \frac{1}{a^{2} b^{2}\left(4 t^{2} + 1\right)} \left( (x-t)^2 (b^2 + a^{2} 4t^2) + (y-t^2)^2 (a^2 + b^2 4t^2) \right) & \\
-& + \frac{1}{a^{2} b^{2}\left(4 t^{2} + 1\right)} \left( 4t(b^2 - a^2)(x-t)(y-t^2)2t \right) - 1 = 0.
-\end{flalign*}
-Koeficienty jeho derivácie
-\begin{flalign*}
-& \dot{A}  = \frac{8 t \left(a^{2} - b^{2}\right)}{a^{2} b^{2} \left(16 t^{4} + 8 t^{2} + 1\right)} & \\
-& \frac{\dot{B}}{2} = \frac{2 (4 t^{2} - 1) (a^{2} - b^{2})}{a^{2} b^{2} \left(16 t^{4} + 8 t^{2} + 1\right)} \\
-& \dot{C} = \frac{-8 t \left(a^{2} - b^{2}\right)}{a^{2} b^{2} \left(16 t^{4} + 8 t^{2} + 1\right)} & \\
-& \frac{\dot{D}}{2} = \frac{ \left(- 8 a^{2} t^{4} - 6 a^{2} t^{2} - 8 b^{2} t^{4} - 2 b^{2} t^{2} - b^{2}\right)}{a^{2} b^{2} \left(16 t^{4} + 8 t^{2} + 1\right)} & \\
-& \frac{\dot{E}}{2} = \frac{2 t \left(a^{2} - 16 b^{2} t^{4} - 8 b^{2} t^{2} - 2 b^{2}\right)}{a^{2} b^{2} \left(16 t^{4} + 8 t^{2} + 1\right)} & \\
-& \dot{F} = \frac{2 t \left(4 a^{2} t^{4} + 2 a^{2} t^{2} + 32 b^{2} t^{6} + 28 b^{2} t^{4} + 8 b^{2} t^{2} + b^{2}\right)}{a^{2} b^{2} \left(16 t^{4} + 8 t^{2} + 1\right)}.
-\end{flalign*}
-Determinant 
+
+V prípade rovnosti
 $$
-\Delta(t) = 0. 
+\lambda = \kappa(t),
 $$
-Subdeterminant
-$$\delta(t) = \frac{-4 (a^2 - b^2)^2}{a^{4} b^{4} \left(16 t^{4} + 8 t^{2} + 1\right)} < 0.$$
-Jednoparametrický systém $\dot{Q}$ po zjednodušení
-\begin{flalign*}
-& \dot{Q} \colon 8t(a^{2} - b^{2}) x^2 + 4(4 t^{2} - 1)(a^{2} - b^{2})xy - 8t(a^{2} - b^{2}) y^2 & \\
-& (- 16 a^{2} t^{4} - 12 a^{2} t^{2} - 16 b^{2} t^{4} - 4 b^{2} t^{2} - 2 b^{2})x + 4 t(a^{2} - 16 b^{2} t^{4} - 8 b^{2} t^{2} - 2 b^{2})y & \\
-& + 2t(4 a^{2} t^{4} + 2 a^{2} t^{2} + 32 b^{2} t^{6} + 28 b^{2} t^{4} + 8 b^{2} t^{2} + b^{2}) = 0. 
-\end{flalign*}
-Rozklad na priamky $p(t)$ a $q(t)$
-\begin{align*}
-p(t)& \colon x+2ty - \left(t + 2t^{3}\right)=0, \\
-q(t)& \colon 2tx-y +\left(-t^{2}-\frac{b^{2}\left(1+4t^{2}\right)^{2}}{2\left(a^{2}-b^{2}\right)}\right)=0.
-\end{align*}
-\end{example}
+je $\rho(t) = b$ a $l(t) = 0$  a prieniky $P_{1,2}$ a $P_{3,4}$ sa zhodujú.
 
 \section{Obálka elipsoidov}
 Pododobne ako pre elipsy odvodíme formu zápisov s dorbnými úpravami pre elipsoidy. V tomto prípade parameter $t$ pre lepšiu prehľadnosť vynechávame.
-Nech $M(t) \colon I \subset \mathbb{R} \rightarrow \mathbb{R}^{4 \times 4}$ je jednoparametrický systém (nie nutne regulárnych) symetrických $4 \times 4$ matíc. Nech $ X = (x, y, z, 1)^T$ sú homogénne súradnice v $\mathbb{P}^3(\mathbb{R})$, potom
+Nech $M(t) \colon I \subset \mathbb{R} \rightarrow \mathbb{R}^{4 \times 4}$ je jednoparametrický systém (nie nutne regulárnych) symetrických $4 \times 4$ matíc. Nech $ X = (x, y, z, 1)^T$ sú homogénne súradnice v $\mathbb{A}^3(\mathbb{R})$, potom
 \begin{equation*}
 Q(t) \colon X^T M(t) X = 0
 \end{equation*}
@@ -499,14 +475,14 @@ w
 0 & -\dot{m}_3 \| \dot{m}\| & \dot{m}_2 \| \dot{m}\| \\
 \dot{m}_2^2 + \dot{m}_3^2 & -\dot{m}_1 \dot{m}_2 & -\dot{m}_1 \dot{m}_2 
 \end{matrix} \right)
-\left(\begin{matrix} x - m_1 \\ y - m_2 \\ z - m_3 \end{matrix}\right),
+\left(\begin{matrix} x - m_1 \\ y - m_2 \\ z - m_3 \end{matrix}\right).
 $$
-Pre jednoparametrický systém elipsoidov $Q$ tak dostávame vyjadrenie
-\begin{align*}
-&\frac{- a^{2} b^{2} (\dot{m}_{2}^{2} + \dot{m}_{3}^{2}) \| \dot{m} \|^2 + a^{2} ((y - m_{2}) \dot{m}_{3} - (z - m_{3}) \dot{m}_{2})^{2} \| \dot{m} \|^2}{a^{2} b^{2} (\dot{m}_{2}^{2} + \dot{m}_{3}^{2}) \| \dot{m} \|^2} \\
-+ &\frac{a^{2} (- (x - m_{1}) (\dot{m}_{2}^{2} + \dot{m}_{3}^{2}) + (y - m_{2}) \dot{m}_{1} \dot{m}_{2} + (z - m_{3}) \dot{m}_{1} \dot{m}_{3})^{2}}{a^{2} b^{2} (\dot{m}_{2}^{2} + \dot{m}_{3}^{2}) \| \dot{m} \|^2} \\
-+ &\frac{b^{2} \| \dot{m} \|^2  ((x - m_{1}) \dot{m}_{1} + (y - m_{2}) \dot{m}_{2} + (z - m_{3}) \dot{m}_{3})^{2}}{a^{2} b^{2} (\dot{m}_{2}^{2} + \dot{m}_{3}^{2}) \| \dot{m} \|^2} = 0.
-\end{align*}
+%Pre jednoparametrický systém elipsoidov $Q$ tak dostávame vyjadrenie
+%\begin{align*}
+%&\frac{- a^{2} b^{2} (\dot{m}_{2}^{2} + \dot{m}_{3}^{2}) \| \dot{m} \|^2 + a^{2} ((y - m_{2}) \dot{m}_{3} - (z - m_{3}) \dot{m}_{2})^{2} \| \dot{m} \|^2}{a^{2} b^{2} (\dot{m}_{2}^{2} + \dot{m}_{3}^{2}) \| \dot{m} \|^2} \\
+%+ &\frac{a^{2} (- (x - m_{1}) (\dot{m}_{2}^{2} + \dot{m}_{3}^{2}) + (y - m_{2}) \dot{m}_{1} \dot{m}_{2} + (z - m_{3}) \dot{m}_{1} \dot{m}_{3})^{2}}{a^{2} b^{2} (\dot{m}_{2}^{2} + \dot{m}_{3}^{2}) \| \dot{m} \|^2} \\
+%+ &\frac{b^{2} \| \dot{m} \|^2  ((x - m_{1}) \dot{m}_{1} + (y - m_{2}) \dot{m}_{2} + (z - m_{3}) \dot{m}_{3})^{2}}{a^{2} b^{2} (\dot{m}_{2}^{2} + \dot{m}_{3}^{2}) \| \dot{m} \|^2} = 0.
+%\end{align*}
 
 \subsection{Výpočet obálky elipsodiov}
 \begin{flalign*}
@@ -523,15 +499,11 @@ Pre jednoparametrický systém elipsoidov $Q$ tak dostávame vyjadrenie
 &+ \frac{(a^2 m_1^2 + b^2 m_2^2 + a^2 m_3^2 - a^2 b^2) \dot{m}_2^2 + 2 (b^2 - a^2) m_1 m_2 \dot{m}_1 \dot{m}_2 + (b^2 m_1^2 + a^2 m_2^2 + a^2 m_3^2 - a^2 b^2) \dot{m}_1^2}{a^2 b^2 \|\dot{m} \|^2}
 \end{flalign*}
 
-Ako v prípade elíps, derivujme funkcie $A(t), \dots, J(t).$
-
-Poznámka: Vzťahy derivácii sú dosť dlhé. 
-
-Určme typ kvadrík jednoparametrického systému $\dot{Q}$ podľa jeho invariantov.
+Určme typ kvadrík jednoparametrického systému $\dot{Q}$ podľa jeho invariantov, rovnako ako v prípade elíps.
 Invarianty
 \begin{align*}
 \Delta (t) &= 0, \\
-\delta (t)&=0, \\
+\Delta_{44} (t)&=0, \\
 T(t) & = - \frac{(b^2 - a^2)^2}{a^4b^4} \frac{ (\dot{m_1}\ddot{m_2} - \ddot{m_1}\dot{m_2})^2 + (\dot{m_2}\ddot{m_3} - \ddot{m_2}\dot{m_3})^2 + (\dot{m_3}\ddot{m_1} - \ddot{m_3}\dot{m_1})^2}{\|\dot{m}\|^4} < 0, \\
 S(t) & = 0,
 \end{align*}
@@ -540,7 +512,7 @@ S(t) & = 0,
 pre všetky $t \in I,$
 teda podľa klasifikácie plôch druhého stupňa \ref{tab:classification_of_quadrics} a \ref{tab:degenerate_quadrics} sú kvadriky v systéme $\dot{Q}$ dve rôznobežné roviny.
 
-$\dot{Q}$ vieme napísať v súčinovom tvare dvoch rovín $ \eta (t) \xi (t) = 0,$
+Jednoparametrický systém $\dot{Q}$ vieme napísať v súčinovom tvare dvoch rovín $ \eta (t) \xi (t) = 0,$
 kde 
 \begin{align*}
 \eta(t) & \colon \dot{m}_1 x + \dot{m}_2 y + \dot{m}_3 z - (m_1 \dot{m}_1 + m_2 \dot{m}_2 + m_3 \dot{m}_3) = 0, \\
@@ -584,9 +556,7 @@ bod $S$ má súradnice $(0, -\rho)$ a bod na elipse $P$ má súradnice $(p_x, -\
 $$
 p_x = \pm \frac{a}{b} \sqrt{b^2 - \rho^2},
 $$
-hľadaná vzdialenosť $c(t) = \frac{a}{b} \sqrt{b^2 - \rho^2}.$
-
-Majme fixnú krivku $m(t),$ ako určiť, pre aké parametre $a$ a $b$ možno plochu zostrojiť v každom $t$ iba z kružníc? Jediné miesto kde sa objavujú parametre škálovania $a$ a $b$, je funkcia $\delta (t).$
+hľadaná vzdialenosť $c(t) = \frac{a}{b} \sqrt{b^2 - \rho^2(t)}.$
 
 \section{Softvér Maxima}
 Na všetky výpočty v tejto kapitole bol použitý voľne dostupný softvér počítačovej algebry Maxima s grafickým užívateľským rozhraním wmMaxima. Celý balík a dokumentácia sú dostupné na \cite{MaximaDoc}, \cite{MaximaDownload}.

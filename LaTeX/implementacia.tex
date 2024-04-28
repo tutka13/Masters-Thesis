@@ -1,28 +1,31 @@
 \chapter{Softvér}
-V našej práci je cieľom implementácie matematicky odvodených konceptov vizualizácia vypočítaných plôch a následne aj ich 3D tlač. V tejto kapitole v prvej časti uvedieme stručnú špecifikáciu softvéru, v druhej časti zdôvodnime výber programovacieho jazyka a knižníc, opíšeme proces ich inštalácie, zdôvodnime použité programovacie prostredie a uvedieme jeho konfiguráciu pre naše použitie. V tretej časti uvedieme vývoj skriptov a na záver, vo štvrtej časti, krátko opíšeme proces 3D tlače plôch. Všetky vytvorené skripty, vymodelované plochy, súbory pripravené na 3D tlač a ďalšie súbory sa nachádzajú na GitHube v repozitári \url{https://github.com/tutka13/Masters-Thesis}.
-%demo a chyby, ktoré sa počas riešenia vyskytli 
+V našej práci je cieľom implementácie matematicky odvodených konceptov vizualizácia vypočítaných plôch. Pri vytváraní plôch nám napadlo vytlačiť si niekoľko modelov v 3D tlačiarni. 
+
+V tejto kapitole v prvej časti uvedieme stručnú špecifikáciu softvéru, v druhej časti zdôvodnime výber programovacieho jazyka a knižníc, opíšeme proces ich inštalácie, zdôvodnime použité programovacie prostredie a uvedieme jeho konfiguráciu pre naše použitie. V tretej časti uvedieme beh skriptov a na záver, vo štvrtej časti, krátko opíšeme proces 3D tlače plôch. Všetky vytvorené skripty, vymodelované plochy, súbory pripravené na 3D tlač a ďalšie súbory sa nachádzajú na GitHube v repozitári \url{https://github.com/tutka13/Masters-Thesis}.
+ 
 \section{Špecifikácia}
-Hlavným cieľom je vytvorenie 3D plochy - obálky sfér a elipsoidov, kde používateľ zadá vstupné parametre. Softvér vypočíta a vymodeluje plochu podľa procesu workflow.
+Hlavným cieľom je vytvorenie 3D plochy - obálky sfér a elipsoidov, kde používateľ zadá vstupné parametre. Softvér vypočíta a vymodeluje plochu podľa procesu.
+
 \subsection{Vstup}
 \textbf{Obálka sfér:}
 
-Zadať parametrizáciu priestorovej krivky $m(t)$ stredov sfér, funkciu polomeru $r(t)$, interval $I$ vykreslenia plochy parametra $t$ a vzorkovanie plochy, teda krok vyčíslenia.
+Parametrizácia priestorovej krivky $m(t)$ stredov sfér, funkcia polomeru $r(t)$, interval $I$ vykreslenia plochy parametra $t$, vzorkovanie plochy, teda krok vyčíslenia a posun plochy v priestore.
 
 \noindent \textbf{Obálka elipsoidov:}
 
-Zadať parametrizáciu priestorovej krivky $m(t)$ stredov elipsoidov, konštanty $a$ a $b$, interval $I$ vykreslenia plochy parametra $t$ a vzorkovanie plochy, teda krok vyčíslenia.
+Parametrizácia priestorovej krivky $m(t)$ stredov elipsoidov, konštanty $a$ a $b$, interval $I$ vykreslenia plochy parametra $t$ a vzorkovanie plochy, teda krok vyčíslenia a posun plochy v priestore.
 \subsection{Výstup} 
 \textbf{Obálka sfér:}
 
-Vizualizácia troch ploch - jednoparametrického systému sfér, charakteristických kružníc a výslednej plochy - obálky sfér.
+Vizualizácia troch ploch - jednoparametrického systému sfér, jednoparametrického systému charakteristických kružníc a výslednej plochy - obálky sfér.
 
 \noindent \textbf{Obálka elipsoidov:}
 
-Vizualizácia troch plôch - jednoparametrického systému elipsoidov, charakteristických kružníc a výslednej plochy - obálky elipsoidov.
-\subsection{Workflow}
-Proces workflow je v oboch prípadoch, pre sféry a elipsoidy, rovnaký.
-Najprv vymažeme všetky objekty zo scény. Po prečítaní vstupných parametrov z textového súboru sa prevedú symbolické výpočty. Vytvoríme si prázdne zoznamy, do ktorých sa v ďalšom kroku ukladajú numericky vyčíslené hodnoty symbolických výrazov. Pre vykreslenie plôch prechádzame zoznam už uložených hodnôt. Pred vykreslením daného objektu zrealizujeme posun objektu v priestore. Medzi dvomi susednými krokmi parametrov sa obálka interpoluje. Nakoniec scénu s vykreslenými plochami uložíme do databázy.
+Vizualizácia troch plôch - jednoparametrického systému elipsoidov, jednoparametrického systému charakteristických kriviek, výslednej plochy - obálky elipsoidov.
 
+\subsection{Postup práce}
+Priebeh procesu je v oboch prípadoch, pre sféry a elipsoidy, rovnaký.
+Najprv vymažeme všetky objekty zo scény. Po prečítaní vstupných parametrov z textového súboru sa prevedú symbolické výpočty. Vytvoríme si prázdne zoznamy, do ktorých sa v ďalšom kroku ukladajú numericky vyčíslené hodnoty symbolických výrazov. Plochy sa vykresľujú po jednotlivých objektoch. Objekt je kružnica sféra alebo elipsoid. Pri vykresľovaní objektov prechádzame zoznamy jeho uložených parametrov. Po vykreslení daného objektu zrealizujeme jeho posun a natočenie v priestore. Ak boli objekty kružnice, vhodne ich pospájame a vhodne medzi ne doplníme pletivo \textit{(mesh)}. Na záver scénu uložíme.
 %\begin{itemize}
 %	\item vymazanie scény
 %    \item čítanie parametrov z textového súboru
@@ -62,9 +65,8 @@ Potrebné funkcie:
     \item čítanie parametrov z textového súboru
     \item symbolické výpočty
     \item numerické vyčíslenie
-    \item interpolácia medzi dvomi charakteristickými kružnicami
-    \item posun plochy v priestore
-    \item vizualizácia plochy
+    \item posun objektu v priestore
+    \item interpolácia - doplnenie pletiva medzi dvomi charakteristickými kružnicami
     \item uloženie scény do databázy
 \end{itemize}
 \section{Výber softvéru a jeho inštalácia}
@@ -97,17 +99,7 @@ Na výpočet a zobrazenie plôch v Blendri sme využili nasledovné knižnice
 \subsubsection{Inštalácia knižníc}
 Pip je inštalátor balíkov pre Python, ktorý spravuje knižnice pre jazyk Python. Používa sa na inštaláciu z Python Package Index. PyPI je knižníc pre programovací jazyk Python. Keďže sme Python stiahli z oficiálnej stránky Python \cite{PythonDownload}, pip sa inštaloval automaticky \cite{Pip}. Overiť, či máme naištalovaný pip, možno pomocou príkazového riadku, ktorý otvoríme vyhľadaním cmd v ponuke vyhľadávania a zadaním
 \verb|python -m pip --version.|
-V našom prípade pracujeme s verziou pip 24.0. Následne je možné inštalovať všetky potrebné knižnice v príkazovom riadku zadaním
-%pip install bpy,
-\begin{verbatim}
-pip install math,
-pip install mathutils,
-pip install matplotlib,
-pip install numpy,
-pip install sympy,
-pip install sys,
-pip install time.
-\end{verbatim}
+V našom prípade pracujeme s verziou pip 24.0. Následne je možné inštalovať všetky potrebné knižnice v príkazovom riadku zadaním \verb|pip install názov knižnice.|
 \subsection{Programovacie prostredie}
 Keďže prostredie Scripting v Blendri nedisponuje mnohými vlastnosťami, ktoré by sme na zjednodušenie tvorby skriptov potrebovali, využijeme externé programovacie prostredie, a to Visual Studio Code. 
 \subsubsection{Visual Studio Code}
@@ -121,17 +113,16 @@ Na úpravu skriptov pre Python a Python-Blender sme využili programovacie prost
 \end{figure}
 
 \subsubsection{Konfigurácia VS Code - Python - Blender}
-Pre systém Windows sme v prvom kroku nainštalovali samostatnú verziu Pythonu \cite{PythonDownload}. Keďže Blender používa Python verziu 3.10.13, mohli sme stiahnuť akúkoľvek vyššiu. Používame verziu 3.11.5. Pri inštalácii je potrebné odkliknúť možnosť \verb|Add Python| \verb|Executable to the path|. Zo stránky \cite{VSCode} sme stiahli VS Code, ktorý sme následne inštalovali. Vo VS Code sme v paneli rozšírení na ľavej strane vyhľadali rozšírenie Python, ktoré vytvorila spoločnosť Microsoft a aj to sme inštalovali. Tým sa umožnila práca VS Code s jazykom Python. Pre používateľsky príjemnejšie používanie knižnice bpy v skriptoch bolo potrebné nainštalovať falošný bpy modul \cite{Fake-bpy-module} príkazom v termináli \verb|pip install fake-bpy-| \verb|module-latest.|
+Pre systém Windows sme nainštalovali samostatnú verziu Pythonu \cite{PythonDownload}. Keďže Blender používa Python verziu 3.10.13, mohli sme stiahnuť akúkoľvek vyššiu. Používame verziu 3.11.5. Pri inštalácii je potrebné odkliknúť možnosť \verb|Add Python| \verb|Executable to the path|. Zo stránky \cite{VSCode} sme stiahli VS Code, ktorý sme následne inštalovali. Vo VS Code sme v paneli rozšírení na ľavej strane vyhľadali rozšírenie Python, ktoré vytvorila spoločnosť Microsoft a aj to sme inštalovali. Tým sa umožnila práca VS Code s jazykom Python. Pre používateľsky príjemnejšie používanie knižnice bpy v skriptoch bolo potrebné nainštalovať falošný bpy modul \cite{Fake-bpy-module} príkazom v termináli \verb|pip install fake-bpy-| \verb|module-latest.|
 Po dokončení inštalácie sme reštartovali VS Code. V bočnom paneli rozšírení sme vyhľadali Blender development. Po inštalácii sme v priečinku Python v inštalačnom adresári programu Blender otvorili vlastnosti, kartu zabezpečenia a skupinu používateľov \verb|Users|, ktorým sme povolili možnosť \verb|Write|. Vďaka tomuto rozšíreniu sme mohli ladiť program pomocou \verb|Ctrl+Shift+P.| Po stlačení tejto klávesovej skratky sa v hornom paneli zobrazilo kontextové menu, kde sme vybrali \verb|Blender: Build and Start,| čím sme spustili Blender. Proces ladenia programu sme spúšťali možnosťou \verb|Blender:| \verb|Run Script.|
 \subsubsection{Jupyter Notebook}
-Pre účely našej práce sme potrebovali niekoľko pomocných skriptov na výpočet obálok konkrétnych prípadov v 2D a 3D a na prepis symbolických výpočtov z Maximy do programu \LaTeX. Pri programovaní týchto skriptov sme využívali Jupyter Notebook vo verzii 7.0.4, výpočtový nástroj, pôvodne navrhnutý pre úlohy dátovej vedy, ktorý umožňuje interaktívnu prácu s kódom, rovnicami a vizualizáciami s podporou v 40 programovacích jazykoch. S jeho pomocou je možné vytvárať dokumenty vo formáte JSON, ktoré sú rozdelené do buniek a komunikujú s výpočtovými jadrami cez Interactive Computing Protocol. Jadrá sú zodpovedné za vykonávanie kódu a výstupy. Jupyter Notebook ponúka modulárny dizajn, ktorý umožňuje jednoduché manipulácie s jednotlivými bunkami, vrátane možnosti úpravy bunky bez ďalšieho vplyvu na zvyšnú časť kódu, spätného vrátenia sa a vymazania bunky \cite{Jupyter}. Jupyter Notebook sa nainštaluje rovnako ako Blender Development vo VS Code rozšíreniach. 
+Pre účely našej práce sme potrebovali niekoľko pomocných skriptov na vyčíslenie obálok konkrétnych prípadov v 2D a 3D a na prepis symbolických výpočtov z Maximy do programu \LaTeX. Pri programovaní týchto skriptov sme využívali Jupyter Notebook vo verzii 7.0.4, výpočtový nástroj, pôvodne navrhnutý pre úlohy dátovej vedy, ktorý umožňuje interaktívnu prácu s kódom, rovnicami a vizualizáciami s podporou v 40 programovacích jazykoch. S jeho pomocou je možné vytvárať dokumenty vo formáte JSON, ktoré sú rozdelené do buniek a komunikujú s výpočtovými jadrami cez Interactive Computing Protocol. Jadrá sú zodpovedné za vykonávanie kódu a výstupy. Jupyter Notebook ponúka modulárny dizajn, ktorý umožňuje jednoduché manipulácie s jednotlivými bunkami, vrátane možnosti úpravy bunky bez ďalšieho vplyvu na zvyšnú časť kódu, spätného vrátenia sa a vymazania bunky \cite{Jupyter}. Jupyter Notebook sa nainštaluje rovnako ako Blender Development vo VS Code rozšíreniach. 
 %alebo v príkazovom riadku zadaním
 %\begin{verbatim}
 %pip install jupyterlab
 %pip install jupyter notebook.
 %\end{verbatim}  
-Jednou možnosťou je spustiť Jupyter Notebook v termináli príkazom \verb|jupyter notebook| alebo si vytvoriť súbor vo VS Code možnosťou \verb|New File| a zvoliť \verb|Jupyter Notebook .ipynb.| My sme využívali druhú možnosť.
-
+Jednou možnosťou ako spustiť Jupyter Notebook je vytvorenie nového súboru vo VS Code s príponou \verb|Jupyter Notebook .ipynb.| 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{images/jupyter.png}
@@ -140,22 +131,38 @@ Jednou možnosťou je spustiť Jupyter Notebook v termináli príkazom \verb|jup
 \end{figure}
 
 \section{Implementácia}
-V tejto časti sa budeme venovať vývoju našich skriptov. Skritov máme niekoľko. Skript na vymodelovanie obálky sfér, skript na vymodelovanie obálky elipsoidov, skript s používanými funkciami, skipt pre rovninné príklady obálky elíps, skript pre príklady obálky elipsoidov, skript na symbolické výpočty, skript pre prepísanie rovníc do programu \LaTeX $\ $a skript pre vizualizáciu jednoparametrickáho systému kriviek v rovine. Hlavnou úlohou bolo však zostrojenie obálky, preto budeme primárne hovoriť o skriptoch pre vymodelovanie obálky.
-\subsection{Realizácia procesu worklow}
-\noindent \textbf{Obálka sfér:}
-Najprv sme začali vyvíjať skript pre obálku sfér, kde bolo hlavnou myšlienkou zostrojenie obálky sfér na intervale $I$ s vhodným vzorkovaním plochy pre parameter $t \in I$ iba pomocou charakteristických kružníc. Po importe knižníc sme spustili časomieru, prečítali parametre z textového súboru, vypočítali dotykové vektory krivky $m(t),$ stredy a polomery sfér a zodpovedajúcich charakteristických kružníc a začali sme pridávať objekty do scény. 
-Vymodelovanie obálky sme realizovali, tak že charakteristické kružnice sme postupne v for cykle pridávali do ich vypočítaných stredov s normálou $(0,0,1).$ Následne sme kružnice v priestore otočili podľa dotykového vektora krivky $m(t)$ pomocou \verb|circle_object.rotation_mode = 'AXIS_ANGLE'.| Vymodelované kružnice sme označili, vytvorili z nich jeden objekt pomocou \verb|bpy.ops.object.join()| a pospájali ich v \verb|Edit Mode| funkciou \verb|bpy.ops.mesh.bridge_edge_loops().| Zobrazenie jednoparametrického systému sfér sme vykonali v ďalšom for cykle vykreslením sfér na s im zodpovedajúcimi parametrami a vizualizáciu charakterisktických kružníc sme vykonali v tom istom cykle, opäť s prislúchajúcimi parametrami a výpočtom rotácie s posunom v priestore. Tieto kružnice sme už však nespájali. Týmto spôsobom sme v scéne vytvorili tri plochy, ktoré sme mohli porovnať. Na záver sme scénu uložili do vhodného priečinku menšej databázy a vyčíslili sme čas behu skriptu. Skript \verb|envelope_of_spheres.py| má $127$ riadkov a všetky výpočty vrátane rotácie kružníc sú realizované pomocou vlastných funkcií uložených v skripte \verb|functions.py|, ktorý má $108$ riadkov.
+V tejto časti sa budeme venovať vývoju našich skriptov. Skritov máme niekoľko, no v tejto časti budeme primárne hovoriť o skripte na vymodelovanie obálky sfér, skripte na vymodelovanie obálky elipsoidov a o skripte s používanými funkciami.
 
-\noindent \textbf{Obálka elipsoidov:}
-V skripte \verb|envelope_of_ellipsoids.py| je jedinou zmenou oproti obálke sfér pridanie faktorov škálovania $a$ a $b$, ktoré možno meniť v skripte, teda nenačítavajú sa priamo z textového súboru. Výpočty prebiehajú rovnako pomocou \verb|functions.py|, pridáme vykreslenie jednoparametrického systému elipsoidov jedným for cyklom, kde najprv pridáme elipsoid na správnu pozíciu so škálovaním v smere súradnicových osí s hodnotami $(b, b, a)$ a potom tento elipsoid správne natočíme podľa dotykového vektora krivky $m(t).$  TO DO budú tam ďalšie plochy
 
-\noindent \textbf{Porovnanie plôch:}
-V skripte \verb|comparison_of_surfaces.py| sa nachádzajú štyri vymodelované plochy pre danú krivku $m(t),$ jednoparametrický systém sfér, jeho obálka, jednoparametrický systém elipsoidov a jeho obálka. TO DO príklady a obálka elipsoidov
 
-Napísali sme skript a uložili ho ako envelopes.py. Takto sme vytvorili modul envelopes s potrebnými funkciami. Skript sme umiestnili do adresára programu Blender, v ktorom Blender ukladá svoje skripty a moduly. Potom sme importovali modul do programu Blender štandardným spôsobom.
+\subsection{Realizácia}
+Opíšeme beh skriptov \verb|envelope_of_spheres.py| a \verb|envelope_of_spheres.py|. Všetky výpočty vrátane rotácie kružníc a elipsoidov sú realizované pomocou funkcií definovaných v module \verb|envelopes.py|. Modul sme umiestnili do adresára programu Blender, v ktorom Blender ukladá svoje skripty a moduly. V našom prípade to bolo \verb|C:\Program Files\Blender Foundation\Blender 4.0\4.0\scripts\modules|. Potom sme importovali modul do programu Blender štandardným spôsobom. 
+\subsubsection*{Obálka sfér}
+Najprv sme začali vyvíjať skript pre obálku sfér, kde bolo hlavnou myšlienkou zostrojenie obálky sfér na intervale $I$ s vhodným vzorkovaním plochy pre parameter $t \in I$ iba pomocou charakteristických kružníc. 
+
+Po importe knižníc sme spustili časomieru, prečítali parametre z vopred pripraveného textového súboru, teda stredy a polomery sfér. Vypočítali sme dotykové vektory krivky $m(t)$ a parametre zodpovedajúcich charakteristických kružníc a začali sme pridávať objekty do scény. 
+
+Vykreslenie jednoparametrického systému sfér prebieha jedným for cyklom, kde najprv pridáme sféru na správnu pozíciu.
+
+Zobrazenie jednoparametrického systému charakterisktických kružníc sme vykonali v tom istom cykle a to tak, že charakteristické kružnice sme postupne v for cykle pridávali do ich vypočítaných stredov s normálou $(0,0,1). $ Následne sme kružnice v priestore otočili podľa dotykového vektora krivky $m(t)$ pomocou \verb|circle_object.rotation_mode = 'AXIS_ANGLE'.|
+
+Vymodelovanie obálky sme realizovali rovnako ako vizualizáciu charakteristických kružníc. Vymodelované kružnice sme označili, vytvorili z nich jeden objekt pomocou \verb|bpy.ops.object.join()| a pospájali ich v \verb|Edit Mode| funkciou Blendru \verb|bpy.ops.mesh.bridge_edge_loops().| 
+
+
+Týmto spôsobom sme v scéne vytvorili tri plochy. Na záver sme scénu uložili do vhodného priečinku menšej databázy a vyčíslili sme čas behu skriptu.
+
+\subsubsection*{Obálka elipsoidov}
+V skripte \verb|envelope_of_ellipsoids.py| je oproti obálke sfér niekoľko zmien. Jednou z nich je pridanie faktorov škálovania $a$ a $b$, ktoré možno meniť v skripte, teda nenačítavajú sa priamo z textového súboru. Výpočty prebiehajú rovnako pomocou funkcií importovaného modulu \verb|envelopes.py|.
+
+Vykreslenie jednoparametrického systému elipsoidov prebieha jedným for cyklom, kde najprv pridáme elipsoid na správnu pozíciu so škálovaním v smere súradnicových osí s hodnotami $(b, b, a)$ a potom tento elipsoid správne natočíme podľa dotykového vektora krivky $m(t).$  
+
+Vykreslenie charakteristických kriviek sme realizovali vykreslením charakteristických kružníc v miestach, kde
+$\kappa(t) \leq \frac{b}{a^2-b^2}$ a v miestach, kde nerovnosť neplatí sme vykreslili elipsoid zo systému.
+
+Vykreslenie obálky je modelované rovnakým spôsobom, no medzi vhodne pospájané charakteristické kružnice je doplnené pletivo pomocou nástroja \verb|bpy.ops.mesh.bridge_edge_loops().|  
 
 \section{3D tlač}
-Tlačiareň, v ktorej sme plochy tlačili je typu Original Prusa i3 MK3S+. Všetky jej parametre a taktiež manuál k tlači sa nachádza na \cite{PrusaManual}. Na vytlačenie modelov plôch bolo potrebné exportovať plochy v Blendri do vhodného formátu. Pre tlač bolo potrebné inštalovať softvér PrusaSlicer, ktorý možno stiahnuť z \cite{PrusaSlicer}.
+Tlačiareň, v ktorej sme plochy tlačili sa nazýva Original Prusa i3 MK3S+. Všetky jej parametre a taktiež manuál k tlači sa nachádza na \cite{PrusaManual}. Na vytlačenie modelov plôch bolo potrebné exportovať plochy v Blendri do vhodného formátu. Pre prípravu na tlač bolo potrebné inštalovať softvér PrusaSlicer, ktorý možno stiahnuť z \cite{PrusaSlicer}.
 \subsection{PrusaSlicer}
 Popis procesu v programe PrusaSlicer vo verzii 2.7.2.
 \begin{enumerate}
@@ -200,10 +207,12 @@ Stiahli sme jeho poslednú veziu 2.0.1 na webovej lokalite \cite{Pronterface}. P
 	\label{fig:pronterface}
 \end{figure}
 
-Po niekoľkých neúspešných pokusoch a nevydarených prototypoch plôch sme napokon spustili 3D tlač. Náš plán bol vytlačiť tri bezchybné sady plôch pre danú krivku $m(t),$ jednoparametrický systém sfér, jeho obálku, jednoparametrický systém elipsoidov a jeho obálku a porovnať si tieto plochy. Plochy bolo potrebné rôzne škálovať, príliš tenké časti by boli príliš krehké. Po tlači sme ešte odstránili podporné štruktúry a tak sme dostali výsledné plochy. 
+\section{Zhrnutie procesu}
+Najprv sme pripravili vstupné parametre v textovom súbore, ktorý sme načítali pred spustením skriptu. Python skript vygeneroval objekty v Blendri, kde bolo potrebné objekty vhodne pospájať a doplniť pletivo. Vytvorené plochy sme uzavreli a exportovali do programom PrusaSlicer podporovaného formátu, v našom prípade \verb|.stl|, ktorý pre plochy pripravil \verb|.gcode| na 3D tlač. Súbor \verb|.gcode| sa následne vložil na SD kartu alebo do softvéru Pronterface a mohli sme realizovať tlač po načítaní SD karty tlačiarňou alebo pripojení počítaču k tlačiarni.
+
 \begin{figure}[h]
 	\centering
-	\includegraphics[angle=-90,width=0.5\textwidth]{images/plocha_v_tlaciarni.jpg}
-	\caption[Plocha v 3D tlačiarni.]{Plocha v 3D tlačiarni.}
-	\label{fig:plocha_v_tlaciarni}
+	\includegraphics[trim={2.8cm 26cm 0cm 0cm},clip]{images/pipeline3.pdf}
+	\caption[Schéma procesu od vstupu až po výstup.]{Schéma procesu.}
+	\label{fig:pipeline}
 \end{figure}

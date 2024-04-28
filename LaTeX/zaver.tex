@@ -1,1 +1,24 @@
 \chapter*{Záver}
+Hlavným cieľom práce bolo vypočítať obálku jednoparametrického systému plôch druhého stupňa $Q$, kde sme za plochu druhého stupňa považovali elipsoid naškálovaný v dotykovom smere krivky $m(t)$ konštantou $a$ a v ostatných smeroch krivky konštantou $b$. Obálku jednoparametrického systému elipsoidov $Q$ sme počítali rovnakým prístupom ako obálku jednoparametrického systému sfér $S$, a to tak, že sme v každom parameteri $t$ systému $Q$ zistili prienik systému s jeho deriváciou $\dot{Q}$. Systém ležal na krivke $m(t),$ kde $t \in I \subset \mathbb{R}.$
+Zistili sme, že v každom parametri $t$ je prienikom systémov $Q$ a $\dot{Q}$ kružnica a v tých parametroch $t,$ pre ktoré platí
+$$
+\kappa(t) < \lambda,
+$$  
+kde $\kappa(t)$ je krivosť krivky $m(t)$ a $\lambda = \big| \frac{b}{a^2 - b^2} \big| $ je funkciou škálovacích faktorov, je prienikom systémov aj elipsa.
+
+Obálky sfér a elipsoidov sme zostrojili v programe Blender pomocu Blender Python API. Pre 
+$$
+\kappa(t) \leq \lambda,
+$$  
+sme v $t$ vykreslili charakteristickú kružnicu a pre
+$$
+\kappa(t) < \lambda,
+$$  
+sme v $t$ vykreslili pôvodný elipsoid zo systému.
+Potom sme charakteristické kružnice pospájali nástrojom programu Blender, ktorý automaticky vygeneroval pletivo. 
+
+Týmto spôsobom sme zostrojili menšiu databázu jednoparametrických systémov sfér, jednoparametrických systémov elipsoidov a ich obálok, ktorá sa nachádza spolu s ďalšími súbormi na webovej lokalite v GitHub repozitári \url{https://github.com/tutka13/Masters-Thesis/tree/main}. 
+
+Niekoľko plôch sme vytlačili v 3D tlačiarni.
+
+V prvej kapitole sme uviedli prehľad obálok v rovine, prístupy výpočtu a tiež odvodenie rovníc pre obálku sfér. V druhej kapitole sme odvodili rovine pre obálku elipsoidov. V tretej kapitole sme sa zaoberali špecifikáciou softvéru a jeho implementáciou. V štvrtej kapitole sme uvideli výsledky práce na príkladoch.

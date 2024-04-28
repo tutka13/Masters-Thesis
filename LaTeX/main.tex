@@ -26,6 +26,9 @@
 \usepackage{adjustbox}
 \newcommand{\altref}[2]{\hyperref[#1]{#2}}
 
+\usepackage[labelformat=simple]{subcaption}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+
 \newtheorem{definition}{Definícia}[chapter]
 \newtheorem{theorem}{Veta}[chapter]
 \newtheorem{lemma}{Lema}[chapter]
@@ -278,6 +281,10 @@ Tutková J., Bc. Envelope of a system of surfaces. Master's thesis. Comenius Uni
 
 \bibitem{doCarmo17} do Carmo M. P. 2017. \textit{Differential Geometry of Curves and Surfaces}, New York. Dover Publications Inc., Mineola. ISBN 978-0-486-80699-0.
 
+\bibitem{Desmos} Desmos Graphing Calculator. 2011. Amherst, Desmos. Dostupné online: \url{https://www.desmos.com/calculator}. 
+
+\bibitem{Deepl} Deepl. Dostupné online: \url{https://www.deepl.com/translator}.
+
 \bibitem{Fake-bpy-module} Fake-bpy-module. Dostupné na internete: \url{https://github.com/nutti/fake-bpy-module}.
 
 \bibitem{Gro97} Grossfield A. 1997. What Are Differential Equations: A Review Of Curve Families. Paper presented at 1997 Annual Conference, Milwaukee, Wisconsin. 10.18260/1-2--6898. Dostupné na internete: \url{https://216.185.13.174/what-are-differential-equations-a-review-of-curve-families}.
@@ -285,6 +292,8 @@ Tutková J., Bc. Envelope of a system of surfaces. Master's thesis. Comenius Uni
 %\bibitem{Hla} Hlavička R., Růžičková I. Numerické metody. Brno. Dostupné na internete: \url{http://physics.ujep.cz/ jskvor/NME/DalsiSkripta/Numerika.pdf}.
 
 \bibitem{Chalm} Chalmovianská J. Skriptá k predmetu Algebraická geometria. Dostupné na internete: \url{http://fractal.dam.fmph.uniba.sk/~pilnikova/ag1.html}.
+
+\bibitem{ChatGPT} ChatGPT 3.5. Dostupné online: \url{https://chat.openai.com/.}
 
 \bibitem{Chud09} Chudinov P. 2009. Numerical-analytical Algorithm for Constructing the Envelope of the Projectile Trajectories in Midair. Dostupné na internete: \url{https://doi.org/10.48550/arXiv.0902.0520}.
 
@@ -354,9 +363,7 @@ Volume 15, Issue 3, Pages 223-249, ISSN 0167-8396. Dostupné na internete: \url{
 Všetky online zdroje boli dostupné dňa 12.04.2024.
 
 
-Pri príprave tejto práce boli použité nástroje UI DeepL, Google Translate a ChatGPT za účelom kontroly chýb v kóde a v prostredí latex. 
-
-Za správnosť výslednej podoby textu zodpovedá autorka.
+Pri príprave tejto práce boli použité nástroje UI \cite{Deepl} a \cite{ChatGPT} za účelom prekladu textov, kontroly chýb v syntaxi kódu a v prostredí \LaTeX. Za správnosť výslednej podoby textu zodpovedá autorka.
 
 %\bibitem{Ber88} Berger, M., Gostiaux, B. (1988). Differential Geometry: Manifolds, Curves, and Surfaces. Graduate Texts in Mathematics, vol 115. Springer, New York, NY. %https://doi.org/10.1007/978-1-4612-1033-7_6
 %nemam

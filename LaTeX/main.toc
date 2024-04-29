@@ -33,16 +33,16 @@
 \contentsline {subsection}{\numberline {3.2.1}Blender}{33}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Python}{34}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}Knižnice}{34}{subsection.3.2.3}%
-\contentsline {subsubsection}{Inštalácia knižníc}{34}{section*.23}%
+\contentsline {subsubsection}{Inštalácia knižníc}{34}{section*.25}%
 \contentsline {subsection}{\numberline {3.2.4}Programovacie prostredie}{35}{subsection.3.2.4}%
-\contentsline {subsubsection}{Visual Studio Code}{35}{section*.24}%
-\contentsline {subsubsection}{Konfigurácia VS Code - Python - Blender}{36}{section*.26}%
-\contentsline {subsubsection}{Jupyter Notebook}{36}{section*.27}%
+\contentsline {subsubsection}{Visual Studio Code}{35}{section*.26}%
+\contentsline {subsubsection}{Konfigurácia VS Code - Python - Blender}{36}{section*.28}%
+\contentsline {subsubsection}{Jupyter Notebook}{36}{section*.29}%
 \contentsline {section}{\numberline {3.3}Implementácia}{36}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Realizácia}{37}{subsection.3.3.1}%
 \contentsline {section}{\numberline {3.4}3D tlač}{38}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}PrusaSlicer}{38}{subsection.3.4.1}%
-\contentsline {subsubsection}{Parametre tlače}{39}{section*.32}%
+\contentsline {subsubsection}{Parametre tlače}{39}{section*.34}%
 \contentsline {subsection}{\numberline {3.4.2}Pronterface}{40}{subsection.3.4.2}%
 \contentsline {section}{\numberline {3.5}Zhrnutie procesu}{40}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Výsledky práce}{43}{chapter.4}%
@@ -51,4 +51,4 @@
 \contentsline {section}{\numberline {4.3}3D tlač}{45}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Otvorené problémy}{46}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Budúca práca}{46}{section.4.5}%
-\contentsline {chapter}{Príloha A}{55}{chapter*.41}%
+\contentsline {chapter}{Príloha A}{55}{chapter*.43}%

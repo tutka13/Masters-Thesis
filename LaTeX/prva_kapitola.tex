@@ -15,7 +15,7 @@ Ak nakreslíme kružnice so stredom na x-ovej osi s polomerom 1, ako na obr. \re
 \begin{figure}[h]
 	\centering
 	\includegraphics[trim={0.5cm 2.5cm 0.5cm 3cm},clip]{images/new_envelope.pdf}
-	\caption[Zobrazenie prvkov systému.]{Systém je zobrazený na intervale $[-2,2]$ s krokom  $\Delta t = 0.1$. Ružovou farbou je vyznačená kružnica systému v parametri $t=-2$, čiernou farbou v parametri $t = 2$, v hodnotách parametrov medzi nimi je farba kružnice lineárne interpolovaná. }
+	\caption[Jednoparametrický systém kružníc.]{Systém je zobrazený na intervale $[-2,2]$ s krokom  $\Delta t = 0.1$. Ružovou farbou je vyznačená kružnica systému v parametri $t=-2$, čiernou farbou v parametri $t = 2$, v hodnotách parametrov medzi nimi je farba kružnice lineárne interpolovaná. }
 	\label{fig:new_system}
 \end{figure}
 
@@ -264,7 +264,7 @@ y(u) &= 1.
 \begin{figure}[h]
 	\centering
 	\includegraphics{images/lines_in_normal_form.eps}
-	\caption[Systém priamok v normálovom tvare.]{Systém priamok v normálovom tvare zobrazený na intervale $[0, 2\pi]$ s krokom $\Delta t = 0,1$. Priamka $l$ je znázornená oranžovou farbou a transformovaná priamka $g_{\frac{\pi}{2}}(l)$ zelenou farbou.}
+	\caption[Systém priamok v normálovom tvare.]{Systém priamok v normálovom tvare zobrazený na intervale $[0, 2\pi]$ s krokom $\Delta t = 0.1$. Priamka $l$ je znázornená oranžovou farbou a transformovaná priamka $g_{\frac{\pi}{2}}(l)$ zelenou farbou.}
 	\label{fig:lines_in_normal_form}
 \end{figure}
 \end{example}
@@ -328,7 +328,7 @@ $$
 -t_1^2
 \end{pmatrix}.
 $$
-Po reparametrizácii $t_1(t) = -t$ je ľahké vidieť, že množina všetkých týchto priesečníkov $\mathcal{L} = \{(t, -t^2): t \in \mathbb{R}\} = \mathcal{E}$, ktorá predstavuje lokálny priesečník, sa zhoduje s vypočítanou množinou bodov obálky.
+Po reparametrizácii $t_1(t) = -t$ je ľahké vidieť, že množina všetkých týchto priesečníkov $\mathcal{L} = \{(t, t^2): t \in \mathbb{R}\} = \mathcal{E}$, ktorá predstavuje lokálny priesečník, sa zhoduje s vypočítanou množinou bodov obálky.
 \end{example}
 
 \begin{corollary} Nech je daný systém $\mathcal{F}$. Každý bod lokálneho priesečníka systému $\mathcal{L}$ je aj bodom obálky systému $\mathcal{E}$. Teda platí
@@ -373,6 +373,13 @@ Opačne, ak $X$ patrí obálke $\mathcal{E},$ existuje podľa definície \ref{ch
 Týmto je rovnosť $\mathcal{E} = \bigcup_{t \in I} c_t$ dokázaná.
 \end{proof}
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[trim={-1cm 11cm 0 1cm},clip]{images/char_kruznica.pdf}
+	\caption[Charakteristická kružnica.]{Prienik sféry $\mathcal{S}_t$ a roviny $\mathcal{\dot{S}}_t$ je charakteristická kružnica $c_t$.}
+	\label{fig:char_kruznica}
+\end{figure}
+
 Obálka sfér sa teda skladá zo systému kružníc. Charakteristická kružnica leží celá v rovine $\mathcal{\dot{S}}_t $, takže v tejto rovine leží aj jej stred. Dotykový vektor kostrovej krivky $m(t)$ je kolmý na rovinu $\mathcal{\dot{S}}_t$, teda stred $C_t$ charakteristickej kružnice leží na dotyčnici $T(t, s)= m(t) + s \cdot \dot{m}(t),$ $s \in \mathbb{R}$, preto stred $C_t$ nájdeme ako
 $$ \mathcal{\dot{S}}_t \cap T(t, s).$$
 Pre parameter $s$ potom platí $s = \dfrac{r(t) \dot{r}(t)}{\langle \dot{m}(t), \dot{m}(t) \rangle }, $
@@ -391,6 +398,13 @@ Rozoberme si nasledujúce dva prípady
 Polomer $l_t$ charakteristiskej kružnice  možno vypočítať z pravouhlého trojuholníka $M_tC_tP,$ kde $P$ je ľubovoľný bod na charakteristickej kružnici $c_t$, a teda aj na sfére $\mathcal{S}_t.$
 $$ l_t = \sqrt{r^2(t) - \|M_tC_t\|^2} = r(t) \sqrt{ 1 - \frac{\dot{r}^2(t)}{\langle \dot{m}(t), \dot{m}(t) \rangle}}. $$
 V prípade, že $ \|M_tC_t\| > r(t)$, sféra $\mathcal{S}_t$ nemá s obálkou $\mathcal{E}$ reálny kontakt. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[trim={-4cm 23cm 0 0cm},clip]{images/trojuholnik.pdf}
+	\caption[Stred a polomer charakteristickej kružnice.]{Stred $C_t$ charakteristickej kružnice $c_t$ leží v prieniku roviny $\mathcal{\dot{S}}_t$ a dotyčnice ku krivke $m(t)$. Polomer $l_t$ kružnice $lc_t$ je vyjadrený z pravouhlého trojuholníka $M_tC_tP$. }
+	\label{fig:trojuholnik}
+\end{figure}
 
 \begin{example}
 Uvažujme kostrovú krivku $m(t)$ a polomer $r(t)$

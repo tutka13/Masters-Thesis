@@ -233,11 +233,19 @@ $$
 $$
 kde jej prvky $\dot{A}(t), \dots, \dot{F}(t)$ sú funkcie parametra $t \in I,$ ktoré definujú kužeľosečku $\dot{Q}_t$ danú rovnicou 
 $$\dfrac{\partial f(x, y, t)}{\partial t} = \dot{A}(t)x^2 + \dot{B}(t)xy + \dot{C}(t)y^2 + \dot{D}(t)x + \dot{E}(t)y + \dot{F}(t) = 0.$$
-
 Označme determinant matice 
-$$\Delta(t) \vcentcolon = \det \dot{M}(t) $$
-a subdeterminant matice, ktorá vznikne odstránením tretieho riadku a tretieho stĺpca 
-$$\delta(t) \vcentcolon = \det \dot{M}_{33}(t).$$ 
+$$\Delta(t) \vcentcolon = \det \dot{M}(t), $$
+subdeterminant matice, ktorá vznikne odstránením tretieho riadku a tretieho stĺpca 
+$$\Delta_{33}(t) \vcentcolon = \det \dot{M}_{33}(t)$$
+a $$
+T(t) \vcentcolon = \det \left( \begin{matrix}
+\dot{C} & \frac{\dot{E}}{2} \\ 
+\frac{\dot{E}}{2} & \dot{F}
+\end{matrix} \right) + \det \left( \begin{matrix}
+\dot{A} & \frac{\dot{D}}{2} \\ 
+\frac{\dot{D}}{2} & \dot{F}
+\end{matrix} \right).
+$$
 
 \subsection{Zmena bázy elíps}
 Nech $m(t) \colon  I \subseteq \mathbb{R} \rightarrow \mathbb{R}^2$ je aspoň dvakrát diferencovateľná krivka, napíšme rovnicu jednoparametrického systému elíps $Q$ so stredom na krivke $m(t)$, hlavnou polosou $a$ v smere vektora $\dot{m}(t)$ a vedľajšou polosou $b$ v smere normálového vektora $\vec{n}$ ku krivke $m(t)$. Uvažujme $\vec{n}=(-\dot{m}_2, \dot{m}_1). $ Vydelením normou vektorov $\dot{m}(t)$ a $\vec{n}$ dostávame novú ortonormálnu bázu tvorenú stĺpcovými vektormi matice $P(t).$ Keďže sme prešli od štandardnej bázy k ortonormálnej báze, matica $P(t)$ je ortogonálna, a teda
@@ -322,10 +330,7 @@ p(t)q(t) = 0, \text{ kde}
 $$
 \begin{align*}
 p(t) &\colon \dot{m}_1 x + \dot{m}_2 y - (m_1 \dot{m}_1 + m_2 \dot{m}_2) = 0, \\
-q(t) &\colon  \alpha(t) x + \beta(t) y +  \gamma(t) = 0.
-\end{align*}
-kde 
-\begin{align*}
+q(t) &\colon  \alpha(t) x + \beta(t) y +  \gamma(t) = 0, \\
 \alpha (t) &= \dot{m}_2(\dot{m}_2 \ddot{m}_1 - \dot{m}_1 \ddot{m}_2) , \\
 \beta (t) &= \dot{m}_1 (\dot{m}_1 \ddot{m}_2 - \dot{m}_2 \ddot{m}_1) , \\
 \gamma (t) &= -\alpha m_1 - \beta m_2 - \frac{b^2 \| \dot{m} \|^4 }{b^2 - a^2}.
@@ -342,23 +347,21 @@ $$
 Označme $\lambda = \big| \frac{b}{a^2 - b^2} \big|.$ Po chvíľke úprav zistíme, že člen $\frac{\sqrt{\alpha^2 + \beta^2}}{\| \dot{m} \|^4} $ reprezentuje krivosť krivky $\kappa(t).$
 Teda do obálky jednoparametrického systému elíps $Q$ pre parametre $t,$ pre ktoré platí 
 $$
-\lambda > \kappa(t).
+\kappa(t) < \lambda
 $$
 prispievajú dva prieniky, ktoré možno parametrizovať
 $$P_{1,2}= m(t)\pm b \vec{n}(t).$$
 Pre parametre, v ktorých
 $$
-\lambda < \kappa(t).
+\kappa(t) > \lambda
 $$
 pribudnú ďalšie dva prieniky
 $$
 P_{3,4} = m(t) + \rho(t) \vec{n}(t) \pm l(t) \vec{t},$$
 kde $l(t)=\frac{a}{b} \sqrt{b^2 - \rho^2(t)}.$
-
-
 V prípade rovnosti
 $$
-\lambda = \kappa(t),
+\kappa(t) = \lambda,
 $$
 je $\rho(t) = b$ a $l(t) = 0$  a prieniky $P_{1,2}$ a $P_{3,4}$ sa zhodujú.
 
@@ -512,14 +515,12 @@ S(t) & = 0,
 pre všetky $t \in I,$
 teda podľa klasifikácie plôch druhého stupňa \ref{tab:classification_of_quadrics} a \ref{tab:degenerate_quadrics} sú kvadriky v systéme $\dot{Q}$ dve rôznobežné roviny.
 
-Jednoparametrický systém $\dot{Q}$ vieme napísať v súčinovom tvare dvoch rovín $ \eta (t) \xi (t) = 0,$
+Jednoparametrický systém $\dot{Q}$ vieme napísať v súčinovom tvare dvoch rovín 
+$$ \eta (t) \xi (t) = 0,$$
 kde 
 \begin{align*}
 \eta(t) & \colon \dot{m}_1 x + \dot{m}_2 y + \dot{m}_3 z - (m_1 \dot{m}_1 + m_2 \dot{m}_2 + m_3 \dot{m}_3) = 0, \\
-\xi(t) & \colon  \alpha (t) x + \beta (t) y + \gamma (t) z + \delta (t) = 0, 
-\end{align*}
-kde 
-\begin{align*}
+\xi(t) & \colon  \alpha (t) x + \beta (t) y + \gamma (t) z + \delta (t) = 0, \\
 \alpha (t) &= \ddot{m}_1 (\dot{m}_2^2 + \dot{m}_3^2) - \dot{m}_1(\dot{m}_2 \ddot{m}_2 + \dot{m}_3 \ddot{m}_3) , \\
 \beta (t) &= \ddot{m}_2 (\dot{m}_1^2 + \dot{m}_3^2) - \dot{m}_2(\dot{m}_1 \ddot{m}_1 + \dot{m}_3 \ddot{m}_3), \\
 \gamma (t) &= \ddot{m}_3 (\dot{m}_1^2 + \dot{m}_2^2) - \dot{m}_3(\dot{m}_1 \ddot{m}_1 + \dot{m}_2 \ddot{m}_2), \\

@@ -303,32 +303,32 @@ $
 \mathcal{L} := \bigcup_{t \in I} \mathcal{L}_{t}
 $ kde
 $$
-\mathcal{L}_{t} = \lim_{\varepsilon \to 0} F_{t} \cap F_{t + \varepsilon}
+\mathcal{L}_{t} = \lim_{\varepsilon \to 0} \mathcal{F}_{t} \cap \mathcal{F}_{t + \varepsilon}
 $$
 pre nejaké pevné $t \in I.$
 \end{definition}
 Lokálny priesečník regulárneho systému sa v mnohých prípadoch zhoduje s jeho obálkou. Ilustrujme to na nasledovnom príklade.
 
 \begin{example}
-Vezmime dva ľubovoľné, ale odlišné prvky systému $F(x, y, t) = y - 2tx - t.$
+Vezmime dva ľubovoľné, ale odlišné prvky systému $F(x, y, t) = y - 2tx + t.$
 Pre fixné parametre $t_1 \neq t_2$ tak máme
-$$F(x_1, y_1, t_1) = y_1 - 2t_1x_1 - t_1^2,$$
-$$F(x_2, y_2, t_2) = y_2 - 2t_2x_2 - t_2^2.$$ 
+$$F(x_1, y_1, t_1) = y_1 - 2t_1x_1 + t_1^2,$$
+$$F(x_2, y_2, t_2) = y_2 - 2t_2x_2 + t_2^2.$$ 
 Označme priesečník týchto dvoch priamok $Q = (q_x, q_y)^T.$ Pre priesečník $Q$ platí $$F(Q, t_1) = 0 = F(Q, t_2),$$ odkiaľ vyplýva 
-$$(t_2 - t_1)(2q_x + t_1 + t_2) = 0.$$ 
-Keďže podľa predpokladu $t_1 \neq t_2$, jediné riešenie tejto rovnice je $q_x = -\dfrac{t_1 + t_2}{2}$ a priesečník je potom daný 
-$$Q = (-\dfrac{t_1 + t_2}{2}, -t_1t_2)^T.$$ Definujme $\varepsilon := t_2 - t_1$ a nechajme $\varepsilon$ smerovať k nule, dostávame priesečník
+$$(t_2 - t_1)(2q_x - t_1 - t_2) = 0.$$ 
+Keďže podľa predpokladu $t_1 \neq t_2$, jediné riešenie tejto rovnice je $q_x = \dfrac{t_1 + t_2}{2}$ a priesečník je potom daný 
+$$Q = \left(\dfrac{t_1 + t_2}{2}, t_1t_2\right)^T.$$ Definujme $\varepsilon := t_2 - t_1$ a nechajme $\varepsilon$ smerovať k nule, dostávame priesečník
 $$
 \lim_{\varepsilon \to 0} 
 \begin{pmatrix} 
--t_1 - \dfrac{\varepsilon}{2} \\
--t_1(t_1 + \varepsilon)
+t_1 + \dfrac{\varepsilon}{2} \\
+t_1(t_1 + \varepsilon)
 \end{pmatrix} = \begin{pmatrix} 
--t_1 \\
--t_1^2
+t_1 \\
+t_1^2
 \end{pmatrix}.
 $$
-Po reparametrizácii $t_1(t) = -t$ je ľahké vidieť, že množina všetkých týchto priesečníkov $\mathcal{L} = \{(t, t^2): t \in \mathbb{R}\} = \mathcal{E}$, ktorá predstavuje lokálny priesečník, sa zhoduje s vypočítanou množinou bodov obálky.
+Je ľahké vidieť, že množina všetkých týchto priesečníkov $\mathcal{L} = \{(t, t^2): t \in \mathbb{R}\} = \mathcal{E}$, ktorá predstavuje lokálny priesečník, sa zhoduje s vypočítanou množinou bodov obálky na obr.~\ref{fig:odr}.
 \end{example}
 
 \begin{corollary} Nech je daný systém $\mathcal{F}$. Každý bod lokálneho priesečníka systému $\mathcal{L}$ je aj bodom obálky systému $\mathcal{E}$. Teda platí
@@ -406,7 +406,8 @@ V prípade, že $ \|M_tC_t\| > r(t)$, sféra $\mathcal{S}_t$ nemá s obálkou $\
 	\label{fig:trojuholnik}
 \end{figure}
 
-\begin{example}
+\begin{example} 
+\label{exam:obalka_sfer}
 Uvažujme kostrovú krivku $m(t)$ a polomer $r(t)$
 $$ 
 m(t) = \begin{pmatrix} 0 \\ 0 \\ t \end{pmatrix} \quad \text{ a } \quad r(t) = \frac{t}{\sqrt{26}}.
@@ -428,6 +429,38 @@ Napríklad, pre $t = 1 \in I$ charakteristická krivka je prienikom dvoch plôch
 &\mathcal{\dot{S}}_1 \colon z - \frac{25}{26} = 0. \\
 \end{align*}
 Z toho môžeme usúdiť, že charakteristická krivka $c_1$ je kružnica so stredom v bode $C_1 = (0, 0, \frac{25}{26})$ v rovine $z = \frac{25}{26}$ a neprechádza stredom sféry $M_1 = m(1) = (0,0,1)$, polomer $c_1$ je $l_{1} = \frac{\sqrt{25}}{26}$. Vzdialenosť bodov $ \|M_tC_t\| = \frac{1}{26}$ a $r(1)= \frac{1}{\sqrt{26}}$, takže platí, že $r(1) > \|M_tC_t\|$ a sféra $\mathcal{S}_1$ má s obálkou $\mathcal{E}$ reálny kontakt.
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/cornetto.png}
+	\caption[Jednoparametrický systém sfér.]{Jednoparametrický systém sfér z príkladu \ref{exam:obalka_sfer} pre $t \in [0,10]$ s krokom $\Delta t = 0,2.$ }
+	\label{fig:cornetto}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+       \includegraphics[width=\textwidth]{images/envelope_cornetto.png}
+	\caption[Obálka jednoparametrického systém sfér.]{Obálka jednoparametrického systém sfér z príkladu \ref{exam:obalka_sfer} zostrojená z charakteristických kružníc pre $t \in [0,10]$ s krokom $\Delta t = 0,2.$ }
+    \end{subfigure}
+    \caption{Obálka sfér.}
+    \label{fig:envelope_spheres}
+\end{figure}
+
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=0.5\textwidth]{images/cornetto.png}
+%	\caption[Jednoparametrický systém sfér.]{Jednoparametrický systém sfér z príkladu \ref{exam:obalka_sfer} pre $t \in [0,10]$ s krokom $\Delta t = 0,2.$ }
+%	\label{fig:cornetto}
+%\end{figure}
+%
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=0.5\textwidth]{images/envelope_cornetto.png}
+%	\caption[Obálka jednoparametrického systém sfér.]{Obálka jednoparametrického systém sfér z príkladu \ref{exam:obalka_sfer} zostrojená z charakteristických kružníc pre $t \in [0,10]$ s krokom $\Delta t = 0,2.$ }
+%	\label{fig:envelope_cornetto}
+%\end{figure}
 \end{example}
 
 Jedným z dôležitých výsledkov je, že kanálové plochy, definované ako obálka jednoparametrického systému sfér s racionálnou funkciou polomeru $r(t)$ a stredmi v racionálnej krivke $m(t)$ možno racionálne parametrizovať \cite{Pet97}.

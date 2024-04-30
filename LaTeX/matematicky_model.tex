@@ -12,7 +12,7 @@ V závislosti od počtu reálnych priesečníkov s priamkou $s$ v nekonečne roz
 \begin{enumerate}
 \item eliptický typ: bez reálnych priesečníkov,
 \item hyperbolický typ: dva reálne priesečníky,
-\item parabolický typ: priamka v nekonečne sa dotýka krivky.
+\item parabolický typ: kužeľosečky sa dotýka priamka v nekonečne.
 \end{enumerate}
 
 \begin{definition}
@@ -102,10 +102,10 @@ Je zrejmé, že ak je prvých šesť koeficientov nulových, uvedená rovnica je
 
 V algebraickom zmysle je kvadrika $P$ plocha druhého stupňa, ktorá má vždy dva priesečníky $S_1$ a $S_2$ s danou priamkou $s$. Oba môžu byť reálne alebo komplexne združené. Limitný prípad $S_1 = S_2$ nastáva vtedy, keď $s$ je dotyčnicou $P$.
 
-V závislosti od počtu reálnych priesečníkov s rovinou $s$ v nekonečne rozlišujeme tri typy kvadrík:
+V závislosti od typu prieniku kvadriky s rovinou $s$ v nekonečne rozlišujeme tri typy kvadrík:
 \begin{enumerate}
-\item eliptický typ: bez reálnych priesečníkov,
-\item hyperbolický typ: dva reálne priesečníky,
+\item eliptický typ: bez reálnej kužeľosečky,
+\item hyperbolický typ: reálna kužeľosečka,
 \item parabolický typ: kvadriky sa dotýka rovina v nekonečne.
 \end{enumerate}
 \subsection{Invarianty plôch druhého stupňa}
@@ -533,7 +533,11 @@ $$
 \rho (t) = \| m(t), \xi(t) \|= \bigg|  \frac{\alpha m_1 + \beta m_2 + \gamma m_3 + \delta}{\sqrt{\alpha^2 + \beta^2 + \gamma^2}} \bigg|.
 $$
 
-Ak $\rho(t) > b,$ tak jednoparametrický systém $Q$ nemá prienik s rovinou $\xi(t) $ a za body obálky vieme v parametri $t$ považovať prienik $Q(t)$ a $\eta(t)$, čo je charakteristická kružnica s rovnakými parametrami ako v obálke sfér. Ak $\rho(t) < b,$ tak prienikom $Q(t)$ a $\xi(t)$ je elipsa a prienikom $Q(t)$ a $\eta(t)$ je charakteristická kružnica. Keďže rovina $\eta(t)$ prechádza krivkou $m(t)$ a jej normálový vektor je $\dot{m}(t),$ prienik $Q(t)$ a $\dot{Q}(t)$ je vždy reálny.
+Ak $\rho(t) > b,$ tak jednoparametrický systém $Q$ nemá prienik s rovinou $\xi(t) $ a za body obálky vieme v parametri $t$ považovať prienik $Q(t)$ a $\eta(t)$, čo je charakteristická kružnica s rovnakými parametrami ako v obálke sfér. 
+
+Ak $\rho(t) < b,$ tak prienikom $Q(t)$ a $\xi(t)$ je elipsa a prienikom $Q(t)$ a $\eta(t)$ je charakteristická kružnica. 
+
+Keďže rovina $\eta(t)$ prechádza krivkou $m(t)$ a jej normálový vektor je $\dot{m}(t),$ prienik $Q(t)$ a $\dot{Q}(t)$ je vždy reálny.
 
 Všimnime si, že podmienku
 $$
@@ -541,7 +545,7 @@ $$
 $$
 možno vyjadriť
 $$
-\bigg| \frac{b^2}{a^2 - b^2} \bigg| > \frac{\sqrt{\alpha^2 + \beta^2 + \gamma^2}}{\| \dot{m} \|^4} = \kappa (t),
+\lambda = \bigg| \frac{b^2}{a^2 - b^2} \bigg| > \frac{\sqrt{\alpha^2 + \beta^2 + \gamma^2}}{\| \dot{m} \|^4} = \kappa (t),
 $$
 kde výraz $ \sqrt{\alpha^2 + \beta^2 + \gamma^2} $ predstavuje veľkosť normálového vektora roviny $\xi(t)$ a $\kappa(t)$ je krivosť krivky $m(t).$
 

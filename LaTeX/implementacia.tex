@@ -131,12 +131,7 @@ Jednou možnosťou ako spustiť Jupyter Notebook je vytvorenie nového súboru v
 \end{figure}
 
 \section{Implementácia}
-V tejto časti sa budeme venovať vývoju našich skriptov. Skritov máme niekoľko, no v tejto časti budeme primárne hovoriť o skripte na vymodelovanie obálky sfér, skripte na vymodelovanie obálky elipsoidov a o skripte s používanými funkciami.
-
-
-
-\subsection{Realizácia}
-Opíšeme beh skriptov \verb|envelope_of_spheres.py| a \verb|envelope_of_spheres.py|. Všetky výpočty vrátane rotácie kružníc a elipsoidov sú realizované pomocou funkcií definovaných v module \verb|envelopes.py|. Modul sme umiestnili do adresára programu Blender, v ktorom Blender ukladá svoje skripty a moduly. V našom prípade to bolo \verb|C:\Program Files\Blender Foundation\Blender 4.0\4.0\scripts\modules|. Potom sme importovali modul do programu Blender štandardným spôsobom. 
+V tejto časti sa budeme venovať vývoju skriptov. Skriptov máme niekoľko, no v tejto časti budeme primárne hovoriť o skripte na vymodelovanie obálky sfér \verb|envelope_of_spheres.py|, skripte na vymodelovanie obálky elipsoidov \verb|envelope_of_spheres.py| a o skripte s používanými funkciami \verb|envelope_of_spheres.py|. Všetky výpočty vrátane rotácie kružníc a elipsoidov sú realizované pomocou funkcií definovaných v module \verb|envelopes.py|. Modul sme umiestnili do adresára programu Blender, v ktorom Blender ukladá svoje skripty a moduly. V našom prípade to bolo \verb|C:\Program Files\Blender Foundation\Blender 4.0\4.0\scripts\modules|. Potom sme importovali modul do programu Blender štandardným spôsobom. 
 \subsubsection*{Obálka sfér}
 Najprv sme začali vyvíjať skript pre obálku sfér, kde bolo hlavnou myšlienkou zostrojenie obálky sfér na intervale $I$ s vhodným vzorkovaním plochy pre parameter $t \in I$ iba pomocou charakteristických kružníc. 
 

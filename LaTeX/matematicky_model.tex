@@ -1,6 +1,6 @@
 \chapter{Matematický model}
 \label{kap:matematicky_model}
-V tejto kapitole odvodíme rovnice obálky pre jednoparametrický systém elíps a elipsoidov. Najprv však klasifikujme krivky a plochy druhého stupňa. Nasledujúca teória a klasifikácia nadplôch druhého rádu je prevzatá zo \cite{Ivan}, \cite{Kor13}, \cite{Gla16}, \cite{Ode20} a \cite{Zla11}.
+V tejto kapitole odvodíme rovnice obálky pre jednoparametrický systém elíps a elipsoidov. Najprv však klasifikujme krivky a plochy druhého stupňa. Nasledujúcu teóriu a klasifikáciu nadplôch druhého stupňa preberáme zo \cite{Ivan}, \cite{Kor13}, \cite{Gla16}, \cite{Ode20} a \cite{Zla11}.
 \section{Krivky druhého stupňa}
 Krivka druhého stupňa $p$ je v karteziánskych súradniciach $(x, y) \in \mathbb{E}^2$ daná rovnicou 
 $$ f(x, y) = Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0.$$
@@ -98,7 +98,7 @@ hyperbolický & $< 0$ & hyperbola & dve rôznobežné priamky \\
 \section{Plochy druhého stupňa}
 Plocha druhého stupňa $P$ je v karteziánskych súradniciach $(x, y, z) \in \mathbb{E}^3$ daná rovnicou
 \[ f(x, y, z) = Ax^2 + By^2 + Cz^2 + Dxy + Exz + Fyz + Gx + Hy + Iz + J = 0. \]
-Je zrejmé, že ak je prvých šesť koeficientov nulových, uvedená rovnica je lineárna a opisuje rovinu v priestore. Vo všeobecnosti rovnica opisuje kvadriku, ktorá je daná deviatimi bodmi. Ak $J \neq 0$, môžeme ju vydeliť $J$ a potom vyriešiť sústavu lineárnych rovníc s deviatimi neznámymi. Okrem klasických prípadov, ako elipsoidy, paraboloidy a hyperboloidy, môžu kvadriky degenerovať aj na kvadratické kužele, kvadratické valce a dvojice rovín.
+Ak je prvých šesť koeficientov nulových, uvedená rovnica je lineárna a opisuje rovinu v priestore. Vo všeobecnosti rovnica opisuje kvadriku, ktorá je daná deviatimi bodmi. Ak $J \neq 0$, môžeme ju vydeliť $J$ a potom vyriešiť sústavu lineárnych rovníc s deviatimi neznámymi. Okrem klasických prípadov, ako elipsoidy, paraboloidy a hyperboloidy, môžu kvadriky degenerovať aj na kvadratické kužele, kvadratické valce a dvojice rovín.
 
 V algebraickom zmysle je kvadrika $P$ plocha druhého stupňa, ktorá má vždy dva priesečníky $S_1$ a $S_2$ s danou priamkou $s$. Oba môžu byť reálne alebo komplexne združené. Limitný prípad $S_1 = S_2$ nastáva vtedy, keď $s$ je dotyčnicou $P$.
 
@@ -121,7 +121,7 @@ a_{41} & a_{42} & a_{43} & a_{44}
 \Delta_{44} = \det \begin{pmatrix} 
 a_{11} & a_{12} & a_{13} \\ 
 a_{21} & a_{22} & a_{23} \\ 
-a_{31} & a_{32} & a_{33} 
+a_{31} & a_{32} & a_{33}, 
 \end{pmatrix}
 \end{align*}
 \begin{align*}
@@ -281,7 +281,7 @@ $$
 Systém elíps $Q$ sa potom transformuje na tvar
 \begin{align} 
 \label{eq:elipsa_v_novej_baze}
-&\frac{1}{\|{\dot{m}}\|^2} \left( (x - m_1)^2 \left( \frac{{\dot{m}_1}^2}{a^2} + \frac{{\dot{m}_2}^2}{b^2} \right) + (y - m_2)^2 \left( \frac{{\dot{m}_2}^2}{a^2} + \frac{{\dot{m}_1}^2}{b^2} \right) \right) \notag \\
+&\frac{1}{\|{\dot{m}}\|^2} \left( (x - m_1)^2 \left( \frac{{\dot{m}_1}^2}{a^2} + \frac{{\dot{m}_2}^2}{b^2} \right) + (y - m_2)^2 \left( \frac{{\dot{m}_2}^2}{a^2} + \frac{{\dot{m}_1}^2}{b^2} \right) \right) \notag + \\
 + &\frac{1}{\|{\dot{m}}\|^2} \left( 2\left( \frac{1}{a^2} - \frac{1}{b^2} \right)(x - m_1)(y - m_2)\dot{m}_1\dot{m}_2 \right) - 1 = 0.
 \end{align}
 %po miernej úprave tak dostávame výraz
@@ -366,7 +366,7 @@ $$
 je $\rho(t) = b$ a $l(t) = 0$  a prieniky $P_{1,2}$ a $P_{3,4}$ sa zhodujú.
 
 \section{Obálka elipsoidov}
-Pododobne ako pre elipsy odvodíme formu zápisov s dorbnými úpravami pre elipsoidy. V tomto prípade parameter $t$ pre lepšiu prehľadnosť vynechávame.
+Pododobne ako pre elipsy odvodíme formu zápisov s drobnými úpravami pre elipsoidy. V tomto prípade parameter $t$ pre lepšiu prehľadnosť vynechávame.
 Nech $M(t) \colon I \subset \mathbb{R} \rightarrow \mathbb{R}^{4 \times 4}$ je jednoparametrický systém (nie nutne regulárnych) symetrických $4 \times 4$ matíc. Nech $ X = (x, y, z, 1)^T$ sú homogénne súradnice v $\mathbb{A}^3(\mathbb{R})$, potom
 \begin{equation*}
 Q(t) \colon X^T M(t) X = 0
@@ -446,7 +446,7 @@ kde
 \vec{b} &= \dfrac{\dddot{m} - \langle \dddot{m}, \vec{t} \rangle \vec{t} - \langle \dddot{m}, \vec{n} \rangle \vec{n}}{\| \dddot{m} - \langle \dddot{m}, \vec{t} \rangle \vec{t} - \langle \dddot{m}, \vec{n} \rangle \vec{n} \| }.
 \end{align*}
 Matica $P(t)$ je ortogonálna, preto $P^{-1} = P^T.$
-Keďže vyjadrenia nových vektorov sú pri prepise do súraníc alebo aj vyčíslení pre konkrétne prípady príliš dlhé, uvažujme inú ortonormálnu bázu, ktorá by zachovala požadované vlastnosti škálovania. Keďže je elipsoid v normálovom smere krivky homogénny, môžeme za $\vec{n}$ zvoliť ľubovoľný jednotkový vektor z normálovej roviny krivky. Vektor $\vec{b}$ následne zvolíme ako vektorový súčin $\vec{t} \times \vec{n}$ a normalizujeme ho. Uvažujme teda
+Keďže vyjadrenia nových vektorov sú pri prepise do súradníc alebo aj vyčíslení pre konkrétne prípady príliš dlhé, uvažujme inú ortonormálnu bázu, ktorá by zachovala požadované vlastnosti škálovania. Keďže je elipsoid v normálovom smere krivky homogénny, môžeme za $\vec{n}$ zvoliť ľubovoľný jednotkový vektor z normálovej roviny krivky. Vektor $\vec{b}$ následne zvolíme ako vektorový súčin $\vec{t} \times \vec{n}$ a normalizujeme ho. Uvažujme teda
 \begin{align*}
 \vec{t} &= \dfrac{(\dot{m}_1, \dot{m}_2, \dot{m}_3)}{\sqrt{\dot{m}_1^2 + \dot{m}_2^2 + \dot{m}_3^2}}, \\
 \vec{n} &= \dfrac{(0, -\dot{m}_3, \dot{m}_2)}{\sqrt{\dot{m}_2^2 + \dot{m}_3^2}}, \\

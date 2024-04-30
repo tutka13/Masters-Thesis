@@ -29,6 +29,8 @@
 \usepackage[labelformat=simple]{subcaption}
 \renewcommand\thesubfigure{(\alph{subfigure})}
 
+%\usepackage{acro}
+
 \newtheorem{definition}{Definícia}[chapter]
 \newtheorem{theorem}{Veta}[chapter]
 \newtheorem{lemma}{Lema}[chapter]
@@ -38,8 +40,8 @@
 \newtheorem{example}{Príklad}
 
 %euler, pxtx, cm
-\usepackage[scr=dutchcal,
-scrscaled=1.1]{mathalpha}
+%\usepackage[scr=dutchcal,
+%scrscaled=1.1]{mathalpha}
 
 % -------------------
 % --- Definicia zakladnych pojmov
@@ -63,7 +65,6 @@ scrscaled=1.1]{mathalpha}
 
 \begin{document}     
 \frontmatter
-
 
 % -------------------
 % --- Obalka ------
@@ -124,8 +125,7 @@ Fakulta matematiky, fyziky a informatiky
 \vfill
 
 
-\noindent \mfmiesto\\
-\mfautor
+\noindent \mfmiesto \hfill \mfautor
 
 \eject % EOP i
 
@@ -156,8 +156,7 @@ Fakulta matematiky, fyziky a informatiky
 
 \vfill
 {\bf Poďakovanie:} Na tomto mieste by som sa chcela poďakovať môjmu školiteľovi
-doc. RNDr. Pavlovi Chalmovianskému, PhD. za odborné vedenie diplomovej práce, cenné rady, pripomienky a čas strávený na konzultáciách. Moje poďakovanie patrí aj Mgr. Adriane Malovec Bosákovej, PhD. za pomoc s 3D tlačou.
-% a vedúcemu diplomových seminárov, doc. RNDr. Andrejovi Ferkovi, PhD. za  inšpiráciu a  
+doc. RNDr. Pavlovi Chalmovianskému, PhD. za odborné vedenie diplomovej práce, cenné rady, pripomienky a čas strávený na konzultáciách. Moje poďakovanie patrí aj Mgr. Adriane Malovec Bosákovej, PhD. za pomoc s 3D tlačou a vedúcemu diplomových seminárov, doc. RNDr. Andrejovi Ferkovi, PhD. za pravidelnú inšpiráciu a podporu.
 
 % --- Koniec poďakovania
 
@@ -166,24 +165,17 @@ doc. RNDr. Pavlovi Chalmovianskému, PhD. za odborné vedenie diplomovej práce,
 % -------------------
 \newpage 
 \section*{Abstrakt}
-Tutková J., Bc. Obálka systému plôch. Diplomová práca. Univerzita Komenského. Fakulta matematiky, fyziky a informatiky. Katedra algebry a geometrie. Bratislava, 2024.
-\vspace{\baselineskip}
-
-\noindent Táto práca sa zaoberá výpočtom obálky jednoparametrického systému elíps v $\mathbb{R}^2$ a elipsoidov v $\mathbb{R}^3$, pričom elipsy a elipsoidy sú konštantne škálované faktorom $a$ v dotykovom smere krivky $m(t)$ a faktorom $b$ v ostatných smeroch krivky. Výpočet je založený na známej teórii obálky jednoparametrického systému sfér v $\mathbb{R}^3.$ Na určenie obálky využívame symbolické a numerické výpočty v programovacom jazyku Python a vypočítané plochy vizualizujeme v 3D modelovacom softvéri Blender. Niektoré z plôch sme vytlačili v 3D tlačiarni.
+%Tutková J., Bc. Obálka systému plôch. Diplomová práca. Univerzita Komenského. Fakulta matematiky, fyziky a informatiky. Katedra algebry a geometrie. Bratislava, 2024.
+%\vspace{\baselineskip}
+\noindent Táto práca sa zaoberá výpočtom obálky jednoparametrického systému elíps v $\mathbb{R}^2$ a elipsoidov v $\mathbb{R}^3$, pričom elipsy a elipsoidy sú konštantne škálované faktorom $a$ v dotykovom smere krivky $m(t),$ faktorom $b$ v normálovom smere a v prípade $\mathbb{R}^3$ faktorom $b$ v binormálovom smere krivky. Výpočet je založený na známej teórii obálky jednoparametrického systému sfér v $\mathbb{R}^3.$ Na určenie obálky využívame symbolické a numerické výpočty v programovacom jazyku Python a vypočítané plochy vizualizujeme v 3D modelovacom softvéri Blender. Vybraných 14 plôch sme vytlačili na 3D tlačiarni.
 
 \paragraph*{Kľúčové slová:} obálka plôch, systém kvadratických plôch
 % --- Koniec Abstrakt - Slovensky
 
-
-% -------------------
-% --- Abstrakt - Anglicky 
-% -------------------
-\newpage
 \section*{Abstract} 
-Tutková J., Bc. Envelope of a system of surfaces. Master's thesis. Comenius University. Faculty of Mathematics, Physics and Informatics. Department of Algebra and Geometry. Bratislava, 2024.
-\vspace{\baselineskip}
-
-\noindent This thesis deals with the computation of the envelope of a one-parameter system of ellipses in $\mathbb{R}^2$ and ellipsoids in $\mathbb{R}^3$, where these ellipses are scaled by a constant factor $a$ in the tangent direction of the curve $m(t)$ and by a factor $b$ in the other directions of the curve. The computation is based on known  theory of envelopes of a one-parameter system of spheres in $\mathbb{R}^3$. To determine the envelope, we use symbolic and numerical calculations in the Python programming language and visualize the calculated surfaces in the 3D modeling software Blender. We printed some of the surfaces in a 3D printer.
+%Tutková J., Bc. Envelope of a system of surfaces. Master's thesis. Comenius University. Faculty of Mathematics, Physics and Informatics. Department of Algebra and Geometry. Bratislava, 2024.
+%\vspace{\baselineskip}
+\noindent This thesis deals with the computation of the envelope of a one-parameter system of ellipses in $\mathbb{R}^2$ and ellipsoids in $\mathbb{R}^3$, where these ellipses and ellipsoids are scaled by a constant factor $a$ in the tangent direction of the curve $m(t)$, by a factor $b$ in the normal direction, and in the case of $\mathbb{R}^3$ by a factor $b$ in the binormal direction of the curve. The computation is based on known  theory of envelopes of a one-parameter system of spheres in $\mathbb{R}^3$. To determine the envelope, we use symbolic and numerical calculations in the Python programming language and visualize the calculated surfaces in the 3D modeling software Blender. We printed 14 selected surfaces on a 3D printer.
 
 
 \paragraph*{Keywords:} envelope of surfaces, system of surfaces
@@ -223,9 +215,9 @@ Tutková J., Bc. Envelope of a system of surfaces. Master's thesis. Comenius Uni
 % -------------------
 
 \newpage 
-
 \listoffigures
 \listoftables
+%\printacronyms
 
 % ---  Koniec Zoznamov
 
@@ -262,6 +254,7 @@ Tutková J., Bc. Envelope of a system of surfaces. Master's thesis. Comenius Uni
 
 %Prípadne môžete napísať literatúru priamo tu
 \begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{Literatúra}
 
 %\bibitem{Bab00} Babušíková J., Slodička M., Weisz J. 2000. \textit{Numerické metódy.} Univerzita Komenského v Bratislave. ISBN 80-223-1384-X. Dostupné na internete: \url{http://hore.dnom.fmph.uniba.sk/~babusikova/skripta.pdf}.
 
@@ -273,7 +266,7 @@ Tutková J., Bc. Envelope of a system of surfaces. Master's thesis. Comenius Uni
 
 \bibitem{Bien16} Biernet A. 2016. Visualisierung und grafische Anwendung von Kanalflächen. Martin-Luther-Universität Halle-Wittenberg, Naturwissenschaftliche Fakultät III. Halle (Saale). Dissertation. Dostupné na internete: \url{https://digital.bibliothek.uni-halle.de/hs/content/titleinfo/2416652}.
 
-\bibitem{Bru92} Bruce, J., Giblin, P. 1992. Envelopes. \textit{In Curves and Singularities: A Geometrical Introduction to Singularity Theory} (pp. 99-132). Cambridge: Cambridge University Press. Dostupné na internete: \url{doi:10.1017/CBO9781139172615.007}.
+\bibitem{Bru92} Bruce J. W., Giblin P. J. 1992. Envelopes. \textit{In Curves and Singularities: A Geometrical Introduction to Singularity Theory} (pp. 99-132). Cambridge: Cambridge University Press. Dostupné na internete: \url{doi:10.1017/CBO9781139172615.007}.
 
 \bibitem{Bru81} Bruce J. W., Giblin P. J. 1981. What Is an Envelope? \textit{The Mathematical Gazette}, 65(433), 186-192. Dostupné na internete: \url{http://www.jstor.org/stable/3617131}.
 
@@ -359,9 +352,11 @@ Volume 15, Issue 3, Pages 223-249, ISSN 0167-8396. Dostupné na internete: \url{
 
 \bibitem{MusicTheater} Obrázok Hudobné divadlo a výstavná sieň. Dostupné na internete:  \url{https://www.archdaily.com/789123/music-theatre-and-exhibition-hall-massimiliano-and-doriana-fuksas}.
 
+\vspace{\baselineskip}
 
 Všetky online zdroje boli dostupné dňa 12.04.2024.
 
+\vspace{\baselineskip}
 
 Pri príprave tejto práce boli použité nástroje UI \cite{Deepl} a \cite{ChatGPT} za účelom prekladu textov, kontroly chýb v syntaxi kódu a v prostredí \LaTeX. Za správnosť výslednej podoby textu zodpovedá autorka.
 

@@ -1,3 +1,17 @@
 Parabola m(t)=(t, t^2)
 https://www.desmos.com/calculator/dxhsakefk1
 
+Kružnica m(t)=(cos(t), sin(t))
+https://www.desmos.com/calculator/sz5onriydm
+
+Elipsa m(t)=(c cos(t), d sin(t))
+https://www.desmos.com/calculator/ufjyhkh7sf
+
+Hyperbola m(t)=(c cosh(t), d sinh(t))
+
+
+Kubická krivka m(t)=(t, t^3)
+https://www.desmos.com/calculator/sqm3x14rlh
+
+Krivka m(t)=(t, t^4)
+https://www.desmos.com/calculator/bqqpdtmule

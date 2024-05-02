@@ -97,7 +97,6 @@ $$ \frac{\partial F}{\partial t}(\gamma_{1}(t),\gamma_{2}(t),t) = 0. $$
 Často sa v literatúre môžeme stretnúť s rôznymi opismi obálky, ktoré však bez ďalších predpokladov nemusia definovať rovnakú množinu bodov. Príkladom je ďalšia charakterizácia obálky ako množiny limitných bodov prienikov kriviek systému. Vzťahy medzi jednotlivými charakterizáciami možno nájsť v \cite{Bru81}.  
 
 Dokonca, daný systém nemusí mať obálku. Príkladom sú sústredné kružnice s rastúcim polomerom.
-
 \begin{example} 
 Obálku systému sústredných kružníc pre $t \in I=[\frac{1}{100},2]$ rátame ako riešenie systému rovníc
 \begin{align*}
@@ -106,44 +105,36 @@ F(x, y, t) &= x^2 + y^2 - t, \\
 \end{align*}
 Z druhej rovnice máme $t=-1 \neq 0,$ teda systém nemá riešenie. Aj keď by sa nám mohlo zdať, že by obálkou mohli byť body kružnice s najväčším polomerom $\mathcal{F}_2$ a kružnice s najmenším polomerom $\mathcal{F}_{\frac{1}{100}}$, práve podmienka existencie takej krivky $\gamma(t),$ ktorá by patrila do systému kružníc $\mathcal{F}$ pre všetky $t$ z intervalu $J \subseteq  I, $ nie je splnená.
 \end{example}
-
 \begin{figure}[h]
 	\centering
 	\includegraphics[trim={0 0.35cm 0 0.85cm},clip, width=0.9\textwidth]{images/concentric_circles.pdf}
 	\caption[Sústredné kružnice.]{Sústredné kružnice na intervale $[\frac{1}{100},2]$ a krokom $\Delta t = 0,1$. V parametri $t = \frac{1}{100} $ je farba kružnice ružová, v $ t = 2 $ čierna.}
 	\label{fig:concentric_circles}
 \end{figure}
-
 Prístup, ktorý sme využili pre jednoparametrický systém kriviek, možno zovšeobecniť pre ľubovoľný jednoparametrický systém plôch v $\mathbb{E}^n.$
-
 \begin{definition}{\textbf{\textup{(Charakterizácia.)}}}
 \label{charakterizacia}
 Obálkou jednoparametrického systému plôch $ \mathcal{F} $ je množina bodov $\mathcal{E}$ daná
 $$\mathcal{E} = \{ X \in \mathbb{R}^{n} \colon \exists t \in \mathbb{R} \mid F(X, t) = \frac{\partial F}{\partial t}(X, t) = 0 \}.$$
 \end{definition}
-
 Ak by sme chápali obálku podľa definície ako množinu bodov, problém by sme mohli riešiť ako systém nelineárnych rovníc v parametri $t,$ kde chceme z rovníc 
 \begin{align*}
 F(x,y,t) &= 0, \\
 \frac{\partial F}{\partial t}(x, y, t) &= 0, \\
 \end{align*}
-eliminovať $t.$ Na riešenie nelineárneho systému dvoch rovníc síce existujú pokročilé nástroje, no eliminovaním parametra $t$ strácame informáciu o tom, na akom intervale $I$ je obálka definovaná. 
-
+eliminovať $t.$ Na riešenie nelineárneho systému dvoch rovníc síce existujú pokročilé nástroje, no eliminovaním parametra $t$ strácame informáciu o tom, na akom intervale $I$ je obálka definovaná.
 \begin{example}
 Pre náš príklad $ F(x, y, t) = (x - t)^2 + y^2 - 1 = 0 $ máme 
 $$\frac{\partial F}{\partial t}(x, y, t) = 2(t-x) = 0. $$
 Ak $t = x, $ tak $y^2 = 1.$ Teda obálku charakterizuje $ y = \pm 1, $ ako sme očakávali.
 \end{example}
-
 %\begin{figure}[h]
 %	\centering
 %	\includegraphics[trim={0.5cm 2.8cm 0.5cm 3.3cm},clip]{images/system_with_envelope_unlimited_domain.pdf}
 %	\caption[Obálka systému podľa charakterizácie.]{Modrou farbou je znázornená obálka systému podľa charakterizácie \ref{charakterizacia}.}
 %	\label{fig:system_with_envelope_unlimited_domain}
 %\end{figure}
-
 V skutočnosti sú obálkou úsečky $y=\pm 1$ definované na intervale $[-2,2]$. Tento problém možno ošetriť tak, že budeme uvažovať systémy kriviek, ktoré sú v parametri $t$ definované na celej reálnej priamke $\mathbb{R}$. 
-
 %\begin{figure}[h]
 %	\centering
 %	\includegraphics[trim={0.5cm 2.8cm 0.5cm 3.3cm},clip]{images/system_with_correct_envelope.pdf}
@@ -152,14 +143,12 @@ V skutočnosti sú obálkou úsečky $y=\pm 1$ definované na intervale $[-2,2]$
 %\end{figure}
 
 Ďalšou otázkou, ktorá prirodzene vzniká je, či patria aj časti kriviek jednoparametrického systému v koncových bodoch intervalu do obálky. Podľa defínicie \ref{definicia} a charakterizácie \ref{charakterizacia} nie. Ak by sme predsa len koncové časti pridali, mohli by sme systém v prípadoch ako kružnice, elpsy, sféry a elipsoidy ohraničiť akousi kontúrou systému. Na obr. \ref{fig:nanuk} sa nachádza vizualizácia systému s jeho kontúrou vytvorenou z obálky systému a polkružnicami v parametroch $t=-2$ a $t=2.$ Táto kontúra pripomína tvar nanukovej paličky.
-
 \begin{figure}[h]
 	\centering
 	\includegraphics[trim={0.5cm 2.8cm 0.5cm 3.3cm},clip]{images/nanuk.pdf}
 	\caption{Kontúra systému.}
 	\label{fig:nanuk}
 \end{figure}
-
 \begin{example}
 \label{example:too_complicated_equations}
 Počítajme obálku systému kriviek, znázorneného na obrázku \ref{fig:too_complicated_equations}, daného vzťahmi
@@ -174,14 +163,12 @@ F_t^\lambda &= 24t^5-20yt^4+4y^2t^3+28t^3-24yt^2+4y^2t+4t-4y. \\
 \end{align*}
 Na obrázku \ref{fig:too_complicated_equations} je znázornený tento systém elíps pre $t \in [-2,2]$ s krokom $\Delta t=0.1$. Obálku nájdeme ako riešenie rovníc $F^\lambda \cap F_t^\lambda. $ Rovnice sú však príliš vysokého stupňa v~parametri $t$, preto nevieme implicitnú rovnicu obálky bez vhodného nástroja vyjadriť. V ďalšej časti rozoberieme známe prístupy k výpočtu.
 \end{example}
-
 %\begin{figure}[h]
 %	\centering
 %	\includegraphics[trim={0 0.35cm 0 0.85cm},clip, width=\textwidth]{images/too_complicated_equations.pdf}
 %	\caption[Systém elíps.]{Systém elíps, pre $t=-2$ ružová elipsa, pre $t=2$ čierna elipsa.}
 %	\label{fig:too_complicated_equations}
 %\end{figure}
-
 \section{Výpočet obálky}
 Vo väčšine prípadov sú rovnice charakterizujúce obálku systému plôch príliš vysokého stupňa v parametri $t$ a nedokážeme z nich ľahko odvodiť rovnicu obálky, preto pristupujeme aj k numerickým riešeniam. Na začiatok si však rozoberme existujúce analytické prístupy.
 \subsection{Prístup algebraickej geometrie}
@@ -189,30 +176,22 @@ Dokonca aj v prípade jednoduchého príkladu \ref{example:too_complicated_equat
 %Najprv vypočítame Gröbnerovu bázu Buchbergerovým algoritmom pre ideál generovaný sústavou polynomických rovníc, ktorá obsahuje všetky premenné vrátane tej, ktorú chceme eliminovať. Z Gröbnerovej bázy vyberieme polynómy, ktoré obsahujú premennú, ktorú chceme eliminovať. Tieto polynómy použijeme na vyjadrenie tejto premennej v závislosti od ostatných premenných. Po vyriešení nových rovníc získame výraz, ktorý opisuje vzťah medzi zvyšnými premennými a eliminovanou premennou. Týmto spôsobom úspešne eliminujeme premennú.
 %Pokúsme sa vypočítať Gröbnerovu bázu príkladu \ref{example:too_complicated_equations} vzhľadom na lexikografické usporiadanie monómov $t > x > y $. 
 Keďže výpočet Gröbnerovej bázy aj pre príklad \ref{example:too_complicated_equations} trvá pomerne dlho, neuvádzame tu postup a výsledok možno nájsť v \altref{kap:priloha1}{Prílohe A}. 
-
 %Gröbnerova báza vzhľadom na iné usporiadanie, napr. grevlex je zvyčajne vypočítaná oveľa rýchlejšie a jej polynómy majú krajšie koeficienty, no na druhej strane, tento prístup nie je vo všeobecnosti možné použiť na odstránenie premennej $t$ z rovníc. 
 %Spôsob, ako nájsť polynóm, ktorý leží v prvom eliminačnom ideáli, ktorý je nezávislý na Gröbnerovej bázach a monómických usporiadaniach, využíva teóriu rezultantov. 
-
 Gröbnerovu bázu možno určiť vzhľadom na usporiadanie monómov, existujú aj iné metódy na riešenie polynomických rovníc, ktoré nezávisia na usporiadaní monómov. Jednou z metód je výpočet rezultantu, determinantu špeciálnej matice polynómov.
 Hoci výpočet determinantov veľkých matíc je výpočtovo aj časovo náročný, poznáme metódy, ako vypočítať determinant efektívnejšie. Navyše táto metóda, rovnako ako metóda založená na eliminačnej teórii s použitím Gröbnerových báz, nám vypočíta správnu obálku len vtedy, ak uvažujeme parameter $t$ jednoparametrického systému z celej reálnej priamky. 
-
 %Ak obmedzíme oblasť parametra na interval, tak obálka zvyčajne nemôže byť daná implicitnou rovnicou, a preto je potrebné nájsť nejakú parametrizáciu obálky. 
-
 %Pri použití rezultantov máme lepšiu kontrolu nad zložitosťou výpočtu. Pre dané dva polynómy totiž vieme, ako sa konštruuje rezultant, a tak vieme odhadnúť, s akými veľkými polynómami sa bude počas výpočtu manipulovať, avšak pri hľadaní Gröbnerovej bázy je ťažké odhadnúť, aké zložité polynómy sa behom algoritmu vyskytnú.
-
-V príklade \ref{example:too_complicated_equations} uvedieme výsledný polynóm $Res(F^\lambda , F_t^\lambda , t)$ a na obr. \ref{fig:resultant} obálku nájdenú pomocou rezultantu. 
+V príklade \ref{example:too_complicated_equations} uvedieme výsledný polynóm $Res(F^\lambda , F_t^\lambda , t)$ a na obr. \ref{fig:too_complicated_equations} obálku nájdenú pomocou rezultantu. 
 
 $ Res(F^\lambda , F_t^\lambda , t) = 191102976x^{10} + 262144x^8y^6 - 9584640x^8y^4 + 83165184x^8y^2 - 633470976x^8 - 16384x^6y^{10} - 81920x^6y^8 - 14483456x^6y^6 - 113311744x^6y^4 + 96419840x^6y^2 + 698368000x^6 - 16384x^4y^{12} - 294912x^4y^{10} - 2998272x^4y^8 - 18284544x^4y^6 - 74956800x^4y^4 - 184320000x^4y^2 - 256000000x^4. $
-
 %[trim={0 0.35cm 0 0.85cm},clip
-
 \begin{figure}[h]
 	\centering
 	\includegraphics{images/resultant.eps}
 	\caption[Obálka nájdená pomocou rezultantu.]{Systém elíps, pre $t=-2$ je elipsa vykreslená ružovou farbou, pre $t=2$ čiernou. Modrou farbou je znázornená obálka vypočítaná rezultantom.}
 	\label{fig:too_complicated_equations}
 \end{figure}
-
 \subsection{Prístup projektívnej geometrie}
 Body duálneho projektívneho priestoru $\mathbb{P}^3 $ možno stotožniť s nadrovinami v $\mathbb{R}^3$. Plochu v duálnom projektívnom priestore možno teda interpretovať ako množinu všetkých jej dotykových nadrovín. Pomocou duálneho prístupu sa dá dokázať, že obálky jednoparametrických systémov sú pre racionálne vstupné údaje racionálne. Potrebné vybudovanie teórie možno nájsť v \cite{Pott01}, z čoho čerpajú články s mnohými výsledkami \cite{Pet08}, \cite{Pet98} a príklady pre výpočet obálky možno nájsť v \cite{Vra22}.
 \begin{example}
@@ -226,12 +205,10 @@ máme krivku $m_2(t) = (t^3, t^2, \frac{t}{2}).$
 Kružnice zodpovedajúce $t < 0$ sú negatívne orientované, pre $t > 0$ pozitívne orientované, pre $t = 0$ je prvok $\mathcal{F}_0 \in \mathcal{F}$ bod $ (0, 0) \in m(t), $ čo je kružnica s nulovým polomerom a bez určenej orientácie.
 Krivka $m(t)$ je ortogonálna projekcia oboch kriviek $m_1$ a $m_2$ a často sa nazýva stredná os \textit{(medial axis)} jednoparametrického systému.
 \end{example}
-
 Rovnakým spôsobom môžeme definovať jednoparametrický systém sfér v $\mathbb{R}^3$ ako obraz kriviek v $\mathbb{R}^4$.
 Jedným z dôležitých výsledkov je, že pomocou tohto prístupu možno rozhodnúť o reálnosti obálky a to tak, že systém korešpondujúci s krivkou $m(t) \subset \mathbb{R}^{n+1}$ má reálnu obálku práve vtedy, keď pre všetky $t \in I $ platí 
 $$\langle \dot{m}(t), \dot{m}(t) \rangle \geq 0$$ 
 a rovnosť platí len pre izolované hodnoty $t$, kde za skalárny súčin vezmeme pseudo-skalárny súčin vyjadrený ako $\langle \dot{m}(t), \dot{m}(t) \rangle = m_1^2(t) + m_2^2(t) + \ldots + m_n^2(t) - m_{n+1}^2(t).$
-
 Pre príklad tak 4 máme
 \begin{align*}
 &\langle \dot{m}_1(t), \dot{m}_1(t) \rangle = 9t^4 + 4t^2 \geq 0, \text{ pre } t \in \mathbb{R}, \\
@@ -436,14 +413,14 @@ Z toho môžeme usúdiť, že charakteristická krivka $c_1$ predstavuje kružni
     \centering
     \begin{subfigure}[t]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{images/cornetto.png}
+        \includegraphics[width=\textwidth]{images/cornetto_spheres.png}
 	\caption[Jednoparametrický systém sfér.]{Jednoparametrický systém sfér z príkladu \ref{exam:obalka_sfer} pre $t \in [0,10]$ s krokom $\Delta t = 0,2.$ }
 	\label{fig:cornetto}
     \end{subfigure}
     ~
     \begin{subfigure}[t]{0.45\textwidth}
         \centering
-       \includegraphics[width=\textwidth]{images/envelope_cornetto.png}
+       \includegraphics[width=\textwidth]{images/cornetto_en.png}
 	\caption[Obálka jednoparametrického systém sfér.]{Obálka jednoparametrického systém sfér z príkladu \ref{exam:obalka_sfer} zostrojená z charakteristických kružníc pre $t \in [0,10]$ s krokom $\Delta t = 0,2.$ }
     \end{subfigure}
     \caption{Obálka sfér.}

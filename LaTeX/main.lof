@@ -7,7 +7,7 @@
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Obálka nájdená pomocou rezultantu.}}{10}{figure.caption.13}%
 \contentsline {figure}{\numberline {1.5}{\ignorespaces Reálnosť obálky.}}{11}{figure.caption.14}%
 \contentsline {figure}{\numberline {1.6}{\ignorespaces Systém priamok v normálovom tvare.}}{12}{figure.caption.15}%
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Regulárne riešenia a obálka.}}{14}{figure.caption.16}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Regulárne riešenia a obálka.}}{13}{figure.caption.16}%
 \contentsline {figure}{\numberline {1.8}{\ignorespaces Charakteristická kružnica.}}{16}{figure.caption.17}%
 \contentsline {figure}{\numberline {1.9}{\ignorespaces Stred a polomer charakteristickej kružnice.}}{17}{figure.caption.18}%
 \contentsline {figure}{\numberline {1.10}{\ignorespaces Obálka sfér.\relax }}{18}{figure.caption.19}%
@@ -22,10 +22,12 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Jupyter Notebook.}}{41}{figure.caption.34}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Softvér PrusaSlicer.}}{43}{figure.caption.37}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Softvér Pronterface.}}{44}{figure.caption.39}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Schéma procesu od vstupu až po výstup.}}{45}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Schéma procesu.}}{45}{figure.caption.40}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Jednoparametrický systém elíps na parabole.}}{49}{figure.caption.41}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Prvý pokus 3D tlače.}}{50}{figure.caption.42}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Plocha v 3D tlačiarni.}}{51}{figure.caption.43}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Doplnenie pletiva.}}{52}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Jednoparametrický systém elíps.}}{49}{figure.caption.41}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Obálka z príkladu \ref {ex:bienert}.}}{50}{figure.caption.42}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Obálka z príkladu \ref {ex:helix}.}}{50}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Obálka z príkladu \ref {ex:heart}.}}{51}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Otvorené hrany.}}{51}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Chybné doplnenie pletiva.}}{53}{figure.caption.47}%
 \addvspace {10\p@ }

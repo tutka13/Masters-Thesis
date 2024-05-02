@@ -160,7 +160,7 @@ Tlačiareň, v ktorej sme plochy tlačili sa nazýva Original Prusa i3 MK3S+. V�
 \subsection{PrusaSlicer}
 Popis procesu v programe PrusaSlicer vo verzii 2.7.2.
 \begin{enumerate}
-\item Načítanie modelu: Používateľ načíta do PrusaSliceru 3D model,ktorý chce vytlačiť, vo vhodnom formáte.
+\item Načítanie modelu: Používateľ načíta do PrusaSliceru 3D model, ktorý chce vytlačiť, vo vhodnom formáte.
 
 \item Nastavenie parametrov tlače: Používateľ nastaví parametre tlače, ako je typ tlačiarne, materiál, hrúbka vrstvy, percento výplne \textit{(infill)}, teplota tlače atď. Tieto parametre ovplyvňujú kvalitu a vlastnosti vytlačeného modelu.
 
@@ -202,11 +202,12 @@ Stiahli sme jeho poslednú veziu 2.0.1 na webovej lokalite \cite{Pronterface}. P
 \end{figure}
 
 \section{Zhrnutie procesu}
-Najprv sme pripravili vstupné parametre v textovom súbore, ktorý sme načítali pred spustením skriptu. Python skript vygeneroval objekty v Blendri, kde bolo potrebné objekty vhodne pospájať a doplniť pletivo. Vytvorené plochy sme uzavreli a exportovali do programom PrusaSlicer podporovaného formátu, v našom prípade \verb|.stl|, ktorý pre plochy pripravil \verb|.gcode| na 3D tlač. Súbor \verb|.gcode| sa následne vložil na SD kartu alebo do softvéru Pronterface a mohli sme realizovať tlač po načítaní SD karty tlačiarňou alebo pripojení počítaču k tlačiarni.
+Najprv sme pripravili vstupné parametre v textovom súbore, ktorý sme načítali pred spustením skriptu. Python skript vygeneroval objekty v Blendri, kde bolo potrebné objekty vhodne pospájať, doplniť pletivo. Vytvorené plochy sme uzavreli a exportovali do programom PrusaSlicer podporovaného formátu, v našom prípade \verb|.stl|. PrusaSlicer pripravil pre plochy \verb|.gcode| na 3D tlač. Súbor \verb|.gcode| sa následne vložil na SD kartu alebo do softvéru Pronterface a mohli sme realizovať tlač po načítaní SD karty tlačiarňou alebo pripojení počítaču k tlačiarni.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[trim={2.8cm 26cm 0cm 1cm},clip]{images/pipeline3.pdf}
-	\caption[Schéma procesu od vstupu až po výstup.]{Schéma procesu.}
+	\caption[Schéma procesu.]{Schéma procesu od vstupu až po výstup.}
 	\label{fig:pipeline}
 \end{figure}
+

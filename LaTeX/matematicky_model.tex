@@ -34,7 +34,20 @@ je každý taký algebraický výraz, závisiaci od \(a_{11}, a_{12}, a_{22}, a_
 
 \begin{theorem}
 Nasledujúce číselné výrazy sú invariantmi krivky druhého stupňa, vyjadrenej rovnicou $f(x, y)$.
-\begin{align*}
+%\begin{align*}
+%\Delta = \det \begin{pmatrix} 
+%a_{11} & a_{12} & a_{13} \\ 
+%a_{12} & a_{22} & a_{23} \\
+%a_{13} & a_{23} & a_{33} \end{pmatrix}, \
+%\Delta_{33} = \det \begin{pmatrix} a_{11} & a_{12} \\ a_{12} & a_{22} \end{pmatrix}, \\
+%T = \det \begin{pmatrix} 
+%a_{22} & a_{23} \\
+%a_{32} & a_{33}  \end{pmatrix} + \det \begin{pmatrix} 
+%a_{11} & a_{13} \\ 
+%a_{31} & a_{33} \end{pmatrix}, \\
+%s = a_{11} + a_{22}.
+%\end{align*}
+\begin{gather*}
 \Delta = \det \begin{pmatrix} 
 a_{11} & a_{12} & a_{13} \\ 
 a_{12} & a_{22} & a_{23} \\
@@ -46,7 +59,7 @@ a_{32} & a_{33}  \end{pmatrix} + \det \begin{pmatrix}
 a_{11} & a_{13} \\ 
 a_{31} & a_{33} \end{pmatrix}, \\
 s = a_{11} + a_{22}.
-\end{align*}
+\end{gather*}
 \end{theorem}
 Z tohto možno odvodiť nasledujúcu klasifikáciu kužeľosečiek.
 
@@ -231,11 +244,10 @@ $$
 $$
 kde jej prvky $\dot{A}(t), \dots, \dot{F}(t)$ sú funkcie parametra $t \in I,$ ktoré definujú kužeľosečku $\dot{Q}_t$ danú rovnicou 
 $$\dfrac{\partial f(x, y, t)}{\partial t} = \dot{A}(t)x^2 + \dot{B}(t)xy + \dot{C}(t)y^2 + \dot{D}(t)x + \dot{E}(t)y + \dot{F}(t) = 0.$$
-Označme determinant matice 
-$$\Delta(t) \vcentcolon = \det \dot{M}(t), $$
-subdeterminant matice, ktorá vznikne odstránením tretieho riadku a tretieho stĺpca 
-$$\Delta_{33}(t) \vcentcolon = \det \dot{M}_{33}(t)$$
-a $$
+Označme invarianty 
+\begin{gather*}
+\Delta(t) \vcentcolon = \det \dot{M}(t), \\
+\Delta_{33}(t) \vcentcolon = \det \dot{M}_{33}(t), \\
 T(t) \vcentcolon = \det \left( \begin{matrix}
 \dot{C} & \frac{\dot{E}}{2} \\ 
 \frac{\dot{E}}{2} & \dot{F}
@@ -243,8 +255,7 @@ T(t) \vcentcolon = \det \left( \begin{matrix}
 \dot{A} & \frac{\dot{D}}{2} \\ 
 \frac{\dot{D}}{2} & \dot{F}
 \end{matrix} \right).
-$$
-
+\end{gather*}
 \subsection{Zmena bázy elíps}
 Nech $m(t) \colon  I \subseteq \mathbb{R} \rightarrow \mathbb{R}^2$ je aspoň dvakrát diferencovateľná krivka, napíšme rovnicu jednoparametrického systému elíps $Q$ so stredom na krivke $m(t)$, hlavnou polosou $a$ v smere vektora $\dot{m}(t)$ a vedľajšou polosou $b$ v smere normálového vektora $\vec{n}$ ku krivke $m(t)$. Uvažujme $\vec{n}=(-\dot{m}_2, \dot{m}_1). $ Vydelením normou vektorov $\dot{m}(t)$ a $\vec{n}$ dostávame novú ortonormálnu bázu tvorenú stĺpcovými vektormi matice $P(t).$ Keďže sme prešli od štandardnej bázy k ortonormálnej báze, matica $P(t)$ je ortogonálna, a teda
 %$$
@@ -358,13 +369,13 @@ $$
 $$
 pribudnú ďalšie dva prieniky
 $$
-P_{3,4} = m(t) + \rho(t) \vec{n}(t) \pm l(t) \vec{t},$$
-kde $l(t)=\frac{a}{b} \sqrt{b^2 - \rho^2(t)}.$
+P_{3,4} = m(t) + \rho(t) \vec{n}(t) \pm d(t) \vec{t},$$
+kde $d(t)=\frac{a}{b} \sqrt{b^2 - \rho^2(t)}.$
 V prípade rovnosti
 $$
 \kappa(t) = \lambda,
 $$
-je $\rho(t) = b$ a $l(t) = 0$  a prieniky $P_{1,2}$ a $P_{3,4}$ sa zhodujú.
+je $\rho(t) = b$ a $d(t) = 0$  a prieniky $P_{1,2}$ a $P_{3,4}$ sa zhodujú.
 
 \section{Obálka elipsoidov}
 Pododobne ako pre elipsy odvodíme rovnice obálky pre elipsoidy. V tomto prípade parameter $t$ pre lepšiu prehľadnosť vynechávame.
@@ -400,29 +411,11 @@ $$
 $$
 kde jej prvky $A, \dots, F$ sú funkcie $\dot{A}(t), \dots, \dot{J}(t)$ parametra $t \in I,$ a definujú plochu druhého stupňa $Q_t$ danú rovnicou 
 $$\dfrac{\partial f(x, y, z, t)}{\partial t} = \dot{A}x^2 + \dot{B}y^2 + \dot{C}z^2 + \dot{D}xy + \dot{E}xz + \dot{F}yz + \dot{G}x + \dot{H}y + \dot{I}z + \dot{J} = 0.$$
-Označme determinant matice 
-$$\Delta(t) \vcentcolon =  \det \dot{M}(t), $$
-subdeterminant matice, ktorá vznikne odstránením štvrtého riadku a štvrtého stĺpca 
-$$ \delta(t) \vcentcolon = \det \dot{M}_{44}(t) $$
-%$$\delta(t) := \det \dot{M}_{44}(t),$$
-%$$ T(t) = \left( \begin{bmatrix}
-%\dot{A} & \dfrac{D}{2} \\ 
-%\dot{\dfrac{D}{2}} & \dot{B}
-%\end{bmatrix} right) + \left( \begin{bmatrix}
-%\dot{B} & \dfrac{F}{2} \\ 
-%\dot{\dfrac{F}{2}} & \dot{C}
-%\end{bmatrix} right) + \left( \begin{bmatrix}
-%\dot{C} & \dfrac{E}{2} \\ 
-%\dot{\dfrac{E}{2}} & \dot{A}
-%\end{bmatrix} right),$$
-%$$ s(t) = A + B + C,
-%$$ 
-%$$
-%\Delta'= \det \dot{M}_{11}(t) + \det \dot{M}_{22}(t) +\det \dot{M}_{33}(t).
-%$$
-a ďalšie invarianty plôch druhého stupňa
-\begin{align*}
-T(t) & = \det \left( \begin{matrix}
+Označme invarianty
+\begin{gather*} 
+\Delta(t) \vcentcolon =  \det \dot{M}(t), \\
+\Delta_{44}(t) \vcentcolon = \det \dot{M}_{44}(t), \\
+T(t) = \det \left( \begin{matrix}
 \dot{A} & \frac{\dot{D}}{2} \\ 
 \frac{\dot{D}}{2} & \dot{B}
 \end{matrix} \right) + \det \left( \begin{matrix}
@@ -432,9 +425,41 @@ T(t) & = \det \left( \begin{matrix}
 \dot{C} & \frac{\dot{E}}{2} \\ 
 \frac{\dot{E}}{2} & \dot{A}
 \end{matrix} \right), \\
-S(t) &= \det \dot{M}_{11}(t) + \det \dot{M}_{22}(t) + \det \dot{M}_{33}(t).
-\end{align*}
-
+S(t) = \det \dot{M}_{11}(t) + \det \dot{M}_{22}(t) + \det \dot{M}_{33}(t).
+\end{gather*} 
+%$$\Delta(t) \vcentcolon =  \det \dot{M}(t), $$
+%subdeterminant matice, ktorá vznikne odstránením štvrtého riadku a štvrtého stĺpca 
+%$$ \delta(t) \vcentcolon = \det \dot{M}_{44}(t) $$
+%%$$\delta(t) := \det \dot{M}_{44}(t),$$
+%%$$ T(t) = \left( \begin{bmatrix}
+%%\dot{A} & \dfrac{D}{2} \\ 
+%%\dot{\dfrac{D}{2}} & \dot{B}
+%%\end{bmatrix} right) + \left( \begin{bmatrix}
+%%\dot{B} & \dfrac{F}{2} \\ 
+%%\dot{\dfrac{F}{2}} & \dot{C}
+%%\end{bmatrix} right) + \left( \begin{bmatrix}
+%%\dot{C} & \dfrac{E}{2} \\ 
+%%\dot{\dfrac{E}{2}} & \dot{A}
+%%\end{bmatrix} right),$$
+%%$$ s(t) = A + B + C,
+%%$$ 
+%%$$
+%%\Delta'= \det \dot{M}_{11}(t) + \det \dot{M}_{22}(t) +\det \dot{M}_{33}(t).
+%%$$
+%a ďalšie invarianty plôch druhého stupňa
+%\begin{align*}
+%T(t) & = \det \left( \begin{matrix}
+%\dot{A} & \frac{\dot{D}}{2} \\ 
+%\frac{\dot{D}}{2} & \dot{B}
+%\end{matrix} \right) + \det \left( \begin{matrix}
+%\dot{B} & \frac{\dot{F}}{2} \\ 
+%\frac{\dot{F}}{2} & \dot{C}
+%\end{matrix} \right) + \det \left(  \begin{matrix}
+%\dot{C} & \frac{\dot{E}}{2} \\ 
+%\frac{\dot{E}}{2} & \dot{A}
+%\end{matrix} \right), \\
+%S(t) &= \det \dot{M}_{11}(t) + \det \dot{M}_{22}(t) + \det \dot{M}_{33}(t).
+%\end{align*}
 \subsection{Zmena bázy elipsodiov}
 Upravme rovnice pre obálku sféry tak, aby zodpovedali obálke elipsoidov. Vezmime sféru, zmeňme súradnicový systém so štandardnou bázou  $\vec{e}_1, \vec{e}_2, \vec{e}_3$ na lokálny súradnicový system krivky s bázou Frenetovho repéra $\vec{t}, \vec{n}, \vec{b}$ v každom bode krivky $m(t).$ Tak budeme môcť upraviť sféru na elipsoid tak, aby $a$ zodpovedalo škálovaniu v dotykovom smere priestorovej krivky $m(t)$ a $b$ zodpovedalo škálovaniu v normálovom a binormálovom smere. Frenetov repér je ortonormálna báza, ktorú tvoria stĺpcové vektory matice $P(t),$ kde
 $$
@@ -454,7 +479,6 @@ Keďže vyjadrenia nových vektorov sú pri prepise do súradníc alebo aj vyč�
 \vec{b} &= \dfrac{(\dot{m}_2^2 + \dot{m}_3^2, -\dot{m}_1 \dot{m}_2, -\dot{m}_1 \dot{m}_3)}{\sqrt{\dot{m}_1^2 + \dot{m}_3^2}\sqrt{\dot{m}_1^2 + \dot{m}_2^2 + \dot{m}_3^2}},
 \end{align*}
 kde je $\dot{m_2} \neq 0$ a $\dot{m_3} \neq 0$. Ak by boli, vieme nájsť iné ortonormálne vektory $\vec{n}, \vec{b}$ v normálovej rovine krivky $m(t)$ podobného tvaru. 
-
 
 Potom matica prechodu $P^{-1}$ má tvar
 $$
@@ -595,7 +619,6 @@ $$
 \end{figure}
 \section{Softvér Maxima}
 Na všetky výpočty v tejto kapitole bol použitý voľne dostupný softvér počítačovej algebry Maxima s grafickým užívateľským rozhraním wmMaxima. Celý balík a dokumentácia sú dostupné na \cite{MaximaDoc}, \cite{MaximaDownload}.
-
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{images/maxima.png}

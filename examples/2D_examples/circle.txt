@@ -4,6 +4,18 @@ System:
 Derivation:
 \frac{2 \left(- a^{2} \left(x \cos{\left(t \right)} + y \sin{\left(t \right)} - 1\right) + b^{2} \left(x \cos{\left(t \right)} + y \sin{\left(t \right)}\right)\right) \left(x \sin{\left(t \right)} - y \cos{\left(t \right)}\right)}{a^{2} b^{2}} = 0
 Time:
-0.6981282234191895
+1.5121018886566162
+Determinant:
+0
 Subdeterminant:
 - \frac{\left(a - b\right)^{2} \left(a + b\right)^{2}}{a^{4} b^{4}}
+Curvature:
+1
+Ratio:
+\left|{b^{2} - \frac{b}{a^{2}}}\right|
+Rho:
+\frac{\left|{\frac{b^{2} \left(\sin^{2}{\left(t \right)} + \cos^{2}{\left(t \right)}\right)^{2}}{a^{2} - b^{2}}}\right|}{\sqrt{\left(- \sin^{2}{\left(t \right)} - \cos^{2}{\left(t \right)}\right)^{2} \cos^{2}{\left(t \right)} + \left(\sin^{2}{\left(t \right)} + \cos^{2}{\left(t \right)}\right)^{2} \sin^{2}{\left(t \right)}}}
+p_t:
+- x \sin{\left(t \right)} + y \cos{\left(t \right)}
+q_t:
+- \frac{b^{2} \left(\sin^{2}{\left(t \right)} + \cos^{2}{\left(t \right)}\right)^{2}}{- a^{2} + b^{2}} + x \left(- \sin^{2}{\left(t \right)} - \cos^{2}{\left(t \right)}\right) \cos{\left(t \right)} - y \left(\sin^{2}{\left(t \right)} + \cos^{2}{\left(t \right)}\right) \sin{\left(t \right)} - \left(- \sin^{2}{\left(t \right)} - \cos^{2}{\left(t \right)}\right) \cos^{2}{\left(t \right)} + \left(\sin^{2}{\left(t \right)} + \cos^{2}{\left(t \right)}\right) \sin^{2}{\left(t \right)}

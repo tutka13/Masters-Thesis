@@ -29,6 +29,10 @@
 \usepackage[labelformat=simple]{subcaption}
 \renewcommand\thesubfigure{(\alph{subfigure})}
 
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
 %\usepackage{acro}
 
 \newtheorem{definition}{Definícia}[chapter]
@@ -232,7 +236,7 @@ doc. RNDr. Pavlovi Chalmovianskému, PhD. za odborné vedenie diplomovej práce,
 
 \input implementacia.tex
 
- \input vysledky_prace.tex
+\input vysledky_prace.tex
 
 \input zaver.tex
 
@@ -385,16 +389,11 @@ Pri príprave tejto práce boli použité nástroje UI \cite{Deepl} a \cite{Chat
 %Zoznam príloh je súčasťou obsahu.
 
 \newpage
-%\addcontentsline{toc}{chapter}{Príloha A}
+\appendix
+\setcounter{figure}{0} 
+\renewcommand\thefigure{B.\arabic{figure}}
 \input AppendixA.tex
-%
-%\addcontentsline{toc}{chapter}{Appendix B}
-%\input AppendixB.tex
-
+%\addcontentsline{toc}{chapter}{Príloha A}
+\input AppendixB.tex
+%\addcontentsline{toc}{chapter}{Príloha B}
 \end{document}
-
-
-
-
-
-

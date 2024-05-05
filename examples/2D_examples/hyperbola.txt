@@ -1,11 +1,21 @@
-hyperbola Matrix([[2*cosh(t)], [sinh(t)]])
+hyperbola Matrix([[c*cosh(t)], [d*sinh(t)]])
 System:
-\frac{- a^{2} b^{2} \cdot \left(5 \cosh{\left(2 t \right)} - 3\right) + 2 a^{2} \left(- x \cosh{\left(t \right)} + 2 y \sinh{\left(t \right)} + 2\right)^{2} + 2 b^{2} \left(2 x \sinh{\left(t \right)} + y \cosh{\left(t \right)} - \frac{5 \sinh{\left(2 t \right)}}{2}\right)^{2}}{a^{2} b^{2} \cdot \left(5 \cosh{\left(2 t \right)} - 3\right)} = 0
+\frac{- a^{2} b^{2} \left(c^{2} \sinh^{2}{\left(t \right)} + d^{2} \cosh^{2}{\left(t \right)}\right) + a^{2} \left(c d + c y \sinh{\left(t \right)} - d x \cosh{\left(t \right)}\right)^{2} + b^{2} \left(c \left(c \cosh{\left(t \right)} - x\right) \sinh{\left(t \right)} + d \left(d \sinh{\left(t \right)} - y\right) \cosh{\left(t \right)}\right)^{2}}{a^{2} b^{2} \left(c^{2} \sinh^{2}{\left(t \right)} + d^{2} \cosh^{2}{\left(t \right)}\right)} = 0
 Derivation:
-\frac{8 \cdot \left(2 a^{2} \left(- x \cosh{\left(t \right)} + 2 y \sinh{\left(t \right)} + 2\right) - b^{2} \left(- 2 x \cosh{\left(t \right)} + 4 y \sinh{\left(t \right)} + 25 \sinh^{4}{\left(t \right)} + 10 \sinh^{2}{\left(t \right)} + 5\right)\right) \left(2 x \sinh{\left(t \right)} + y \cosh{\left(t \right)} - \frac{5 \sinh{\left(2 t \right)}}{2}\right)}{a^{2} b^{2} \left(5 \cosh{\left(2 t \right)} - 3\right)^{2}} = 0
+\frac{a^{2} c d \left(- c d + c y \sin{\left(t \right)} + d x \cos{\left(t \right)}\right) \left(c^{2} \sin{\left(2 t \right)} - 2 c x \sin{\left(t \right)} - d^{2} \sin{\left(2 t \right)} + 2 d y \cos{\left(t \right)}\right) - 2 b^{2} \left(c \left(c \cos{\left(t \right)} - x\right) \sin{\left(t \right)} - d \left(d \sin{\left(t \right)} - y\right) \cos{\left(t \right)}\right) \left(c^{4} \sin^{4}{\left(t \right)} - 2 c^{2} d^{2} \sin^{4}{\left(t \right)} + 2 c^{2} d^{2} \sin^{2}{\left(t \right)} - c^{2} d^{2} + c^{2} d y \sin{\left(t \right)} + c d^{2} x \cos{\left(t \right)} + d^{4} \sin^{4}{\left(t \right)} - 2 d^{4} \sin^{2}{\left(t \right)} + d^{4}\right)}{a^{2} b^{2} \left(c^{2} \sin^{2}{\left(t \right)} + d^{2} \cos^{2}{\left(t \right)}\right)^{2}} = 0
 Time:
-10.22841215133667
+75.66770100593567
 Determinant:
-(20480*sinh(t)**8*sinh(2*t) - 25600*sinh(t)**7*cosh(t)*cosh(2*t) + 15360*sinh(t)**7*cosh(t) + 20480*sinh(t)**6*sinh(2*t)*cosh(t)**2 - 19200*sinh(t)**5*cosh(t)**3*cosh(2*t) + 11520*sinh(t)**5*cosh(t)**3 + 7680*sinh(t)**4*sinh(2*t)*cosh(t)**4 - 4800*sinh(t)**3*cosh(t)**5*cosh(2*t) + 2880*sinh(t)**3*cosh(t)**5 + 1280*sinh(t)**2*sinh(2*t)*cosh(t)**6 - 400*sinh(t)*cosh(t)**7*cosh(2*t) + 240*sinh(t)*cosh(t)**7 + 80*sinh(2*t)*cosh(t)**8)/(625*a**4*b**2*cosh(2*t)**4 - 1500*a**4*b**2*cosh(2*t)**3 + 1350*a**4*b**2*cosh(2*t)**2 - 540*a**4*b**2*cosh(2*t) + 81*a**4*b**2)
+0
 Subdeterminant:
-- \frac{8 \left(a - b\right)^{2} \left(a + b\right)^{2} \left(\left(5 \cosh{\left(2 t \right)} - 3\right)^{2} \left(\cosh{\left(4 t \right)} - 1\right) + 2 \left(50 \sinh^{6}{\left(t \right)} + 135 \sinh^{4}{\left(t \right)} + 152 \sinh^{2}{\left(t \right)} - 50 \cosh^{6}{\left(t \right)} + 51\right)^{2}\right)}{a^{4} b^{4} \left(5 \sinh^{2}{\left(t \right)} + 1\right)^{4} \left(5 \cosh{\left(2 t \right)} - 3\right)^{2}}
+- \frac{c^{2} d^{2} \left(a - b\right)^{2} \left(a + b\right)^{2}}{a^{4} b^{4} \left(c^{2} \sinh^{2}{\left(t \right)} + d^{2} \sinh^{2}{\left(t \right)} + d^{2}\right)^{2}}
+Curvature:
+\frac{\left|{c d}\right|}{\left(c^{2} \sinh^{2}{\left(t \right)} + d^{2} \cosh^{2}{\left(t \right)}\right)^{1.5}}
+Ratio:
+\left|{b^{2} - \frac{b}{a^{2}}}\right|
+Rho:
+\frac{\left|{\frac{b^{2} \left(c^{2} \sinh^{2}{\left(t \right)} + d^{2} \cosh^{2}{\left(t \right)}\right)^{2}}{a^{2} - b^{2}}}\right|}{\sqrt{c^{2} \left(c d \sinh^{2}{\left(t \right)} - c d \cosh^{2}{\left(t \right)}\right)^{2} \sinh^{2}{\left(t \right)} + d^{2} \left(- c d \sinh^{2}{\left(t \right)} + c d \cosh^{2}{\left(t \right)}\right)^{2} \cosh^{2}{\left(t \right)}}}
+p_t:
+- c^{2} \sinh{\left(t \right)} \cosh{\left(t \right)} + c x \sinh{\left(t \right)} - d^{2} \sinh{\left(t \right)} \cosh{\left(t \right)} + d y \cosh{\left(t \right)}
+q_t:
+- \frac{b^{2} \left(c^{2} \sinh^{2}{\left(t \right)} + d^{2} \cosh^{2}{\left(t \right)}\right)^{2}}{- a^{2} + b^{2}} - c d \left(- c d \sinh^{2}{\left(t \right)} + c d \cosh^{2}{\left(t \right)}\right) \cosh^{2}{\left(t \right)} - c d \left(c d \sinh^{2}{\left(t \right)} - c d \cosh^{2}{\left(t \right)}\right) \sinh^{2}{\left(t \right)} + c y \left(c d \sinh^{2}{\left(t \right)} - c d \cosh^{2}{\left(t \right)}\right) \sinh{\left(t \right)} + d x \left(- c d \sinh^{2}{\left(t \right)} + c d \cosh^{2}{\left(t \right)}\right) \cosh{\left(t \right)}

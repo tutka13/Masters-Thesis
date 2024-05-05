@@ -1,9 +1,17 @@
-ellipse Matrix([[2*cos(t)], [sin(t)]])
+ellipse Matrix([[c*cos(t)], [d*sin(t)]])
 System:
-\frac{- a^{2} b^{2} \cdot \left(3 \sin^{2}{\left(t \right)} + 1\right) + a^{2} \left(x \cos{\left(t \right)} + 2 y \sin{\left(t \right)} - 2\right)^{2} + b^{2} \left(2 x \sin{\left(t \right)} - y \cos{\left(t \right)} - \frac{3 \sin{\left(2 t \right)}}{2}\right)^{2}}{a^{2} b^{2} \cdot \left(3 \sin^{2}{\left(t \right)} + 1\right)} = 0
+\frac{- a^{2} b^{2} \left(c^{2} \sin^{2}{\left(t \right)} + d^{2} \cos^{2}{\left(t \right)}\right) + a^{2} \left(- c d + c y \sin{\left(t \right)} + d x \cos{\left(t \right)}\right)^{2} + b^{2} \left(c \left(c \cos{\left(t \right)} - x\right) \sin{\left(t \right)} - d \left(d \sin{\left(t \right)} - y\right) \cos{\left(t \right)}\right)^{2}}{a^{2} b^{2} \left(c^{2} \sin^{2}{\left(t \right)} + d^{2} \cos^{2}{\left(t \right)}\right)} = 0
 Derivation:
-\frac{2 \left(- 2 a^{2} \left(x \cos{\left(t \right)} + 2 y \sin{\left(t \right)} - 2\right) + b^{2} \cdot \left(2 x \cos{\left(t \right)} + 4 y \sin{\left(t \right)} + 9 \sin^{4}{\left(t \right)} + 6 \sin^{2}{\left(t \right)} - 3\right)\right) \left(2 x \sin{\left(t \right)} - y \cos{\left(t \right)} - \frac{3 \sin{\left(2 t \right)}}{2}\right)}{a^{2} b^{2} \left(3 \sin^{2}{\left(t \right)} + 1\right)^{2}} = 0
+\frac{a^{2} c d \left(- c d + c y \sin{\left(t \right)} + d x \cos{\left(t \right)}\right) \left(c^{2} \sin{\left(2 t \right)} - 2 c x \sin{\left(t \right)} - d^{2} \sin{\left(2 t \right)} + 2 d y \cos{\left(t \right)}\right) - 2 b^{2} \left(c \left(c \cos{\left(t \right)} - x\right) \sin{\left(t \right)} - d \left(d \sin{\left(t \right)} - y\right) \cos{\left(t \right)}\right) \left(c^{4} \sin^{4}{\left(t \right)} - 2 c^{2} d^{2} \sin^{4}{\left(t \right)} + 2 c^{2} d^{2} \sin^{2}{\left(t \right)} - c^{2} d^{2} + c^{2} d y \sin{\left(t \right)} + c d^{2} x \cos{\left(t \right)} + d^{4} \sin^{4}{\left(t \right)} - 2 d^{4} \sin^{2}{\left(t \right)} + d^{4}\right)}{a^{2} b^{2} \left(c^{2} \sin^{2}{\left(t \right)} + d^{2} \cos^{2}{\left(t \right)}\right)^{2}} = 0
 Time:
-0.5867576599121094
+15.97615385055542
+Determinant:
+0
 Subdeterminant:
-- \frac{4 \left(a - b\right)^{2} \left(a + b\right)^{2}}{a^{4} b^{4} \left(3 \sin^{2}{\left(t \right)} + 1\right)^{2}}
+- \frac{c^{2} d^{2} \left(a - b\right)^{2} \left(a + b\right)^{2}}{a^{4} b^{4} \left(c^{2} \sin^{2}{\left(t \right)} - d^{2} \sin^{2}{\left(t \right)} + d^{2}\right)^{2}}
+Curvature:
+Abs(c*d)/(c**2*sin(t)**2 + d**2*cos(t)**2)**1.5
+Ratio:
+Abs(b**2 - b/a**2)
+Rho:
+Abs(b**2*(c**2*sin(t)**2 + d**2*cos(t)**2)**2/(a**2 - b**2))/sqrt(c**2*(c*d*sin(t)**2 + c*d*cos(t)**2)**2*sin(t)**2 + d**2*(-c*d*sin(t)**2 - c*d*cos(t)**2)**2*cos(t)**2)

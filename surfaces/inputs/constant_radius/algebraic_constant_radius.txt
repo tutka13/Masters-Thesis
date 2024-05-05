@@ -1,5 +1,0 @@
-curve_parametrization: t, t**2, t**3
-radius_function: 4
-step: 0.05
-t_values: -2, 2
-shift_array: -15, 16, 15

@@ -80,7 +80,7 @@ original_normal = Vector((0, 0, 1))
 
 for i in range(number_of_spheres):
     # Circles with bridge edge loops
-    bpy.ops.mesh.primitive_circle_add(radius=radii_char[i], location=f.shift_x(center_char[i], shift_array[-1]))
+    bpy.ops.mesh.primitive_circle_add(radius=radii_char[i], location=en.shift_x(center_char[i], shift_array[-1]))
     circle_object = bpy.context.object
 
     rotated_normal_vector = Vector(derivatives[i])
@@ -119,7 +119,7 @@ for i in range(number_of_spheres):
 #Update the scene
 bpy.context.view_layer.update()
 #Save the Blender file
-bpy.ops.wm.save_as_mainfile(filepath='C:/Users/tutko/Desktop/Masters-Thesis/surfaces/outputs_envelope_of_spheres/' + input_file + '.blend') 
+#bpy.ops.wm.save_as_mainfile(filepath='C:/Users/tutko/Desktop/Masters-Thesis/surfaces/outputs_envelope_of_spheres/' + input_file + '.blend') 
 
 #Time computation
 end_time = time.time()

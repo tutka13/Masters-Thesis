@@ -1,7 +1,7 @@
 \chapter{Výsledky práce}
 
 \section{Príklady kriviek}
-Pri konštrukcií obálok elipsoidov sme vyriešili aj o rozmer nižší prípad, a to, obálku jednoparametrického systému elíps v rovine ležiacich na rovinnej krivke $m(t) \subset \mathbb{R}^2$. Pre rovinné prípady sme výsledky vizualizovali v online nástroji Desmos \cite{Desmos}, kde sme zadávali matematické výrazy vypočítané skriptom v Pythone \verb|2D_workflow.py| V adresári na GitHube sa nachádza niekoľko textových súborov s výpočtami a tiež odkazy na viaceré vizualizované príklady v Desmose.
+Pri konštrukcií obálok elipsoidov sme vyriešili aj o rozmer nižší prípad, a to, obálku jednoparametrického systému elíps v rovine ležiacich na rovinnej krivke $m(t) \subset \mathbb{R}^2$. Pre rovinné prípady sme výsledky vizualizovali v online nástroji Desmos \cite{Desmos}, kde sme zadávali matematické výrazy vypočítané skriptom v Pythone \verb|2D_workflow.ipybn| V adresári na GitHube sa nachádza niekoľko textových súborov s výpočtami a tiež odkazy na viaceré vizualizované príklady v Desmose.
 
 \begin{example}[Parabola]
 Majme parabolu s parametrizáciou $m(t)=(t, t^2), t \in \mathbb{R}.$ Na tejto krivke zostrojme jednoparametrický systém elíps so škálovaním v dotykovom smere krivky $a$ a v normálovom smere krivky $b$. 
@@ -162,7 +162,7 @@ V prípade $\kappa(t) > \frac{1}{8}$ je obálka vymodelovaná elipsoidmi, čomu 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.4\textwidth]{images/otvorene_hrany2.png}
-	\caption[Otvorené hrany.]{Identifikácia otvorených hrán v programe PrusaSlicer. Modrou farbou sú označené problémové miesta na obálke jednoparametrického systému elipsoidov so škálovaním $a = 2$ a $b =1$ na krivke $m(t) = (\cos t, \sin t, 0) $.}
+	\caption[Otvorené hrany.]{Identifikácia otvorených hrán v programe PrusaSlicer. Modrou farbou sú~označené problémové miesta na obálke jednoparametrického systému elipsoidov so~škálovaním $a = 2$ a $b =1$ na krivke $m(t) = (\cos t, \sin t, 0) $.}
 	\label{fig:open_edges}
 \end{figure}
 
@@ -183,16 +183,13 @@ S 3D tlačou bolo spojených niekoľko komplikácii. Pri prvých pokusoch sme zr
     \begin{subfigure}[b]{0.49\textwidth}
      \centering	
      \includegraphics[width=\textwidth]{images/plocha_v_tlaciarni.jpg}
-	\caption[Plocha v 3D tlačiarni.]{Plocha v 3D tlačiarni.}
+	\caption[Plocha v 3D tlačiarni.]{Výsledná plocha v 3D tlačiarni.}
 	\label{fig:plocha_v_tlaciarni}
 	\end{subfigure}
+	\caption[Ukážky plôch z 3D tlače.]{Ukážky plôch z 3D tlače.}
 \end{figure}
-Neskôr tlačiareň odmietala tlač z SD karty, tak sme využili tlač z počítača pomocou softvéru Pronterface. Tlač z počítača bola mierne nepraktická, keďže musel byť celý čas zapnutý a pripojený k tlačiarni, ktorá nedisponovala káblom potrebnej dĺžky. Po niekoľkých úspešných výtlačkoch začala tlačiareň škrípať a bolo potrebné ju namazať a znova kalibrovať. Potom sme zistili, že tlačiareň podporuje tlač z SD karty, ktorá k nej bola dodaná a tlač už prebiehala pomerne bez problémov. Pri našej veľkosti plôch tlač trvala 90 až 150 minút. Plochy bolo potrebné rôzne škálovať, príliš tenké časti by totiž boli krehké. Použili sme škálovanie $500-750\%$. Vytlačili sme niekoľko prototypov a tri bezchybné sady plôch, kde jedna sada obsahuje jednoparametrický systém sfér, obálku sfér, jednoparametrický systém elipsoidov a obálku elipsoidov. Po tlači sme ešte odstránili podporné štruktúry a tak sme dostali výsledné plochy. 
-%\begin{figure}[h]
-%	\centering	\includegraphics[angle=-90,width=0.5\textwidth]{images/plocha_v_tlaciarni.jpg}
-%	\caption[Plocha v 3D tlačiarni.]{Plocha v 3D tlačiarni.}
-%	\label{fig:plocha_v_tlaciarni}
-%\end{figure}
+Neskôr tlačiareň odmietala tlač z SD karty, tak sme využili tlač z počítača pomocou softvéru Pronterface. Tlač z počítača bola mierne nepraktická, keďže musel byť celý čas zapnutý a pripojený k tlačiarni, ktorá nedisponovala káblom potrebnej dĺžky. Po~niekoľkých úspešných výtlačkoch začala tlačiareň škrípať a bolo potrebné ju namazať a znova kalibrovať. Potom sme zistili, že tlačiareň podporuje tlač z SD karty, ktorá k~nej bola dodaná a tlač už prebiehala pomerne bez problémov. Pri našej veľkosti plôch tlač trvala 90 až 150 minút. Plochy bolo potrebné rôzne škálovať, príliš tenké časti by totiž boli krehké. Použili sme škálovanie $500-750\%$. Vytlačili sme niekoľko prototypov a tri bezchybné sady plôch, kde jedna sada obsahuje jednoparametrický systém sfér, obálku sfér, jednoparametrický systém elipsoidov a obálku elipsoidov. Po tlači sme ešte odstránili podporné štruktúry a tak sme dostali výsledné plochy. V prílohe \altref{pri:priloha2}{Prílohe B} sa nachádza katalóg vytlačených plôch.
+
 \section{Otvorené problémy}
 Ak by sme chceli mať spájanie charakteristických kružníc plne automatizované, 
 narazili by sme na niekoľko problémov. Na obr.~\ref{fig:spojenie_kruznic_1} sa pletivo medzi kružnice síce doplnilo očakávaným spôsobom, no v našom prípade to nesedí s požadovaným tvarom výslednej plochy.
@@ -215,17 +212,7 @@ Takisto sú výzvou uzavreté plochy a samoprieniky plôch ako na obr.~\ref{fig:
     	\caption[Chybné doplnenie pletiva.]{Chybné doplnenie pletiva.}
     \label{fig:spojenie_kruznic}
 \end{figure}
-%\begin{figure}[h]
-%	\centering	\includegraphics[width=0.5\textwidth]{images/mesh.png}
-%	\caption[Spojenie kružníc.]{Spojenie kružníc.}
-%	\label{fig:spojenie_kruznic}
-%\end{figure}
-%
-%\begin{figure}[h]
-%	\centering	\includegraphics[width=0.5\textwidth]{images/diery.png}
-%	\caption[Spojenie kružníc.]{Spojenie kružníc.}
-%	\label{fig:spojenie_kruznic_2}
-%\end{figure}
+
 Ak by sme pre parametre $t,$ v ktorých $\kappa(t) > \lambda $ generovali charakteristickú elipsu a charakteristickú kružnicu namiesto elipsoidu, narazili by sme taktiež na problém vhodného spojenia týchto objektov a taktiež vygenerovaného pletiva.
 \section{Budúca práca}
 V budúcom výskume na matematickej úrovni môžeme uvažovať odlišný faktor škálovania $c \neq b$ v binormálovom smere $\vec{b}$ Frenetovho lokálneho súradnicového systému $(\vec{t}, \vec{n}, \vec{b})$ ku krivke $m(t)$. V tomto prípade by sme ako prienik roviny prechádzajúcej stredom elipsoidu nedostali charakteristickú kružnicu, ale elipsu.

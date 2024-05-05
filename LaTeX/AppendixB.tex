@@ -1,194 +1,111 @@
 \chapter{Príloha B}
 \label{pri:priloha2}
-\section{Krivky druhého stupňa}
-Krivka druhého stupňa $c$ je v karteziánskych súradniciach $(x, y) \in \mathbb{E}^2$ daná rovnicou 
-$$ q(x, y) = Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0.$$
-Prípad $A = B = C = 0$  môžeme vylúčiť, pretože potom je rovnica lineárna a opisuje priamku. Vo všeobecnosti rovnica vyjadruje kužeľosečku, ktorá je daná piatimi bodmi. Ak $F \neq 0$, môžeme ju vydeliť $F$ a potom riešiť sústavu lineárnych rovníc s piatimi neznámymi. Okrem klasických prípadov, ako elipsy, paraboly a hyperboly, môžu kužeľosečky degenerovať na dvojice priamok, bod alebo prázdnu množinu.
+Katalóg vytlačených plôch v 3D tlačiarni.
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+	\captionsetup[subfigure]{justification=centering}
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth, trim=0mm 100mm 0mm 50mm, clip=true]{images/heart_spheres.png}
+        	\caption{Jednoparametrický systém sfér s~polomerom $r=1$.}
+        \label{fig:plocha11}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth, trim=0mm 100mm 0mm 50mm, clip=true]{images/heart_envelope_spheres.png}
+        	\caption{Obálka jednoparametrického systému sfér s~polomerom $r=1$.}
+        \label{fig:plocha12}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth, trim=0mm 100mm 0mm 50mm, clip=true]{images/heart_ellipsoids2.png}
+        	\caption{Jednoparametrický systém elipsoidov so~škálovaním $a=3$ a $b=1$.}
+        \label{fig:plocha13}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth, trim=0mm 100mm 0mm 50mm, clip=true]{images/heart_envelope_ellipsoids2.png}
+        	\caption{Obálka jednoparametrického systému elipsoidov so~škálovaním $a=3$ a $b=1$.}
+        \label{fig:plocha14}
+    \end{subfigure}
+    \caption[Jednoparametrické systémy a ich obálky ležiace na krivke srdce.]{Jednoparametrické systémy a ich obálky ležiace na krivke s~parametrizáciou $m(t)=(10\sin^{3}t, 8 \cos t-3\cos(2t) -\cos(3t)-\cos (4t), 0)$, $t \in [-\pi, \pi]$ a krokom $\Delta t = 0,05.$}
+    \label{fig:katalogIII}
+\end{figure}
 
-V algebraickom zmysle má kužeľosečka $c$ vždy dva priesečníky $S_1$ a $S_2$ s danou priamkou $s$. Oba môžu byť reálne alebo komplexne združené. Limitný prípad $S_1 = S_2$ nastáva vtedy, keď $s$ je dotyčnicou k $c$.
+\begin{figure}[h]
+    \centering
+    \captionsetup{justification=centering}
+    \captionsetup[subfigure]{justification=centering}
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth, trim=0mm 50mm 0mm 100mm, clip=true]{images/bienert_constant_radius_spheres.png}
+        	\caption{Jednoparametrický systém sfér s~konštantným polomerom $r=1$.}
+        \label{fig:plocha1}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth, trim=0mm 50mm 0mm 100mm, clip=true]{images/bienert_constant_radius_envelope.png}
+		\caption{Obálka jednoparametrického systému sfér s~konštantným polomerom $r=1$.}
+        \label{fig:plocha2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth, trim=0mm 50mm 0mm 100mm, clip=true]{images/bienert_function_radius_spheres.png}
+        	\caption{Jednoparametrický systém sfér s~funkciou polomeru $r=\frac{t^2}{5}-\frac{1}{2}$.}
+        \label{fig:plocha3}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth, trim=0mm 50mm 0mm 50mm, clip=true]{images/bienert_function_radius_envelope.png}
+        	\caption{Obálka jednoparametrického systém sfér s~funkciou polomeru $r=\frac{t^2}{5}-\frac{1}{2}$.}
+        \label{fig:plocha4}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth, trim=0mm 50mm 0mm 50mm, clip=true]{images/bienert_ellipsoids.png}
+		\caption{Jednoparametrický systém elipsoidov so~škálovaním $a=2$ a $b=1$.}
+        \label{fig:plocha5}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth, trim=0mm 50mm 0mm 100mm, clip=true]{images/bienert_ellipsoids.png}
+        	\caption{Obálka jednoparametrického systému elipsoidov so~škálovaním $a=2$ a $b=1$.}
+        \label{fig:plocha6}
+    \end{subfigure}
+    	\caption[Jednoparametrické systémy a ich obálky ležiace na krivke Bienert.]{Jednoparametrické systémy a ich obálky ležiace na krivke s parametrizáciou  $m(t)=(t, t^2, \frac{t^3}{10}), \  t \in [-3, 3]$ a krokom $\Delta t = 0,05$.}
+    \label{fig:katalogI}
+\end{figure}
 
-V závislosti od počtu reálnych priesečníkov s priamkou $s$ v nekonečne rozlišujeme tri typy kužeľosečiek 
-\begin{enumerate}
-\item eliptický typ: bez reálnych priesečníkov,
-\item hyperbolický typ: dva reálne priesečníky,
-\item parabolický typ: priamka v nekonečne sa dotýka krivky. \cite{Gla16}\cite{Ode20}
-\end{enumerate}
-Ku klasifikácii kužeľosečiek nahliadnime do lineárnej algebry a geometrie \cite{Kor13} a \cite{Zla11}.
-
-Matica $A \in \mathbb{R}^{n \times n}$ sa nazýva ortogonálna, ak platí $A^T \cdot A = I_n$, alebo, čo je to isté, $A^{-1} = A^T$. Prvá podmienka hovorí, že stĺpce matice $A$ tvoria ortonormálnu bázu euklidovského priestoru $\mathbb{R}^n$ so štandardným skalárnym súčinom. Potom tiež platí $A \cdot A^T = I_n$, teda takisto riadky matice $A$ tvoria ortonormálnu bázu v $\mathbb{R}^n$. 
-
-\begin{theorem} 
-Matica prechodu od ortonormálnej bázy v $\mathbb{R}^n$ so štandardným skalárnym súčinom k ortonormálnej báze je ortogonálna matica. Tiež, ak od ortonormálnej bázy v $\mathbb{R}^n$ prejdeme pomocou ortogonálnej matice prechodu k novej báze,
-tak aj nová báza bude ortonormálna.
-\end{theorem}
-
-\subsection{Invarianty kriviek druhého stupňa}
-\begin{definition}
-Invariantom krivky druhého stupňa, vyjadrenej rovnicou
-$$
-q(x, y) = a_{11}x^2 + 2a_{12}xy + a_{22}y^2 + 2a_{13}x + 2a_{23}y + a_{33} = 0
-$$
-je každý taký algebraický výraz, závisiaci od \(a_{11}, a_{12}, a_{22}, a_{13}, a_{23}, a_{33}\), ktorého hodnota sa nezmení, ak túto krivku vyjadríme v inom karteziánskom súradnicovom systéme, ku ktorému prejdeme pomocou otočení alebo posunutí (čím od rovnice, viažúcej staré premenné \(x, y\), prejdeme k rovnici, viažúcej nové premenné \(x', y'\)).
-\end{definition}
-
-\begin{theorem}
-Nasledujúce číselné výrazy sú invariantmi krivky druhého stupňa, vyjadrenej rovnicou $q(x, y)$.
-\begin{align*}
-\Delta(x,y) &= \det \begin{pmatrix} 
-a_{11} & a_{12} & a_{13} \\ 
-a_{12} & a_{22} & a_{23} \\
-a_{13} & a_{23} & a_{33} \end{pmatrix}, \
-\delta(x,y) = \det \begin{pmatrix} a_{11} & a_{12} \\ a_{12} & a_{22} \end{pmatrix}, \
-s(x,y) &= a_{11} + a_{22}.
-\end{align*}
-\end{theorem}
-Z tohto možno odvodiť nasledujúcu klasifikáciu kužeľosečiek.
-
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{|c|c|c|l|}
-%\hline
-%\textbf{Typ} & $\delta$ & $\Delta$ & \textbf{Tvar}  \\
-%\hline
-%\multirow{3}{*}{eliptický} & \multirow{3}{*}{$> 0$} & $\neq 0$ & ak $s\Delta < 0$, tak elipsa \\
-%& & $\neq 0$ & ak $s\Delta > 0$, tak  $\emptyset$ \\
-%& & $= 0$ & bod \\
-%\hline
-%\multirow{2}{*}{hyperbolický} & \multirow{2}{*}{$< 0$} & $\neq0$ & hyperbola \\
-% & & $=0$ & dve rôznobežné priamky \\
-%\hline
-%\multirow{4}{*}{parabolický} & \multirow{4}{*}{$= 0$} & $\neq0$ & parabola \\
-%& & $=0$ & dve rovnobežné priamky \\
-%& & $= 0$ & priamka \\
-%& & $= 0$ & $\emptyset$ \\
-%\hline
-%\end{tabular}
-%\caption{Klasifikácia kužeľosečiek.}
-%\label{tab:conic_sections}
-%\end{table}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{|l|l|l|l|}
-\hline
-\textbf{Typ} & $\delta$ & $\Delta \neq  0$ & $\Delta = 0 $ \\
-\hline
-\multirow{2}{*}{eliptický} & \multirow{2}{*}{$> 0$} & ak $s\Delta < 0$, tak elipsa & \multirow{2}{*}{bod} \\
-& & ak $s\Delta > 0$, tak $\emptyset$ & \\
-\hline
-hyperbolický & $< 0$ & hyperbola & dve rôznobežné priamky \\
-\hline
-\multirow{3}{*}{parabolický} & \multirow{3}{*}{$= 0$} & dve rovnobežné priamky & \multirow{3}{*}{parabola} \\
-& & priamka & \\
-& & $\emptyset$ & \\
-\hline
-\end{tabular}
-\caption{Klasifikácia kužeľosečiek.}
-\label{tab:conic_sections}
-\end{table}
-
-\section{Plochy druhého stupňa}
-Plocha druhého stupňa $Q$ je v karteziánskych súradniciach $(x, y, z) \in \mathbb{E}^3$ daná rovnicou
-\[ q(x, y, z) = Ax^2 + By^2 + Cz^2 + Dxy + Exz + Fyz + Gx + Hy + Iz + J = 0. \]
-Je zrejmé, že ak je prvých šesť koeficientov nulových, uvedená rovnica je lineárna a opisuje rovinu v priestore. Vo všeobecnosti rovnica opisuje kvadriku, ktorá je daná deviatimi bodmi. Ak $J \neq 0$, môžeme ju vydeliť $J$ a potom vyriešiť sústavu lineárnych rovníc s deviatimi neznámymi. Okrem klasických prípadov, ako elipsoidy, paraboloidy a hyperboloidy, môžu kvadriky degenerovať aj na kvadratické kužele, kvadratické valce a dvojice rovín.
-
-V algebraickom zmysle je kvadrika $Q$ plocha druhého stupňa, ktorá má vždy dva priesečníky $S1$ a $S2$ s danou priamkou $s$. Oba môžu byť reálne alebo komplexne združené. Limitný prípad $S1 = S2$ nastáva vtedy, keď $s$ je dotyčnicou $Q$.
-
-V závislosti od počtu reálnych priesečníkov s rovinou $s$ v nekonečne rozlišujeme tri typy kvadrík:
-\begin{enumerate}
-\item eliptický typ: bez reálnych priesečníkov,
-\item hyperbolický typ: dva reálne priesečníky,
-\item parabolický typ: kvadriky sa dotýka rovina v nekonečne. \cite{Ode20}
-\end{enumerate}
-
-Nasledujúce číselné výrazy sú invariantmi plochy druhého rádu, vyjadrenej rovnicou 
-\[ q(x, y, z) = a_{11}x^2 + a_{22}y^2 + a_{33}z^2 + 2a_{12}xy + 2a_{13}xz + 2a_{23}yz + 2a_{14}x + 2a_{24}y + 2a_{23}z + a_{44} = 0. \]
-\begin{align*}
-\Delta(x, y, z) &= \det \begin{pmatrix} 
-a_{11} & a_{12} & a_{13} & a_{14} \\ 
-a_{21} & a_{22} & a_{23} & a_{24} \\
-a_{31} & a_{32} & a_{33} & a_{34} \\
-a_{41} & a_{42} & a_{43} & a_{44}
-\end{pmatrix}, \
-\delta(x, y, z) = \det \begin{pmatrix} 
-a_{11} & a_{12} & a_{13} \\ 
-a_{21} & a_{22} & a_{23} \\ 
-a_{31} & a_{32} & a_{33} 
-\end{pmatrix}
-\end{align*}
-\begin{align*}
-T(x, y, z) &= \det \begin{pmatrix} 
-a_{11} & a_{12} \\ 
-a_{21} & a_{22} 
-\end{pmatrix} + \det \begin{pmatrix} 
-a_{22} & a_{23} \\ 
-a_{32} & a_{33} 
-\end{pmatrix} + \det \begin{pmatrix} 
-a_{33} & a_{31} \\ 
-a_{13} & a_{11} 
-\end{pmatrix}, 
-\end{align*}
-\begin{align*}
-s(x, y, z) &= a_{11} + a_{22} + a_{33}, \ \Delta'(x, y, z) = \Delta_{11} + \Delta_{22} + \Delta_{33}, 
-\end{align*}
-kde $
-\Delta_{ij} = (-1)^{i+j} \det(\Delta_{ij}).$
-
-Z tohto možno odvodiť nasledujúce dve tabuľky.
-
-\begin{table}[h]
-\centering
-\begin{tabular}{|c|c|c|p{2.2cm}|p{2.15cm}|p{2cm}|}
-\hline
-Typ & $\delta$ & $s\delta$ a $T$ & $\Delta > 0$ & $\Delta < 0$ & $\Delta = 0$ \\
-\hline
-eliptický & $\neq 0$ & $s\delta>0$ a $T>0$ & $\emptyset$ & elipsoid & $\emptyset$ \\
-\hline
-hyperbolický & $\neq 0$ & $s\delta>0$ alebo $T \leq0$ & jednodielny hyperboloid & dvojdielny hyperboloid & kužeľ \\
-\hline
-parabolický & $=0$ & & hyperbolický paraboloid & eliptický paraboloid & valcové a reducibilné plochy \\
-\hline
-\end{tabular}
-\caption{Klasifikácia kvadrík.}
-\label{tab:classification_of_quadrics}
-\end{table}
-
-%\begin{table}[h]
-%\begin{adjustbox}{center}
-%\centering
-%\begin{tabular}{|c|c|c|p{2.2cm}|p{2.15cm}|p{2cm}|}
-%\hline
-%Typ & $\delta$ & $s\delta$ a $T$ & $\Delta > 0$ & $\Delta < 0$ & $\Delta = 0$ \\
-%\hline
-%eliptický & $\neq 0$ & $s\delta>0$ a $T>0$ & $\emptyset$ & elipsoid & $\emptyset$ \\
-%\hline
-%hyperbolický & $\neq 0$ & $s\delta>0$ alebo $T \leq0$ & jednodielny hyperboloid & dvojdielny hyperboloid & kužeľ \\
-%\hline
-%parabolický & $=0$ & & hyperbolický paraboloid & eliptický paraboloid & valcové a reducibilné plochy \\
-%\hline
-%\end{tabular}
-%\end{adjustbox}
-%\caption{Klasifikácia kvadrík.}
-%\label{tab:classification_of_quadrics}
-%\end{table}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{|l|l|l|l|}
-\hline
-Typ & $T$ & $\Delta' \neq  0$ & $\Delta' = 0 $ \\
-\hline
-\multirow{2}{*}{eliptický} & \multirow{2}{*}{$> 0$} & ak $s\Delta < 0$, tak eliptický valec & \multirow{2}{*}{bod} \\
-& & ak $s\Delta > 0$, tak $\emptyset$ &\\
-\hline
-hyperbolický & $< 0$ & hyperbolický valec & dve rôznobežné roviny \\
-\hline
-\multirow{3}{*}{parabolický} & \multirow{3}{*}{$= 0$} & \multirow{3}{*}{parabolický valec} & dve rovnobežné roviny \\
-& & & rovina \\
-& & & $\emptyset$ \\
-\hline
-\end{tabular}
-\caption{Klasifikácia degenerovaných kvadrík.}
-\label{tab:degenerate_quadrics}
-\end{table}
-\end{document}
+\begin{figure}[t!]
+	\captionsetup{justification=centering}
+	\captionsetup[subfigure]{justification=centering}
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/helix_spheres.png}
+		\caption{Jednoparametrický systém sfér s~konštantnou funkciou polomeru $r=1.$}
+        \label{fig:plocha7}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/helix_envelope2.png}
+        	\caption{Obálka systému sfér s~konštantnou funkciou polomeru $r=1$.}
+        \label{fig:plocha8}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/helix_ellipsoids2.png}
+        	\caption{Jednoparametrický systém elipsoidov so~škálovaním $a=2$ a $b=1$.}
+        \label{fig:plocha9}
+    \end{subfigure}
+    	\caption[Jednoparametrické systémy a ich obálky ležiace na krivke skrutkovica.]{Jednoparametrické systémy a ich obálky ležiace na krivke s~parametrizáciou  $m(t)=(\cos t, \sin t, t), \  t \in [-10, 10]$ a krokom $\Delta t = 0,2$.}
+    \label{fig:katalogII}
+\end{figure}

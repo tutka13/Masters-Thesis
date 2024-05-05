@@ -13,21 +13,27 @@
 \contentsline {figure}{\numberline {1.10}{\ignorespaces Obálka sfér.\relax }}{18}{figure.caption.19}%
 \contentsline {figure}{\numberline {1.11}{\ignorespaces Technika rolling ball blends.}}{19}{figure.caption.20}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Vedľajšia os charakteristickej elipsy.}}{32}{figure.caption.25}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Hlavná os charakteristickej elipsy.}}{33}{figure.caption.26}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Softvér Maxima.}}{33}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Derivácia jednoparametrického systému.}}{31}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Vedľajšia os charakteristickej elipsy.}}{32}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Hlavná os charakteristickej elipsy.}}{33}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Softvér Maxima.}}{34}{figure.caption.28}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Softvér Blender.}}{37}{figure.caption.28}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Softvér Visual Studio Code.}}{39}{figure.caption.31}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Jupyter Notebook.}}{41}{figure.caption.34}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Softvér PrusaSlicer.}}{43}{figure.caption.37}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Softvér Pronterface.}}{44}{figure.caption.39}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Schéma procesu.}}{45}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Softvér Blender.}}{37}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Softvér Visual Studio Code.}}{39}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Jupyter Notebook.}}{41}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Softvér PrusaSlicer.}}{43}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Softvér Pronterface.}}{44}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Schéma procesu.}}{45}{figure.caption.41}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Jednoparametrický systém elíps.}}{49}{figure.caption.41}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Obálka z príkladu \ref {ex:bienert}.}}{50}{figure.caption.42}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Obálka z príkladu \ref {ex:helix}.}}{50}{figure.caption.43}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Obálka z príkladu \ref {ex:heart}.}}{51}{figure.caption.44}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Otvorené hrany.}}{51}{figure.caption.45}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Chybné doplnenie pletiva.}}{53}{figure.caption.47}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Jednoparametrický systém elíps.}}{49}{figure.caption.42}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Obálka z príkladu \ref {ex:bienert}.}}{50}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Obálka z príkladu \ref {ex:helix}.}}{50}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Obálka z príkladu \ref {ex:heart}.}}{51}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Otvorené hrany.}}{51}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Ukážky plôch z 3D tlače.}}{52}{figure.caption.47}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Chybné doplnenie pletiva.}}{53}{figure.caption.48}%
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Jednoparametrické systémy a ich obálky ležiace na krivke srdce.}}{65}{figure.caption.53}%
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Jednoparametrické systémy a ich obálky ležiace na krivke Bienert.}}{66}{figure.caption.54}%
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Jednoparametrické systémy a ich obálky ležiace na krivke skrutkovica.}}{67}{figure.caption.55}%

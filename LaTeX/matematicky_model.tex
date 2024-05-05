@@ -1,4 +1,4 @@
-\chapter{Matematický model}
+\chapter{Matematický model obálky elipsoidov}
 \label{kap:matematicky_model}
 V tejto kapitole odvodíme rovnice obálky pre jednoparametrický systém elíps a elipsoidov. Najprv však klasifikujme krivky a plochy druhého stupňa. Nasledujúcu teóriu a klasifikáciu nadplôch druhého stupňa preberáme zo \cite{Ivan}, \cite{Kor13}, \cite{Gla16}, \cite{Ode20} a \cite{Zla11}.
 \section{Krivky druhého stupňa}
@@ -25,7 +25,7 @@ tak aj nová báza bude ortonormálna.
 
 \subsection{Invarianty kriviek druhého stupňa}
 \begin{definition}
-Invariantom krivky druhého stupňa $p$, vyjadrenej rovnicou
+Invariantom krivky $p$ druhého stupňa, vyjadrenej rovnicou
 $$
 f(x, y) = a_{11}x^2 + 2a_{12}xy + a_{22}y^2 + 2a_{13}x + 2a_{23}y + a_{33} = 0
 $$
@@ -549,6 +549,12 @@ S(t) = 0,
 % \dot{A} \dot{B} - \frac{\dot{D}^2}{4} + \dot{B} \dot{C} - \frac{\dot{F}^2}{4} + \dot{A} \dot{C} - \frac{\dot{E}^2}{4}
 pre všetky $t \in I,$
 teda podľa klasifikácie plôch druhého stupňa \ref{tab:classification_of_quadrics} a \ref{tab:degenerate_quadrics} sú kvadriky v systéme $\dot{Q}$ dve rôznobežné roviny.
+\begin{figure}[h]
+	\centering
+	\includegraphics[trim={-2cm 11cm 0 0cm},clip]{images/ellipsoids.pdf}
+	\caption[Derivácia jednoparametrického systému.]{Derivácia jednoparametrického systému.}
+	\label{fig:ellipsoids}
+\end{figure}
 Jednoparametrický systém $\dot{Q}$ vieme napísať v súčinovom tvare dvoch rovín 
 $$ \eta (t) \xi (t) = 0,$$
 kde 

@@ -27,15 +27,13 @@ with open('C:/Users/tutko/Desktop/Masters-Thesis/surfaces/inputs/constant_radius
     lines = file.readlines()
 
 # Call the functions
-curve_parametrization_str, radius_function_str = en.parse_parameters(lines)
-curve_parametrization_exp, radius_function = en.convert_to_expressions(curve_parametrization_str, radius_function_str)
-
+curve_parametrization_str = en.parse_parameter(lines)
+curve_parametrization_exp = en.convert_to_expression(curve_parametrization_str)
 curve_parametrization = en.calculate_curve_parametrization(curve_parametrization_exp)
 derivative_curve_parametrization = en.calculate_derivative_curve(curve_parametrization)
-
 curvature = en.curvature(derivative_curve_parametrization)
 ratio = en.ratio(a, b)
-print(f'ratio: {ratio}')
+#print(f'ratio: {ratio}')
 
 # Number of ellipsoids to create with step and shift array
 step = en.step(lines)
@@ -70,13 +68,26 @@ for t_value in t_values:
 #Define the original normal vector (assuming z-axis) 
 original_normal = Vector((0, 0, 1)) 
 
-# Ellipsoids
-for i in range(number_of_ellipsoids):
-    bpy.ops.mesh.primitive_uv_sphere_add(scale=(b, b, a), location=en.shift_x(points[i], shift_array[0]))
-    ellipsoid = bpy.context.object
-    ellipsoid.name = "Ellipsoid"
-    direction = Vector(derivatives[i])
-    ellipsoid.rotation_euler = direction.to_track_quat('Z', 'Y').to_euler()
+# Envelope    
+for i in range(number_of_ellipsoids):    
+    if (ratio >= curvatures[i]):  
+        bpy.ops.mesh.primitive_circle_add(radius=b, location=en.shift_x(points[i], shift_array[0]))
+        circle = bpy.context.object
+        circle.name = "Circle"
+        rotated_normal_vector = Vector(derivatives[i])
+        # Calculate rotation
+        rotation_angle, rotation_axis = en.find_rotation(original_normal, rotated_normal_vector)
+
+        # Apply the rotation
+        circle.rotation_mode = 'AXIS_ANGLE'
+        circle.rotation_axis_angle[0] = rotation_angle
+        circle.rotation_axis_angle[1:] = rotation_axis        
+    else:
+        bpy.ops.mesh.primitive_uv_sphere_add(scale=(b, b, a), location=en.shift_x(points[i], shift_array[0]))
+        ellipsoid = bpy.context.object
+        ellipsoid.name = "Ellipsoid"
+        direction = Vector(derivatives[i])
+        ellipsoid.rotation_euler = direction.to_track_quat('Z', 'Y').to_euler()
 
 # Ellipsoids + circles        
 for i in range(number_of_ellipsoids):   
@@ -91,43 +102,26 @@ for i in range(number_of_ellipsoids):
         # Apply the rotation
         circle.rotation_mode = 'AXIS_ANGLE'
         circle.rotation_axis_angle[0] = rotation_angle
-        circle.rotation_axis_angle[1:] = rotation_axis        
-
-for i in range(number_of_ellipsoids):
-    if (ratio < curvatures[i]):
+        circle.rotation_axis_angle[1:] = rotation_axis
+    else:        
         bpy.ops.mesh.primitive_uv_sphere_add(scale=(b, b, a), location=en.shift_x(points[i], shift_array[1]))
         ellipsoid = bpy.context.object
         ellipsoid.name = "Ellipsoid"
         direction = Vector(derivatives[i])
-        ellipsoid.rotation_euler = direction.to_track_quat('Z', 'Y').to_euler()       
+        ellipsoid.rotation_euler = direction.to_track_quat('Z', 'Y').to_euler()     
 
-# Envelope    
-for i in range(number_of_ellipsoids):    
-    if (ratio >= curvatures[i]):  
-        bpy.ops.mesh.primitive_circle_add(radius=b, location=en.shift_x(points[i], shift_array[2]))
-        circle = bpy.context.object
-        circle.name = "Circle"
-        rotated_normal_vector = Vector(derivatives[i])
-        # Calculate rotation
-        rotation_angle, rotation_axis = en.find_rotation(original_normal, rotated_normal_vector)
-
-        # Apply the rotation
-        circle.rotation_mode = 'AXIS_ANGLE'
-        circle.rotation_axis_angle[0] = rotation_angle
-        circle.rotation_axis_angle[1:] = rotation_axis        
-
+# Ellipsoids
 for i in range(number_of_ellipsoids):
-    if (ratio < curvatures[i]):
-        bpy.ops.mesh.primitive_uv_sphere_add(scale=(b, b, a), location=en.shift_x(points[i], shift_array[2]))
-        ellipsoid = bpy.context.object
-        ellipsoid.name = "Ellipsoid"
-        direction = Vector(derivatives[i])
-        ellipsoid.rotation_euler = direction.to_track_quat('Z', 'Y').to_euler()
-                    
+    bpy.ops.mesh.primitive_uv_sphere_add(scale=(b, b, a), location=en.shift_x(points[i], shift_array[2]))
+    ellipsoid = bpy.context.object
+    ellipsoid.name = "Ellipsoid"
+    direction = Vector(derivatives[i])
+    ellipsoid.rotation_euler = direction.to_track_quat('Z', 'Y').to_euler()
+                 
 #Update the scene
 bpy.context.view_layer.update()
 # Save the Blender file
-#bpy.ops.wm.save_as_mainfile(filepath='C:/Users/tutko/Desktop/Masters-Thesis/surfaces/outputs_envelope_of_ellipsoids/ellipsoids_and_circles/' + text_file + '.blend') 
+bpy.ops.wm.save_as_mainfile(filepath='C:/Users/tutko/Desktop/Masters-Thesis/surfaces/outputs_envelope_of_ellipsoids/' + text_file + '.blend') 
 
 #Time computation
 end_time = time.time()

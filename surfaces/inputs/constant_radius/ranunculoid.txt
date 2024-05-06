@@ -1,5 +1,5 @@
 curve_parametrization: (6*cos(t)-cos(6*t)), (6*sin(t)-sin(6*t)), 0
 radius_function: 2
 step: 0.05
-t_values: -3,4, 3,4
-shift_array: -10, 11, 10
+t_values: -3.14, 3.14
+shift_array: -30, 31, 30

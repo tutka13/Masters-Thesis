@@ -1,6 +1,0 @@
-curve_parametrization: 2 + cos(3*t)*cos(2*t), 2 + cos(3*t)*sin(2*t), sin(3*t)
-radius_function: ((1/16)*t**2 + 7)/(t**2 + 1)
-step: 0.01
-t_values: 2, 5
-shift_array: -10, 11, 10
-

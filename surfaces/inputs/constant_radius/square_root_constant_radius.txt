@@ -1,5 +1,0 @@
-curve_parametrization: sqrt(2-t**2)*cos(20*t), sqrt(2-t**2)*cos(20*t), t
-radius_function: 1/8
-step: 0.01
-t_values: -1, 1
-shift_array: -5, 6, 5

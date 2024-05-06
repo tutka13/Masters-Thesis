@@ -1,5 +1,0 @@
-curve_parametrization: t*cos(t), t*sin(t), t
-radius_function: 1
-step: 0.05
-t_values: -12, 12
-shift_array: -20, 21, 20

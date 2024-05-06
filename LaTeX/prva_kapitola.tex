@@ -1,6 +1,6 @@
 \chapter{Prehľad problematiky}
 \label{kap:kapitola1}
-Prehľad definíciía a viet uvedených v tejto kapitole sme čerpali najmä z \cite{Bru92}, \cite{Bru81}, \cite{doCarmo17}, \cite{Ode20} a \cite{Vra22}.
+Prehľad definícií a viet uvedených v tejto kapitole sme čerpali najmä z \cite{Bru92}, \cite{Bru81}, \cite{doCarmo17}, \cite{Ode20} a \cite{Vra22}.
 
 \section{Jednoparametrický systém}
 Ak nakreslíme kružnice so stredom na $x$-ovej osi s polomerom 1, ako na obr. \ref{fig:new_system}, pozornosť nám upútajú úsečky $y = \pm 1$ pre $ x \in [-2,2]$ idúce ponad a popod systém kružníc.
@@ -15,7 +15,7 @@ Ak nakreslíme kružnice so stredom na $x$-ovej osi s polomerom 1, ako na obr. \
 \begin{figure}[h]
 	\centering
 	\includegraphics[trim={0.5cm 2.5cm 0.5cm 3cm},clip]{images/new_envelope.pdf}
-	\caption[Jednoparametrický systém kružníc.]{Systém je zobrazený na intervale $[-2,2]$ s krokom  $\Delta t = 0.1$. Ružovou farbou je vyznačená kružnica systému v parametri $t=-2$, čiernou farbou v parametri $t = 2$, v hodnotách parametrov medzi nimi je farba kružnice lineárne interpolovaná. }
+	\caption[Jednoparametrický systém kružníc.]{Jednoparametrický systém kružníc je zobrazený na intervale $[-2,2]$ s krokom  $\Delta t = 0,1$. Ružovou farbou je vyznačená kružnica systému v parametri $t=-2$, čiernou farbou v parametri $t = 2$, v hodnotách parametrov medzi nimi je farba kružnice lineárne interpolovaná. }
 	\label{fig:new_system}
 \end{figure}
 
@@ -34,14 +34,14 @@ Pre $n = 2$ budeme značiť premenné $x_{1}, x_{2}$ ako $x, y,$ pre $n = 3$ pri
 Pre horeuvedený prípad, vizualizovaný na obr. \ref{fig:new_system}, teda máme jednoparametrický systém kružníc 
 $$ \mathcal{F} = \{ (x, y) \in \mathbb{R}^{2} \mid \ F(x, y, t) = 0, \ t \in [-2,2] \}, $$
 so stredmi kružníc, ktoré ležia na úsečke parametrizovanej $(t,0)$ pre $t \in [-2,2]$ a~konštantným polomerom pre každú kružnicu $r = 1$ daný implicitnou funkciou
-$$ F(x, y, t) = (x - t)^2 + y^2 - 1.$$
+$$ F(x, y, t) = (x - t)^2 + y^2 - 1=0.$$
 
 Systém budeme ilustrovať zobrazením niektorých prvkov systému pre diskrétne hodnoty parametra $t$. Pre $t = -2$ je zodpovedajúci prvok systému $\mathcal{F}_{-2} \in \mathcal{F}$  kružnica s~implicitnou rovnicou
-$$ F_{-2}(x, y) = F(x, y, -2) = (x + 2)^2 + y^2 - 1. $$
-Často budeme pre pevný parameter $t_0$ označovať prislúchajúcu rovnicu $F_{t_0}(X)$ a množinu bodov, ktoré rovnicu spĺňajú označíme $\mathcal{F}_{t_0}.$
+$$ F_{-2}(x, y) = F(x, y, -2) = (x + 2)^2 + y^2 - 1=0. $$
+Často budeme pre pevný parameter $t_0$ označovať prislúchajúcu rovnicu $F_{t_0}(X)=0$ a množinu bodov, ktoré rovnicu spĺňajú označíme $\mathcal{F}_{t_0}.$
 
 \section{Obálka jednoparametrického systému nadplôch}
-Najskôr definujeme obálku jednoparametrického systému kriviek v $\mathbb{E}^2$. Uvedieme charakterizáciu obálok, ktorú možno použiť na výpočet pre jednoduchšie jednoparametrické systémy. Následne túto charakterizáciu použijeme ako definíciu pre obálku jednoparametrického systému plôch v $\mathbb{E}^n$.
+Najskôr definujeme obálku jednoparametrického systému kriviek v $\mathbb{R}^2$. Uvedieme charakterizáciu obálok, ktorú možno použiť na výpočet pre jednoduchšie jednoparametrické systémy. Následne túto charakterizáciu použijeme ako definíciu pre obálku jednoparametrického systému plôch v $\mathbb{R}^n$.
 
 \begin{definition}
 Gradient funkcie $F \colon \mathbb{R}^2 \times I \rightarrow \mathbb{R}$ vzhľadom na $x$ a $y$ je
@@ -57,9 +57,9 @@ Obálkou systému kriviek $ \mathcal{F} $ je parametrizovaná krivka $\gamma(t) 
 \end{enumerate}
 \end{definition}
 
-Obálka $\gamma(t)$ sa dotýka každej krivky zo systému $F(x,y,t)$ v bode $(x, y)$  pre nejaké $t$ a v tomto bode má s krivkou zo systému rovnakú dotyčnicu. To znamená, že každý bod obálky ${\gamma}(t) = (\gamma_{1}(t),\gamma_{2}(t))$ spĺňa rovnicu systému $F(\gamma_{1}(t),\gamma_{2}(t),t)=0$ pre nejaké $t,$ a~teda platí prvá podmienka $\gamma(t) \in \mathcal{F}_{t}$. Gradient funkcie $ \nabla F(x,y,t)$ možno geometricky interpretovať ako normálový vektor k $F(x,y,t)$ v regulárnom bode $(x,y)$ a parametri $t$. V spoločnom bode $(x,y)$ a parametri $t$ požadujeme lineárnu závislosť dotykového vektora obálky $\gamma(t)$ a systému $F(x,y,t), $ z čoho dostávame $\dot{\gamma}(t) \perp \nabla F \left( \gamma(t), t \right), $ druhú podmienku v definícii obálky. Interval $J,$ na ktorom dostávame výslednú obálku, môže byť menší ako interval $I,$ na ktorom bol definovaný systém kriviek, teda máme $J \subseteq I.$
+Obálka $\gamma(t)$ sa dotýka každej krivky zo systému $\mathcal{F}$ v bode $(x, y)$  pre nejaké $t$ a v tomto bode má s krivkou zo systému rovnakú dotyčnicu. To znamená, že každý bod obálky ${\gamma}(t) = (\gamma_{1}(t),\gamma_{2}(t))$ spĺňa rovnicu systému $F(\gamma_{1}(t),\gamma_{2}(t),t)=0$ pre nejaké $t,$ a~teda platí prvá podmienka $\gamma(t) \in \mathcal{F}_{t}$. Gradient funkcie $ \nabla F(x,y,t)$ možno geometricky interpretovať ako normálový vektor k $F(x,y,t)=0$ v regulárnom bode $(x,y)$ a parametri $t$. V spoločnom bode $(x,y)$ a parametri $t$ požadujeme lineárnu závislosť dotykového vektora obálky $\gamma(t)$ a $F(x,y,t)=0, $ z čoho dostávame $\dot{\gamma}(t) \perp \nabla F \left( \gamma(t), t \right), $ druhú podmienku v definícii obálky. Interval $J,$ na ktorom dostávame výslednú obálku, môže byť menší ako interval $I,$ na ktorom bol definovaný systém kriviek, teda máme $J \subseteq I.$
 
-Pre všetky $(x, y, t)$ predpokladáme, že  $\nabla F(x,y,t) \neq \vec{0}. $  Ak by bol gradient $\nabla F(x,y,t) $ v nejakom bode nulový, nevieme jednoznačne nájsť dotykový vektor systému $F(x, y, t).$ 
+Pre všetky $(x, y, t)$ predpokladáme, že  $\nabla F(x,y,t) \neq \vec{0}. $  Ak by bol gradient $\nabla F(x,y,t) $ v nejakom bode nulový, nevieme jednoznačne nájsť dotykový vektor $F(x, y, t)=0.$ 
 
 \begin{theorem}
 Regulárna krivka $\gamma(t) \colon J \subseteq I \rightarrow \mathbb{R}^{2}$ kde $t \in J  \subseteq I$ je obálkou jednoparametrického systému $\mathcal{F}$ práve vtedy, keď spĺňa:
@@ -98,7 +98,7 @@ $$ \frac{\partial F}{\partial t}(\gamma_{1}(t),\gamma_{2}(t),t) = 0. $$
 
 Dokonca, daný systém nemusí mať obálku. Príkladom sú sústredné kružnice s rastúcim polomerom.
 \begin{example} 
-Obálku systému sústredných kružníc pre $t \in I=[\frac{1}{100},2]$ rátame ako riešenie systému rovníc
+Obálku systému sústredných kružníc pre $t \in I=[\frac{1}{100},2]$ hľadáme ako riešenie systému rovníc
 \begin{align*}
 F(x, y, t) &= x^2 + y^2 - t, \\
 \frac{\partial F}{\partial t}(x,y,t) &= -1. \\
@@ -108,10 +108,10 @@ Z druhej rovnice máme $t=-1 \neq 0,$ teda systém nemá riešenie. Aj keď by s
 \begin{figure}[h]
 	\centering
 	\includegraphics[trim={0 0.35cm 0 0.85cm},clip, width=0.9\textwidth]{images/concentric_circles.pdf}
-	\caption[Sústredné kružnice.]{Sústredné kružnice na intervale $[\frac{1}{100},2]$ a krokom $\Delta t = 0,1$. V parametri $t = \frac{1}{100} $ je farba kružnice ružová, v $ t = 2 $ čierna.}
+	\caption[Sústredné kružnice.]{Sústredné kružnice na intervale $[\frac{1}{100},2]$ a krokom $\Delta t = 0,1$. V parametri $t = \frac{1}{100} $ je farba kružnice ružová, v $ t = 2 $ čierna, v hodnotách medzi nimi je lineárne interpolovaná.}
 	\label{fig:concentric_circles}
 \end{figure}
-Prístup, ktorý sme využili pre jednoparametrický systém kriviek, možno zovšeobecniť pre ľubovoľný jednoparametrický systém plôch v $\mathbb{E}^n.$
+Prístup, ktorý sme využili pre jednoparametrický systém kriviek, možno zovšeobecniť pre ľubovoľný jednoparametrický systém plôch v $\mathbb{R}^n.$
 \begin{definition}{\textbf{\textup{(Charakterizácia.)}}}
 \label{charakterizacia}
 Obálkou jednoparametrického systému plôch $ \mathcal{F} $ je množina bodov $\mathcal{E}$ daná
@@ -146,7 +146,7 @@ V skutočnosti sú obálkou úsečky $y=\pm 1$ definované na intervale $[-2,2]$
 \begin{figure}[h]
 	\centering
 	\includegraphics[trim={0.5cm 2.8cm 0.5cm 3.3cm},clip]{images/nanuk.pdf}
-	\caption{Kontúra systému.}
+	\caption[Kontúra systému]{Kontúra jednoparametrického systému kružníc je vykreslená modrou farbou.}
 	\label{fig:nanuk}
 \end{figure}
 \begin{example}
@@ -161,7 +161,7 @@ Vynásobením prvej rovnice $ \lambda(t) = (t^2 + 1)^2$ a derivovaním získame
 F^\lambda &= 4 t^6 - 4 t^5 y + t^4 y^2 + 7 t^4 - 8 t^3 y + 2 t^2 y^2 + 2 t^2 - 4 t y + x^2 + y^2 - 1, \\
 F_t^\lambda &= 24t^5-20yt^4+4y^2t^3+28t^3-24yt^2+4y^2t+4t-4y. \\
 \end{align*}
-Na obrázku \ref{fig:too_complicated_equations} je znázornený tento systém elíps pre $t \in [-2,2]$ s krokom $\Delta t=0.1$. Obálku nájdeme ako riešenie rovníc $F^\lambda \cap F_t^\lambda. $ Rovnice sú však príliš vysokého stupňa v~parametri $t$, preto nevieme implicitnú rovnicu obálky bez vhodného nástroja vyjadriť. V ďalšej časti rozoberieme známe prístupy k výpočtu.
+Na obrázku \ref{fig:too_complicated_equations} je znázornený tento systém elíps pre $t \in [-2,2]$ s krokom $\Delta t=0,1$. Obálku nájdeme ako riešenie rovníc $F^\lambda \cap F_t^\lambda. $ Rovnice sú však príliš vysokého stupňa v~parametri $t$, preto nevieme implicitnú rovnicu obálky bez vhodného nástroja vyjadriť. V ďalšej časti rozoberieme známe prístupy k výpočtu.
 \end{example}
 %\begin{figure}[h]
 %	\centering
@@ -189,7 +189,7 @@ $ Res(F^\lambda , F_t^\lambda , t) = 191102976x^{10} + 262144x^8y^6 - 9584640x^8
 \begin{figure}[h]
 	\centering
 	\includegraphics{images/resultant.pdf}
-	\caption[Obálka nájdená pomocou rezultantu.]{Systém elíps, pre $t=-2$ je elipsa vykreslená ružovou farbou, pre $t=2$ čiernou. Modrou farbou je znázornená obálka vypočítaná rezultantom.}
+	\caption[Obálka nájdená pomocou rezultantu.]{Jednoparametrický systém elíps, kde je pre $t=-2$ elipsa vykreslená ružovou farbou, pre $t=2$ čiernou, v hodnotách medzi nimi je farba lineárne interpolovaná. Modrou farbou je znázornená obálka nájdená pomocou rezultantu.}
 	\label{fig:too_complicated_equations}
 \end{figure}
 \subsection{Prístup projektívnej geometrie}
@@ -246,7 +246,7 @@ y(u) &= 1.
 \begin{figure}[h]
 	\centering
 	\includegraphics{images/lines_in_normal_form.eps}
-	\caption[Systém priamok v normálovom tvare.]{Systém priamok v normálovom tvare zobrazený na intervale $[0, 2\pi]$ s krokom $\Delta t = 0,1$. Priamka $l$ je znázornená oranžovou farbou a transformovaná priamka $g_{\frac{\pi}{2}}(l)$ zelenou farbou.}
+	\caption[Systém priamok v normálovom tvare.]{Jednoparametrický systém priamok v normálovom tvare zobrazený na intervale $[0, 2\pi]$ s krokom $\Delta t = 0,1$, kde pre $t=0$ je priamka ružová a pre $t=2\pi$ je priamka čierna, v hodnotách medzi nimi je farba priamky lineárne interpolovaná. Priamka $l$ je znázornená oranžovou farbou a transformovaná priamka $g_{\frac{\pi}{2}}(l)$ zelenou farbou.}
 	\label{fig:lines_in_normal_form}
 \end{figure}
 \end{example}
@@ -278,7 +278,7 @@ Obálka tohto jednoparametrického systému priamok, ktorou je parabola $y = x^2
 \end{figure}
 
 \subsection{Lokálne prieniky} \label{lokalne prieniky pre krivky}
-Lokálny prienik systému kriviek $\mathcal{F} $ pozostáva z prienikov nekonečne blízkych susedných kriviek systému. Formalizujme túto myšlienku.
+Lokálny prienik systému kriviek $\mathcal{F} $ pozostáva z limitných bodov prienikov kriviek systému. Formalizujme túto myšlienku.
 \begin{definition}[Lokálny prienik] \label{def:lokalny prienik}
 Lokálny prienik systému $\mathcal{F}$ je množina všetkých prienikov infinitezimálne blízkych prvkov pre všetky parametre $t \in I$. Označuje sa ako $\mathcal{L}$ a platí
 $
@@ -370,7 +370,7 @@ C_t = m(t) - \frac{r(t) \dot{r}(t)}{\langle \dot{m}(t), \dot{m}(t) \rangle} \dot
 
 Rozoberme si nasledujúce dva prípady
 \begin{itemize}
-\item Ak je funkcia polomeru $r(t)$ konštantná, $\dot{r} \equiv 0$ a rovina $\mathcal{\dot{S}}_t$ obsahuje stred sféry $M_t$ pre všetky $t \in I$, v tomto prípade možno obálku $\mathcal{E}$ považovať za posunutie (\textit{offset}) kostrovej krivky $m$. Tieto obálky sú známe ako rúrkové plochy (\textit{pipe surfaces}). Keďže rovina $\mathcal{\dot{S}}_t$ charakteristickej kružnice $c_t$ obsahuje stred sféry $M_t$ v každom $t \in I$, charakteristická krivka je hlavnou kružnicou sféry a obálka $\mathcal{E}$ je pokrytá jednoparametrickým systémom zhodných kružníc.
+\item Ak je funkcia polomeru $r(t)$ konštantná, $\dot{r} \equiv 0$ a rovina $\mathcal{\dot{S}}_t$ obsahuje stred sféry $M_t$ pre všetky $t \in I$, v tomto prípade možno obálku $\mathcal{E}$ považovať za posunutie (\textit{offset}) kostrovej krivky $m$. Tieto obálky sú známe ako potrubné plochy (\textit{pipe surfaces}). Keďže rovina $\mathcal{\dot{S}}_t$ charakteristickej kružnice $c_t$ obsahuje stred sféry $M_t$ v každom $t \in I$, charakteristická krivka je hlavnou kružnicou sféry a obálka $\mathcal{E}$ je pokrytá jednoparametrickým systémom zhodných kružníc.
 \item Ak funkcia polomeru $r(t)$ nie je konštantná, potom $\dot{r}(t) \neq 0$ a rovina $\mathcal{\dot{S}}_t$  neprechádza stredom sféry $M_t$. V tomto prípade obálka $\mathcal{E}$ patrí do triedy kanálových plôch.
 \end{itemize}
 
@@ -423,7 +423,7 @@ Z toho môžeme usúdiť, že charakteristická krivka $c_1$ predstavuje kružni
        \includegraphics[width=\textwidth]{images/cornetto_envelope.png}
 	\caption[Obálka jednoparametrického systém sfér.]{Obálka jednoparametrického systém sfér z príkladu \ref{exam:obalka_sfer} zostrojená z charakteristických kružníc pre $t \in [0,10]$ s krokom $\Delta t = 0,2.$ }
     \end{subfigure}
-    \caption{Obálka sfér.}
+    \caption{Jednoparametrický systém sfér a jeho obálka z príkladu \ref{exam:obalka_sfer}.}
     \label{fig:envelope_spheres}
 \end{figure}
 
@@ -446,7 +446,7 @@ Jedným z dôležitých výsledkov je, že kanálové plochy, definované ako ob
 
 %Bohužiaľ, vo väčšine prípadov sú rovnice, ktoré charakterizujú obálky, príliš zložité a odvodiť z nich rovnicu obálky nie sme schopní.
 
-Ďalšou z aplikácii kanálových a rúrkových plôch je výroba potrubia. Hladké spojenie medzi dvoma nie nevyhnutne valcovými rúrami $\mathcal{P}_1$ a $\mathcal{P}_2$ sa modeluje tak, aby bol prechod hladký, bez záhybov, vodotesný alebo dokonca aj parotesný. Na to sa používa technika \textit{rolling ball blends}, využívajúca nasledujúcu myšlienku: Kým sa sféra $S$ s konštantným alebo nekonštantným polomerom $r$ kotúľa na oboch rúrach súčasne, zanecháva stopu $s_i$ na oboch rúrach. Zmiešavacia plocha je tá časť obálky $\mathcal{E}$ jednoparametrického systému sfér, ktorá leží medzi dvoma stopami $s_1$ a $s_2$. Kostrová krivka obálky $\mathcal{E}$ je priesečníkom ekvidištánt \textit{(offsetov)} plôch $\mathcal{P}_1$ a $\mathcal{P}_2$ vo vzdialenosti $r$. Každá charakteristická krivka spája dva dotykové body zmiešavacej plochy a plochami $\mathcal{P}_1$ a $\mathcal{P}_2$, ktoré sa majú zmiešavať. Viac detailov možno nájsť v \cite{Kar00} a \cite{Ode20}. Na obrázku \ref{fig:rolling_ball_blends} vľavo je znázornená metóda so sférou s konštantným polomerom $r$, vpravo s nekonštantným.
+Ďalšou z aplikácii kanálových a rúrkových plôch je výroba potrubia. Hladké spojenie medzi dvoma nie nevyhnutne valcovými rúrami $\mathcal{P}_1$ a $\mathcal{P}_2$ sa modeluje tak, aby bol prechod hladký, bez záhybov alebo dokonca aj vodotesný. Na to sa používa technika \textit{rolling ball blends}, využívajúca nasledujúcu myšlienku: Kým sa sféra $S$ s konštantným alebo nekonštantným polomerom $r$ kotúľa na oboch rúrach súčasne, zanecháva stopu $s_i$ na oboch rúrach. Zmiešavacia plocha je tá časť obálky $\mathcal{E}$ jednoparametrického systému sfér, ktorá leží medzi dvoma stopami $s_1$ a $s_2$. Kostrová krivka obálky $\mathcal{E}$ je priesečníkom ekvidištánt \textit{(offsetov)} plôch $\mathcal{P}_1$ a $\mathcal{P}_2$ vo vzdialenosti $r$. Každá charakteristická krivka spája dva dotykové body zmiešavacej plochy a plochami $\mathcal{P}_1$ a $\mathcal{P}_2$, ktoré sa majú zmiešavať. Viac detailov možno nájsť v \cite{Kar00} a \cite{Ode20}. Na obrázku \ref{fig:rolling_ball_blends} vľavo je znázornená metóda so sférou s konštantným polomerom $r$, vpravo s nekonštantným.
 
 \begin{figure}[h]
 	\centering

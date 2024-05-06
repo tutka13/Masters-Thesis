@@ -1,8 +1,8 @@
 \chapter{Matematický model obálky elipsoidov}
 \label{kap:matematicky_model}
-V tejto kapitole odvodíme rovnice obálky pre jednoparametrický systém elíps a elipsoidov. Najprv však klasifikujme krivky a plochy druhého stupňa. Nasledujúcu teóriu a klasifikáciu nadplôch druhého stupňa preberáme zo \cite{Ivan}, \cite{Kor13}, \cite{Gla16}, \cite{Ode20} a \cite{Zla11}.
+V tejto kapitole odvodíme rovnice obálky pre jednoparametrický systém elíps a elipsoidov. Najprv však klasifikujme krivky a plochy druhého stupňa. Nasledujúcu teóriu a~klasifikáciu nadplôch druhého stupňa preberáme zo \cite{Ivan}, \cite{Kor13}, \cite{Gla16}, \cite{Ode20} a \cite{Zla11}.
 \section{Krivky druhého stupňa}
-Krivka druhého stupňa $p$ je v karteziánskych súradniciach $(x, y) \in \mathbb{E}^2$ daná rovnicou 
+Krivka druhého stupňa $p$ je v karteziánskych súradniciach $(x, y) \in \mathbb{R}^2$ daná rovnicou 
 $$ f(x, y) = Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0.$$
 Prípad $A = B = C = 0$  môžeme vylúčiť, pretože potom je rovnica lineárna a opisuje priamku. Vo všeobecnosti rovnica vyjadruje kužeľosečku, ktorá je daná piatimi bodmi. Ak $F \neq 0$, môžeme ju vydeliť $F$ a potom riešiť sústavu lineárnych rovníc s piatimi neznámymi. Okrem klasických prípadov, ako sú elipsy, paraboly a hyperboly, môžu kužeľosečky degenerovať na dvojice priamok, bod alebo prázdnu množinu.
 
@@ -107,7 +107,7 @@ hyperbolický & $< 0$ & hyperbola & dve rôznobežné priamky \\
 \end{table}
 
 \section{Plochy druhého stupňa}
-Plocha druhého stupňa $P$ je v karteziánskych súradniciach $(x, y, z) \in \mathbb{E}^3$ daná rovnicou
+Plocha druhého stupňa $P$ je v karteziánskych súradniciach $(x, y, z) \in \mathbb{R}^3$ daná rovnicou
 \[ f(x, y, z) = Ax^2 + By^2 + Cz^2 + Dxy + Exz + Fyz + Gx + Hy + Iz + J = 0. \]
 Ak je prvých šesť koeficientov nulových, uvedená rovnica je lineárna a opisuje rovinu v priestore. Vo všeobecnosti rovnica opisuje kvadriku, ktorá je daná deviatimi bodmi. Ak $J \neq 0$, môžeme ju vydeliť $J$ a potom vyriešiť sústavu lineárnych rovníc s deviatimi neznámymi. Okrem klasických prípadov, ako elipsoidy, paraboloidy a hyperboloidy, môžu kvadriky degenerovať aj na kvadratické kužele, kvadratické valce a dvojice rovín.
 
@@ -326,7 +326,7 @@ F = \frac{\dot{m}_1^2 (b^2 m_1^2 + a^2 m_2^2 - a^2b^2) + 2 (b^2 - a^2) m_1 m_2 \
 %& + \frac{ 2b^{2} ( m_1 (\dot{m}_1 \dot{m}_2^{4} + 2 \dot{m}_1^{3}  \dot{m}_2^{2} + \dot{m}_1^{5}) +  m_2 (\dot{m}_1^{4} \dot{m}_2 + 2\dot{m}_1^{2}  \dot{m}_2^{3} + \dot{m}_2^{5}))}{a^2 b^2 \|\dot{m} \|^4} & \\
 %\end{flalign*}
 %\dot{A} \dot{C} - \frac{\dot{B}^2}{4} = 
-Určme typ kužeľosečiek jednoparametrického systému $\dot{Q}$, kde prvky matíc, z ktorých počítame invarianty, sú derivácie funkcií $A(t), \dots, F(t).$ 
+Určime typ kužeľosečiek jednoparametrického systému $\dot{Q}$, kde prvky matíc, z ktorých počítame invarianty, sú derivácie funkcií $A(t), \dots, F(t).$ 
 Invarianty
 \begin{align*}
 \Delta(t) &= 0, \\
@@ -476,8 +476,9 @@ Keďže vyjadrenia nových vektorov sú pri prepise do súradníc alebo aj vyč�
 \begin{align*}
 \vec{t} &= \dfrac{(\dot{m}_1, \dot{m}_2, \dot{m}_3)}{\sqrt{\dot{m}_1^2 + \dot{m}_2^2 + \dot{m}_3^2}}, \\
 \vec{n} &= \dfrac{(0, -\dot{m}_3, \dot{m}_2)}{\sqrt{\dot{m}_2^2 + \dot{m}_3^2}}, \\
-\vec{b} &= \dfrac{(\dot{m}_2^2 + \dot{m}_3^2, -\dot{m}_1 \dot{m}_2, -\dot{m}_1 \dot{m}_3)}{\sqrt{\dot{m}_1^2 + \dot{m}_3^2}\sqrt{\dot{m}_1^2 + \dot{m}_2^2 + \dot{m}_3^2}},
+\vec{b} &=  vec{t} \times \vec{n}.
 \end{align*}
+%\dfrac{(\dot{m}_2^2 + \dot{m}_3^2, -\dot{m}_1 \dot{m}_2, -\dot{m}_1 \dot{m}_3)}{\sqrt{\dot{m}_1^2 + \dot{m}_3^2}\sqrt{\dot{m}_1^2 + \dot{m}_2^2 + \dot{m}_3^2}},
 kde je $\dot{m_2} \neq 0$ a $\dot{m_3} \neq 0$. Ak by boli, vieme nájsť iné ortonormálne vektory $\vec{n}, \vec{b}$ v normálovej rovine krivky $m(t)$ podobného tvaru. 
 
 Potom matica prechodu $P^{-1}$ má tvar

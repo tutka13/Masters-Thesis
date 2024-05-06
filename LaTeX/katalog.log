@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.25)  3 MAY 2024 11:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.25)  6 MAY 2024 15:52
 entering extended mode
 **./katalog.tex
 (katalog.tex
@@ -933,8 +933,7 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \sift@deathcycles=\count327
 \@vwid@loff=\dimen320
 \@vwid@roff=\dimen321
-))
-No file katalog.aux.
+)) (katalog.aux)
 \openout1 = `katalog.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -955,6 +954,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1032,6 +1032,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 31.
 LaTeX Info: Redefining \pageref on input line 31.
 LaTeX Info: Redefining \nameref on input line 31.
+ (katalog.out) (katalog.out)
 \@outlinefile=\write4
 \openout4 = `katalog.out'.
 
@@ -1052,13 +1053,13 @@ Package gensymb Info: Using \textmu for \micro on input line 31.
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-<images/bienert_constant_radius_spheres.png, id=6, 2099.41788pt x 2084.63324pt>
+<images/bienert_constant_radius_spheres.png, id=6, 1793.93617pt x 1781.30281pt>
 
 File: images/bienert_constant_radius_spheres.png Graphic file (type png)
 <use images/bienert_constant_radius_spheres.png>
 Package pdftex.def Info: images/bienert_constant_radius_spheres.png  used on in
 put line 38.
-(pdftex.def)             Requested size: 216.1011pt x 170.62555pt.
+(pdftex.def)             Requested size: 216.1011pt x 170.00882pt.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
 
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -1070,110 +1071,101 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
 (C:\Users\tutko\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<images/bienert_constant_radius_envelope.png, id=9, 2099.41788pt x 2084.63324pt
+<images/bienert_constant_radius_envelope.png, id=9, 1793.93617pt x 1781.30281pt
 >
 File: images/bienert_constant_radius_envelope.png Graphic file (type png)
 <use images/bienert_constant_radius_envelope.png>
 Package pdftex.def Info: images/bienert_constant_radius_envelope.png  used on i
 nput line 44.
-(pdftex.def)             Requested size: 216.1011pt x 170.62555pt.
-<images/bienert_function_radius_spheres.png, id=11, 2099.41788pt x 2084.63324pt
+(pdftex.def)             Requested size: 216.1011pt x 170.00882pt.
+<images/bienert_function_radius_spheres.png, id=11, 1793.93617pt x 1781.30281pt
 >
 File: images/bienert_function_radius_spheres.png Graphic file (type png)
 <use images/bienert_function_radius_spheres.png>
 Package pdftex.def Info: images/bienert_function_radius_spheres.png  used on in
 put line 51.
-(pdftex.def)             Requested size: 216.1011pt x 170.62555pt.
-<images/bienert_function_radius_envelope.png, id=13, 2099.41788pt x 2084.63324p
+(pdftex.def)             Requested size: 216.1011pt x 180.29045pt.
+<images/bienert_function_radius_envelope.png, id=13, 1793.93617pt x 1781.30281p
 t>
 File: images/bienert_function_radius_envelope.png Graphic file (type png)
 <use images/bienert_function_radius_envelope.png>
 Package pdftex.def Info: images/bienert_function_radius_envelope.png  used on i
 nput line 58.
-(pdftex.def)             Requested size: 216.1011pt x 185.26738pt.
-<images/bienert_ellipsoids.png, id=15, 2099.41788pt x 2084.63324pt>
+(pdftex.def)             Requested size: 216.1011pt x 180.29045pt.
+<images/bienert_ellipsoids.png, id=15, 1793.93617pt x 1781.30281pt>
 File: images/bienert_ellipsoids.png Graphic file (type png)
 <use images/bienert_ellipsoids.png>
 Package pdftex.def Info: images/bienert_ellipsoids.png  used on input line 64.
-(pdftex.def)             Requested size: 216.1011pt x 185.26738pt.
-File: images/bienert_ellipsoids.png Graphic file (type png)
-<use images/bienert_ellipsoids.png>
-Package pdftex.def Info: images/bienert_ellipsoids.png  used on input line 71.
-(pdftex.def)             Requested size: 216.1011pt x 170.62555pt.
-
-
-LaTeX Warning: Float too large for page by 6.62721pt on input line 77.
+(pdftex.def)             Requested size: 216.1011pt x 180.29045pt.
+<images/bienert_ellipsoids_envelope.png, id=17, 1793.93617pt x 1781.30281pt>
+File: images/bienert_ellipsoids_envelope.png Graphic file (type png)
+<use images/bienert_ellipsoids_envelope.png>
+Package pdftex.def Info: images/bienert_ellipsoids_envelope.png  used on input 
+line 71.
+(pdftex.def)             Requested size: 216.1011pt x 180.29045pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/helix_spheres.png, id=18, 1656.57191pt x 1644.90591pt>
+<images/helix_spheres.png, id=19, 512.55319pt x 1781.30281pt>
 File: images/helix_spheres.png Graphic file (type png)
 <use images/helix_spheres.png>
-Package pdftex.def Info: images/helix_spheres.png  used on input line 85.
-(pdftex.def)             Requested size: 141.12889pt x 140.12889pt.
-<images/helix_envelope2.png, id=19, 1657.08447pt x 1645.41486pt>
-File: images/helix_envelope2.png Graphic file (type png)
-<use images/helix_envelope2.png>
-Package pdftex.def Info: images/helix_envelope2.png  used on input line 92.
-(pdftex.def)             Requested size: 141.12889pt x 140.12202pt.
-<images/helix_ellipsoids2.png, id=20, 1656.05936pt x 1644.39697pt>
-File: images/helix_ellipsoids2.png Graphic file (type png)
-<use images/helix_ellipsoids2.png>
-Package pdftex.def Info: images/helix_ellipsoids2.png  used on input line 99.
-(pdftex.def)             Requested size: 141.12889pt x 140.13571pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/heart_spheres.png, id=21, 2099.41788pt x 2084.63324pt>
+Package pdftex.def Info: images/helix_spheres.png  used on input line 83.
+(pdftex.def)             Requested size: 63.50757pt x 164.30008pt.
+<images/helix_envelope.png, id=21, 512.55319pt x 1781.30281pt>
+File: images/helix_envelope.png Graphic file (type png)
+<use images/helix_envelope.png>
+Package pdftex.def Info: images/helix_envelope.png  used on input line 90.
+(pdftex.def)             Requested size: 63.50757pt x 164.30008pt.
+<images/helix_ellipsoids.png, id=23, 512.55319pt x 1781.30281pt>
+File: images/helix_ellipsoids.png Graphic file (type png)
+<use images/helix_ellipsoids.png>
+Package pdftex.def Info: images/helix_ellipsoids.png  used on input line 97.
+(pdftex.def)             Requested size: 63.50757pt x 164.30008pt.
+<images/heart_spheres.png, id=25, 1793.93617pt x 1781.30281pt>
 File: images/heart_spheres.png Graphic file (type png)
 <use images/heart_spheres.png>
-Package pdftex.def Info: images/heart_spheres.png  used on input line 113.
-(pdftex.def)             Requested size: 176.40439pt x 139.28307pt.
-<images/heart_envelope_spheres.png, id=23, 2099.41788pt x 2084.63324pt>
-File: images/heart_envelope_spheres.png Graphic file (type png)
-<use images/heart_envelope_spheres.png>
-Package pdftex.def Info: images/heart_envelope_spheres.png  used on input line 
-120.
-(pdftex.def)             Requested size: 176.40439pt x 139.28307pt.
-<images/heart_ellipsoids2.png, id=25, 2099.41788pt x 2084.63324pt>
-File: images/heart_ellipsoids2.png Graphic file (type png)
-<use images/heart_ellipsoids2.png>
-Package pdftex.def Info: images/heart_ellipsoids2.png  used on input line 127.
-(pdftex.def)             Requested size: 176.40439pt x 139.28307pt.
-<images/heart_envelope_ellipsoids2.png, id=27, 2099.41788pt x 2084.63324pt>
-File: images/heart_envelope_ellipsoids2.png Graphic file (type png)
-<use images/heart_envelope_ellipsoids2.png>
-Package pdftex.def Info: images/heart_envelope_ellipsoids2.png  used on input l
-ine 134.
-(pdftex.def)             Requested size: 176.40439pt x 139.28307pt.
+Package pdftex.def Info: images/heart_spheres.png  used on input line 110.
+(pdftex.def)             Requested size: 177.20448pt x 133.78496pt.
+<images/heart_spheres_envelope.png, id=27, 1793.93617pt x 1781.30281pt>
+File: images/heart_spheres_envelope.png Graphic file (type png)
+<use images/heart_spheres_envelope.png>
+Package pdftex.def Info: images/heart_spheres_envelope.png  used on input line 
+117.
+(pdftex.def)             Requested size: 177.20448pt x 133.78496pt.
+<images/heart_ellipsoids.png, id=29, 1793.93617pt x 1781.30281pt>
+File: images/heart_ellipsoids.png Graphic file (type png)
+<use images/heart_ellipsoids.png>
+Package pdftex.def Info: images/heart_ellipsoids.png  used on input line 124.
+(pdftex.def)             Requested size: 177.20448pt x 139.40552pt.
+<images/heart_ellipsoids_envelope.png, id=31, 1793.93617pt x 1781.30281pt>
+File: images/heart_ellipsoids_envelope.png Graphic file (type png)
+<use images/heart_ellipsoids_envelope.png>
+Package pdftex.def Info: images/heart_ellipsoids_envelope.png  used on input li
+ne 131.
+(pdftex.def)             Requested size: 177.20448pt x 139.40552pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [1{C:/Users/tutko/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./images/bien
 ert_constant_radius_spheres.png> <./images/bienert_constant_radius_envelope.png
 > <./images/bienert_function_radius_spheres.png> <./images/bienert_function_rad
-ius_envelope.png> <./images/bienert_ellipsoids.png>] [2 <./images/heart_spheres
-.png> <./images/heart_envelope_spheres.png> <./images/heart_ellipsoids2.png> <.
-/images/heart_envelope_ellipsoids2.png> <./images/helix_spheres.png> <./images/
-helix_envelope2.png> <./images/helix_ellipsoids2.png>] (katalog.aux)
+ius_envelope.png> <./images/bienert_ellipsoids.png> <./images/bienert_ellipsoid
+s_envelope.png>] [2 <./images/helix_spheres.png> <./images/helix_envelope.png> 
+<./images/helix_ellipsoids.png> <./images/heart_spheres.png> <./images/heart_sp
+heres_envelope.png> <./images/heart_ellipsoids.png> <./images/heart_ellipsoids_
+envelope.png>] (katalog.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package rerunfilecheck Warning: File `katalog.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `katalog.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `katalog.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34408 strings out of 478927
- 792723 string characters out of 2852534
+ 34421 strings out of 478927
+ 793183 string characters out of 2852534
  1238249 words of memory out of 3000000
- 51672 multiletter control sequences out of 15000+600000
+ 51678 multiletter control sequences out of 15000+600000
  413332 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,9n,103p,743b,771s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1190,9 +1182,9 @@ ko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
 Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1095.
 pfb><C:/Users/tutko/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/s
 frm1200.pfb>
-Output written on katalog.pdf (2 pages, 6815495 bytes).
+Output written on katalog.pdf (2 pages, 5614464 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
+ 124 PDF objects out of 1000 (max. 8388607)
  5 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
 

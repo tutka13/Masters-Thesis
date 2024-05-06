@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.25)  6 MAY 2024 14:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.10.25)  6 MAY 2024 15:49
 entering extended mode
 **./main.tex
 (main.tex
@@ -1295,17 +1295,17 @@ Overfull \hbox (270.2994pt too wide) in paragraph at lines 383--384
  []
 
 [17 <./images/trojuholnik.pdf>]
-<images/cornetto_spheres.png, id=755, 531.51765pt x 531.84613pt>
+<images/cornetto_spheres.png, id=755, 1793.93617pt x 1781.30281pt>
 File: images/cornetto_spheres.png Graphic file (type png)
 <use images/cornetto_spheres.png>
 Package pdftex.def Info: images/cornetto_spheres.png  used on input line 416.
-(pdftex.def)             Requested size: 198.45662pt x 198.57346pt.
-<images/cornetto_en.png, id=759, 1179.89745pt x 1171.5883pt>
-File: images/cornetto_en.png Graphic file (type png)
-<use images/cornetto_en.png>
-Package pdftex.def Info: images/cornetto_en.png  used on input line 423.
-(pdftex.def)             Requested size: 198.45662pt x 197.05789pt.
- [18 <./images/cornetto_spheres.png> <./images/cornetto_en.png>]
+(pdftex.def)             Requested size: 198.45662pt x 197.0583pt.
+<images/cornetto_envelope.png, id=759, 1793.93617pt x 1676.96936pt>
+File: images/cornetto_envelope.png Graphic file (type png)
+<use images/cornetto_envelope.png>
+Package pdftex.def Info: images/cornetto_envelope.png  used on input line 423.
+(pdftex.def)             Requested size: 198.45662pt x 185.51633pt.
+ [18 <./images/cornetto_spheres.png> <./images/cornetto_envelope.png>]
 <images/rolling_ball_blends.png, id=775, 713.66624pt x 253.94875pt>
 File: images/rolling_ball_blends.png Graphic file (type png)
 <use images/rolling_ball_blends.png>
@@ -1491,12 +1491,12 @@ Package pdftex.def Info: images/axis_t=0.2.pdf  used on input line 95.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [48]
-<images/bienert_envelope_ellipsoids.png, id=1197, 1665.79787pt x 1654.0669pt>
-File: images/bienert_envelope_ellipsoids.png Graphic file (type png)
-<use images/bienert_envelope_ellipsoids.png>
-Package pdftex.def Info: images/bienert_envelope_ellipsoids.png  used on input 
+<images/bienert_ellipsoids_envelope.png, id=1197, 1793.93617pt x 1781.30281pt>
+File: images/bienert_ellipsoids_envelope.png Graphic file (type png)
+<use images/bienert_ellipsoids_envelope.png>
+Package pdftex.def Info: images/bienert_ellipsoids_envelope.png  used on input 
 line 122.
-(pdftex.def)             Requested size: 220.50887pt x 218.94829pt.
+(pdftex.def)             Requested size: 220.50887pt x 218.93858pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1514,21 +1514,21 @@ Overfull \hbox (18.32416pt too wide) in paragraph at lines 128--130
 pdfTeX warning: pdflatex (file ./images/axis_t=0.2.pdf): PDF inclusion: multipl
 e pdfs with page group included in a single page
 >]
-<images/helix_envelope.png, id=1233, 429.51958pt x 1604.69937pt>
-File: images/helix_envelope.png Graphic file (type png)
-<use images/helix_envelope.png>
-Package pdftex.def Info: images/helix_envelope.png  used on input line 139.
-(pdftex.def)             Requested size: 429.51852pt x 1604.69547pt.
+<images/helix_ellipsoids.png, id=1233, 512.55319pt x 1781.30281pt>
+File: images/helix_ellipsoids.png Graphic file (type png)
+<use images/helix_ellipsoids.png>
+Package pdftex.def Info: images/helix_ellipsoids.png  used on input line 139.
+(pdftex.def)             Requested size: 512.55194pt x 1781.29848pt.
 
 Overfull \hbox (5.86311pt too wide) detected at line 151
 \OML/cmm/m/it/12 \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) = []\OML
 /cmm/m/it/12 :
  []
 
-<images/heart_envelope_ellipsoids.png, id=1236, 1651.44638pt x 1639.81648pt>
-File: images/heart_envelope_ellipsoids.png Graphic file (type png)
-<use images/heart_envelope_ellipsoids.png>
-Package pdftex.def Info: images/heart_envelope_ellipsoids.png  used on input li
+<images/heart_ellipsoids_envelope.png, id=1236, 1793.93617pt x 1781.30281pt>
+File: images/heart_ellipsoids_envelope.png Graphic file (type png)
+<use images/heart_ellipsoids_envelope.png>
+Package pdftex.def Info: images/heart_ellipsoids_envelope.png  used on input li
 ne 155.
 (pdftex.def)             Requested size: 220.50887pt x 218.93858pt.
 
@@ -1545,23 +1545,22 @@ Overfull \hbox (3.56656pt too wide) in paragraph at lines 161--168
  [][]\T1/cmtt/m/n/12 Windows repair algorithm[]\T1/cmr/m/n/12 .
  []
 
-[50 <./images/bienert_envelope_ellipsoids.png> <./images/helix_envelope.png>]
+[50 <./images/bienert_ellipsoids_envelope.png> <./images/helix_ellipsoids.png>]
 <images/tlac_prvy_pokus.jpg, id=1246, 859.71187pt x 968.86969pt>
 File: images/tlac_prvy_pokus.jpg Graphic file (type jpg)
 <use images/tlac_prvy_pokus.jpg>
 Package pdftex.def Info: images/tlac_prvy_pokus.jpg  used on input line 178.
 (pdftex.def)             Requested size: 216.1011pt x 243.53258pt.
-<images/plocha_v_tlaciarni.jpg, id=1247, 2258.4375pt x 2461.69687pt>
+<images/plocha_v_tlaciarni.jpg, id=1247, 2258.4375pt x 2536.97812pt>
 File: images/plocha_v_tlaciarni.jpg Graphic file (type jpg)
 <use images/plocha_v_tlaciarni.jpg>
 Package pdftex.def Info: images/plocha_v_tlaciarni.jpg  used on input line 185.
 
-(pdftex.def)             Requested size: 216.1011pt x 235.51637pt.
-
+(pdftex.def)             Requested size: 216.1011pt x 242.71872pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[51 <./images/heart_envelope_ellipsoids.png> <./images/otvorene_hrany2.png>]
+[51 <./images/heart_ellipsoids_envelope.png> <./images/otvorene_hrany2.png>]
 <images/interpolacia.png, id=1257, 560.22064pt x 556.27542pt>
 File: images/interpolacia.png Graphic file (type png)
 <use images/interpolacia.png>
@@ -1673,104 +1672,97 @@ daily . com / 789123 /
 ] [62]) (AppendixB.tex [63] [64
 
 ]
-<images/heart_spheres.png, id=1393, 2099.41788pt x 2084.63324pt>
+<images/heart_spheres.png, id=1393, 1793.93617pt x 1781.30281pt>
 File: images/heart_spheres.png Graphic file (type png)
 <use images/heart_spheres.png>
 Package pdftex.def Info: images/heart_spheres.png  used on input line 10.
-(pdftex.def)             Requested size: 216.1011pt x 170.62555pt.
-<images/heart_envelope_spheres.png, id=1395, 2099.41788pt x 2084.63324pt>
-File: images/heart_envelope_spheres.png Graphic file (type png)
-<use images/heart_envelope_spheres.png>
-Package pdftex.def Info: images/heart_envelope_spheres.png  used on input line 
+(pdftex.def)             Requested size: 216.1011pt x 163.1544pt.
+<images/heart_spheres_envelope.png, id=1395, 1793.93617pt x 1781.30281pt>
+File: images/heart_spheres_envelope.png Graphic file (type png)
+<use images/heart_spheres_envelope.png>
+Package pdftex.def Info: images/heart_spheres_envelope.png  used on input line 
 17.
-(pdftex.def)             Requested size: 216.1011pt x 170.62555pt.
-<images/heart_ellipsoids2.png, id=1397, 2099.41788pt x 2084.63324pt>
-File: images/heart_ellipsoids2.png Graphic file (type png)
-<use images/heart_ellipsoids2.png>
-Package pdftex.def Info: images/heart_ellipsoids2.png  used on input line 24.
-(pdftex.def)             Requested size: 216.1011pt x 170.62555pt.
-<images/heart_envelope_ellipsoids2.png, id=1399, 2099.41788pt x 2084.63324pt>
-File: images/heart_envelope_ellipsoids2.png Graphic file (type png)
-<use images/heart_envelope_ellipsoids2.png>
-Package pdftex.def Info: images/heart_envelope_ellipsoids2.png  used on input l
-ine 31.
-(pdftex.def)             Requested size: 216.1011pt x 170.62555pt.
-<images/bienert_constant_radius_spheres.png, id=1401, 2099.41788pt x 2084.63324
+(pdftex.def)             Requested size: 216.1011pt x 163.1544pt.
+<images/heart_ellipsoids.png, id=1397, 1793.93617pt x 1781.30281pt>
+File: images/heart_ellipsoids.png Graphic file (type png)
+<use images/heart_ellipsoids.png>
+Package pdftex.def Info: images/heart_ellipsoids.png  used on input line 24.
+(pdftex.def)             Requested size: 216.1011pt x 180.29045pt.
+File: images/heart_ellipsoids_envelope.png Graphic file (type png)
+<use images/heart_ellipsoids_envelope.png>
+Package pdftex.def Info: images/heart_ellipsoids_envelope.png  used on input li
+ne 31.
+(pdftex.def)             Requested size: 216.1011pt x 180.29045pt.
+<images/bienert_constant_radius_spheres.png, id=1400, 1793.93617pt x 1781.30281
 pt>
 File: images/bienert_constant_radius_spheres.png Graphic file (type png)
 <use images/bienert_constant_radius_spheres.png>
 Package pdftex.def Info: images/bienert_constant_radius_spheres.png  used on in
 put line 45.
-(pdftex.def)             Requested size: 216.1011pt x 170.62555pt.
-<images/bienert_constant_radius_envelope.png, id=1403, 2099.41788pt x 2084.6332
-4pt>
+(pdftex.def)             Requested size: 216.1011pt x 170.00882pt.
+<images/bienert_constant_radius_envelope.png, id=1402, 1793.93617pt x 1781.3028
+1pt>
 File: images/bienert_constant_radius_envelope.png Graphic file (type png)
 <use images/bienert_constant_radius_envelope.png>
 Package pdftex.def Info: images/bienert_constant_radius_envelope.png  used on i
 nput line 51.
-(pdftex.def)             Requested size: 216.1011pt x 170.62555pt.
-<images/bienert_function_radius_spheres.png, id=1405, 2099.41788pt x 2084.63324
+(pdftex.def)             Requested size: 216.1011pt x 170.00882pt.
+<images/bienert_function_radius_spheres.png, id=1404, 1793.93617pt x 1781.30281
 pt>
 File: images/bienert_function_radius_spheres.png Graphic file (type png)
 <use images/bienert_function_radius_spheres.png>
 Package pdftex.def Info: images/bienert_function_radius_spheres.png  used on in
 put line 58.
-(pdftex.def)             Requested size: 216.1011pt x 170.62555pt.
-<images/bienert_function_radius_envelope.png, id=1407, 2099.41788pt x 2084.6332
-4pt>
+(pdftex.def)             Requested size: 216.1011pt x 180.29045pt.
+<images/bienert_function_radius_envelope.png, id=1406, 1793.93617pt x 1781.3028
+1pt>
 File: images/bienert_function_radius_envelope.png Graphic file (type png)
 <use images/bienert_function_radius_envelope.png>
 Package pdftex.def Info: images/bienert_function_radius_envelope.png  used on i
 nput line 65.
-(pdftex.def)             Requested size: 216.1011pt x 185.26738pt.
-<images/bienert_ellipsoids.png, id=1409, 2099.41788pt x 2084.63324pt>
+(pdftex.def)             Requested size: 216.1011pt x 180.29045pt.
+<images/bienert_ellipsoids.png, id=1408, 1793.93617pt x 1781.30281pt>
 File: images/bienert_ellipsoids.png Graphic file (type png)
 <use images/bienert_ellipsoids.png>
 Package pdftex.def Info: images/bienert_ellipsoids.png  used on input line 71.
-(pdftex.def)             Requested size: 216.1011pt x 185.26738pt.
-<images/bienert_ellipsoids_envelope.png, id=1411, 2099.41788pt x 2084.63324pt>
+(pdftex.def)             Requested size: 216.1011pt x 180.29045pt.
 File: images/bienert_ellipsoids_envelope.png Graphic file (type png)
 <use images/bienert_ellipsoids_envelope.png>
 Package pdftex.def Info: images/bienert_ellipsoids_envelope.png  used on input 
 line 78.
-(pdftex.def)             Requested size: 216.1011pt x 170.62555pt.
-
-
-LaTeX Warning: Float too large for page by 6.62721pt on input line 84.
+(pdftex.def)             Requested size: 216.1011pt x 180.29045pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/helix_spheres.png, id=1413, 1656.57191pt x 1644.90591pt>
+<images/helix_spheres.png, id=1411, 512.55319pt x 1781.30281pt>
 File: images/helix_spheres.png Graphic file (type png)
 <use images/helix_spheres.png>
 Package pdftex.def Info: images/helix_spheres.png  used on input line 91.
-(pdftex.def)             Requested size: 141.12889pt x 140.12889pt.
-<images/helix_envelope2.png, id=1414, 1657.08447pt x 1645.41486pt>
-File: images/helix_envelope2.png Graphic file (type png)
-<use images/helix_envelope2.png>
-Package pdftex.def Info: images/helix_envelope2.png  used on input line 98.
-(pdftex.def)             Requested size: 141.12889pt x 140.12202pt.
-<images/helix_ellipsoids2.png, id=1415, 1656.05936pt x 1644.39697pt>
-File: images/helix_ellipsoids2.png Graphic file (type png)
-<use images/helix_ellipsoids2.png>
-Package pdftex.def Info: images/helix_ellipsoids2.png  used on input line 105.
-(pdftex.def)             Requested size: 141.12889pt x 140.13571pt.
-) [65 <./images/heart_spheres.png> <./images/heart_envelope_spheres.png> <./ima
-ges/heart_ellipsoids2.png> <./images/heart_envelope_ellipsoids2.png>] [66 <./im
-ages/bienert_constant_radius_spheres.png> <./images/bienert_constant_radius_env
-elope.png> <./images/bienert_function_radius_spheres.png> <./images/bienert_fun
-ction_radius_envelope.png> <./images/bienert_ellipsoids.png> <./images/bienert_
-ellipsoids_envelope.png>] [67 <./images/helix_spheres.png> <./images/helix_enve
-lope2.png> <./images/helix_ellipsoids2.png>] (main.aux)
+(pdftex.def)             Requested size: 70.56444pt x 245.22208pt.
+<images/helix_envelope.png, id=1412, 512.55319pt x 1781.30281pt>
+File: images/helix_envelope.png Graphic file (type png)
+<use images/helix_envelope.png>
+Package pdftex.def Info: images/helix_envelope.png  used on input line 98.
+(pdftex.def)             Requested size: 70.56444pt x 245.22208pt.
+File: images/helix_ellipsoids.png Graphic file (type png)
+<use images/helix_ellipsoids.png>
+Package pdftex.def Info: images/helix_ellipsoids.png  used on input line 105.
+(pdftex.def)             Requested size: 70.56444pt x 245.22208pt.
+) [65 <./images/heart_spheres.png> <./images/heart_spheres_envelope.png> <./ima
+ges/heart_ellipsoids.png>] [66 <./images/bienert_constant_radius_spheres.png> <
+./images/bienert_constant_radius_envelope.png> <./images/bienert_function_radiu
+s_spheres.png> <./images/bienert_function_radius_envelope.png> <./images/biener
+t_ellipsoids.png>] [67 <./images/helix_spheres.png> <./images/helix_envelope.pn
+g>] (main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D38673F2AE327D35BA7559DBAF2EFD9B;7388.
  ) 
 Here is how much of TeX's memory you used:
- 35241 strings out of 478927
- 807816 string characters out of 2852534
+ 35220 strings out of 478927
+ 807065 string characters out of 2852534
  1258246 words of memory out of 3000000
- 52146 multiletter control sequences out of 15000+600000
+ 52128 multiletter control sequences out of 15000+600000
  425369 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,16n,103p,1437b,771s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1803,9 +1795,9 @@ s/type1/public/cm-super/sfrm1200.pfb><C:/Users/tutko/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/cm-super/sfsl1200.pfb><C:/Users/tutko/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/cm-super/sfti1200.pfb><C:/Users/tutko/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (79 pages, 18342148 bytes).
+Output written on main.pdf (79 pages, 15120809 bytes).
 PDF statistics:
- 1607 PDF objects out of 1728 (max. 8388607)
+ 1601 PDF objects out of 1728 (max. 8388607)
  268 named destinations out of 1000 (max. 500000)
- 774 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 759 words of extra memory for PDF output out of 10000 (max. 10000000)
 

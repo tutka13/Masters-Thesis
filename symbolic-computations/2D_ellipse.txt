@@ -54,7 +54,7 @@ DELTA_22: ratsimp(determinant(matrix(
 )))$
 
 T: DELTA_11 + DELTA_22;
-is(T=0);
+is(T=[0]);
 
 /*obalka vzdy existuje, pretoze jedna priamka vzdy pretina elipsu*/
 conic_section: ratsimp(A1*x^2+B1*x*y+C1*y^2+D1*x+E1*y+F1)$

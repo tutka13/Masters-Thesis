@@ -1,0 +1,21 @@
+invariants Matrix([[4], [t**2]])
+System:
+-1 + \frac{\left(x - 4\right)^{2}}{b^{2}} + \frac{\left(t^{2} - y\right)^{2}}{a^{2}} = 0
+Derivation:
+\frac{4 t \left(t^{2} - y\right)}{a^{2}} = 0
+Time:
+0.6906659603118896
+Determinant:
+0
+Subdeterminant:
+0
+Curvature:
+0
+Ratio:
+\left|{b^{2} - \frac{b}{a^{2}}}\right|
+Rho:
+\tilde{\infty} \left|{\frac{b^{2} t^{4}}{a^{2} - b^{2}}}\right|
+p_t:
+- 2 t^{3} + 2 t y
+q_t:
+- \frac{16 b^{2} t^{4}}{- a^{2} + b^{2}}
